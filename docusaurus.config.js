@@ -122,10 +122,6 @@ const config = {
                 to: '/docs/getting-started',
               },
               {
-                label: 'FAQ',
-                to: '/docs/faq',
-              },
-              {
                 label: 'Tutorials',
                 to: 'docs/tutorials',
               },
@@ -136,7 +132,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                href: 'https://blog.nevermined.io/',
               },
               {
                 label: 'GitHub',

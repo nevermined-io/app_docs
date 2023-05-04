@@ -38,34 +38,32 @@ function HomepageHeader() {
 
 const FeatureList: BoxItem[] = [
   {
-    title: 'Nevermined',
+    title: 'Getting Started',
     className: clsx(b('box', ['main'])),
     link: 'docs/getting-started',
     Svg: nvmSVGIcon,
-    description: <>What is Nevermined? And what can I use it for?</>,
+    description: <>What is the Nevermined App? And what can I use it for?</>,
     overlay: <div className={b('box-overlay')} />,
   },
   {
-    title: 'SDK',
+    title: 'Tutorials',
     className: b('box'),
-    link: 'docs/nevermined-sdk/intro',
+    link: 'docs/tutorials',
     Svg: integrationDocsSVGIcon,
     description: (
       <>
-        Everything you need to know about using Nevermined via our SDK. For
-        developers who want to use a low-level library.
+        Everything you need to know about using the Nevermined App
       </>
     ),
   },
   {
-    title: 'React Catalog',
+    title: 'Environments',
     className: b('box'),
-    link: 'docs/react-components/intro',
+    link: 'docs/environments',
     png: tutorialPNGIcon,
     description: (
       <>
-        Everything you need to know about using Nevermined via our Catalog. For
-        developers who are using React.
+        Where is the application available?
       </>
     ),
   },
