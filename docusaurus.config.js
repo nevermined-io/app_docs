@@ -7,10 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nevermined Documentation',
+  title: 'Nevermined App Documentation',
   tagline:
     'Nevermined champions open Data and AI to lower the barrier of entry for AI adoption and advancement and opposes the centralization of AI development and training data',
-  url: 'https://docs.nevermined.io',
+  url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,18 +38,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         gtag: {
-          trackingID: 'G-S70X8HQFLP',
+          trackingID: 'G-XJGFKP2VS4',
           anonymizeIP: true,
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/nevermined-io/docs/tree/main/',
+          editUrl: 'https://github.com/nevermined-io/app_docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          blogTitle: 'Nevermined blog',
+          blogTitle: 'Nevermined Blog',
           blogDescription:
             'Here is included the last 10 posts from Nevermined Medium',
           blogSidebarCount: 0,
@@ -92,20 +92,14 @@ const config = {
           },
           {
             position: 'left',
-            label: 'React Components',
-            to: 'docs/react-components/intro',
-          },
-          {
-            position: 'left',
-            label: 'SDK',
-            to: 'docs/nevermined-sdk/getting-started',
-          },
-          {
-            position: 'left',
             label: 'Tutorials',
             to: 'docs/tutorials',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            position: 'left',
+            label: 'App',
+            href: 'https://mumbai.nevermined.app/'            
+          },
           {
             position: 'right',
             href: 'https://discord.gg/GZju2qScKq',
@@ -128,8 +122,8 @@ const config = {
                 to: '/docs/getting-started',
               },
               {
-                label: 'Architecture',
-                to: '/docs/architecture',
+                label: 'FAQ',
+                to: '/docs/faq',
               },
               {
                 label: 'Tutorials',
@@ -200,10 +194,10 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'IB2HKPUD05',
+        appId: 'ABQRAL96WH',
         // Public API key: it is safe to commit it
-        apiKey: '3d8368dd627ea8c7a748d249ff26a567',
-        indexName: 'nevermined',
+        apiKey: '150e070c95ed97482ce743ffeadc64fc',
+        indexName: 'nevermined-app',
         // Optional
         contextualSearch: true,
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.

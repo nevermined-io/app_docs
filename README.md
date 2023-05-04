@@ -3,17 +3,13 @@
 
 # Nevermined Documentation
 
-> http://docs.nevermined.io/
+> http://docs.nevermined.app/
 
 
 [![Twitter](https://img.shields.io/twitter/follow/nevermined_io?style=social)](https://twitter.com/nevermined_io)
 [![Discord](https://img.shields.io/discord/775670012446507028.svg?color=7289da&label=Discord&logo=discord&style=flat-square)](https://discord.gg/GZju2qScKq)
 
-Nevermined is a digital ecosystems builder solution that provides the capabilities of
-creating bespoke networks where different entities can interact around digital assets.
-This interaction between parties allow to them data sharing, tokenization and 
-monetization of their digital assets in an efficient and secure way between 
-untrusted parties.
+Nevermined App is an online tool that allows the publication and tokenization of data and web services.
 
 Nevermined is the product powered by [Nevermined AG](https://nevermined.io).
 
