@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7674],{7674:(s,a,c)=>{c.r(a),c.d(a,{default:()=>e});const e=c.p+"assets/images/battalion-bg-c86258a6bf0b0f1e6c9a5f86d78aff6c.png"}}]);
