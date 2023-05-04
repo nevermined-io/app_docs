@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1360],{1360:(s,a,e)=>{e.r(a),e.d(a,{default:()=>t});const t=e.p+"assets/fonts/Catalogue-BookItalic-b3851b9c53a74d9964d922b98859457e.otf"}}]);

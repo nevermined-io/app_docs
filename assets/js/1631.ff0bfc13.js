@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1631],{1631:(s,a,d)=>{d.r(a),d.d(a,{default:()=>e});const e=d.p+"assets/fonts/Catalogue-Bold-3daad0ddf63348b4489f695217ebb194.otf"}}]);

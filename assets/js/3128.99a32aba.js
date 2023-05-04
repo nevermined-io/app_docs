@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3128],{3128:(e,s,a)=>{a.r(s),a.d(s,{default:()=>d});const d=a.p+"assets/images/nevermined-symbol-gradient-744ee5a071d5ab3e8579e8af6950573f.png"}}]);

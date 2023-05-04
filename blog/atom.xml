@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://docs.nevermined.io/blog</id>
-    <title>Nevermined Documentation Blog</title>
-    <updated>2023-05-04T10:48:31.000Z</updated>
+    <id>https://docs.nevermined.app/blog</id>
+    <title>Nevermined App Documentation Blog</title>
+    <updated>2023-05-04T14:32:29.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://docs.nevermined.io/blog"/>
-    <subtitle>Nevermined Documentation Blog</subtitle>
-    <icon>https://docs.nevermined.io/img/favicon.ico</icon>
+    <link rel="alternate" href="https://docs.nevermined.app/blog"/>
+    <subtitle>Nevermined App Documentation Blog</subtitle>
+    <icon>https://docs.nevermined.app/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[The last 10 posts of Nevermined Medium]]></title>
-        <id>https://docs.nevermined.io/blog/index</id>
-        <link href="https://docs.nevermined.io/blog/index"/>
-        <updated>2023-05-04T10:48:31.000Z</updated>
+        <id>https://docs.nevermined.app/blog/index</id>
+        <link href="https://docs.nevermined.app/blog/index"/>
+        <updated>2023-05-04T14:32:29.000Z</updated>
         <summary type="html"><![CDATA[Blog Posts]]></summary>
         <content type="html"><![CDATA[<div></div>]]></content>
     </entry>

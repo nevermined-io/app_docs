@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1327],{7152:(e,s,a)=>{a.r(s),a.d(s,{default:()=>c});const c=a.p+"assets/fonts/Catalogue-Regular-720474ee1efc8848dd06d0ebdc49199f.otf"}}]);
