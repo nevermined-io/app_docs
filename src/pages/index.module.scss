@@ -1,0 +1,147 @@
+@import '~@nevermined-io/styles/lib/cjs/styles/index.scss';
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.nvm {
+  &__container {
+    margin: 0 auto;
+    max-width: var(--ifm-container-width);
+    padding: 0 var(--ifm-spacing-horizontal);
+    width: 100%;
+    text-align: center;
+  }
+
+  &__boxes {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0 5rem;
+    width: 100%;
+  }
+
+  &__box {
+    &--main {
+      height: 100%;
+      background: linear-gradient(107.16deg, #2f12dc 9.77%, #1ddef9 100%);
+      position: relative;
+
+      svg {
+        width: 64px;
+        height: 40px;
+      }
+
+      *[class~='text'] {
+        color: #fff;
+      }
+    }
+
+    &-overlay {
+      background-color: transparent;
+      background-image: url('/nevermined/backgrounds/home-bg-box.png');
+      background-position: 30% bottom, 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 110%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      bottom: -2px;
+      border-bottom: 1px solid transparent;
+      border-radius: 24px;
+    }
+  }
+
+  &__gutter {
+    margin-bottom: 40px;
+
+    &--main {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 997px) {
+      &--main {
+        margin-bottom: 40px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 64px;
+    color: var(--ifm-color-black);
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-size: 21px;
+    color: var(--ifm-color-black);
+    padding: 0 25%;
+
+    @media (min-width: 997px) and (max-width: 1439px) {
+      padding: 0 18%;
+    }
+
+    @media (min-width: 768px) and (max-width: 996px) {
+      padding: 0 15%;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
+  &__banner {
+    padding-top: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 996px) {
+    &__banner {
+      padding: 2rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__row {
+    justify-content: center;
+  }
+
+  &__col {
+    max-width: 544px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .nvm {
+    &__title,
+    &__description {
+      word-break: keep-all;
+    }
+
+    &__title {
+      font-size: 4vh;
+    }
+
+    &__box {
+      padding: 40px;
+    }
+  }
+}
