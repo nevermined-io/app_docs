@@ -1,21 +1,18 @@
 ---
 sidebar_position: 8
-description: How to generate the JWT access token that gives access to a remote web service
+description: How to generate the JWT access token that gives access to a web service
 ---
 
-# How a subscriber can integrate a web service
+# How to integrate a web service in an application
 
-In Nevermined you can find web services published by some other users. These web services are published in such a way any user can [purchase a subscription](07-search-and-purchase.md) and get access to them.
-
-In this tutorial we are gonna see how a user who already owns a subscription giving access to a web service, can integrate that web service in an application.
+In this tutorial we show how a user who bought a subscription to a web service, can integrate that web service in an application.
 
 ## Getting ready
 
-Currently, the [Nevermined App](https://mumbai.nevermined.app/) is connected to the Polygon Mumbai test network. In order to interact with that network you need to:
-
-1. Connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](10-faucets.md)).
-3. You should have own a subscription with a web service attached to it. If you don't please read the Tutorial [How to search and purchase assets](07-search-and-purchase.md) first.
+If you got this far, we assume you know that: 
+1. You need to connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
+2. You need some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](10-faucets.md)).
+3. You also need to own a Subscription NFT for the web service you want to integrate. If you haven't done that yet, first purchase a subscription. [tutorial here](07-search-and-purchase.md)
 
 ## How to integrate a web service
 
@@ -23,29 +20,27 @@ The steps to integrate are the following:
 
 ### 1. Open your Dashboard page
 
-Click on the “Dashboard” link on the header of the application. Click on the "Purchased" link to display the subscriptions you purchased and already own.
+Click on the “Dashboard” link on the header of the application. Click on the "Purchased" link to display the subscriptions you own.
 
 ![Consumer Dashboard](../images/tutorials/15_Consumer_Dashboard_after.png)
 
 ### 2. Get the JWT access token
 
-Now you can see all the subscriptions you own, if you click in the arrow you will expand the view listing all the assets (datasets and webservices) included as part of the subscription.
+Click on the arrow to list all the assets (datasets and webservices) that are part of the subscription.
 
-All the web services included as part of the subscription are identified with the type "Web service" and will show an **"API"** button at right. If you click on it, the application will require you to sign a message and will show the web service JWT access token.
+Each web services will show an **"API"** button at the right hand side. If you click on it, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
 
 ![Consumer Dashboard](../images/tutorials/16_Consumer_Dashboard_JWT.png)
 
-### 3. Copy the JWT token
+The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
-The JWT token is the access key identifying you as a subscriber and allows you to make HTTP requests to the web service. Once you have it, using it you can make requests to all the endpoints included as part of the web service.
+Copy both the JWT token and the Proxy url (https://proxy.nevermined.network/). You need these to enable your app to send HTTP requests.
 
-Copy the JWT token and the Proxy url (https://proxy.nevermined.network/) from the screen, we are gonna use them to send a HTTP request.
+### 3. Use the JWT to call the service
 
-### 4. Use the JWT to call the service
+Next we will show how you can integrate the web service into your app using Command Line. 
 
-Having the JWT and the Proxy url We are gonna test everything works in the command line. 
-
-#### 4.a Using curl to integrate the web service
+#### 3.a Using curl to integrate the web service
 
 Here we are gonna use **curl** but the same works for any HTTP client application or library.
 
@@ -66,7 +61,7 @@ curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $
 ```
 
 
-#### 4.b Using typescript to integrate the web service
+#### 3.b Using typescript to integrate the web service
 
 ```typescript
 const proxyEndpoint = `https://proxy.nevermined.network/ask`
