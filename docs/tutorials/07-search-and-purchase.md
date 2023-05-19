@@ -11,8 +11,8 @@ The Nevermined marketplace allows you to browse, search and purchase access to a
 Currently, the Nevermined App is connected to the Polygon Mumbai test network. In order to interact with that network you need to:
 
 1. Connect your Metamask wallet to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the [Mumbai Faucet](10-faucets.md).
-3. You will need (test) USDC to pay for the subscription. Again, there's [a faucet](10-faucets.md) for that. 
+2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the [Mumbai Faucet](50-faucets.md).
+3. You will need (test) USDC to pay for the subscription. Again, there's [a faucet](50-faucets.md) for that. 
 
 ## How to buy a subscription for the asset you want
 

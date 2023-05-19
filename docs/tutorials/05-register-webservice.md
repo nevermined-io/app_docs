@@ -16,7 +16,7 @@ An asset can not be registered without having previously configured a subscripti
 Currently, the [Nevermined App](https://mumbai.nevermined.app/) is connected to the Polygon Mumbai test network. In order to interact with that network you need to:
 
 1. Connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](10-faucets.md)).
+2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](50-faucets.md)).
 3. You should have created a subscription first. If you haven’t done that yet, go to [How to publish a subscription Tutorial](04-create-subscription.md) for instructions.
 
 ## How to register a web service
