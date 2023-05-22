@@ -11,7 +11,7 @@ In this tutorial we show how a user who bought a subscription to a web service, 
 
 If you got this far, we assume you know that: 
 1. You need to connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. You need some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](10-faucets.md)).
+2. You need some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](50-faucets.md)).
 3. You also need to own a Subscription NFT for the web service you want to integrate. If you haven't done that yet, first purchase a subscription. [tutorial here](07-search-and-purchase.md)
 
 ## How to integrate a web service

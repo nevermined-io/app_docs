@@ -23,7 +23,7 @@ When you’ve completed those 2 steps,  the subscription NFT becomes an access c
 The subscription NFT contracts will be deployed in a blockchain network. Currently, the Nevermined App is connected to the Polygon Mumbai test network. In order to interact with that network you need to:
 
 1. Connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the [Mumbai Faucet](10-faucets.md).
+2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the [Mumbai Faucet](50-faucets.md).
 
 ## How to create a subscription
 

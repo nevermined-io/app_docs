@@ -105,7 +105,7 @@ Depending on where you live, you may be able to purchase Matic directly on Metam
 
 ### To buy Matic on Metamask on a Testnet
 
-Please read the [Tutorial for getting tokens from faucets in testing environments](10-faucets.md).
+Please read the [Tutorial for getting tokens from faucets in testing environments](50-faucets.md).
 
 ### To buy Matic on Metamask
 
