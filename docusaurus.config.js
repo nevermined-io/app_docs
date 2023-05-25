@@ -82,7 +82,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Nevermined Logo',
-          src: 'img/nevermined/nevermined_logo.svg',
+          src: 'img/nevermined/nevermined-app-logo.png',
         },
         items: [
           {
