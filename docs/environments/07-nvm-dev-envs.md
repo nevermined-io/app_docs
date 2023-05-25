@@ -6,7 +6,6 @@ description: Nevermined Testnet Environments
 # Testnet environments
 
 Testnet environments are public nevermined environments deployed on public EVM-compatible testnet networks. Typically we use Polygon Mumbai.
-Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai faucet](https://faucet.polygon.technology/) for requesting MATIC.
 
 ## Network Fee
 
@@ -24,3 +23,22 @@ The network fee in Nevermined testnets is **1%** and the receiver of that fee is
 The Nevermined testing environment can be found on the following url:
 
 https://mumbai.nevermined.app/
+
+:::info
+
+For Polygon testnet you can use the [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai faucet](https://faucet.polygon.technology/) for requesting MATIC.
+
+:::
+
+
+## Gnosis - Chiado
+
+The Nevermined testing environment can be found on the following url:
+
+https://chiado.nevermined.app/
+
+:::info
+
+For Gnosis testnet Chiado you can use the [Gnosis Faucet](https://gnosisfaucet.com/) for requesting some xDAI.
+
+:::
