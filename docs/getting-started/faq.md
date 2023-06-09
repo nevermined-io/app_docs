@@ -83,7 +83,7 @@ Web services allow applications to interact with each other over the internet, e
 ## What do I need to get started as a consumer?
 
 * A wallet;
-* If you’re buying an asset on https://polygon.nevermined.app/, you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
+* If you’re buying an asset on https://nevermined.app/, you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
 * If you’re buying an asset on https://gnosis.nevermined.app/, you need USDC tokens to pay for the assets you want to purchase and a small amount of xDAI for the network gas fees.
 
 
