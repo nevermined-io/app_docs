@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
   title: 'Nevermined App Documentation',
   tagline:
-    'Nevermined champions open Data and AI to lower the barrier of entry for AI adoption and advancement and opposes the centralization of AI development and training data',
+    'Monetize your AI and your Data with Nevermined Smart Subscriptions',
   url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -132,7 +132,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://blog.nevermined.io/',
+                href: 'https://nevermined.io/nevermined-blog/',
               },
               {
                 label: 'GitHub',
