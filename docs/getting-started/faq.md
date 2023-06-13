@@ -12,7 +12,7 @@ One of the standout features of Nevermined is the full data & AI provenance trac
 
 ## What is Nevermined App?
 
-The Nevermined App allows Data & AI developers to create tokenized subscriptions that allow them to monetize their data assets or web services. The Nevermined App simply creates NFTs according to the time and price conditions set by the publisher. This smart contract then tokengates your assets for a set period of time to wallets that own the NFTs. No NFT = No Access.
+The Nevermined App allows Data & AI developers to create tokenized subscriptions that allow them to monetize their data assets or web services. These Smart Subscriptions simply create access tokens according to the time and price conditions set by the publisher. This smart contract then tokengates your assets for a set period of time to wallets that own the access token. No Smart Subscription token = No Access.
 
 ## Who can use Nevermined App?
 
@@ -30,27 +30,23 @@ App developers can purchase access to a broad range of AI Services and integrate
 
 Researchers or data consumers who require access to specific or specialized data that is not readily accessible to the public, can purchase access to datasets, in order to advance their research.
 
-
 ## How does Nevermined App work?
 
 * AI service publishers can tokenize their API endpoint and embed time and price access conditions. Data publishers will simply go through an upload flow.
 * Once the subscription terms are created, a DID associated with the publisher’s wallet is issued and it can be then linked to a specific subscription.
 * At the end of the process, the App will automatically create a widget containing the subscription information and display it on the marketplace, but publishers also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
 * Purchasing access means the asset's smart contract sends the buyer a non-fungible Subscription token, using ERC-standards, that can be simply copied into the Buyer’s application.
-* This Subscription NFT proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
+* This Smart Subscription proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
 
-## What are NFTs
+## What are Smart Subscriptions
 
-NFTs, or non-fungible tokens, are unique digital items stored on a blockchain. NFTs can represent any asset and serve as a digital record of ownership.
+Smart Subscriptions is a new concept that builds on blockchain and technology, but provides much greater utility and flexibility. Traditionally, NFT technology has been applied to represent a unique asset, 1-to-1. For example, a Bored Ape NFT has one JPEG for each token.While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets. 
 
-## What are Subscription NFTs
-
-Subscription NFTs are a new concept that provide much greater utility and flexibility for NFTs. Traditionally, the relationship between token and asset for an NFT has been 1-to-1. For example, a Bored Ape NFT has one JPEG for each token.
-
-While the 1-to-1 nature of NFTs works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets. 
 In the case of AI, a workflow might require access to dozens of assets (i.e. data and services). If each dataset and analysis service was represented by an NFT, this would correspond to dozens of onchain confirmations, performed via your wallet, to orchestrate the end-to-end process. The result? Horrendous UX.
 
-Instead, Subscription NFTs facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one NFT can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference. In addition, Nevermined has added the ability to tokengate access to a Subscription NFTs assets based on time, so now you can tokengate access for 1 hour, 1 day, 1 month, 1 year…the sky’s the limit!
+Instead, Smart Subscriptions facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one Smart Subscription can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference. 
+
+In addition, Nevermined has added the ability to add a time-related parameter to the Smart Subscriptions and its related assets. This means you can tokengate access for 1 hour, 1 day, 1 month, 1 year… The sky’s the limit!
 
 The result? Much greater usability and a big step change in overall utility.
 
