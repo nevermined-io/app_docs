@@ -11,7 +11,7 @@ Publishers can use Nevermined to create Smart Subscriptions. These function as a
 Creating a Smart Subscription is the first of two steps:
 
 * First, you create a subscription. 
-* Then, you register your asset (an AI web service, Data,...) and you link it to your subscription. This is explained in the [web service tutorial](05-register-webservice) and [data tutorial](06-register-dataset).
+* Then, you register your asset (an AI web service, Data,...) and you link it to your subscription. This is explained in the [web service tutorial](05-register-webservice.md) and [data tutorial](06-register-dataset.md).
 
 When you’ve completed those 2 steps, the Smart Subscription becomes an access control mechanism to your asset.
 
