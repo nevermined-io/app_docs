@@ -17,6 +17,17 @@ The network fee in Nevermined testnets is **1%** and the receiver of that fee is
 
 :::
 
+## Arbitrum - Goerli
+
+The Nevermined Arbitrum testing environment can be found on the following url:
+
+https://goerli.nevermined.app/
+
+:::info
+
+For Arbitrum Goerli testnet you can use the [Circle tutorial](https://developers.circle.com/developer/docs/funding-test-wallets#option-2-fund-your-wallet-with-an-external-usdc-transfer) to get USDC and the [Arbitrum Faucet](https://faucet.triangleplatform.com/arbitrum/goerli) to get some ETH.
+
+:::
 
 ## Polygon - Mumbai
 

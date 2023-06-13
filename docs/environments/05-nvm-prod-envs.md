@@ -18,11 +18,18 @@ The network fee in Nevermined testnets is **1%** and the receiver of that fee is
 :::
 
 
-## Polygon - Matic
+## Arbitrum One
+
+The Nevermined Arbitrum production environment can be found on the following url:
+
+https://nevermined.app/
+
+
+## Polygon Matic
 
 The Nevermined Polygon production environment can be found on the following url:
 
-https://nevermined.app/
+https://matic.nevermined.app/
 
 ## Gnosis - Mainnet
 

@@ -128,6 +128,35 @@ const config = {
             ],
           },
           {
+            title: 'Nevermined App',
+            items: [
+              {
+                label: 'Arbitrum One',
+                to: 'https://nevermined.app/',
+              },
+              {
+                label: 'Polygon Matic',
+                to: 'https://matic.nevermined.app/',
+              },
+              {
+                label: 'Gnosis',
+                to: 'https://gnosis.nevermined.app/',
+              },
+              {
+                label: 'Arbitrum Goerli',
+                to: 'https://goerli.nevermined.app/',
+              },
+              {
+                label: 'Polygon Mumbai',
+                to: 'https://matic.nevermined.app/',
+              },
+              {
+                label: 'Gnosis Chiado',
+                to: 'https://chiado.nevermined.app/',
+              },              
+            ],
+          },          
+          {
             title: 'More',
             items: [
               {
