@@ -1,21 +1,21 @@
 ---
 sidebar_position: 2
-description: How to connect your Metamask wallet
+description: How to connect MetaMask
 ---
 
-# How to use and configure Metamask wallet
+# How to set up a MetaMask wallet
 
-MetaMask is a cryptocurrency wallet used to interact with the Ethereum blockchain. It can be accessed through an app or through a browser extension.
-For the registration of assets and purchase of them Nevermined App registers all the transactions in a blockchain. So to make full usage of the app
-you need to install and configure a Web3 wallet in your browser. 
+Nevermined is a blockchain-based application. This means that you can simply connect and log in with a Web3 wallet. Nevermined has integrated Metamask, arguably the most common of wallet applications.  
 
-In this tutorial we show how to use Metamask for that purpose:
+MetaMask is a Web3 wallet used to interact with different blockchains. It can be accessed through a browser extension or a mobile app.
+
+In this tutorial we show how to get started with MetaMask:
 
 ## How to connect your wallet/Metamask
 
-### Step 1: Download MetaMask wallet
+### Step 1: Download MetaMask
 
-Go to [Metamask Website](https://metamask.io/) and click on “Download”. Choose your preferred browser or mobile application and install the MetaMask extension.
+Go to [Metamask Website](https://metamask.io/) and click on “Download”. Choose your preferred browser or mobile application and install.
 MetaMask supports iOS, Android native apps along with Chrome, Firefox, Brave and Edge browser extensions.
 
 ![](../images/tutorials/metamask/MM_install_MM.png)
@@ -29,16 +29,21 @@ Click on “Create a Wallet” and on the next window click on “I agree” if 
 
 ### Step 3: Create a strong password for your wallet
 
+:::tip
+As MetaMask is a decentralized app, it does not store the password on its server. This means you should make sure you store it safely yourself. 
+:::
+
 ![](../images/tutorials/metamask/MM_create_password.png)
 
 ### Step 4: Securely store the seed phrase for your wallet
 
-Click on “Click here to reveal secret words” to show the seed phrase.
-
-
 :::tip
-MetaMask requires that you store your seed phrase in a safe place. It is the only way to recover your funds should your device crash or your browser reset. We recommend you write it down. The most common method is to write your 12-word phrase on a piece of paper and store it safely in a place where only you have access. Note: if you lose your seed phrase, MetaMask can’t help you recover your wallet and your funds will be lost forever.
+A seed phrase is a unique combination of words that is irrevocably and cryptographically linked to your wallet address. The phrase is generated in the application and is not known to anyone but you. This is very secure, but MetaMask recommends that you store your seed phrase in a safe place. It is the only way to recover your funds should your device crash or your browser reset. We recommend you write it down. The most common method is to write your 12-word phrase on a piece of paper and store it safely in a place where only you have access. Note: if you lose your seed phrase, MetaMask can’t help you recover your wallet nor your funds.
 :::
+
+- Click on “Click here to reveal secret words” to show the seed phrase.
+
+- Then click on 'Next'
 
 ![](../images/tutorials/metamask/MM_post_recovery_phrase.png)
 
@@ -46,7 +51,6 @@ MetaMask requires that you store your seed phrase in a safe place. It is the onl
 Never share your seed phrase or your private key to anyone or any site, unless you want them to have full control over your funds.
 :::
 
-Click on next
 
 ### Step 5: Seed phrase confirmation
 
@@ -56,7 +60,7 @@ Congratulations! Your MetaMask wallet has been set up successfully.
 
 ![](../images/tutorials/metamask/MM_Success.png)
 
-You can now access your wallet by clicking on the MetaMask icon at the top-right-end corner of your preferred browser.
+You can now access your wallet by clicking on the MetaMask icon in the extensions bar of your browser.
 
 
 ## How To Use the MATIC and MUMBAI Networks With MetaMask
