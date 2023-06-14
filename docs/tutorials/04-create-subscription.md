@@ -27,8 +27,8 @@ The Smart Subscription will be deployed in a blockchain network. Currently, the 
 
 In order to interact with that network you need to:
 
-1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask.md)).
-2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask.md))
+1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask-networks.md)).
+2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask-tokens.md))
 
 ## How to create a Smart Subscription
 
