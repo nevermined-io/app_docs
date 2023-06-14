@@ -1,66 +1,83 @@
 ---
-sidebar_position: 5
-description: How to register your web service and associate to a subscription
+sidebar_position: 6
+description: How to register your web service and link to a Smart Subscription
 ---
 
-# How to register your web service
+# How to register your AI web service and link to a Smart Subscription
 
-In Nevermined you can register a web service or a data set and make it “accessible” to users that hold a specific subscription NFT. In a previous tutorial we saw how to create a subscription. Here we show how to register a new asset and link it to a subscription.
+In a previous tutorial we showed how to create a Smart Subscription. Here we go through the required steps of registering a new AI web service and link it to your Smart Subscription. Owners who have purchased that subscription will get access to the related AI web service. 
 
 :::note
-An asset can not be registered without having previously configured a subscription. Soo if you skipped that part, please go to the tutorial about [How to publish a subscription](04-create-subscription.md) first.
+An asset can not be registered without having previously configured a subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
 :::
 
-## Getting ready
+## Before you start
 
-Currently, the [Nevermined App](https://mumbai.nevermined.app/) is connected to the Polygon Mumbai test network. In order to interact with that network you need to:
+Currently, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks (plus on their respective testnets). 
 
-1. Connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. Get some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](50-faucets.md)).
-3. You should have created a subscription first. If you haven’t done that yet, go to [How to publish a subscription Tutorial](04-create-subscription.md) for instructions.
+In order to interact with that network you need to:
 
-## How to register a web service
+1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask-networks.md)).
+2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask-tokens.md))
 
-You can use the [Nevermined App](https://mumbai.nevermined.app/) to register a web service and make it accessible, only to users holding a specific subscription. The steps to register a web service are the following:
+## How to register an AI web service
+
+These are the steps to make your web service accessible to holders of your Smart Subscription.
 
 ### 1. Open the New Asset page
 
-Click on the “Create Asset” button of the Web Service box
+- Click on the New button in the top right to go the New Asset page.
+- Click on the “Create Asset” button of the Web Service box.
 
 ![Create a new Asset page](../images/tutorials/01_New_Subscription.png)
 
 ### 2. Add the web service metadata
 
-Provide a short title, description and tags to explain to potential users what your web service is about. Some examples:
+Provide a short title. 
 
-- _Summarize any document you have_
-- _My OpenAI assistant_
-- _World weather forecast service_
+Use the description box to explain to potential users what your web service is about. Some examples:
+- _An open source summarizer specialised in scientific research_
+- _A chatbot-style AI Agent that generates quotes based on Elvis lyrics. Built using Lllama Index and an open source LLM. Good for devs who want to have some fun, build a Discord bot,..._
+
+Add tags help buyers find your AI Web Service in the Nevermined marketplace. 
+Click the + symbol to add new tags. 
 
   ![Add Web Service metadata page](../images/tutorials/06_New_Service_01.png)
 
 ### 3. Configure the attributes of the web service
 
-First you add all the server links we want to expose and protect (i.e: <https://myapi.example.com/v1>). Paste the link and click on the **“+”** button
-Note that you can use this URL field  to specify regular expressions. This could be useful when you want to expose multiple links at once. For example: <https://myapi.example.com/(.*)> will expose all the endpoints under the same domain.
+In the next page, you add all the endpoint APIs of your AI agent or model (e.g. <https://myapi.example.com/v1>). Paste the link and click on the **“+”** button
+
+Note that you can use this URL field to specify regular expressions. This could be useful when you want to expose multiple links at once. For example: 
+<https://myapi.example.com/(.*)> will expose all the endpoints under the same domain.
+
 ![Add Web Service details page](../images/tutorials/07_New_Service_02.png)
 
 ### 4. Add the access token
 
-Next, you can add an optional access token to your web service. Nevermined can protect the access to a web service that uses a HTTP Bearer token for authorization. Your access token is encrypted and always will be kept private.
+Next, you add an access token to your web service. Nevermined can protect the access to a web service that uses a HTTP Bearer token for authorization. Your access token is encrypted and will always be kept private.
 
-### 5. Upload a cover image
+### 5. Add a sample link
 
-This is optional but recommended. Providing cover images make more attractive your web service on the marketplace.
+Give your potential buyers an idea of what they can expect. Add a test link showing what your AI is about.
 
-### 6. Upload a Terms and Conditions document
+### 6. More information about your web service
 
-The T&C document defines any rules related to the usage of your web service. This is optional, but recommended. Click on the “Next” button when you are done.
+Add any information for developers about how to integrate your web service. 
 
-### 7. Attach a subscription
+You can also add a visual that gives more info. 
 
-Now the web service is configured, you need to specify what type of subscription a user requires to get access to your web service. You can link your web service to one or multiple subscriptions.
+<img width="441" alt="webservice-instructions" src="https://github.com/nevermined-io/app_docs/assets/17851410/08b82e6c-3b52-47b0-80c4-c1e01ea5e06b">
+
+### 7. Choose a subscription plan 
+
+Next, you need to specify what type of subscription a user requires to get access to your web service. You can link your web service to one or multiple subscriptions.
 ![Associate a subscription to a web service page](../images/tutorials/08_New_Service_03.png)
+
+:::Pro tip
+If you want your web service to be available via different plans, you can go through this process once more. 
+Register the asset again and add it to another Smart Subscription plan. For now ;-)
+:::
 
 ### 8. Review everything is okay
 
@@ -69,13 +86,15 @@ Finally, review your web service subscription. Click on “Create” if everythi
 
 ### 9. Web service registration
 
-The Nevermined App will register the new web service on the blockchain. This will require you to sign one transaction in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of MATIC to pay for the transaction fees. You can get some free MATIC using the [Mumbai Faucet](https://mumbaifaucet.com/).
+The Nevermined App will register the new web service on the blockchain. This will require you to sign one transaction in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of gas tokens to pay for the transaction fees. 
 ![Register Web Service page](../images/tutorials/10_New_Service_05.png)
 
 ---
 
+### 10. Distribute and make some money
+
 You’re done! Go to your dashboard to see your subscription tiers and the web services associated with it.
 ![Publisher dashboard page](../images/tutorials/11_Publisher_Dashboard_no_balance.png)<br/>
 
-Click on the web services to see more detailed information, including the on-chain provenance info and a Buy Now section. You can share this link with anyone interested in buying a subscription to your web service.  
+Click on the web service to see more detailed information, including the on-chain provenance info and a Buy Now section. You can share this link with anyone interested in buying a subscription to your AI.  
 ![New web service details page](../images/tutorials/12_Service_details.png)
