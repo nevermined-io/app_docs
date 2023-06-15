@@ -89,7 +89,7 @@ After confirming the Swap, USDC will show up in the Assets tab of your wallet.
 
 USDC is a token that is cross-chain compatible. This means it can be 'bridged' from one network to another. If you already have USDC on another network (e.g. Ethereum) you can use this option to get USDC on Polygon. 
 
-Note: there are other bridging services available, e.g. https://wallet.polygon.technology/polygon/bridge. 
+Note: there are other bridging services available, e.g. [https://wallet.polygon.technology/polygon/bridge](https://wallet.polygon.technology/polygon/bridge). 
 Take good note of disclaimers and fees. 
 
 
@@ -113,16 +113,16 @@ As often, these things change, so do your own research. And if you have any ques
 This [StakingBits article]([url](https://medium.com/stakingbits/setting-up-metamask-for-gnosis-chain-formerly-xdai-e0deb1541757)) lists the following options: 
 
 - From another user on the Gnosis Chain
-- Converting Dai from Ethereum to xDai using the [xDai Bridge]([url](https://bridge.gnosischain.com/))
-- Convert Dai from BSC to xDai using the [OmniBridge]([url](https://omni.xdaichain.com/))
-- Purchase directly on [AscendEx]([url](https://ascendex.com/en/global-digital-asset-platform)) with the xDai/USDT Pair
-- Purchase directly with fiat using [Ramp.Network]([url](https://ramp.network/buy/?swapAsset=XDAI))
+- Converting Dai from Ethereum to xDai using the [xDai Bridge](https://bridge.gnosischain.com/)
+- Convert Dai from BSC to xDai using the [OmniBridge](https://omni.xdaichain.com/)
+- Purchase directly on [AscendEx](https://ascendex.com/en/global-digital-asset-platform) with the xDai/USDT Pair
+- Purchase directly with fiat using [Ramp.Network](https://ramp.network/buy/?swapAsset=XDAI)
 
 
 ### Scenario 2: Getting USDC for Gnosis
 
-- Bridge USDC from Ethereum or Binance Smart Chain, according to the instructions in [this tutorial]([url](https://docs.gnosischain.com/bridges/tutorials/using-omnibridge/)). 
-- Swap xDAI for USDC on a decentralised exchange like [Honeyswap]([url](https://honeyswap.1hive.eth.limo//#/swap)). 
+- Bridge USDC from Ethereum or Binance Smart Chain, according to the instructions in [this tutorial](https://docs.gnosischain.com/bridges/tutorials/using-omnibridge/). 
+- Swap xDAI for USDC on a decentralised exchange like [Honeyswap](https://honeyswap.1hive.eth.limo//#/swap). 
 
 
 
@@ -172,7 +172,7 @@ If you have ETH on another network (like Ethereum), you can bridge it to make it
 
 You can use the Bridge function in your MetaMask wallet. 
 
-Note: there are other bridging services available, e.g. https://bridge.arbitrum.io/
+Note: there are other bridging services available, e.g. [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
 Take good note of disclaimers and fees. 
 
 
@@ -218,7 +218,7 @@ In the MetaMask home screen, Choose Swap to exchange some of your Arbitrum ETH f
 
 After confirming the Swap, USDC will show up in the Assets tab of your wallet. 
 
-You can also use a decentralised exchange like Uniswap, SushiSwap or any of the other [dozens of exchanges that work on Arbitrum]([url](https://www.alchemy.com/list-of/decentralized-exchanges-dexs-on-arbitrum)) to swap a token (like ETH) for USDC. 
+You can also use a decentralised exchange like Uniswap, SushiSwap or any of the other [dozens of exchanges that work on Arbitrum](https://www.alchemy.com/list-of/decentralized-exchanges-dexs-on-arbitrum) to swap a token (like ETH) for USDC. 
 
 
 
