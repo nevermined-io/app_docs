@@ -5,21 +5,23 @@ description: How to get tokens
 
 # How to add funds to your MetaMask wallet
 
-Below we will outline the steps to take to get tokens for the 3 main networks: Polygon, Gnosis and Arbitrum. 
+Nevermined is live on the 3 main networks. Polygon, Gnosis and Arbitrum. 
 
-If you want to get tokens for the testnets, please go [this tutorial](50-faucets.md) on getting tokens from faucets. 
+Below we will outline the steps you need to take to get tokens for these networks. 
+If you want to get tokens for the respective testnets, please go to [this tutorial](50-faucets.md), on getting tokens from faucets. 
 
 
 ## How to get MATIC and USDC for Polygon
 
-As a buyer you need MATIC to pay for the network transaction fees and USDC to pay for the assets you're purchasing. 
-As a publisher, you only need MATIC, to pay for the network transaction feed. You will receive USDC when someone buys access to your asset. 
+* To buy a Smart Subscription you need MATIC to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Smart Subscription (and the associated AI web service or Data), you only need MATIC, to pay for the network transaction fees. 
+You will receive USDC when someone buys access to your asset. 
 
 
-### Option 1: Buy MATIC on MetaMask
+### Scenario 1: Buy MATIC on MetaMask
 
 Depending on where you live, you may be able to purchase MATIC directly on MetaMask using a credit card or debit card. 
-Please note that this method can incur additional fees, and you might not receive the Matic immediately, as transactions can take time to complete. 
+Please note that this method can incur additional fees, and you might not receive the MATIC immediately, as transactions can take time to complete. 
 
 Make sure you are connected to the Polygon main network. 
 
@@ -46,13 +48,14 @@ These generally include Know Your Customer (KYC) requirements and filling in you
 
 #### Step 5: You are done
 
-Once you are done with the instructions, your funds should appear in your Metamask wallet. It’s important to look carefully at the transaction terms when choosing a third-party service to fund your account. 
+Once you are done with the instructions, your funds should appear in your MetaMask wallet. It’s important to look carefully at the transaction terms when choosing a third-party service to fund your account. 
 
 
 
-### Option 2: Transfer MATIC or USDC to your wallet
+### Scenario 2: Transfer MATIC to your MetaMask wallet
 
-You can fund your MetaMask wallet with MATIC or USDC that you bought on an exchange or are holding in another wallet. 
+You can fund your MetaMask wallet with MATIC you bought on an exchange or are holding in another wallet. 
+
 MATIC can be bought on major exchanges such as Coinbase, Binance or Kraken. Full list see [here](https://coinmarketcap.com/currencies/polygon/markets/).
 
 Below are the steps you need to follow after you have purchased your MATIC and want to transfer it to your MetaMask wallet. 
@@ -69,3 +72,28 @@ The token transfer process may not be instant. After processing your transaction
 Once they have arrived, they will show up in the Assets tab of your MetaMask wallet. 
 
 
+### Scenario 3: Get USDC for Polygon on MetaMask
+
+#### Step 1: Open the Metamask wallet browser extension
+
+If you're connected to Polygon, you will find four buttons under your wallet balance: Buy, Send, Swap and Bridge.
+
+#### Step 2: Swap option
+
+Choose Swap to exchange some of your MATIC for USDC. Take note of transaction network fees and MetaMask fees. 
+
+After confirming the Swap, USDC will show up in the Assets tab of your wallet. 
+
+
+#### Step 2: Bridge option
+
+USDC is a token that is cross-chain compatible. This means it can be 'bridged' from one network to another. If you already have USDC on another network (e.g. Ethereum) you can use this option to get USDC on Polygon. 
+
+Note: there are other bridging services available, e.g. https://wallet.polygon.technology/polygon/bridge. 
+Take good note of disclaimers and fees. 
+
+
+### Scenario 4: Transfer USDC from an exchange
+
+Some exchanges allow you to withdraw USDC directly to the Polygon network. 
+If this feature is available, you can buy USDC on your favourite exchange and withdraw it to your MetaMask wallet. Make sure you read the exchange documentation and select the Polygon network when sending your USDC. 
