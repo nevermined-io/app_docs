@@ -79,13 +79,15 @@ Click on “Create” if everything looks good. Or go “Back” if you want to 
 
 ![Review new dataset is okay](../images/tutorials/21_Publisher_dataset_04.png)
 
-### 8. Dataset registration
+### 6. Dataset registration
 
 The Nevermined App will register the new data set on the blockchain. This will require you to sign two transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of gas tokens to pay for the network transaction fees. 
 
 ![Registration of the dataset](../images/tutorials/22_Publisher_dataset_05.png)
 
 ---
+
+### 7. Distribute and make some money
 
 Go to your Dashboard to get an overview of your Smart Subscription(s) and the data set(s) associated with it.
 
