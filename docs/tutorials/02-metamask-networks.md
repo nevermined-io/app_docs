@@ -101,7 +101,7 @@ Block Explorer URL: https://blockscout.com/gnosis/chiado
 ```
 
 ### Arbitrum Goerli Testnet
-For the most up to date network details, visit the [Gnosis website](https://docs.gnosischain.com/tools/wallets/metamask/).
+For the most up to date network details, visit a website like [https://chainlist.org/](https://chainlist.org/) or check other Arbitrum documentation.
 
 ```
 Network Name: Arbitrum Goerli Testnet
