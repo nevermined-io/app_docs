@@ -78,14 +78,14 @@ Once they have arrived, they will show up in the Assets tab of your MetaMask wal
 
 If you're connected to Polygon, you will find four buttons under your wallet balance: Buy, Send, Swap and Bridge.
 
-#### Step 2: Swap option
+#### Step 2a: Swap option
 
 Choose Swap to exchange some of your MATIC for USDC. Take note of transaction network fees and MetaMask fees. 
 
 After confirming the Swap, USDC will show up in the Assets tab of your wallet. 
 
 
-#### Step 2: Bridge option
+#### Step 2b: Bridge option
 
 USDC is a token that is cross-chain compatible. This means it can be 'bridged' from one network to another. If you already have USDC on another network (e.g. Ethereum) you can use this option to get USDC on Polygon. 
 
@@ -97,3 +97,130 @@ Take good note of disclaimers and fees.
 
 Some exchanges allow you to withdraw USDC directly to the Polygon network. 
 If this feature is available, you can buy USDC on your favourite exchange and withdraw it to your MetaMask wallet. Make sure you read the exchange documentation and select the Polygon network when sending your USDC. 
+
+
+## How to get xDAI and USDC for Gnosis
+
+* To buy a Smart Subscription on Gnosis you need xDAI to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Smart Subscription (and the associated AI web service or Data), you only need xDAI, to pay for the network transaction fees. 
+You will receive USDC when someone buys access to your asset. 
+
+As often, these things change, so do your own research. And if you have any questions, join our Discord. 
+
+
+### Scenario 1: Getting xDAI
+
+This [StakingBits article]([url](https://medium.com/stakingbits/setting-up-metamask-for-gnosis-chain-formerly-xdai-e0deb1541757)) lists the following options: 
+
+- From another user on the Gnosis Chain
+- Converting Dai from Ethereum to xDai using the [xDai Bridge]([url](https://bridge.gnosischain.com/))
+- Convert Dai from BSC to xDai using the [OmniBridge]([url](https://omni.xdaichain.com/))
+- Purchase directly on [AscendEx]([url](https://ascendex.com/en/global-digital-asset-platform)) with the xDai/USDT Pair
+- Purchase directly with fiat using [Ramp.Network]([url](https://ramp.network/buy/?swapAsset=XDAI))
+
+
+### Scenario 2: Getting USDC for Gnosis
+
+- Bridge USDC from Ethereum or Binance Smart Chain, according to the instructions in [this tutorial]([url](https://docs.gnosischain.com/bridges/tutorials/using-omnibridge/)). 
+- Swap xDAI for USDC on a decentralised exchange like [Honeyswap]([url](https://honeyswap.1hive.eth.limo//#/swap)). 
+
+
+
+## How to get ETH and USDC for Arbitrum
+
+* To buy a Smart Subscription on Arbitrum you need ETH to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Smart Subscription (and the associated AI web service or Data), you only need ETH, to pay for the network transaction fees. 
+You will receive USDC when someone buys access to your asset. 
+
+
+### Scenario 1: Buy ETH on MetaMask
+
+Depending on where you live, you may be able to purchase ETH directly on MetaMask using a credit card or debit card. 
+Please note that this method can incur additional fees, and you might not receive the ETH immediately, as transactions can take time to complete. 
+
+Make sure you are connected to the Arbitrum main network. If not, you may end up buying ETH for Ethereum. 
+
+![](../images/tutorials/metamask/Matic_header.png)
+
+#### Step 1: Open the Metamask wallet browser extension
+
+On the front page, you will find three buttons under your wallet balance: Buy, Send, and Swap.
+
+![](../images/tutorials/metamask/MM_Buy.png)
+
+#### Step 2: Click Buy
+
+#### Step 3: Specify your country
+
+You will be prompted to select your country. Based on this, MetaMask will offer different payment methods, like Credit/debit card, Sepa or a third-party service like MoonPay or Transak to facilitate the transaction.
+
+![](../images/tutorials/metamask/MM_buy_3.png)
+
+
+#### Step 4: Follow the prompts given by the service
+
+These generally include Know Your Customer (KYC) requirements and filling in your credit card information.
+
+#### Step 5: You are done
+
+Once you are done with the instructions, your funds should appear in your MetaMask wallet. It’s important to look carefully at the transaction terms when choosing a third-party service to fund your account. 
+
+
+### Scenario 2: Bridge ETH to Arbitrum 
+
+If you have ETH on another network (like Ethereum), you can bridge it to make it available and usable on Arbitrum. 
+
+You can use the Bridge function in your MetaMask wallet. 
+
+Note: there are other bridging services available, e.g. https://bridge.arbitrum.io/
+Take good note of disclaimers and fees. 
+
+
+### Scenario 3: Buy USDC for Arbitrum on MetaMask
+
+Depending on where you live, you may be able to purchase USDC (for Arbitrum) directly on MetaMask using a credit card or debit card. 
+Please note that this method can incur additional fees, and you might not receive the USDC immediately, as transactions can take time to complete. 
+
+Important!
+- Make sure you are connected to the Arbitrum main network. If not, you may end up buying USDC for another network like Ethereum or Polygon. 
+- Make sure you buy USDC, not USDC.e. 
+
+![](../images/tutorials/metamask/Matic_header.png)
+
+#### Step 1: Open the Metamask wallet browser extension
+
+On the front page, you will find three buttons under your wallet balance: Buy, Send, and Swap.
+
+![](../images/tutorials/metamask/MM_Buy.png)
+
+#### Step 2: Click Buy
+
+#### Step 3: Specify your country
+
+You will be prompted to select your country. Based on this, MetaMask will offer different payment methods, like Credit/debit card, Sepa or a third-party service like MoonPay or Transak to facilitate the transaction.
+
+![](../images/tutorials/metamask/MM_buy_3.png)
+
+
+#### Step 4: Follow the prompts given by the service
+
+These generally include Know Your Customer (KYC) requirements and filling in your credit card information.
+
+#### Step 5: You are done
+
+Once you are done with the instructions, your funds should appear in your MetaMask wallet. It’s important to look carefully at the transaction terms when choosing a third-party service to fund your account. 
+
+
+
+### Scenario 2: Swap a token for Arbitrum USDC
+
+In the MetaMask home screen, Choose Swap to exchange some of your Arbitrum ETH for USDC. Take note of transaction network fees and MetaMask fees. 
+
+After confirming the Swap, USDC will show up in the Assets tab of your wallet. 
+
+You can also use a decentralised exchange like Uniswap, SushiSwap or any of the other [dozens of exchanges that work on Arbitrum]([url](https://www.alchemy.com/list-of/decentralized-exchanges-dexs-on-arbitrum)) to swap a token (like ETH) for USDC. 
+
+
+
+
+
