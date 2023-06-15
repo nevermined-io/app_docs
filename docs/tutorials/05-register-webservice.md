@@ -98,8 +98,9 @@ Go to your dashboard to get an overview of your Smart Subscription(s) and the we
 
 ![Publisher dashboard page](../images/tutorials/11_Publisher_Dashboard_no_balance.png)<br/>
 
-Click on the web service to see more detailed information, including the on-chain provenance info and a Buy Now section. 
+Click on the web service to go the Asset Detail page. 
 
-You can share this link with anyone interested in buying a subscription to your AI.  
+Share this URL with potential buyers. They can use the 'Buy Now' button to purchase directly from you. 
+In addition, people can also automatically discover your AI web service in the Nevermined Marketplace.  
 
 ![New web service details page](../images/tutorials/12_Service_details.png)
