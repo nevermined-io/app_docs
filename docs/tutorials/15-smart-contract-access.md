@@ -1,15 +1,15 @@
 ---
 sidebar_position: 15
-description: How to use Subscription NFTs to protect Smart Contracts
+description: How to use Smart Subscriptions to protect Smart Contracts
 ---
 
-# How to use Subscription NFTs to protect Smart Contracts?
+# How to use Smart Subscriptions to protect Smart Contracts?
 
-In this tutorial we show how a Smart Contract developer can control which external users can call the contract logic. We explain how you can use Subscription NFTs to limit the ability to execute certain Smart Contract functionalities to holders of an NFT.
+In this tutorial we show how a Smart Contract developer can control which external users can call the contract logic. We explain how you can use Smart Subscription to limit the ability to execute certain Smart Contract functionalities to holders of a Smart Subscription NFT.
 
 ## Getting ready
 
-First you will need to create your own Subscription NFT for your Smart Contract (instructions [here](04-create-subscription.md)).
+First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](04-create-subscription.md)).
 
 :::info Tutorial
 
@@ -18,7 +18,7 @@ All the code used in this tutorial is available in this **[repository](https://g
 :::
 
 
-## How to integrate the Subscription NFT in your Smart Contract
+## How to integrate the Smart Subscription NFT in your Smart Contract
 
 The steps to integrate are the following:
 
@@ -26,9 +26,9 @@ The steps to integrate are the following:
 
 First you need to decide what you need to protect. This is totally dependent on your Smart Contract logic. In our example we are going to protect the `claim` method. This method is used to claim a giveaway in an ERC20 token contract.
 
-### 2. Integrate with the Subscription NFT
+### 2. Integrate with the Smart Subscription NFT
 
-Next, you need to link the Solidity code of your Smart Contract with the Subscription NFT contract. Because the Nevermined contract uses the ERC721 format, you can use the standard ERC721 interfaces to interact with it.
+Next, you need to link the Solidity code of your Smart Contract with the Smart Subscription NFT contract. Because the Nevermined contract uses the ERC721 format, you can use the standard ERC721 interfaces to interact with it.
 
 ```solidity
 IERC721 subscriptionNFT = IERC721(subscriptionNFTAddress);
