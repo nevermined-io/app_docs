@@ -23,12 +23,12 @@ Under the hood, a Smart Subscription is an NFT smart contract, created and owned
 
 ## Before you start
 
-The Smart Subscription will be deployed in a blockchain network. Currently, the Nevermined App is deployed on the Polygon and Gnosis networks (plus on their respective testnets). 
+The Smart Subscription will be deployed in a blockchain network. Currently, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks (plus on their respective testnets). 
 
 In order to interact with that network you need to:
 
-1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask.md)).
-2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask.md))
+1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask-networks.md)).
+2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask-tokens.md))
 
 ## How to create a Smart Subscription
 
@@ -73,12 +73,12 @@ Before creating the subscription, you can review the description, duration and p
 
 ### 5. Register the subscription
 
-The Nevermined App will register your new subscription on the blockchain. This will require you to sign 2 transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of tokens (depending on the network you're using) to pay for the network transaction fees.  
+The Nevermined App will register your new subscription on the blockchain. This will require you to sign 2 transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a small amount of tokens to pay for the network transaction fees.  
 
 ![Finish the subscription creation](../images/tutorials/05_New_Subscription_04.png)
 
 ### 6. See the subscription you just published
 
-Go to your dashboard to see the new subscription you created. Now, you can move on the next tutorial and associate your asset (a [Web Service](05-register-webservice.md), Dataset) to this subscription.
+Go to your dashboard to see the new subscription you created. Now, you can move on the next step: append an asset to your Smart Subscription, either (a [Web Service](05-register-webservice.md) or a [Dataset](06-register-dataset.md).
 
 ![Publisher dashboard](../images/tutorials/17_Publisher_Dashboard_with_balance.png)
