@@ -5,10 +5,10 @@ description: How to register your web service and link to a Smart Subscription
 
 # How to register your AI web service and link to a Smart Subscription
 
-In a previous tutorial we showed how to create a Smart Subscription. Here we go through the required steps of registering a new AI web service and link it to your Smart Subscription. Owners who have purchased that subscription will get access to the related AI web service. 
+In a previous tutorial we showed how to create a Smart Subscription. Here we go through the required steps of registering a new AI web service and link it to your Smart Subscription. Owners who purchase that subscription will get access to the AI web service that is included in the plan. 
 
 :::note
-An asset can not be registered without having previously configured a subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
+You can't register an asset without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
 :::
 
 ## Before you start
@@ -39,16 +39,17 @@ Use the description box to explain to potential users what your web service is a
 - _An open source summarizer specialised in scientific research_
 - _A chatbot-style AI Agent that generates quotes based on Elvis lyrics. Built using Lllama Index and an open source LLM. Good for devs who want to have some fun, build a Discord bot,..._
 
-Add tags help buyers find your AI Web Service in the Nevermined marketplace. 
+Add tags to help buyers find your AI Web Service in the Nevermined marketplace. 
 Click the + symbol to add new tags. 
 
-  ![Add Web Service metadata page](../images/tutorials/06_New_Service_01.png)
+![Add Web Service metadata page](../images/tutorials/06_New_Service_01.png)
 
 ### 3. Configure the attributes of the web service
 
-In the next page, you add all the endpoint APIs of your AI agent or model (e.g. <https://myapi.example.com/v1>). Paste the link and click on the **“+”** button
+In the next page, you add all the endpoint APIs of your AI agent or model (e.g. <https://myapi.example.com/v1>). 
+Paste the link and click on the **“+”** button
 
-Note that you can use this URL field to specify regular expressions. This could be useful when you want to expose multiple links at once. For example: 
+Note that you can use this URL field to specify regular expressions. This can be useful when you want to expose multiple links at once. For example: 
 <https://myapi.example.com/(.*)> will expose all the endpoints under the same domain.
 
 ![Add Web Service details page](../images/tutorials/07_New_Service_02.png)
@@ -65,13 +66,13 @@ Give your potential buyers an idea of what they can expect. Add a test link show
 
 Add any information for developers about how to integrate your web service. 
 
-You can also add a visual that gives more info. 
+You can also add an image to add a visual description of the web service you're making available. 
 
 <img width="441" alt="webservice-instructions" src="https://github.com/nevermined-io/app_docs/assets/17851410/08b82e6c-3b52-47b0-80c4-c1e01ea5e06b">
 
 ### 7. Choose a subscription plan 
 
-Next, you need to specify what type of subscription a user requires to get access to your web service. You can link your web service to one or multiple subscriptions.
+Next, you need to specify what type of subscription a user requires to get access to your web service. 
 ![Associate a subscription to a web service page](../images/tutorials/08_New_Service_03.png)
 
 :::Pro tip
@@ -81,7 +82,8 @@ Register the asset again and add it to another Smart Subscription plan. For now 
 
 ### 8. Review everything is okay
 
-Finally, review your web service subscription. Click on “Create” if everything is okay or click on “Back” if you want to modify anything.
+Finally, review your web service subscription. 
+Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
 ![Add Web Service summary page](../images/tutorials/09_New_Service_04.png)
 
 ### 9. Web service registration
@@ -93,8 +95,13 @@ The Nevermined App will register the new web service on the blockchain. This wil
 
 ### 10. Distribute and make some money
 
-You’re done! Go to your dashboard to see your subscription tiers and the web services associated with it.
+You’re done! 
+Go to your dashboard to get an overview of your Smart Subscription(s) and the web service(s) associated with it.
+
 ![Publisher dashboard page](../images/tutorials/11_Publisher_Dashboard_no_balance.png)<br/>
 
-Click on the web service to see more detailed information, including the on-chain provenance info and a Buy Now section. You can share this link with anyone interested in buying a subscription to your AI.  
+Click on the web service to see more detailed information, including the on-chain provenance info and a Buy Now section. 
+
+You can share this link with anyone interested in buying a subscription to your AI.  
+
 ![New web service details page](../images/tutorials/12_Service_details.png)
