@@ -68,8 +68,6 @@ Add any information for developers about how to integrate your web service.
 
 You can also add an image to add a visual description of the web service you're making available. 
 
-<img width="441" alt="webservice-instructions" src="https://github.com/nevermined-io/app_docs/assets/17851410/08b82e6c-3b52-47b0-80c4-c1e01ea5e06b">
-
 ### 7. Choose a subscription plan 
 
 Next, you need to specify what type of subscription a user requires to get access to your web service. 
