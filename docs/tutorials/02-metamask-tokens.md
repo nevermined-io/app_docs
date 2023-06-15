@@ -110,7 +110,7 @@ As often, these things change, so do your own research. And if you have any ques
 
 ### Scenario 1: Getting xDAI
 
-This [StakingBits article]([url](https://medium.com/stakingbits/setting-up-metamask-for-gnosis-chain-formerly-xdai-e0deb1541757)) lists the following options: 
+This [StakingBits article](https://medium.com/stakingbits/setting-up-metamask-for-gnosis-chain-formerly-xdai-e0deb1541757) lists the following options: 
 
 - From another user on the Gnosis Chain
 - Converting Dai from Ethereum to xDai using the [xDai Bridge](https://bridge.gnosischain.com/)
