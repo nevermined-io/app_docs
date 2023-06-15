@@ -52,7 +52,7 @@ New RPC URL: https://polygon-rpc.com/
 ChainID: 137
 Currency Symbol: MATIC
 Block Explorer URL: https://polygonscan.com/
-
+```
 
 ### Gnosis Mainnet
 For the most up to date network details, visit the [Gnosis website](https://docs.gnosischain.com/tools/wallets/metamask/).
@@ -63,6 +63,7 @@ New RPC URL: https://rpc.gnosischain.com
 ChainID: 100
 Currency Symbol: XDAI
 Block Explorer URL: https://gnosisscan.io
+```
 
 
 ### Arbitrum Mainnet
@@ -74,7 +75,7 @@ New RPC URL: https://arb1.arbitrum.io/rpc
 ChainID: 42161
 Currency Symbol: ETH
 Block Explorer URL: https://arbiscan.io
-
+```
 
 
 ### Polygon Mumbai Testnet
@@ -86,7 +87,7 @@ New RPC URL: https://rpc-mumbai.maticvigil.com/
 ChainID: 80001
 Currency Symbol: MATIC
 Block Explorer URL: https://mumbai.polygonscan.com/
-
+```
 
 ### Gnosis Chiado Testnet
 For the most up to date network details, visit the [Gnosis website](https://docs.gnosischain.com/tools/wallets/metamask/).
@@ -97,8 +98,7 @@ New RPC URL: https://rpc.chiadochain.net
 ChainID: 10200
 Currency Symbol: XDAI
 Block Explorer URL: https://blockscout.com/gnosis/chiado
-
-
+```
 
 ### Arbitrum Goerli Testnet
 For the most up to date network details, visit the [Gnosis website](https://docs.gnosischain.com/tools/wallets/metamask/).
@@ -109,3 +109,4 @@ New RPC URL: https://goerli-rollup.arbitrum.io/rpc
 ChainID: 421613
 Currency Symbol: ETH
 Block Explorer URL: https://goerli.arbiscan.io/ 
+```
