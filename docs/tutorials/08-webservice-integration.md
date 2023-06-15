@@ -3,16 +3,15 @@ sidebar_position: 8
 description: How to generate the JWT access token that gives access to a web service
 ---
 
-# How to integrate a web service in an application
+# How to integrate an AI web service in an application
 
-In this tutorial we show how a user who bought a subscription to a web service, can integrate that web service in an application.
+In this tutorial we show how a user, who bought a subscription to a web service, can integrate that web service in an application.
 
 ## Getting ready
 
-If you got this far, we assume you know that: 
-1. You need to connect your Metamask to Polygon Mumbai (instructions [here](02-metamask.md)).
-2. You need some MATIC tokens to pay for the gas fees on that network. To do that you can get some free MATIC using the Mumbai Faucet (more information [here](50-faucets.md)).
-3. You also need to own a Subscription NFT for the web service you want to integrate. If you haven't done that yet, first purchase a subscription. [tutorial here](07-search-and-purchase.md)
+If you got this far, we assume you know that you need to connect your MetaMask wallet. 
+
+You also need to own a Smart Subscription for the web service. If you haven't done that yet, first purchase a subscription for the AI you want to integrate. [tutorial here](07-search-and-purchase.md)
 
 ## How to integrate a web service
 
@@ -28,7 +27,7 @@ Click on the “Dashboard” link on the header of the application. Click on the
 
 Click on the arrow to list all the assets (datasets and webservices) that are part of the subscription.
 
-Each web services will show an **"API"** button at the right hand side. If you click on it, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
+Each web service will show an **"API"** button at the right hand side. If you click on it, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
 
 ![Consumer Dashboard](../images/tutorials/16_Consumer_Dashboard_JWT.png)
 
@@ -42,7 +41,7 @@ Next we will show how you can integrate the web service into your app using Comm
 
 #### 3.a Using curl to integrate the web service
 
-Here we are gonna use **curl** but the same works for any HTTP client application or library.
+Here we will use **curl** but the same works for any HTTP client application or library.
 
 ```bash
 # Here we export the JWT token pasted from the NVM App
