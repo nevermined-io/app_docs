@@ -13,7 +13,7 @@ You can't register an asset without first configuring a Smart Subscription. So i
 
 ## Before you start
 
-Currently, the Nevermined App is deployed on the [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://arbitrum.nevermined.app).  networks (plus on their respective testnets). 
+Currently, the Nevermined App is deployed on the [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://nevermined.app) networks (plus on their respective testnets). 
 
 In order to interact with that network you need to:
 
