@@ -20,7 +20,7 @@ NFTs are good to remove that dependency on any third-party. They live in a block
 
 As with any new technology, NFTs went through the typical journey of the emerging technology hype cycle.
 
-![Emerging Technologies Hype Cycle](../images/hype_cycle.png)
+![Emerging Technologies Hype Cycle](/images/hype_cycle.png)
 
 During 2021 and 2022 we experienced the infancy of the NFT technology. Many digital assets were put online and traded. With a focus on speculation, the first age of NFTs had some characteristics:
 

@@ -30,7 +30,7 @@ These are the steps to make your dataset available to holders of your Smart Subs
 - Click on the New button in the top right to go the New Asset page.
 - Click on the “Create Asset” button of the Dataset box.
 
-![Create a new Asset page](../images/tutorials/01_New_Subscription.png)
+![Create a new Asset page](/images/tutorials/01_New_Subscription.png)
 
 ### 2. Provide a short title and other metadata
 
@@ -43,7 +43,7 @@ or
 Add tags to help buyers find your AI Web Service in the Nevermined marketplace. 
 Click the + symbol to add new tags. 
 
-![Add dataset metadata page](../images/tutorials/18_Publisher_dataset_01.png)
+![Add dataset metadata page](/images/tutorials/18_Publisher_dataset_01.png)
 
 ### 3. Upload the files and supporting assets
 
@@ -58,7 +58,7 @@ Give your potential buyers an idea of what they can expect, by uploading a sampl
 Finally, you have the option to add a visual that gives more info about your Data Asset, e.g. an image of Elvis. 
 
 
-![Add Web Service metadata page](../images/tutorials/19_Publisher_dataset_02.png)
+![Add Web Service metadata page](/images/tutorials/19_Publisher_dataset_02.png)
 
 
 ### 4. Choose a subscription plan 
@@ -70,20 +70,20 @@ If you want your data set to be available via different plans, you can go throug
 Register the asset again and add it to another Smart Subscription plan. For now ;-)
 :::
 
-![Attach a subscription to the dataset](../images/tutorials/20_Publisher_dataset_03.png)
+![Attach a subscription to the dataset](/images/tutorials/20_Publisher_dataset_03.png)
 
 ### 5. Review everything is okay
 
 Finally, review your data subscription. 
 Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
 
-![Review new dataset is okay](../images/tutorials/21_Publisher_dataset_04.png)
+![Review new dataset is okay](/images/tutorials/21_Publisher_dataset_04.png)
 
 ### 6. Dataset registration
 
 The Nevermined App will register the new data set on the blockchain. This will require you to sign two transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of gas tokens to pay for the network transaction fees. 
 
-![Registration of the dataset](../images/tutorials/22_Publisher_dataset_05.png)
+![Registration of the dataset](/images/tutorials/22_Publisher_dataset_05.png)
 
 ---
 
@@ -96,4 +96,4 @@ Click on the eye-icon of your data set to go the Asset Detail page.
 Share this URL with potential buyers. They can use the 'Buy Now' button to purchase directly from you. 
 In addition, people can also automatically discover your Data Asset in the Nevermined Marketplace.  
 
-![New dataset created](../images/tutorials/23_Dataset_details_page.png)
+![New dataset created](/images/tutorials/23_Dataset_details_page.png)

@@ -29,7 +29,7 @@ These are the steps to make your web service accessible to holders of your Smart
 - Click on the New button in the top right to go the New Asset page.
 - Click on the “Create Asset” button of the Web Service box.
 
-<p align="center"><img src="../images/tutorials/04_01_New_Subscription.png" /></p>
+<p align="center"><img src="/images/tutorials/04_01_New_Subscription.png" /></p>
 
 ### 2. Describe the web service with metadata
 
@@ -44,7 +44,7 @@ Use the description box to explain to potential users what your web service is a
 Add tags to help buyers find your AI Web Service in the Nevermined marketplace. 
 Click the '+' symbol to add new tags. 
 
-<p align="center"><img src="../images/tutorials/05-01-Webservice-Describe.png" /></p>
+<p align="center"><img src="/images/tutorials/05-01-Webservice-Describe.png" /></p>
 
 
 ### 3. Define the attributes of the web service
@@ -56,7 +56,7 @@ Paste the link and click on the **“+”** button
 Note that you can use this URL field to specify regular expressions. This can be useful when you want to expose multiple links at once. For example: 
 <https://myapi.example.com/(.*)> will expose all the endpoints under the same domain.
 
-<p align="center"><img src="../images/tutorials/05-02-Webservice-Content.png" /></p>
+<p align="center"><img src="/images/tutorials/05-02-Webservice-Content.png" /></p>
 
 
 #### Add the access token
@@ -85,7 +85,7 @@ Give specific info about how developers can integrate your Web Service. For exam
 - Supported formats
 - Response info (error messages etc)
 
-<p align="center"><img src="../images/tutorials/05-03-Webservice-Integration.png" /></p>
+<p align="center"><img src="/images/tutorials/05-03-Webservice-Integration.png" /></p>
 
 You can also add a visual that gives more info about your Al Web Service. Example: an image of Elvis.
 
@@ -94,7 +94,7 @@ You can also add a visual that gives more info about your Al Web Service. Exampl
 
 Next, you need to specify which subscription a user needs to purchase to get access to your web service. 
 
-<p align="center"><img src="../images/tutorials/05-04-Webservice-Plan.png" /></p>
+<p align="center"><img src="/images/tutorials/05-04-Webservice-Plan.png" /></p>
 
 :::Pro tip
 If you want your web service to be available via different plans, you can go through this process once more. 
@@ -105,12 +105,12 @@ Register the asset again and add it to another Smart Subscription plan. For now 
 
 Finally, review your web service subscription. 
 Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
-<p align="center"><img src="../images/tutorials/05-05-Webservice-Review.png" /></p>
+<p align="center"><img src="/images/tutorials/05-05-Webservice-Review.png" /></p>
 
 ### 7. Web service registration
 
 The Nevermined App will register the new web service on the blockchain. This will require you to sign one transaction in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a little bit of gas tokens to pay for the transaction fees. 
-![Register Web Service page](../images/tutorials/10_New_Service_05.png)
+![Register Web Service page](/images/tutorials/10_New_Service_05.png)
 
 ---
 
@@ -119,11 +119,11 @@ The Nevermined App will register the new web service on the blockchain. This wil
 You’re done! 
 Go to your dashboard to get an overview of your Smart Subscription(s) and the web service(s) associated with it.
 
-<p align="center"><img src="../images/tutorials/05-06-Webservice-Dashboard.png" /></p>
+<p align="center"><img src="/images/tutorials/05-06-Webservice-Dashboard.png" /></p>
 
 Click on the web service to go the Asset Detail page. 
 
 Share this URL with potential buyers. They can use the 'Buy Now' button to purchase directly from you. 
 In addition, people can also automatically discover your AI web service in the Nevermined Marketplace.  
 
-<p align="center"><img src="../images/tutorials/05-07-Webservice-AssetPage.png" /></p>
+<p align="center"><img src="/images/tutorials/05-07-Webservice-AssetPage.png" /></p>
