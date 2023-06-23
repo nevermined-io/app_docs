@@ -18,13 +18,13 @@ In this tutorial we show how to get started with MetaMask.
 - Go to [Metamask Website](https://metamask.io/) and click on “Download”.
 - Choose your preferred browser or mobile application and install. MetaMask supports iOS, Android native apps as well as Chrome, Firefox, Brave and Edge browser extensions.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_install_MM.png" width="600"></p>
+<p align="center"><img src="../images/tutorials/metamask/MM_install_MM.png" width="600" /></p>
 
 ### Step 2: Create a new MetaMask wallet
 
 Click on “Create a Wallet” and on the next window click on “I agree” if you would like to help improve MetaMask or click on “No Thanks” to proceed.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_create_wallet.png" width="600"></p>
+<p align="center"><img src="../images/tutorials/metamask/MM_create_wallet.png" width="600" /></p>
 
 ### Step 3: Create a strong password for your wallet
 
@@ -32,7 +32,7 @@ Click on “Create a Wallet” and on the next window click on “I agree” if 
 As MetaMask is a decentralized app, it does not store the password on its server. This means you should make sure you store it safely yourself. 
 :::
 
-<p align="center"><img src="../images/tutorials/metamask/MM_create_password.png" width="600"></p>
+<p align="center"><img src="../images/tutorials/metamask/MM_create_password.png" width="600" /></p>
 
 ### Step 4: Securely store the seed phrase for your wallet
 
@@ -43,7 +43,7 @@ A seed phrase is a unique combination of words that is irrevocably and cryptogra
 - Click on “Click here to reveal secret words” to show the seed phrase.
 - Then click on 'Next'
 
-<p align="center"><img src="../images/tutorials/metamask/MM_post_recovery_phrase.png" width="600"></p>
+<p align="center"><img src="../images/tutorials/metamask/MM_post_recovery_phrase.png" width="600" /></p>
 
 :::caution
 Never share your seed phrase or your private key to anyone or any website, unless you want them to have full control over your funds.
@@ -57,7 +57,7 @@ Click on “Confirm” to proceed.
 
 Congratulations! Your MetaMask wallet has been set up successfully.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Success.png" width="600"></p>
+<p align="center"><img src="../images/tutorials/metamask/MM_Success.png" width="600" /></p>
 
 
 You can now access your wallet by clicking on the MetaMask icon in the extensions bar of your browser.
