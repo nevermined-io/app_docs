@@ -5,7 +5,7 @@ description: How to get tokens
 
 # How to add funds to your MetaMask wallet
 
-Nevermined is live on 3 networks: [Polygon](https://matic.nevermined.app)), [Gnosis]((https://gnosis.nevermined.app)) and [Arbitrum](https://arbitrum.nevermined.app)). 
+Nevermined is live on 3 networks: [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://arbitrum.nevermined.app). 
 
 Below we will outline the steps you need to take to get tokens for these networks. 
 If you want to get tokens for the respective testnets, please go to [this tutorial](50-faucets.md), on getting tokens from faucets. 
