@@ -10,17 +10,18 @@ Nevermined is currently available on 3 blockchain networks.
 - Gnosis
 - Arbitrum
 
-Depending on your the network you prefer to use, you need to add the following network data to your MetaMask extension. 
+Depending on the network you prefer to use, you need to add some network data to your MetaMask wallet. 
 
-For testing, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees. 
+For testing purposes, we have also deployed the application on the following testnets.
 - Mumbai (for Polygon)
 - Chiado (for Gnosis)
 - Goerli (for Arbitrum)
+Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
 
 ## Get Ready
-Before you add any of these networks, make sure you are logged in to your MetaMask 
-Go to the extension menu in your browser, click on the Metamask icon and login to your MetaMask wallet.
+Before you add any of these networks, make sure you are logged in to your MetaMask. 
+Go to the extension menu in your browser, click on the Metamask icon and login with your password.
 
 
 ## Step 1: Go to 'Add Network'
@@ -28,20 +29,19 @@ Go to the extension menu in your browser, click on the Metamask icon and login t
 - Click the Circle icon in the top right corner of the app. 
 - From the drop down menu select "Settings".
 
-![](../images/tutorials/metamask/MM_settings.png)
+<p align="center"><img src="../images/tutorials/metamask/MM_settings.png" width="600" /></p>
 
 Then
 - Scroll down and locate the Networks tab. 
 - Scroll to the bottom and click on the blue "Add Network" button.
 
-![](../images/tutorials/metamask/MM_settings_Network.png)
-
-![](../images/tutorials/metamask/MM_add_network_manually_2.png)
-
+<p align="center"><img src="../images/tutorials/metamask/MM_settings_Network.png" width="600" /></p>
 
 ## Step 2: Add the network details
 
 Fill in the required fields for your preferred network. We have listed the 3 main networks and the 3 test networks below. 
+
+<p align="center"><img src="../images/tutorials/metamask/MM_add_network_manually_2.png" width="600" /></p>
 
 ### Polygon Mainnet (sometimes also refered to as Matic). 
 For the most up to date network details, visit the [Polygon website](https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask#add-the-polygon-network-manually).
@@ -66,7 +66,7 @@ Block Explorer URL: https://gnosisscan.io
 ```
 
 
-### Arbitrum Mainnet
+### Arbitrum One Mainnet
 For the most up to date network details, visit a website like [https://chainlist.org/](https://chainlist.org/) or check other Arbitrum documentation.
 
 ```
