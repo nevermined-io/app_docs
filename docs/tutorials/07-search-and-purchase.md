@@ -26,7 +26,7 @@ The marketplace has different ways to find assets.
 * Use the search field to type in keywords related to the title of the asset.
 * Use the filter function to restrict your search to certain assets types, subscription durations, tags,...
 
-<p align="center"><img src="/images/tutorials/07-01-Buying-Filter.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/07-01-Buying-Filter.png" /></p>
 
 
 ### 2. Get more detailed information
@@ -45,22 +45,22 @@ If this is the asset you want, simply click the Buy button.
 
 Check the box to confirm you agree with the Nevermined T&C and click 'Complete Purchase'. 
 
-<p align="center"><img src="/images/tutorials/07-02-Buying-Checkout.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/07-02-Buying-Checkout.png" /></p>
 
 
 ### 4. Sign the transactions
 
 First, it is possible that your MetaMask wallet asks you to approve a spending cap for USDC.  
 
-<p align="center"><img src="/images/tutorials/07-03-Buying-Cap.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/07-03-Buying-Cap.png" /></p>
 
 After that, you have to confirm your purchase (and the network transaction fee).  
 
-<p align="center"><img src="/images/tutorials/07-04-Buying-Confirm.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/07-04-Buying-Confirm.png" /></p>
 
 After a short wait you will see a confirmation message. Click on 'Dashboard' to manage the asset you've now bought access to. 
 
-<p align="center"><img src="/images/tutorials/07-05-Buying-Confirmation.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/07-05-Buying-Confirmation.png" /></p>
 
 
 
