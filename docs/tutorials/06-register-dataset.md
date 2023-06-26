@@ -72,7 +72,7 @@ Give your potential buyers an idea of what they can expect, by uploading a sampl
 
 Next, you need to specify what type of subscription a user requires to get access to your dataset. 
 
-:::Tip
+:::tip
 If you want your data set to be available via different plans, you can go through this process once more. 
 Register the asset again and add it to another Smart Subscription plan. For now ;-)
 :::
