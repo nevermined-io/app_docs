@@ -3,22 +3,80 @@ sidebar_position: 50
 description: What faucets can you use to start playing with Nevermined environments
 ---
 
-# Getting tokens from faucets in testing environments
+# Getting tokens for testnets
 
-## Native tokens
+## Testnets
 
-To interact with a blockchain network you need to have balance in the tokens related with the transaction you need to do. For example if you want write anything on-chain as a result of calling a Smart Contract, you need to pay for that in the specific network native token (`ETH`, `MATIC`, etc). In a testnet, it's possible to get some of them using a public faucet. For example https://faucet.polygon.technology/ or https://faucets.chain.link/. You just need to specify the address of your account and wait to get the funds.
+For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
-:::info
+Note that you shouldn't register your real assets, as they will become available in the marketplace. 
 
-If you just created your account with the CLI, remember the command told us our account address: `Wallet address: 0x37434d6673ff106446c9224884D54201e5Ae46A4`
+- [Mumbai](https://mumbai.nevermined.app) (for Polygon)
+- [Chiado](https://chiado.nevermined.app) (for Gnosis)
+- [Goerli](https://goerli.nevermined.app/) (for Arbitrum)
+  
 
-:::
+## Getting tokens for Mumbai, the testnet for Polygon
 
-## ERC20
+To publish a Smart Subscription (and the associated AI web service or Data) you need some MATIC, to pay for the network transaction fees. 
 
-If you want to interact with a Nevermined network where the assets published have a price in a ERC20 token (like **USDC**), you need to have balance in that token to purchase these assets. In a testnet you can get some of them in a Faucet too. For example this is the USDC Faucet in `mumbai`:
+### Getting testnet MATIC
+Faucets are applications where you can claim some (valueless) test tokens. 
+For Mumbai, you can use https://faucet.polygon.technology or https://faucet.quicknode.com/
 
-https://calibration-faucet.filswan.com/#/dashboard
+- Go to the MetaMask extension in your browser.
+- Hover over your account and copy your wallet address (starting with 0x)
+- Paste it in the Wallet Address Field
 
-And then you just need to wait a couple of minutes and see if you got balance.
+<p align="center"><img src="/images/tutorials/50-Testnet-Mumbai-Matic.png" /></p>
+
+### Getting testnet USDC for Mumbai Polygon
+If you want to try the Purchasing flow, you need to get some testnet USDC. 
+We're not aware of any faucets where you can claim them. 
+
+An alternative way of getting USDC is using the testnet version of the Uniswap exchange. 
+- Make sure you're connected to the Mumbai network
+- Go to https://app.uniswap.org/#/swap
+- Swap some (small amount of) MATIC for USDC.
+- If USDC doesn't show up in the token list, click Select Token and paste 0x2058A9D7613eEE744279e3856Ef0eAda5FCbaA7e in the token address field. This is the contract for the testnet USDC.
+
+<p align="center"><img src="/images/tutorials/50-Testnet-Mumbai-USDC-Uniswap.png" /></p>
+
+
+## Getting tokens for Chiado, the testnet for Gnosis
+
+To publish a Smart Subscription (and the associated AI web service or Data) you need some xDAI, to pay for the network transaction fees. 
+
+### Getting testnet xDAI
+
+https://gnosisfaucet.com/ dispenses a small amount of xDAI. 
+
+- Make sure to select the Chiado network from the dropdown.
+- Paste your wallet address
+- Complete the Catpcha.
+
+<p align="center"><img src="/images/tutorials/50-Testnet-Chiado-xDAI.png" /></p>
+
+### Getting testnet USDC for Chiado Gnosis
+We're not aware of any straightforward way to get USDC for Chiado testnet. 
+If you want to try out the purchasing flow, we recommend you use Polygon Mumbai or Arbitrum Goerli. They flows are identical on each network. 
+
+
+## Getting tokens for Goerli, the testnet for Arbitrum
+
+To publish a Smart Subscription (and the associated AI web service or Data) you need some Arbitrum ETH, to pay for the network transaction fees. 
+
+### Getting testnet ETH
+
+[https://gnosisfaucet.com/](https://faucet.quicknode.com/arbitrum/goerli) dispenses a small amount of xDAI. 
+
+- Select Arbitrum and Goerli from the dropdowns.
+- Connect your MetaMask to complete the wallet address field.
+- Optionally you can tweet to double the amount of test ETH you will receive.
+(note: the faucet will say ARB, which is 
+
+<p align="center"><img src="/images/tutorials/50-Testnet-Goerli-ETH" /></p>
+
+
+### Getting testnet USDC for Arbitrum Goerli
+Do not use the Arbitrum Goerli version of Uniswap to swap some ETH to USDC. The Nevermined marketplace uses the Circle USDC version for testing (token contract: 0xfd064A18f3BF249cf1f87FC203E90D8f650f2d63) and that is not (yet) available to trade on Uniswap.  
