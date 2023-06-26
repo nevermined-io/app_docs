@@ -26,13 +26,13 @@ Please note that this method can incur additional fees, and you might not receiv
 
 Make sure you are connected to the Polygon main network. 
 
-<p align="center"><img src="../images/tutorials/metamask/Matic_header.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/Matic_header.png" width="600" /></p>
 
 #### Step 1: Open the Metamask wallet browser extension
 
 On the first screen, you will find four buttons under your wallet balance: Buy, Send, Swap and Bridge.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Buy.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Buy.png" width="600" /></p>
 
 #### Step 2: Click Buy
 
@@ -40,7 +40,7 @@ On the first screen, you will find four buttons under your wallet balance: Buy, 
 
 You will be prompted to select your country. Based on this, MetaMask will offer different payment methods, like Credit/debit card, SEPA or a third-party service like MoonPay or Transak.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_buy_3.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_buy_3.png" width="600" /></p>
 
 #### Step 4: Follow the prompts given by the service
 
@@ -72,7 +72,7 @@ Below are the steps you need to follow after you have purchased your MATIC on th
 The token transfer process may not be instant. After processing your transaction, the crypto exchange will provide a unique transaction number that you will use to check the status of your transaction. 
 Once they have arrived, they will show up in the Assets tab of your MetaMask wallet. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Matic_Asset.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Matic_Asset.png" width="600" /></p>
 
 
 ### Scenario 3: Get USDC for Polygon on MetaMask
@@ -91,7 +91,7 @@ After confirming the Swap, USDC will show up in the Assets tab of your wallet.
 
 USDC is a token that is cross-chain compatible. This means it can be 'bridged' from one network to another. If you already have USDC on another network (e.g. Ethereum) you can use this option to get USDC on Polygon. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Matic_Bridge.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Matic_Bridge.png" /></p>
 
 Note: there are other bridging services available, e.g. [https://wallet.polygon.technology/polygon/bridge](https://wallet.polygon.technology/polygon/bridge). 
 Take good note of disclaimers and fees. 
@@ -128,7 +128,7 @@ This [StakingBits article](https://medium.com/stakingbits/setting-up-metamask-fo
 - Swap xDAI for USDC on a decentralised exchange like [Honeyswap](https://honeyswap.1hive.eth.limo//#/swap). 
 - Bridge USDC from Ethereum or Binance Smart Chain, according to the instructions in [this tutorial](https://docs.gnosischain.com/bridges/tutorials/using-omnibridge/). 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Gnosis_Omnibridge.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Gnosis_Omnibridge.png" width="600" /></p>
 
 
 ## How to get ETH and USDC for Arbitrum
@@ -148,7 +148,7 @@ Please note that this method can incur additional fees, and you might not receiv
 
 Make sure you are connected to the Arbitrum main network. If not, you may end up buying ETH for Ethereum, which you can't use (yet) on Nevermined. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Arbitrum_Network.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Arbitrum_Network.png" width="600" /></p>
 
 On the front page, you will find four buttons under your wallet balance: Buy, Send, Swap and Bridge.
 
@@ -158,7 +158,7 @@ On the front page, you will find four buttons under your wallet balance: Buy, Se
 
 Based on this, MetaMask will offer different payment methods, like Credit/debit card, Sepa or a third-party service like MoonPay or Transak to facilitate the transaction.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Arbitrum_Buy.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Arbitrum_Buy.png" width="600" /></p>
 
 #### Step 4: Follow the prompts given by the service
 
@@ -175,7 +175,7 @@ If you have ETH on another network (like Ethereum), you can bridge it to make it
 
 You can use the Bridge function in your MetaMask wallet. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Arbitrum_Bridge.png" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Arbitrum_Bridge.png" /></p>
 
 Note: there are other bridging services available, e.g. [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
 Take good note of disclaimers and fees. 
@@ -204,7 +204,7 @@ You will be prompted to select your country. Based on this, MetaMask will offer 
 In the top field, type USDC and Select the Arbitrum network from the dropdown. 
 Important! Make sure you buy USDC, not USDC.e. 
 
-<p align="center"><img src="../images/tutorials/metamask/MetaMask-Token-Arbitrum-USDC.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MetaMask-Token-Arbitrum-USDC.png" width="600" /></p>
 
 #### Step 5: Follow the prompts given by the service
 
@@ -221,7 +221,7 @@ Once you are done with the instructions, your funds should appear in your MetaMa
 If you already have a token on the Arbitrum network (e.g. ETH), you can swap it for USDC. 
 In the MetaMask home screen, Choose Swap. Take note of transaction network fees and MetaMask fees. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_Arbitrum_Swap.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_Arbitrum_Swap.png" width="600" /></p>
 
 After confirming the Swap, USDC will show up in the Assets tab of your wallet. 
 

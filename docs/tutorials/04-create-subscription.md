@@ -34,17 +34,17 @@ You can use the [Nevermined Marketplace](https://nevermined.app/) to create a ne
 
 - Connect your MetaMask wallet to the network you want to use (instructions on adding networks [here](02-metamask-networks.md)).
 
-<p align="center"><img src="../images/tutorials/00_Connect_Wallet.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/00_Connect_Wallet.png" width="600" /></p>
 
 #### The first time you connect
 - The first time you connect, you will be asked to sign a message with your MetaMask wallet. This allows you to interact with the Nevermined marketplace. 
 
-<p align="center"><img src="../images/tutorials/04_Sign.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/04_Sign.png" width="600" /></p>
 
 - You will be asked to create an account. This is optional, but it will help us keep you up-to-date.
 - Agree to the Terms of Service to proceed. 
 
-<p align="center"><img src="../images/tutorials/00_Create_Account.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/00_Create_Account.png" width="600" /></p>
 
 
 ### 2. Open the New Asset page
@@ -52,7 +52,7 @@ You can use the [Nevermined Marketplace](https://nevermined.app/) to create a ne
 - Click on the New button in the top right to go the New Asset page. 
 - Then click 'Create Plan'
 
-<p align="center"><img src="../images/tutorials/04_01_New_Subscription.png" /></p>
+<p align="center"><img src="/images/tutorials/04_01_New_Subscription.png" /></p>
 
 
 ### 3. Add some metadata to your Subscription
@@ -72,7 +72,7 @@ You can add an image to highlight your Plan in the Marketplace. Pro tip: use you
 #### Add tags
 Tags can make it easier to find your Subscription in our Marketplace. Click '+' to add a tag. 
 
-<p align="center"><img src="../images/tutorials/04_02_Subscription_Description.png" /></p>
+<p align="center"><img src="/images/tutorials/04_02_Subscription_Description.png" /></p>
 
 
 ### 4. Set the Title, Duration and Price of your plan
@@ -89,23 +89,23 @@ How much do people have to pay (in USDC).
 
 Click on “Next” when you’re happy with the configuration.
 
-<p align="center"><img src="../images/tutorials/04_03_Subscription_Pricing.png" /></p>
+<p align="center"><img src="/images/tutorials/04_03_Subscription_Pricing.png" /></p>
 
 ### 5. Review everything is okay
 
 Before creating the subscription, you can review the description, duration and price. Click on “Create” if everything is okay or click on “Back” if you want to modify anything.
 
-<p align="center"><img src="../images/tutorials/04_04_Subscription_Review.png" /></p>
+<p align="center"><img src="/images/tutorials/04_04_Subscription_Review.png" /></p>
 
 ### 6. Register the subscription
 
 The Nevermined App will register your new subscription on the blockchain. This will require you to sign 2 transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a small amount of tokens to pay for the network transaction fees.  
 
-![Finish the subscription creation](../images/tutorials/05_New_Subscription_04.png)
+![Finish the subscription creation](/images/tutorials/05_New_Subscription_04.png)
 
 ### 7. Add an asset to your Subscription
 
 Now, you can move on the next step: append an asset to your Smart Subscription, either (a [Web Service](05-register-webservice.md) or a [Dataset](06-register-dataset.md).
 Alternatively, you can go to your dashboard to see the new subscription you created. 
 
-<p align="center"><img src="../images/tutorials/04_05_Subscription_AddAsset.png" /></p>
+<p align="center"><img src="/images/tutorials/04_05_Subscription_AddAsset.png" /></p>

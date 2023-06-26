@@ -29,19 +29,19 @@ Go to the extension menu in your browser, click on the Metamask icon and login w
 - Click the Circle icon in the top right corner of the app. 
 - From the drop down menu select "Settings".
 
-<p align="center"><img src="../images/tutorials/metamask/MM_settings.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_settings.png" width="600" /></p>
 
 Then
 - Scroll down and locate the Networks tab. 
 - Scroll to the bottom and click on the blue "Add Network" button.
 
-<p align="center"><img src="../images/tutorials/metamask/MM_settings_Network.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_settings_Network.png" width="600" /></p>
 
 ## Step 2: Add the network details
 
 Fill in the required fields for your preferred network. We have listed the 3 main networks and the 3 test networks below. 
 
-<p align="center"><img src="../images/tutorials/metamask/MM_add_network_manually_2.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/metamask/MM_add_network_manually_2.png" width="600" /></p>
 
 ### Polygon Mainnet (sometimes also refered to as Matic). 
 For the most up to date network details, visit the [Polygon website](https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask#add-the-polygon-network-manually).

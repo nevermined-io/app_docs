@@ -21,7 +21,7 @@ The steps to integrate are the following:
 
 Click on the “Dashboard” link on the header of the application. Click on the "Purchased" link to display the subscriptions you own.
 
-![Consumer Dashboard](../images/tutorials/15_Consumer_Dashboard_after.png)
+![Consumer Dashboard](/images/tutorials/15_Consumer_Dashboard_after.png)
 
 ### 2. Get the JWT access token
 
@@ -29,7 +29,7 @@ Click on the arrow to list all the assets (datasets and webservices) that are pa
 
 Each web service will show an **"API"** button at the right hand side. If you click on it, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
 
-![Consumer Dashboard](../images/tutorials/16_Consumer_Dashboard_JWT.png)
+![Consumer Dashboard](/images/tutorials/16_Consumer_Dashboard_JWT.png)
 
 The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
