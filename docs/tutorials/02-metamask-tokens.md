@@ -5,26 +5,26 @@ description: How to get tokens
 
 # How to add funds to your MetaMask wallet
 
-Nevermined is live on 3 networks: [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://arbitrum.nevermined.app). 
+Nevermined is live on 3 networks: [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://nevermined.app). 
 
-Below we will outline the steps you need to take to get tokens for these networks. 
+Below we will outline the steps you need to take to get tokens for these networks. These things do change, so do your own research. And if you have any questions or want us to update the tutorials, join our Discord. 
+
 If you want to get tokens for the respective testnets, please go to [this tutorial](50-faucets.md), on getting tokens from faucets. 
 
 
 ## How to get MATIC and USDC for Polygon
 
-* To buy a Smart Subscription for an asset you need MATIC to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To buy a Smart Subscription for an asset you need some MATIC tokens to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
 * To publish a Smart Subscription (and the associated AI web service or Data) you only need MATIC, to pay for the network transaction fees. 
 You will receive USDC when someone buys access to your asset. 
 
-As often, these things change, so do your own research. And if you have any questions, join our Discord. 
 
 ### Scenario 1: Buy MATIC on MetaMask
 
 Depending on where you live, you may be able to purchase MATIC directly on MetaMask using a credit card or debit card. 
 Please note that this method can incur additional fees, and you might not receive the MATIC immediately, as transactions can take time to complete. 
 
-Make sure you are connected to the Polygon main network. 
+Make sure you are connected to the Polygon main network (sometimes also called Matic). 
 
 <p align="center"><img src="/images/tutorials/metamask/Matic_header.png" width="600" /></p>
 
@@ -188,9 +188,9 @@ Please note that this method can incur additional fees, and you might not receiv
 
 #### Step 1: Open the Metamask wallet browser extension
 
-Important!
-- Make sure you are connected to the Arbitrum main network. If not, you may end up buying USDC for another network like Ethereum or Polygon. 
-
+:::caution
+Make sure you are connected to the Arbitrum One main network. If not, you may end up buying USDC for another network like Ethereum or Polygon. 
+:::
 
 On the front page, you will find four buttons under your wallet balance: Buy, Send, Swap and Bridge.
 
