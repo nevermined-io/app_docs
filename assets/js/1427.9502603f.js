@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1427],{1427:(s,e,c)=>{c.r(e),c.d(e,{default:()=>a});const a=c.p+"assets/images/21_Publisher_dataset_04-f950473fb634ecc29cf4536c5d155bd3.png"}}]);

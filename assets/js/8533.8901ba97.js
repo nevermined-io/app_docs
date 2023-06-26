@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8533],{8533:(a,e,s)=>{s.r(e),s.d(e,{default:()=>c});const c=s.p+"assets/images/MM_create_wallet-89d071ac06aae585c32e941809a41a60.png"}}]);

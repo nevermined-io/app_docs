@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1600],{1600:(s,a,c)=>{c.r(a),c.d(a,{default:()=>e});const e=c.p+"assets/images/MM_Matic_Bridge-a5f7295c3a0d89052c85cc62ab8b1ef7.png"}}]);

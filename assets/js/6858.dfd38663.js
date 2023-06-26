@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6858],{6858:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/MetaMask-tokens-Polygon-USDC-Swap-860ff7c70cd0210f64b1e669ad1a446d.png"}}]);

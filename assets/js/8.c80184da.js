@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8],{8:(s,e,p)=>{p.r(e),p.d(e,{default:()=>a});const a=p.p+"assets/images/MM_post_recovery_phrase-26586b94b22b640929a12e0b8932285b.png"}}]);
