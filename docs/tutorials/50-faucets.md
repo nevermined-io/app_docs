@@ -59,7 +59,7 @@ https://gnosisfaucet.com/ dispenses a small amount of xDAI.
 
 ### Getting testnet USDC for Chiado Gnosis
 Right now, USDC doesn't exist for Chiado. 
-If you want to try out the purchasing flow, we recommend you use Polygon Mumbai or Arbitrum Goerli. The flows are identical on each network. 
+If you want to try out the purchasing flow, we recommend you use Polygon Mumbai. The flows are identical on each network. 
 
 
 ## Getting tokens for Goerli, the testnet for Arbitrum
@@ -73,10 +73,14 @@ To publish a Smart Subscription (and the associated AI web service or Data) you 
 - Select Arbitrum and Goerli from the dropdowns.
 - Connect your MetaMask to complete the wallet address field.
 - Optionally you can tweet to double the amount of test ETH you will receive.
-(note: the faucet will say ARB, which is 
+(note: the faucet might say ARB, but your MetaMask will say ETH 🤷‍♀️🤷🏼‍♂️)
 
-<p align="center"><img src="/images/tutorials/50-Testnet-Goerli-ETH" /></p>
+<p align="center"><img src="/images/tutorials/50-Testnet-Goerli-ETH.png" /></p>
 
 
 ### Getting testnet USDC for Arbitrum Goerli
-Do not use the Arbitrum Goerli version of Uniswap to swap some ETH to USDC. The Nevermined marketplace uses the Circle USDC version for testing (token contract: 0xfd064A18f3BF249cf1f87FC203E90D8f650f2d63) and that is not (yet) available to trade on Uniswap.  
+Getting USDC for Goerli is possible, but requires a fair amount of developer knowledge. Read more on the [Circle website](https://developers.circle.com/developer/docs/funding-test-wallets). 
+
+If you want to try out the purchasing flow, we recommend you use Polygon Mumbai. The flows are identical on each network. 
+
+In any case, Do not use the Arbitrum Goerli version of Uniswap to swap some ETH to USDC. The Nevermined marketplace uses the Circle USDC version for testing (token contract: 0xfd064A18f3BF249cf1f87FC203E90D8f650f2d63) and that is not (yet) available to trade on Uniswap.  
