@@ -5,7 +5,7 @@ description: How to generate the JWT access token that gives access to a web ser
 
 # How to integrate an AI web service in an application
 
-In this tutorial we show how a user, who bought a subscription to a web service, can integrate that web service in an application.
+In this tutorial we show how you can integrate a web service in an application, after you bought a subscription.
 
 ## Getting ready
 
@@ -19,21 +19,22 @@ The steps to integrate are the following:
 
 ### 1. Open your Dashboard page
 
-Click on the “Dashboard” link on the header of the application. Click on the "Purchased" link to display the subscriptions you own.
+Click on the “Dashboard” link on the header of the application. Click on the "Purchased" tab to display the subscriptions you own.
 
-![Consumer Dashboard](/images/tutorials/15_Consumer_Dashboard_after.png)
+<p align="center"><img src="/images/tutorials/08-01-Integration-Dashboard.png" /></p>
+
 
 ### 2. Get the JWT access token
 
 Click on the arrow to list all the assets (datasets and webservices) that are part of the subscription.
 
-Each web service will show an **"API"** button at the right hand side. If you click on it, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
+Each web service will show a key icon at the right hand side. If you click on this, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
 
-![Consumer Dashboard](/images/tutorials/16_Consumer_Dashboard_JWT.png)
+<p align="center"><img src="/images/tutorials/08-02-Integration-Key.png" /></p>
 
 The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
-Copy both the JWT token and the Proxy url (https://proxy.nevermined.network/). You need these to enable your app to send HTTP requests.
+Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.mumbai.nevermined.network/). You need these to enable your app to send HTTP requests.
 
 ### 3. Use the JWT to call the service
 
