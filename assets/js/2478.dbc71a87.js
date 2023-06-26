@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2478],{2478:(s,a,e)=>{e.r(a),e.d(a,{default:()=>c});const c=e.p+"assets/images/06-04-Dataset-Dashboard-2ed50acd5a2c3f1d64cbc536c6ee4b60.png"}}]);

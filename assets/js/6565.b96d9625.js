@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6565],{6565:(s,e,a)=>{a.r(e),a.d(e,{default:()=>p});const p=a.p+"assets/images/06-05-Dataset-Asset-189a4631cf3c7e20e77f9f8b90d3bb9f.png"}}]);
