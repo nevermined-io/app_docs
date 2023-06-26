@@ -61,6 +61,7 @@ Web services allow applications to interact with each other over the internet, e
 * A Metamask wallet;
 * If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network;
 * If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network;
+* If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network;
 * Your assets: Server link and authentication token.
 * Standard Contract for Marketplace (SCMP) agreement that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Publishers to apply their own SCMP.
 
@@ -69,14 +70,17 @@ Web services allow applications to interact with each other over the internet, e
 * A Metamask wallet;
 * If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network;
 * If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network;
+* If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network;
 * Your data assets. All file formats are supported. Max file size: 50 MB;
 * End user license agreement (EULA) that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Publishers to apply their own EULA.
 
 ## What do I need to get started as a consumer?
 
 * A wallet;
-* If you’re buying an asset on [Polygon Network](https://nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
+* If you’re buying an asset on [Polygon Network](https://matic.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
 * If you’re buying an asset on [Gnosis Network](https://gnosis.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of xDAI for the network gas fees.
+* If you’re buying an asset on [Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
+
 
 ## What is the publishing flow?
 
@@ -115,7 +119,7 @@ Nevermined App offers 3 pre-defined plans, as well as a customized option:
 
 ## What blockchain network does the Nevermined App use?
 
-At the moment, the Nevermined App is deployed on the Polygon and Gnosis networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+At the moment, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
 
 ## How do I create a wallet and add cryptocurrency to it?
 
@@ -129,25 +133,29 @@ In order to claim payment tokens that get locked during a failed transaction, yo
 
 A database schema is the skeleton structure that represents the logical view of the entire database. It defines how the data is organized and how the relations among them are associated. It formulates all the constraints that are to be applied on the data.
 
-## Will assets be published on both Polygon and Gnosis?
+## Will assets be published on Polygon, Gnosis and Arbitrum?
 
 No. As a publisher you choose the network you want to register your assets in. To widen your audience, it might be a good idea to publish on more than one network.
 
-## I want to publish assets. How do I choose between Polygon and Gnosis?
+## I want to publish assets. How do I choose between Polygon, Gnosis and Arbitrum?
 
-As a publisher, you choose on which network you register your assets. This can depend on which network your buyers are more likely to use. It might be a good strategy to publish on both networks initially and use the insights to finetune your strategy as you publish more assets.
+As a publisher, you choose on which network you register your assets. This can depend on which network your buyers are more likely to use. It might be a good strategy to publish on more than one network initially and use the insights to finetune your strategy as you publish more assets.
 
-To publish on Polygon, go directly to https://polygon.nevermined.app/ and connect your Metamask wallet to Polygon (instructions [here](../tutorials/02-metamask.md)).
+To publish on Polygon, go directly to https://matic.nevermined.app/ and connect your Metamask wallet to Polygon (instructions [here](../tutorials/02-metamask.md)).
 
 To publish on Gnosis, go directly to https://gnosis.nevermined.app/ and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/02-metamask.md)).
 
-## I want to buy assets. How do I choose between Polygon and Gnosis?
+To publish on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/02-metamask.md)).
 
-It’s good to get an idea which network is preferred by publishers who have relevant assets for you. You can do this by browsing each marketplace, both on https://polygon.nevermined.app/ and on https://gnosis.nevermined.app/.
+## I want to buy assets. How do I choose between Polygon, Gnosis and Arbitrum?
 
-If the asset you want to buy is available on both networks, you can use the one you’re most familiar with or for which you have gas and USDC tokens.
+It’s good to get an idea which network is preferred by publishers who have relevant assets for you. You can do this by browsing each marketplace, on https://matic.nevermined.app/, on https://gnosis.nevermined.app and on https://nevermined.app/ (for Arbitrum). 
+
+If the asset you want to buy is available on more than one network, you can use the one you’re most familiar with or for which you have gas and USDC tokens.
 
 To buy assets on Polygon, go directly to the [Polygon Network version](https://polygon.nevermined.app/) and connect your Metamask wallet to Polygon (instructions [here](../tutorials/02-metamask.md)).
 
 To buy assets on Gnosis, go directly to the [Gnosis Network version](https://gnosis.nevermined.app/) and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/02-metamask.md)).
+
+To buy assets on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/02-metamask.md))
 
