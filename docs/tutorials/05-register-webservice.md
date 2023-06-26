@@ -13,12 +13,12 @@ You can't register an asset without first configuring a Smart Subscription. So i
 
 ## Before you start
 
-Currently, the Nevermined App is deployed on the [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://nevermined.app) networks (plus on their respective testnets). 
+Currently, the Nevermined App is deployed on the [Polygon](https://matic.nevermined.app), [Gnosis](https://gnosis.nevermined.app) and [Arbitrum](https://nevermined.app) networks (plus on their respective [testnets](https://docs.nevermined.app/docs/tutorials/metamask-networks/)). 
 
 In order to interact with that network you need to:
 
 1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask-networks.md)).
-2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask-tokens.md))
+2. Get the right tokens to pay for the transaction fees on that network (instructions [here](02-metamask-tokens.md))
 
 ## How to register an AI web service
 
@@ -61,7 +61,7 @@ Note that you can use this URL field to specify regular expressions. This can be
 
 #### Add the access token
 
-Next, you add an access token to your web service. 
+Next, you add an access authentication token to your web service. 
 This is the password for that enables connection to your web service. You can get it from the web service config file.  Nevermined can protect the access to a web service that uses a HTTP Bearer token for authorization. Your access token is encrypted and will always be kept private.
 
 #### Add a sample link
@@ -75,7 +75,7 @@ This can include:
 - What can the web service be used for?
 - Who will be interested in the web service?
 - What kind of data does the web service require? What is the format of that data?
-- How long can the web service be used for?
+
 
 ### 4. Add integration instructions
 
@@ -85,9 +85,10 @@ Give specific info about how developers can integrate your Web Service. For exam
 - Supported formats
 - Response info (error messages etc)
 
+You can also add a visual that gives more info about your Al Web Service. Example: an image of Elvis.
+
 <p align="center"><img src="/images/tutorials/05-03-Webservice-Integration.png" /></p>
 
-You can also add a visual that gives more info about your Al Web Service. Example: an image of Elvis.
 
 
 ### 5. Choose a subscription plan 
@@ -96,7 +97,7 @@ Next, you need to specify which subscription a user needs to purchase to get acc
 
 <p align="center"><img src="/images/tutorials/05-04-Webservice-Plan.png" /></p>
 
-:::Pro tip
+:::tip
 If you want your web service to be available via different plans, you can go through this process once more. 
 Register the asset again and add it to another Smart Subscription plan. For now ;-)
 :::
