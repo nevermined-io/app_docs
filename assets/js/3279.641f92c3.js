@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[3279],{3279:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/50-Testnet-Chiado-xDAI-c3e273e2f8c962a7be98875eadd2b164.png"}}]);
