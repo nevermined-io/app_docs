@@ -26,41 +26,41 @@ The marketplace has different ways to find assets.
 * Use the search field to type in keywords related to the title of the asset.
 * Use the filter function to restrict your search to certain assets types, subscription durations, tags,...
 
-![Add Marketplace filter](/images/tutorials/24_marketplace_filter.png)
+<p align="center"><img src="/images/tutorials/07-01-Buying-Filter.png" /></p>
 
 
 ### 2. Get more detailed information
 
 Click on 'Learn More' to go to an overview page of the asset, including: 
 * the description provided by the publisher
-* some on-chain meta-data
 * the price and duration of the subscription you can purchase
+* some on-chain meta-data
 
 If this is the asset you want, simply click the Buy button. 
 
-![Add Individual Asset page](/images/tutorials/12_Service_details.png)
+<p align="center"><img src="/images/tutorials/05-07-Webservice-AssetPage.png" /></p>
 
 
 ### 3. Review and confirm
 
 Check the box to confirm you agree with the Nevermined T&C and click 'Complete Purchase'. 
 
-![Review purchase](/images/tutorials/25_purchase_review.png)
+<p align="center"><img src="/images/tutorials/07-02-Buying-Checkout.png" /></p>
 
 
 ### 4. Sign the transactions
 
 First, it is possible that your MetaMask wallet asks you to approve a spending cap for USDC.  
 
-![Enter spending cap](/images/tutorials/26_Purchase_USDCcap.png)
+<p align="center"><img src="/images/tutorials/07-03-Buying-Cap.png" /></p>
 
-After that, you have to confirm your purchase (and the small gas fee).  
+After that, you have to confirm your purchase (and the network transaction fee).  
 
-![Confirm payment](/images/tutorials/27_purchase_metamask_confirm.png)
+<p align="center"><img src="/images/tutorials/07-04-Buying-Confirm.png" /></p>
 
 After a short wait you will see a confirmation message. Click on 'Dashboard' to manage the asset you've now bought access to. 
 
-![Confirmation message](/images/tutorials/28_purchase_confirm.png)
+<p align="center"><img src="/images/tutorials/07-05-Buying-Confirmation.png" /></p>
 
 
 
