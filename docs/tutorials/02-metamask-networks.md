@@ -12,11 +12,11 @@ Nevermined is currently available on 3 blockchain networks.
 
 Depending on the network you prefer to use, you need to add some network data to your MetaMask wallet. 
 
-For testing purposes, we have also deployed the application on the following testnets.
+For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
+
 - [Mumbai](https://mumbai.nevermined.app) (for Polygon)
 - [Chiado](https://chiado.nevermined.app) (for Gnosis)
 - [Goerli](https://goerli.nevermined.app/) (for Arbitrum)
-Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
 
 ## Get Ready
