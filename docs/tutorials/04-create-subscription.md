@@ -99,13 +99,13 @@ Before creating the subscription, you can review the description, duration and p
 
 ### 6. Register the subscription
 
-The Nevermined App will register your new subscription on the blockchain. This will require you to sign 2 transactions in your MetaMask wallet. As explained in ‘Getting Ready’, this requires a small amount of tokens to pay for the network transaction fees.  
+The Nevermined App will register your new subscription on the blockchain. This will require you to sign 2 transactions in your MetaMask wallet. This requires a small amount of tokens to pay for the network transaction fees.  
 
 ![Finish the subscription creation](/images/tutorials/05_New_Subscription_04.png)
 
 ### 7. Add an asset to your Subscription
 
-Now, you can move on the next step: append an asset to your Smart Subscription, either (a [Web Service](05-register-webservice.md) or a [Dataset](06-register-dataset.md).
+Now, you can move on the next step: append an asset to your Smart Subscription, either a [Web Service](05-register-webservice.md) or a [Dataset](06-register-dataset.md).
 Alternatively, you can go to your dashboard to see the new subscription you created. 
 
 <p align="center"><img src="/images/tutorials/04_05_Subscription_AddAsset.png" /></p>
