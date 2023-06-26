@@ -58,8 +58,8 @@ https://gnosisfaucet.com/ dispenses a small amount of xDAI.
 <p align="center"><img src="/images/tutorials/50-Testnet-Chiado-xDAI.png" /></p>
 
 ### Getting testnet USDC for Chiado Gnosis
-We're not aware of any straightforward way to get USDC for Chiado testnet. 
-If you want to try out the purchasing flow, we recommend you use Polygon Mumbai or Arbitrum Goerli. They flows are identical on each network. 
+Right now, USDC doesn't exist for Chiado. 
+If you want to try out the purchasing flow, we recommend you use Polygon Mumbai or Arbitrum Goerli. The flows are identical on each network. 
 
 
 ## Getting tokens for Goerli, the testnet for Arbitrum
