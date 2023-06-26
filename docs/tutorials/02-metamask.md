@@ -28,7 +28,7 @@ Click on “Create a Wallet” and on the next window click on “I agree” if 
 
 ### Step 3: Create a strong password for your wallet
 
-:::Pro tip
+:::caution
 As MetaMask is a decentralized app, it does not store the password on its server. This means you should make sure you store it safely yourself. 
 :::
 
@@ -36,7 +36,7 @@ As MetaMask is a decentralized app, it does not store the password on its server
 
 ### Step 4: Securely store the seed phrase for your wallet
 
-:::Pro tip
+:::info
 A seed phrase is a unique combination of words that is irrevocably and cryptographically linked to your wallet address. The phrase is generated in the application and is not known to anyone but you. This is very secure, but MetaMask recommends that you store your seed phrase in a safe place. It is the only way to recover your funds should your device crash or your browser reset. We recommend you write it down. The most common method is to write your 12-word phrase on a piece of paper and store it safely in a place where only you have access. Note: if you lose your seed phrase, MetaMask can’t help you recover your wallet nor your funds.
 :::
 
