@@ -98,7 +98,7 @@ const config = {
           {
             position: 'left',
             label: 'App',
-            href: 'https://mumbai.nevermined.app/'            
+            href: 'https://nevermined.app/'            
           },
           {
             position: 'right',
@@ -125,6 +125,10 @@ const config = {
                 label: 'Tutorials',
                 to: 'docs/tutorials',
               },
+              {
+                label: 'FAQ',
+                to: '/docs/getting-started/faq',
+              },
             ],
           },
           {
@@ -132,27 +136,27 @@ const config = {
             items: [
               {
                 label: 'Arbitrum One',
-                to: 'https://nevermined.app/',
+                href: 'https://nevermined.app/',
               },
               {
                 label: 'Polygon Matic',
-                to: 'https://matic.nevermined.app/',
+                href: 'https://matic.nevermined.app/',
               },
               {
                 label: 'Gnosis',
-                to: 'https://gnosis.nevermined.app/',
+                href: 'https://gnosis.nevermined.app/',
               },
               {
                 label: 'Arbitrum Goerli',
-                to: 'https://goerli.nevermined.app/',
+                href: 'https://goerli.nevermined.app/',
               },
               {
                 label: 'Polygon Mumbai',
-                to: 'https://matic.nevermined.app/',
+                href: 'https://matic.nevermined.app/',
               },
               {
                 label: 'Gnosis Chiado',
-                to: 'https://chiado.nevermined.app/',
+                href: 'https://chiado.nevermined.app/',
               },              
             ],
           },          
