@@ -34,7 +34,7 @@ Each web service will show a key icon at the right hand side. If you click on th
 
 The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
-Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.mumbai.nevermined.network/). You need these to enable your app to send HTTP requests.
+Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.mumbai.nevermined.app/). You need these to enable your app to send HTTP requests.
 
 ### 3. Use the JWT to call the service
 
@@ -53,9 +53,9 @@ export $JWT_TOKEN=””
 export REQUEST_DATA='{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
 
 # With curl we make a POST request and we add the $JWT_TOKEN as Bearer token in the Authorization header
-# The url where we send the request is the host name of the proxy: "https://proxy.nevermined.network" plus the endpoint of the service 
+# The url where we send the request is the host name of the proxy: "https://proxy.mumbai.nevermined.app" plus the endpoint of the service 
 # we are calling, int this case "/ask"
-curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.nevermined.network/ask
+curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.mumbai.nevermined.app/ask
 
 {"response":"\nThe song is about a person who is in love with someone who is not perfect, but they cannot live without them. Despite knowing that loving this person will bring heartache, they are willing to take the risk and accept the consequences. The song also compares the relationship to the story of Adam and Eve, with the person in the song being like Adam and their love interest being like Eve.","source_nodes":[{"node":{"text":"...","doc_id":"8e748293-f8d2-41b8-a225-7479455b1899","embedding":null,"doc_hash":"451d68b33de1e8034e48c6a98865364e52edd02837f06c34c662ba6d6d462c76","extra_info":null,"node_info":{"start":0,"end":1030},"relationships":{"1":"did:nv:3e0a13a6dba0ab20e83bf25c3e820af8b71c94cea0ab0763b4f822a6998009e6"}},"score":0.7585169416635178}],"extra_info":null}
 ```
@@ -64,7 +64,7 @@ curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $
 #### 3.b Using typescript to integrate the web service
 
 ```typescript
-const proxyEndpoint = `https://proxy.nevermined.network/ask`
+const proxyEndpoint = `https://proxy.mumbai.nevermined.app/ask`
 const requestData = '{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
 
 opts.headers = {
