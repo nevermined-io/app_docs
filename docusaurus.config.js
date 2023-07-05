@@ -98,7 +98,7 @@ const config = {
           {
             position: 'left',
             label: 'App',
-            href: 'https://mumbai.nevermined.app/'            
+            href: 'https://nevermined.app/'            
           },
           {
             position: 'right',
