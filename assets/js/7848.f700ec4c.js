@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[7848],{7848:(s,e,c)=>{c.r(e),c.d(e,{default:()=>p});const p=c.p+"assets/fonts/Exo-SemiBold-7432b13156830e3b8c316c28713621ad.ttf"}}]);

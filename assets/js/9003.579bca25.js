@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[9003],{9003:(e,s,a)=>{a.r(s),a.d(s,{default:()=>t});const t=a.p+"assets/fonts/Exo-SemiBoldItalic-52f4e22042d87e57f0aee781af7dcee4.ttf"}}]);

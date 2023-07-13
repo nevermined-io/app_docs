@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[242],{242:(s,a,c)=>{c.r(a),c.d(a,{default:()=>e});const e=c.p+"assets/fonts/Catalogue-Medium-6d75d6f01cb5a70299289020029cbcd8.otf"}}]);

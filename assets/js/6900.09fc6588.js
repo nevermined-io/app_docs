@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6900],{6900:(a,s,c)=>{c.r(s),c.d(s,{default:()=>t});const t=c.p+"assets/fonts/Catalogue-BoldItalic-3f35f224b711347a68125d8cc4d15aa3.otf"}}]);
