@@ -8,14 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nevermined App Documentation',
-  tagline:
-    'Monetize your AI and your Data with Nevermined Smart Subscriptions',
+  tagline: 'Monetize your AI and your Data with Nevermined Smart Subscriptions',
   url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support'],
+  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support', './src/plugins/preload-plugin'],
   customFields: {
     subtitle: 'Your Data & AI Unchained',
   },
@@ -50,8 +49,7 @@ const config = {
         blog: {
           showReadingTime: true,
           blogTitle: 'Nevermined Blog',
-          blogDescription:
-            'Here is included the last 10 posts from Nevermined Medium',
+          blogDescription: 'Here is included the last 10 posts from Nevermined Medium',
           blogSidebarCount: 0,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -82,7 +80,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Nevermined Logo',
-          src: 'img/nevermined/nevermined-app-logo.png',
+          src: 'img/nevermined/nevermined-app-logo.svg',
         },
         items: [
           {
@@ -98,7 +96,7 @@ const config = {
           {
             position: 'left',
             label: 'App',
-            href: 'https://nevermined.app/'            
+            href: 'https://nevermined.app/',
           },
           {
             position: 'right',
@@ -157,9 +155,9 @@ const config = {
               {
                 label: 'Gnosis Chiado',
                 href: 'https://chiado.nevermined.app/',
-              },              
+              },
             ],
-          },          
+          },
           {
             title: 'More',
             items: [
