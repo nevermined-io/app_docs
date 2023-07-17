@@ -150,7 +150,7 @@ const config = {
               },
               {
                 label: 'Polygon Mumbai',
-                href: 'https://matic.nevermined.app/',
+                href: 'https://mumbai.nevermined.app/',
               },
               {
                 label: 'Gnosis Chiado',
