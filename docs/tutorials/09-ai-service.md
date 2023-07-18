@@ -254,12 +254,8 @@ So now your AI services are accesible to anyone (as long as you keep your ngrok 
 ```bash
 curl -H "Authorization: Bearer 1234" -X GET " https://6557-213-94-33-247.ngrok-free.app"
 ```
-::: info
 
 Take into account that any time you run ngrok to tunnel your local service, a new url wil be generated, so if you want to test your AI service with Nevermined App, remember to keep ngrok running until you finish all the testing.
-
-:::
-
 
 ## Registering your AI Service in Nevermined App
 
@@ -301,7 +297,7 @@ You can find a complete guide to register your service [here](https://docs.never
 
  ![Service OpenAPI Docs](/images/tutorials/09_02_ServiceDocs.png)
 
- ### Access to the details of the Service
+ ### Access to the details of the Service
 
  When the process is finished, you will be able to access the details of your new Service Asset (you can also access anytime using the "MyAssets" menu on the App).
  In the Service details you can access to the description of the endpoints.
