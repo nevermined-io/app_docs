@@ -19,28 +19,41 @@ The steps to integrate are the following:
 
 ### 1. Open your Dashboard page
 
-Click on the “Dashboard” link on the header of the application. Click on the "Purchased" tab to display the subscriptions you own.
+Click on the "My Assets" link on the header of the application. Select the "My Assets" option in the menu, and click on the "Purchased" tab.
 
-<p align="center"><img src="/images/tutorials/08-01-Integration-Dashboard.png" /></p>
+You will see a list of all the assets you can access. Use the filters in the Search Bar to see only the Services.
+
+![My Assets](/images/tutorials/08-01-Integration-Dashboard.png)
 
 
-### 2. Get the JWT access token
+### 2. Get information about the Service
 
-Click on the arrow to list all the assets (datasets and webservices) that are part of the subscription.
+You can access to detailed information about the service clicking the icons on the right hand side. 
 
-Each web service will show a key icon at the right hand side. If you click on this, the application will require you to sign a message (no gas fees). After that, you will see the web service's JWT access token.
+The fist tab, "Service Information", shows a link to an OpenAPI endpoint, if it was provided by the publisher, and a "How to Integrate" guide.
 
-<p align="center"><img src="/images/tutorials/08-02-Integration-Key.png" /></p>
+![Service Information](/images/tutorials/08-02-Service-Info.png)
+
+In the tab "Endpoints" you'll see detailed information about the endpoints this service exposes, where you can find information about the parameters and the responses.
+This tab is only showed if the publisher provided an OpenAPI definition.
+
+![Service Information](/images/tutorials/08-03-Service-endpoints.png)
+
+### 3. Get the JWT access token
+
+In the last tab, "Integration Details" you will find see the web service's JWT access token, along with the Proxy URL and an example of how to call the service.
+
+![Service Information](/images/tutorials/08-04-Service-JWT.png)
 
 The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
 Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.mumbai.nevermined.app/). You need these to enable your app to send HTTP requests.
 
-### 3. Use the JWT to call the service
+### 4. Use the JWT to call the service
 
 Next we will show how you can integrate the web service into your app using Command Line. 
 
-#### 3.a Using curl to integrate the web service
+#### 4.a Using curl to integrate the web service
 
 Here we will use **curl** but the same works for any HTTP client application or library.
 
@@ -61,7 +74,7 @@ curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $
 ```
 
 
-#### 3.b Using typescript to integrate the web service
+#### 4.b Using typescript to integrate the web service
 
 ```typescript
 const proxyEndpoint = `https://proxy.mumbai.nevermined.app/ask`
