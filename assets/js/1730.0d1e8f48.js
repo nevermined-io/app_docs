@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1730],{1730:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/08-01-Integration-Dashboard-226c8ab243f845b7f962828eafe6eff4.png"}}]);
