@@ -1,0 +1,8 @@
+{
+  "label": "Artificial Intelligence",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "tutorials/ai/index"
+  }
+}
