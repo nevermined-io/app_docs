@@ -9,7 +9,7 @@ In this tutorial we show how a Smart Contract developer can control which extern
 
 ## Getting ready
 
-First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](04-create-subscription.md)).
+First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](../first-steps/create-subscription)).
 
 :::info Tutorial
 

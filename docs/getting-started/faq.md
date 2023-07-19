@@ -123,7 +123,7 @@ At the moment, the Nevermined App is deployed on the Polygon, Gnosis and Arbitru
 
 ## How do I create a wallet and add cryptocurrency to it?
 
-Nevermined App is compatible with the MetaMask wallet. We have created a full tutorial explaining [how to configure a MetaMask wallet and add funds to it](../tutorials/02-metamask.md).
+Nevermined App is compatible with the MetaMask wallet. We have created a full tutorial explaining [how to configure a MetaMask wallet and add funds to it](../tutorials/first-steps/02-metamask.md).
 
 ## How do I claim back my locked tokens if a transaction fails during processing?
 
@@ -141,11 +141,11 @@ No. As a publisher you choose the network you want to register your assets in. T
 
 As a publisher, you choose on which network you register your assets. This can depend on which network your buyers are more likely to use. It might be a good strategy to publish on more than one network initially and use the insights to finetune your strategy as you publish more assets.
 
-To publish on Polygon, go directly to https://matic.nevermined.app/ and connect your Metamask wallet to Polygon (instructions [here](../tutorials/02-metamask.md)).
+To publish on Polygon, go directly to https://matic.nevermined.app/ and connect your Metamask wallet to Polygon (instructions [here](../tutorials/first-steps/02-metamask.md)).
 
-To publish on Gnosis, go directly to https://gnosis.nevermined.app/ and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/02-metamask.md)).
+To publish on Gnosis, go directly to https://gnosis.nevermined.app/ and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/first-steps/02-metamask.md)).
 
-To publish on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/02-metamask.md)).
+To publish on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/first-steps/02-metamask.md)).
 
 ## I want to buy assets. How do I choose between Polygon, Gnosis and Arbitrum?
 
@@ -153,9 +153,9 @@ It’s good to get an idea which network is preferred by publishers who have rel
 
 If the asset you want to buy is available on more than one network, you can use the one you’re most familiar with or for which you have gas and USDC tokens.
 
-To buy assets on Polygon, go directly to the [Polygon Network version](https://polygon.nevermined.app/) and connect your Metamask wallet to Polygon (instructions [here](../tutorials/02-metamask.md)).
+To buy assets on Polygon, go directly to the [Polygon Network version](https://polygon.nevermined.app/) and connect your Metamask wallet to Polygon (instructions [here](../tutorials/first-steps/02-metamask.md)).
 
-To buy assets on Gnosis, go directly to the [Gnosis Network version](https://gnosis.nevermined.app/) and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/02-metamask.md)).
+To buy assets on Gnosis, go directly to the [Gnosis Network version](https://gnosis.nevermined.app/) and connect your Metamask wallet to Gnosis (instructions [here](../tutorials/first-steps/02-metamask.md)).
 
-To buy assets on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/02-metamask.md))
+To buy assets on Arbitrum, go directly to https://nevermined.app/ and connect your Metamask wallet to Arbitrum (instructions [here](../tutorials/first-steps/02-metamask.md))
 
