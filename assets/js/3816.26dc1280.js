@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[3816],{3816:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/home-bg-products_mobile-5dbda7b8c11973351a9c71af2f92ae3f.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2497],{52497:(s,a,c)=>{c.r(a),c.d(a,{default:()=>e});const e=c.p+"assets/images/26_Purchase_USDCcap-fa0f094bda14c3138587267eefc5bac9.png"}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1499],{1499:(e,s,c)=>{c.r(s),c.d(s,{default:()=>p});const p=c.p+"assets/images/header-bg-0d6d5c8f4421ebcbd256c2345b89fbc8.webp"}}]);

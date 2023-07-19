@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1634],{1634:(s,e,a)=>{a.r(e),a.d(e,{default:()=>p});const p=a.p+"assets/images/MM_Arbitrum_Swap-52088637efa3f3208d74ec18a4ce03cb.png"}}]);

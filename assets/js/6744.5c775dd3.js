@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6744],{6744:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/home-bg-banner-4fab221c89c6ba0a2b8e74fd11250e1b.png"}}]);

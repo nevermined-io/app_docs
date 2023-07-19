@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6636],{36636:(e,s,c)=>{c.r(s),c.d(s,{default:()=>p});const p=c.p+"assets/images/08-03-Service-endpoints-21c33b1cf56112593c8c3f583915b5ee.png"}}]);

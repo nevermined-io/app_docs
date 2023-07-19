@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8822],{8822:(s,e,a)=>{a.r(e),a.d(e,{default:()=>p});const p=a.p+"assets/images/05-02-Webservice-Details-d5fd389a609a57703e134c3736335fad.png"}}]);

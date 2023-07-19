@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2060],{32060:(s,a,b)=>{b.r(a),b.d(a,{default:()=>e});const e=b.p+"assets/images/MM_copy_address-7b64bdfb1e70b7a96b26fd16b9c4a0bb.png"}}]);

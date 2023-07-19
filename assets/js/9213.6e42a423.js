@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[9213],{79213:(e,s,a)=>{a.r(s),a.d(s,{default:()=>b});const b=a.p+"assets/images/13_Consumer_Dashboard_before-74fb50c891b3f749bbe771535becde34.png"}}]);

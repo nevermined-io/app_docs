@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8483],{8483:(a,s,e)=>{e.r(s),e.d(s,{default:()=>c});const c=e.p+"assets/images/00_Connect_Wallet-baf9221e1d5a6caa481c97f5558f23c8.png"}}]);

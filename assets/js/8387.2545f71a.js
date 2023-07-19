@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8387],{88387:(s,t,d)=>{d.r(t),d.d(t,{default:()=>a});const a=d.p+"assets/fonts/Exo-LightItalic-46bd1223dd862e4751bd89a179dc4114.ttf"}}]);

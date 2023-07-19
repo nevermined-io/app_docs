@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1848],{1848:(s,e,a)=>{a.r(e),a.d(e,{default:()=>c});const c=a.p+"assets/images/50-Testnet-Mumbai-USDC-Uniswap-32b6c4c1851c279242ec51430e1000a2.png"}}]);

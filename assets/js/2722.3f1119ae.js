@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2722],{2722:(s,c,p)=>{p.r(c),p.d(c,{default:()=>a});const a=p.p+"assets/images/Flow_Subscription_purchase-f022d300036ad4ca77c3ce9765df487d.png"}}]);

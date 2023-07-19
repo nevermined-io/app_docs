@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6352],{86352:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/MetaMask-tokens-Polygon-USDC-Bridge-0e5985bedfa5fba16220abe9e9fc21a6.png"}}]);

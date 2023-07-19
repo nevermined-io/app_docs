@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[4845],{84845:(s,c,a)=>{a.r(c),a.d(c,{default:()=>e});const e=a.p+"assets/images/28_purchase_confirm-970dff6e19f79ac73cbfb0a42756dc7c.png"}}]);

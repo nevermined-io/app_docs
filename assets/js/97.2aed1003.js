@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[97],{70097:(e,s,p)=>{p.r(s),p.d(s,{default:()=>a});const a=p.p+"assets/images/MM_Arbitrum_Bridge-5775b760b8e0c60e6b2287d1a6e5f7c0.png"}}]);

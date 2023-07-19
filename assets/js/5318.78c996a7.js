@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[5318],{5318:(s,a,e)=>{e.r(a),e.d(a,{default:()=>f});const f=e.p+"assets/fonts/CourierPrime-Regular-d74f062159183fadbff6d610abc6aa33.ttf"}}]);
