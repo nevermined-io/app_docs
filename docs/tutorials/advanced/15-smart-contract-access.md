@@ -7,16 +7,23 @@ description: How to use Smart Subscriptions to protect Smart Contracts
 
 In this tutorial we show how a Smart Contract developer can control which external users can call the contract logic. We explain how you can use Smart Subscription to limit the ability to execute certain Smart Contract functionalities to holders of a Smart Subscription NFT.
 
-## Getting ready
-
-First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](../first-steps/create-subscription)).
-
 :::info Tutorial
 
 All the code used in this tutorial is available in this **[repository](https://github.com/nevermined-io/tutorials/tree/main/subscriptions/001-Smart_Contract_Access)**
 
 :::
 
+## Getting ready
+
+First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](../first-steps/create-subscription)).
+
+![Registering a new Plan](/images/tutorials/plans/01_Registering_new_Plan.png)
+
+:::info
+
+The Smart Subscription needs to be registered in the same network where your Smart Contracts are gonna be deployed. Currently Nevermined is deployed on [multiple blockchain networks](../../environments/).
+
+:::
 
 ## How to integrate the Smart Subscription NFT in your Smart Contract
 
@@ -59,7 +66,14 @@ Next, we use this modifier in the `claim` method:
 You can see all the contract code [here](https://github.com/nevermined-io/tutorials/blob/main/subscriptions/001-Smart_Contract_Access/contracts/MyToken.sol).
 
 
-
 ### 4. Testing the integration
 
 You can the complete the test [here](https://github.com/nevermined-io/tutorials/blob/main/subscriptions/001-Smart_Contract_Access/test/MyToken.ts).
+
+### 5. Users can subscribe to your Smart Subscription
+
+Once the Smart Subscription is deployed and the Smart Contract is connected to it, users can subscribe to the plan to claim the airdrop. 
+
+![Purchase the Plan](/images/tutorials/plans/03_Plan_details.png)
+
+So any user that wants to claim the airdrop needs to subscribe to the plan first. So when they make a call to your Smart Contract for claiming the AirDrop, you can validate they are subscribers to that plan and release the tokens.
