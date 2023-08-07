@@ -62,6 +62,7 @@ If you service does not provide an OpenAPI documentation, you can add the endpoi
 
 Note that you can use this URL field to specify regular expressions. This can be useful when you want to expose multiple links at once. For example: 
 <https://myapi.example.com/(.*)> will expose all the endpoints under the same domain.
+Also you can write urls with tokens like <https://myapi.example.com/user/{userId}> or <https://myapi.example.com/user/:userId> however it will be transformed to wildcard like this example <https://myapi.example.com/user/(.*)>
 
 #### Add the access token
 
