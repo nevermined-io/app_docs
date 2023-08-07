@@ -221,14 +221,14 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'ABQRAL96WH',
+        appId: 'ACAZ8KX1UU',
         // Public API key: it is safe to commit it
-        apiKey: '150e070c95ed97482ce743ffeadc64fc',
-        indexName: 'nevermined-app',
+        apiKey: 'c16b51c30a809635dc41ff78c5e7b937',
+        indexName: 'docs_nevermined_app',
         // Optional
         contextualSearch: true,
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+        externalUrlRegex: 'nevermined\\.app',
         // Optional: Algolia search parameters
         searchParameters: {},
         // Optional: path for search page that enabled by default (`false` to disable it)
