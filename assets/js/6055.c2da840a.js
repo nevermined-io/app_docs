@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6055],{26055:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/save_config-290a72263994f11149c1fd7791202497.png"}}]);

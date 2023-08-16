@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6784],{56784:(a,s,c)=>{c.r(s),c.d(s,{default:()=>e});const e=c.p+"assets/images/select_lang-a87f73a17ac947456f22cca46a0780c4.png"}}]);
