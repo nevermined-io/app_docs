@@ -221,9 +221,9 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'ACAZ8KX1UU',
+        appId: 'IB2HKPUD05',
         // Public API key: it is safe to commit it
-        apiKey: 'c16b51c30a809635dc41ff78c5e7b937',
+        apiKey: 'b8ded6cd2e419a89050c77216ddfa217',
         indexName: 'docs_nevermined_app',
         // Optional
         contextualSearch: true,
