@@ -208,6 +208,8 @@ Add the Inference Endpoint URL as a *HTTP POST* Protected Method.
 
 Select *Bearer Token* and add a Hugging Face Token with Read Permissions. This token will be sent and stored encrypted, so no one will be able to access it.
 
+Make sure you provide enough information about your service in the *Description* and *Integration* fields to allow the user to understand the purpose of your service and how they can use it.
+
 ![Register service in Nevermined](/images/tutorials/11-11-creating-service-nvm.png)
 
  ### Access to the details of the Service
