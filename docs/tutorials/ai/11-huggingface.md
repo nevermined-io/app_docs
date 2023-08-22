@@ -6,7 +6,7 @@ description: How to create and integrate a Hugging Face Inference Endpoint
 # How to create and integrate a Hugging Face Inference Endpoint
 
 
-Hugging Face id one of the most, if not the most important Open Source Communities, in the scope of Machine Learning and AI technologies.
+Hugging Face is one of the most, if not the most important Open Source Communities, in the scope of Machine Learning and AI technologies.
 
 It is not only a huge hub of models, datasets, and transformers, but also an environment where users can deploy, test, and productize AI models or pipelines.
 
