@@ -6,7 +6,7 @@ description: How to create and integrate a Hugging Face Inference Endpoint
 # How to create and integrate a Hugging Face Inference Endpoint
 
 
-Hugging Face is one of the most,if not the most, important Open Source Communities, in the scope of Machine Learning and AI technologies.
+Hugging Face id one of the most, if not the most important Open Source Communities, in the scope of Machine Learning and AI technologies.
 
 It is not only a huge hub of models, datasets, and transformers, but also an environment where users can deploy, test, and productize AI models or pipelines.
 
@@ -15,14 +15,14 @@ Hugging Face allows users to implement and deploy models, transformers, pipeline
 - [Spaces](https://huggingface.co/docs/hub/spaces) Based on Github repos, users can implement their models here and deploy it as an app for free (it's also possible to pay for additional resources). This kind of deployment is for demo/fast development purposes, so it is not ready for production.
 - [Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index). With Inference Endpoints a user or organization is able to deploy a model into production in a cloud provider in a completely transparent way. Hugging Face will take care of deploying the necessary containers, securization, auto scaling, etc
 
-In this tutorial we will show you how to deploy your models and pipelines as Inference Endpoints, and how to publish them in Nevermined App, so you can safely share, and monetize, your AI model.
+In this tutorial we will show you how to deploy your models and pipelines as Inference Endpoints, and how to publish them in Nevermined App, so you can safely share and monetize, your AI model.
 
 
 ## Requirements
 
-- A Hugging Face Account
-- Payment Method added. Inferece Endpoints are not for free. We will show you how to keep the cost pretty low so you can test it without spending too much money.
-- Generate a token for your account with Read permissions.
+- A Hugging Face [Account](https://huggingface.co/join)
+- [Payment Method added](https://huggingface.co/settings/billing). Inferece Endpoints are not for free. We will show you how to keep the cost pretty low so you can test it without spending too much money.
+- [Generate a token](https://huggingface.co/docs/hub/security-tokens#how-to-manage-user-access-tokens) for your account with Read permissions.
 
 
 ## Deploy a Hugging Face model
@@ -60,7 +60,7 @@ Of course creating and editing the files directly in the repo is not the best wa
 
 As we mentioned, in the Hugging Face documentation you can find multiple examples about how to expose your own model using custom Inference Endpoints. For our example we will take a different approach, to show you that there are more possibilities than "just" use a model.
 
-In this case we are goint to use [Haystack](https://haystack.deepset.ai) to build a InMemory store where we will index a document related with DeSci DAOs, and using [roberta-base-squad2-distilled](https://huggingface.co/deepset/roberta-base-squad2-distilled) we can implement a Q&A with the content of the store.
+In this case we are goint to use [Haystack](https://haystack.deepset.ai) to build a InMemory store where we will index a document related with DeSci DAOs, and using [roberta-base-squad2-distilled](https://huggingface.co/deepset/roberta-base-squad2-distilled) we can implement a Q&A service using the documents stored.
 
 The fist step is to add the needed dependencies using the requirements.txt file:
 
@@ -188,19 +188,19 @@ You can access to this test version of Nevermined App [here](https://goerli.neve
 
 ### Before you register your Service
 
-We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
+We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](../../getting-started/)
 
-Before starting using Nevermined you will need to install and config Metamask in your browser. [See the instructions here](https://docs.nevermined.app/docs/tutorials/metamask/), [here](https://docs.nevermined.app/docs/tutorials/metamask-networks/#arbitrum-goerli-testnet), and [here](https://docs.nevermined.app/docs/tutorials/metamask-tokens/), 
+Before starting using Nevermined you will need to install and config Metamask in your browser. [See the instructions here](../first-steps/metamask/), [here](../first-steps/metamask-networks#arbitrum-goerli-testnet/), and [here](../first-steps/metamask-tokens/), 
 
-Once you have Metamask correctly configured, the next step is to create a brand new [Smart Subscription](https://docs.nevermined.app/docs/getting-started/smart-subscriptions)
+Once you have Metamask correctly configured, the next step is to create a brand new [Smart Subscription](../../getting-started/smart-subscriptions)
 
-You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/create-subscription) you can find some help to guide you.
+You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](../first-steps/create-subscription) you can find some help to guide you.
 
 ### Registering the AI Model
 
 So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Model in Nevermined App.
 
-You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/register-webservice/)
+You can find a complete guide to register your service [here](../first-steps/register-webservice/)
 
 In the *details* step you need to add the endpoint. As the Inference Endpoint does not generate any OpenAPI document, we need to do it manually. 
 
@@ -222,7 +222,7 @@ Make sure you provide enough information about your service in the *Description*
 
 ### Consuming your AI Model
 
-Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](https://docs.nevermined.app/docs/tutorials/webservice-integration/) you can find how users can integrate your service.
+Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](../advanced/webservice-integration/) you can find how users can integrate your service.
 
 #### Examples
 
