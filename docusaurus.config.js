@@ -8,14 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nevermined App Documentation',
-  tagline:
-    'Monetize your AI and your Data with Nevermined Smart Subscriptions',
+  tagline: 'Monetize your AI and your Data with Nevermined Smart Subscriptions',
   url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support'],
+  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support', './src/plugins/preload-plugin'],
   customFields: {
     subtitle: 'Your Data & AI Unchained',
   },
@@ -50,8 +49,7 @@ const config = {
         blog: {
           showReadingTime: true,
           blogTitle: 'Nevermined Blog',
-          blogDescription:
-            'Here is included the last 10 posts from Nevermined Medium',
+          blogDescription: 'Here is included the last 10 posts from Nevermined Medium',
           blogSidebarCount: 0,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -82,7 +80,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Nevermined Logo',
-          src: 'img/nevermined/nevermined-app-logo.png',
+          src: 'img/nevermined/nevermined-app-logo.svg',
         },
         items: [
           {
@@ -98,7 +96,7 @@ const config = {
           {
             position: 'left',
             label: 'App',
-            href: 'https://nevermined.app/'            
+            href: 'https://nevermined.app/',
           },
           {
             position: 'right',
@@ -152,14 +150,14 @@ const config = {
               },
               {
                 label: 'Polygon Mumbai',
-                href: 'https://matic.nevermined.app/',
+                href: 'https://mumbai.nevermined.app/',
               },
               {
                 label: 'Gnosis Chiado',
                 href: 'https://chiado.nevermined.app/',
-              },              
+              },
             ],
-          },          
+          },
           {
             title: 'More',
             items: [
@@ -223,14 +221,14 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'ABQRAL96WH',
+        appId: 'E8X6MW6KMN',
         // Public API key: it is safe to commit it
-        apiKey: '150e070c95ed97482ce743ffeadc64fc',
-        indexName: 'nevermined-app',
+        apiKey: 'bd89baaf74b78c37767591c2f90f1825',
+        indexName: 'neverminedapp',
         // Optional
         contextualSearch: true,
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+        externalUrlRegex: 'nevermined\\.app',
         // Optional: Algolia search parameters
         searchParameters: {},
         // Optional: path for search page that enabled by default (`false` to disable it)
