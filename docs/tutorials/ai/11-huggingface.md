@@ -182,25 +182,23 @@ If you have deployed the Inference endpoint under an organization, any user who 
 
 Once you have implemented and deployed and protected your own AI model or pipeline in HuggingFace, you can share it with the Community in a safe way, and even monetize them, if you want, using a Nevermined Smart Subscription.
 
-In order to test and learn how you can use Nevermined App, we provide a test deployment that uses Arbitrum Goerli testnet, where you can try the different features provided by Nevermined.
+In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
-You can access to this test version of Nevermined App [here](https://goerli.nevermined.app/en)
+You can access to this test version of Nevermined App [here](https://testing.nevermined.app/en)
 
 ### Before you register your Service
 
 We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](../../getting-started/)
 
-Before starting using Nevermined you will need to install and config Metamask in your browser. [See the instructions here](../first-steps/metamask/), [here](../first-steps/metamask-networks#arbitrum-goerli-testnet/), and [here](../first-steps/metamask-tokens/), 
+The next step is to create a brand new [Smart Subscription](../builders/create-subscription)
 
-Once you have Metamask correctly configured, the next step is to create a brand new [Smart Subscription](../../getting-started/smart-subscriptions)
-
-You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](../first-steps/create-subscription) you can find some help to guide you.
+You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](../builders/create-subscription) you can find some help to guide you.
 
 ### Registering the AI Model
 
 So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Model in Nevermined App.
 
-You can find a complete guide to register your service [here](../first-steps/register-webservice/)
+You can find a complete guide to register your service [here](../builders/register-webservice/)
 
 In the *details* step you need to add the endpoint. As the Inference Endpoint does not generate any OpenAPI document, we need to do it manually. 
 
@@ -233,22 +231,7 @@ For instance:
 ```bash
 export NVM_TOKEN="eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..EW-BsszuYJLLuBylm6VPvw.zlGJQcCRjjG_m....srbCQpQ"
 
-curl -H "Authorization: $NVM_TOKEN" -X POST "https://3dqf53c6wn5sd5crq1n0bzh92cr09kaevh16io0pbefn57kbcj.proxy.goerli.nevermined.app"  \
+curl -H "Authorization: $NVM_TOKEN" -X POST "https://3dqf53c6wn5sd5crq1n0bzh92cr09kaevh16io0pbefn57kbcj.proxy.testing.nevermined.app"  \
 --header 'content-type: application/json' \
 --data '{"inputs":{"question":"What is VitaDAO?"}}'
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

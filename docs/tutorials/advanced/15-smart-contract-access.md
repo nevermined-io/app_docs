@@ -15,7 +15,7 @@ All the code used in this tutorial is available in this **[repository](https://g
 
 ## Getting ready
 
-First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](../first-steps/create-subscription)).
+First you will need to create your own Smart Subscription NFT for your Smart Contract (instructions [here](../builders/create-subscription)).
 
 ![Registering a new Plan](/images/tutorials/plans/01_Registering_new_Plan.png)
 

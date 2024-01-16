@@ -7,14 +7,6 @@ description: How to find an asset and purchase the Smart Subscription
 
 The Nevermined marketplace allows you to browse, search and purchase access to any of the assets that have been registered. 
 
-## Before you start
-Currently, the Nevermined App works on the Polygon, Gnosis and Arbitrum networks. 
-In order to purchase assets on that network you need to:
-
-1. Connect your Metamask wallet to network that the asset has been registered on (instructions [here](02-metamask.md)).
-2. Get some tokens to pay for the network transactions fees on that network. You can find instructions [here](02-metamask-tokens.md).
-3. You will need USDC to pay for the subscription. Again, check the [How to get tokens tutorial](02-metamask-tokens.md). 
-
 ## How to buy a Smart Subscription for the asset you want
 
 The Marketplace is where you find and purchase the asset you're interested in. 

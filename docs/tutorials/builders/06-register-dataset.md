@@ -11,15 +11,6 @@ Here we go through the required steps of registering a new dataset and link it t
 You can't register an asset without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
 :::
 
-## Before you start
-
-Currently, the Nevermined App is deployed on the [Polygon](https://matic.nevermined.app/), [Gnosis](https://gnosis.nevermined.app/) and [Arbitrum](https://nevermined.app/) networks (plus on their respective testnets). 
-
-In order to interact with that network you need to:
-
-1. Connect your MetaMask wallet to the relevant network (instructions [here](02-metamask-networks.md)).
-2. Get the right tokens to pay for the gas fees on that network (instructions [here](02-metamask-tokens.md))
-
 
 ## How to register a dataset
 

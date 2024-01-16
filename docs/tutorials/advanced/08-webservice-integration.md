@@ -11,7 +11,7 @@ In this tutorial we show how you can integrate a web service in an application, 
 
 If you got this far, we assume you know that you need to connect your MetaMask wallet.
 
-You also need to own a Smart Subscription for the web service. If you haven't done that yet, first purchase a subscription for the AI you want to integrate ([tutorial here](../first-steps/search-and-purchase)).
+You also need to own a Smart Subscription for the web service. If you haven't done that yet, first purchase a subscription for the AI you want to integrate ([tutorial here](../subscribers/search-and-purchase)).
 
 ## How to integrate a web service
 
@@ -25,10 +25,9 @@ You will see a list of all the assets you can access. Use the filters in the Sea
 
 ![My Assets](/images/tutorials/08-01-Integration-Dashboard.png)
 
-
 ### 2. Get information about the Service
 
-You can access to detailed information about the service clicking the icons on the right hand side. 
+You can access to detailed information about the service clicking the icons on the right hand side.
 
 The fist tab, "Service Information", shows a link to an OpenAPI endpoint, if it was provided by the publisher, and a "How to Integrate" guide.
 
@@ -47,7 +46,7 @@ In the last tab, "Integration Details" you will find see the web service's JWT a
 
 The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the web service. Once you have it, you can make requests to all the endpoints that are included in the web service that you subscribed to.
 
-Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.goerli.nevermined.app/). You need these to enable your app to send HTTP requests.
+Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.testing.nevermined.app/). You need these to enable your app to send HTTP requests.
 
 ### 4. Use the JWT to call the service
 
@@ -66,18 +65,17 @@ export $JWT_TOKEN=””
 export REQUEST_DATA='{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
 
 # With curl we make a POST request and we add the $JWT_TOKEN as Bearer token in the Authorization header
-# The url where we send the request is the host name of the proxy: "https://proxy.goerli.nevermined.app" plus the endpoint of the service 
+# The url where we send the request is the host name of the proxy: "https://proxy.testing.nevermined.app" plus the endpoint of the service 
 # we are calling, int this case "/ask"
-curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.goerli.nevermined.app/ask
+curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.testing.nevermined.app/ask
 
 {"response":"\nThe song is about a person who is in love with someone who is not perfect, but they cannot live without them. Despite knowing that loving this person will bring heartache, they are willing to take the risk and accept the consequences. The song also compares the relationship to the story of Adam and Eve, with the person in the song being like Adam and their love interest being like Eve.","source_nodes":[{"node":{"text":"...","doc_id":"8e748293-f8d2-41b8-a225-7479455b1899","embedding":null,"doc_hash":"451d68b33de1e8034e48c6a98865364e52edd02837f06c34c662ba6d6d462c76","extra_info":null,"node_info":{"start":0,"end":1030},"relationships":{"1":"did:nv:3e0a13a6dba0ab20e83bf25c3e820af8b71c94cea0ab0763b4f822a6998009e6"}},"score":0.7585169416635178}],"extra_info":null}
 ```
 
-
 #### 4.b Using typescript to integrate the web service
 
 ```typescript
-const proxyEndpoint = `https://proxy.goerli.nevermined.app/ask`
+const proxyEndpoint = `https://proxy.testing.nevermined.app/ask`
 const requestData = '{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
 
 opts.headers = {

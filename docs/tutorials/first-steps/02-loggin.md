@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-description: How login using Web2 credentials
+description: How to login in the App
 ---
 
-# How to login without a MetaMask wallet
+# How to login?
 
-You can login to the Nevermined App using your Web2 credentials such as email or a social network account without having a MetaMask wallet, such a wallet will be automatically associated to your account after your first login.
+You can login to the Nevermined App using your social credentials such as email or a social network account.
 
 ## Choose your method of authentication
 
@@ -13,7 +13,7 @@ You can login to the Nevermined App using your Web2 credentials such as email or
 - Choose one of the available authentication methods and click "Continue"
 - You will be navigated to an external authentication process
 
-<p align="center"><img src="/images/tutorials/web2auth/web2auth-01-login-modal.jpg" width="300" /></p>
+<p align="center"><img src="/images/tutorials/web2auth/login-modal.png" width="300" /></p>
 
 After you have successfully logged in you will see the success message:
 

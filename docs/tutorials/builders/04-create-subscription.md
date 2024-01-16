@@ -4,9 +4,9 @@ description: Steps to publish a Smart Subscription
 ---
 
 
-# How to create a Smart Subscription
+# How to create a Subscription
 
-Publishers can use Nevermined to create Smart Subscriptions. These function as access tokens and help AI or Data Publishers to control the access to their AI or Data Services.  
+Publishers can use Nevermined payments App to create Smart Subscriptions. These function as access tokens and help AI or Data Publishers to control the access to their AI or Data Services.  
 
 Creating a Smart Subscription is the first of two steps:
 
@@ -20,23 +20,18 @@ How does it work?
 Under the hood, a Smart Subscription is an NFT smart contract, created and owned by the Publisher. The users or subscribers can purchase a token that gives them access to the services provided by the Publisher. 
 
 
-## Before you start
-
-The Smart Subscription will be deployed in a blockchain network. Currently, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks (plus on their respective testnets). 
-
-In order to interact with that network you need to get the right tokens to pay for the transaction fees on that network (instructions [here](02-metamask-tokens.md))
-
 ## How to create a Smart Subscription
 
 You can use the [Nevermined Marketplace](https://nevermined.app/) to create a new subscription, as a way to protect the access to your digital asset. The steps to create a subscription are:
 
-### 1. Connect your MetaMask to the Nevermined Marketplace
+### 1. Login to the App
 
-- Connect your MetaMask wallet to the network you want to use (instructions on adding networks [here](02-metamask-networks.md)).
+- Login into the app [here](../first-steps/02-loggin.md)).
 
-<p align="center"><img src="/images/tutorials/00_Connect_Wallet.png" width="600" /></p>
+<p align="center"><img src="/images/tutorials/00_Connect_Wallet.png" width="300" /></p>
 
 #### The first time you connect
+
 - The first time you connect, you will be asked to sign a message with your MetaMask wallet. This allows you to interact with the Nevermined marketplace. 
 
 <p align="center"><img src="/images/tutorials/04_Sign.png" width="600" /></p>

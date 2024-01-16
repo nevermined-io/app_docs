@@ -133,29 +133,13 @@ const config = {
             title: 'Nevermined App',
             items: [
               {
-                label: 'Arbitrum One',
+                label: 'App',
                 href: 'https://nevermined.app/',
               },
               {
-                label: 'Polygon Matic',
-                href: 'https://matic.nevermined.app/',
-              },
-              {
-                label: 'Gnosis',
-                href: 'https://gnosis.nevermined.app/',
-              },
-              {
-                label: 'Arbitrum Goerli',
-                href: 'https://goerli.nevermined.app/',
-              },
-              {
-                label: 'Polygon Mumbai',
-                href: 'https://mumbai.nevermined.app/',
-              },
-              {
-                label: 'Gnosis Chiado',
-                href: 'https://chiado.nevermined.app/',
-              },
+                label: 'Testing',
+                href: 'https://testing.nevermined.app/',
+              }
             ],
           },
           {

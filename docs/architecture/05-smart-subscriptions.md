@@ -1,11 +1,11 @@
 ---
-sidebar_position: 3 
-description: What are Smart Subscriptions 
+sidebar_position: 5
+description: What are the Nevermined Smart Subscriptions?
 ---
 
 # Nevermined's Smart Subscriptions
 
-Smart Subscriptions is a new concept that builds on blockchain and NFT technology, but provides much greater utility and flexibility. 
+Smart Subscriptions is a new concept that builds on blockchain and NFT technology, but provides much greater utility and flexibility.
 
 Traditionally, NFT technology has been applied to represent a unique asset, 1-to-1. For example, a Bored Ape NFT has one JPEG for each token. While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets.
 

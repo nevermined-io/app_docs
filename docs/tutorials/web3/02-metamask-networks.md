@@ -16,7 +16,7 @@ For testing purposes, we have also deployed the application on the following tes
 
 - [Mumbai](https://mumbai.nevermined.app) (for Polygon)
 - [Chiado](https://chiado.nevermined.app) (for Gnosis)
-- [Goerli](https://goerli.nevermined.app/) (for Arbitrum)
+- [Sepolia](https://testing.nevermined.app/) (for Arbitrum)
 
 
 ## Get Ready
@@ -100,13 +100,13 @@ Currency Symbol: XDAI
 Block Explorer URL: https://blockscout.com/gnosis/chiado
 ```
 
-### Arbitrum Goerli Testnet
+### Arbitrum Sepolia Testnet
 For the most up to date network details, visit a website like [https://chainlist.org/](https://chainlist.org/) or check other Arbitrum documentation.
 
 ```
-Network Name: Arbitrum Goerli Testnet
-New RPC URL: https://goerli-rollup.arbitrum.io/rpc
-ChainID: 421613
+Network Name: Arbitrum Sepolia Testnet
+New RPC URL: https://sepolia-rollup.arbitrum.io/rpc
+ChainID: 421614
 Currency Symbol: ETH
-Block Explorer URL: https://goerli.arbiscan.io/ 
+Block Explorer URL: https://sepolia.arbiscan.io/ 
 ```

@@ -5,7 +5,7 @@ export const Widget = () => {
   const onWidgetElementMounted = (widgetElement: HTMLElement | null) => {
     if (widgetElement) {
       insertWidgetScriptBefore(
-        'https://widgets.goerli.nevermined.one/nvm-one-widget-loader.js',
+        'https://widgets.testing.nevermined.app/nvm-one-widget-loader.js',
         widgetElement,
       )
     }

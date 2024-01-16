@@ -263,17 +263,15 @@ So you have implemented some endpoints to access your AI service, you have prote
 
 You can share your service with the Community in a safety way, and even monetize them, if you want, using a Nevermined Smart Subscription.
 
-In order to test and learn how you can use Nevermined App, we provide a test deployment that uses Arbitrum Goerli testnet, where you can try the different features provided by Nevermined.
+In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
-You can access to this test version of Nevermined App [here](https://goerli.nevermined.app/en)
+You can access to this test version of Nevermined App [here](https://testing.nevermined.app/en)
 
 ### Before you register your Service
 
 We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
 
-Before starting using Nevermined you will need to install and config Metamask in your browser. [See the instructions here](https://docs.nevermined.app/docs/tutorials/metamask/), [here](https://docs.nevermined.app/docs/tutorials/metamask-networks/#arbitrum-goerli-testnet), and [here](https://docs.nevermined.app/docs/tutorials/metamask-tokens/), 
-
-Once you have Metamask correctly configured, the next step is to create a brand new [Smart Subscription](https://docs.nevermined.app/docs/getting-started/smart-subscriptions)
+The next step is to create a brand new [Smart Subscription](https://docs.nevermined.app/docs/builders/smart-subscriptions)
 
 You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/create-subscription) you can find some help to guide you.
 
@@ -281,7 +279,7 @@ You will register your AI Service associated with this Subscription you are abou
 
 So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Service in Nevermined App.
 
-You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/register-webservice/)
+You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-webservice/)
 
 
  #### Defining Endpoints URLs
@@ -317,13 +315,13 @@ For instance:
 ```bash
 export NVM_TOKEN="eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..EW-BsszuYJLLuBylm6VPvw.zlGJQcCRjjG_m....srbCQpQ"
 
-curl -H "Authorization: $NVM_TOKEN" -X GET "https://5shbhhycwqvkqxjix1ubwnfss6fec5mpptaloqgx9agsqblyrt.proxy.goerli.nevermined.one/ai_service?param1=value1&param2=value2"
+curl -H "Authorization: $NVM_TOKEN" -X GET "https://5shbhhycwqvkqxjix1ubwnfss6fec5mpptaloqgx9agsqblyrt.proxy.testing.nevermined.app/ai_service?param1=value1&param2=value2"
 ```
 
 In case you have implemented your endpoints as a POST method, you can call them like this:
 
 ```bash
-curl -H "Authorization: $NVM_TOKEN" -X POST "https://5shbhhycwqvkqxjix1ubwnfss6fec5mpptaloqgx9agsqblyrt.proxy.goerli.nevermined.one/ai_service"  \
+curl -H "Authorization: $NVM_TOKEN" -X POST "https://5shbhhycwqvkqxjix1ubwnfss6fec5mpptaloqgx9agsqblyrt.proxy.testing.nevermined.app/ai_service"  \
 --header 'content-type: application/json' \
 --data '{"param1": "value1", "param2": "value2"} '
 ```

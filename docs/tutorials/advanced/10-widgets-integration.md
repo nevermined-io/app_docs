@@ -54,7 +54,7 @@ Here is a example of a code generated:
 
 ```html
 <div class="nvm-one-widget" nvm-did="did:nv:953574e93054b943a5c5935203024794e32e692154761442b70c1fcc0da362b8" nvm-wid="wid-74aabcf4-9441-4fb4-946b-38242928cc6e" nvm-cta-text="See more" nvm-cta-text-color="#cf0a0a" nvm-cta-bg-color="#3effe4" nvm-theme="dark"></div>
-<script defer src="https://widgets.goerli.nevermined.one/nvm-one-widget-loader.js"></script>
+<script defer src="https://widgets.testing.nevermined.app/nvm-one-widget-loader.js"></script>
 ```
 
 And here another example of the widget generated:
