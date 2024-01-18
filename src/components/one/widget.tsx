@@ -16,12 +16,13 @@ export const Widget = () => {
       ref={onWidgetElementMounted}
       className="nvm-one-widget"
       {...{
-        ['nvm-did']: 'did:nv:953574e93054b943a5c5935203024794e32e692154761442b70c1fcc0da362b8',
-        ['nvm-wid']: 'wid-74aabcf4-9441-4fb4-946b-38242928cc6e',
-        ['nvm-cta-text']: 'See More',
+        ['nvm-did']: 'did:nv:e51f0c4befe8bda1a5bc741f7b2cef2389a935119c5f9d06ecf0d0670659403f',
+        ['nvm-wid']: 'wid-801506b6-8936-4261-b183-43005b2e4352',
+        ['nvm-cta-text']: 'Tell me baby',
         ['nvm-theme']: 'dark',
-        ['nvm-cta-text-color']: '#cf0a0a',
-        ['nvm-cta-bg-color']: '#3effe4',
+        ['nvm-layout']: 'horizontal',
+        ['nvm-cta-text-color']: '#ffffff',
+        ['nvm-cta-bg-color']: '#3e95ff',
       }}
     />
   )

@@ -42,7 +42,7 @@ const FeatureList: BoxItem[] = [
     className: clsx(b('box', ['main'])),
     link: 'docs/getting-started',
     Svg: nvmSVGIcon,
-    description: <>What is the Nevermined App? And what can I use it for?</>,
+    description: <>What is the Nevermined Point of Sales? And what can I use it for?</>,
     overlay: <div className={b('box-overlay')} />,
   },
   {
@@ -52,7 +52,7 @@ const FeatureList: BoxItem[] = [
     Svg: integrationDocsSVGIcon,
     description: (
       <>
-        Everything you need to know about using the Nevermined App
+        Everything you need to know about using the Nevermined Payments infrastructure.
       </>
     ),
   },

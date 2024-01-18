@@ -6,8 +6,8 @@ import {themes as prismThemes} from 'prism-react-renderer'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nevermined App Documentation',
-  tagline: 'Monetize your AI and your Data with Nevermined Smart Subscriptions',
+  title: 'Nevermined Payments Documentation',
+  tagline: 'Monetize your AI and your Data with Nevermined payments infrastructure',
   url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,7 +16,7 @@ const config = {
   plugins: ['docusaurus-plugin-sass'],
   //plugins: ['docusaurus-plugin-sass'],//, './src/plugins/http-support', './src/plugins/preload-plugin'],
   customFields: {
-    subtitle: 'Your Data & AI Unchained',
+    subtitle: 'The point of sales for your AI and Data',
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
