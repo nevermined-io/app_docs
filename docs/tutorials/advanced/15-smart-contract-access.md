@@ -35,10 +35,10 @@ First you need to decide what you need to protect. This is totally dependent on 
 
 ### 2. Integrate with the Smart Subscription NFT
 
-Next, you need to link the Solidity code of your Smart Contract with the Smart Subscription NFT contract. Because the Nevermined contract uses the ERC721 format, you can use the standard ERC721 interfaces to interact with it.
+Next, you need to link the Solidity code of your Smart Contract with the Smart Subscription NFT contract. Because the Nevermined contract uses the ERC1155 format, you can use the standard ERC1155 interfaces to interact with it.
 
 ```solidity
-IERC721 subscriptionNFT = IERC721(subscriptionNFTAddress);
+IERC1155 subscriptionNFT = IERC1155(subscriptionNFTAddress);
 ```
 
 ### 3. Implement the access control to check if the caller is a subscriber

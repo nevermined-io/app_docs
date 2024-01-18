@@ -30,27 +30,27 @@ Just click on the three dots icon and select "Edit Widget".
 
 ### 2. Configure the widget properties
 
-![Config Widget](/images/tutorials/widget/widget_config_sceen.png)
+<p align="center"><img src="/images/tutorials/widget/widget_config_sceen.png" width="600"/></p>
 
 ### 3. Set the layout design between Vertical or Horizontal
 
-![Layout design](/images/tutorials/widget/widget_layout_horizontal.png)
+<p align="center"><img src="/images/tutorials/widget/widget_layout_horizontal.png" width="600"/></p>
 
 ### 3. Set the style between Light or Dark
 
-![Layout design](/images/tutorials/widget/edit_theme.png)
+<p align="center"><img src="/images/tutorials/widget/edit_theme.png" width="600"/></p>
 
 ### 4. Change the label text and set the text and button color
 
-![Button Config](/images/tutorials/widget/widget_change_color.png)
+<p align="center"><img src="/images/tutorials/widget/widget_change_color.png" width="600"/></p>
 
 ### 5. Choose a default language which the asset or plan details will show
 
-![Select Language](/images/tutorials/widget/select_lang.png)
+<p align="center"><img src="/images/tutorials/widget/select_lang.png" width="600"/></p>
 
 ### 6. Save and generate the widget code
 
-![Save the code](/images/tutorials/widget/save_config.png)
+<p align="center"><img src="/images/tutorials/widget/save_config.png" width="600"/></p>
 
 ## Code example
 
