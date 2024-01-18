@@ -11,7 +11,7 @@ import { Widget } from '@site/src/components/one';
 In this tutorial we show how you can integrate a widget showing your asset on your own website.
 
 :::note
-You can visit previous tutorials to see [how to create a Smart Subscription](create-subscription), [how to register a dataset](register-file-asset) and [how to register an AI service](register-webservice).
+You can visit previous tutorials to see [how to create a Smart Subscription](../builders/create-subscription), [how to register a dataset](../builders/register-file-asset) and [how to register an AI service](../builders/register-webservice).
 :::
 
 ## Getting ready
