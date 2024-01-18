@@ -2,21 +2,21 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 /* eslint-disable @typescript-eslint/no-var-requires */
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+import {themes as prismThemes} from 'prism-react-renderer'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nevermined App Documentation',
-  tagline: 'Monetize your AI and your Data with Nevermined Smart Subscriptions',
+  title: 'Nevermined Payments Documentation',
+  tagline: 'Monetize your AI and your Data with Nevermined payments infrastructure',
   url: 'https://docs.nevermined.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support', './src/plugins/preload-plugin'],
+  plugins: ['docusaurus-plugin-sass'],
+  //plugins: ['docusaurus-plugin-sass'],//, './src/plugins/http-support', './src/plugins/preload-plugin'],
   customFields: {
-    subtitle: 'Your Data & AI Unchained',
+    subtitle: 'The point of sales for your AI and Data',
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -133,29 +133,13 @@ const config = {
             title: 'Nevermined App',
             items: [
               {
-                label: 'Arbitrum One',
+                label: 'App',
                 href: 'https://nevermined.app/',
               },
               {
-                label: 'Polygon Matic',
-                href: 'https://matic.nevermined.app/',
-              },
-              {
-                label: 'Gnosis',
-                href: 'https://gnosis.nevermined.app/',
-              },
-              {
-                label: 'Arbitrum Goerli',
-                href: 'https://goerli.nevermined.app/',
-              },
-              {
-                label: 'Polygon Mumbai',
-                href: 'https://mumbai.nevermined.app/',
-              },
-              {
-                label: 'Gnosis Chiado',
-                href: 'https://chiado.nevermined.app/',
-              },
+                label: 'Testing',
+                href: 'https://testing.nevermined.app/',
+              }
             ],
           },
           {
@@ -216,8 +200,8 @@ const config = {
         defaultMode: 'light',
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
       algolia: {
         // The application ID provided by Algolia

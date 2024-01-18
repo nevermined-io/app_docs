@@ -1,6 +1,6 @@
 {
-  "label": "Artificial Intelligence",
-  "position": 3,
+  "label": "Where to deploy your AI and get paid",
+  "position": 4,
   "link": {
     "type": "doc",
     "id": "tutorials/ai/index"

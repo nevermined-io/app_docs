@@ -6,7 +6,7 @@
 
 @import './navbar.scss';
 @import './sidebar.scss';
-@import './fonts.scss';
+//@import './fonts.scss';
 @import './doc-card.scss';
 
 :root {
@@ -24,10 +24,10 @@
   --prism-color: #000;
   --prism-background-color: #fff;
 
-  --ifm-font-family-base: Exo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --ifm-font-family-monospace: CourierPrime, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  // --ifm-font-family-base: Exo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  //   Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // --ifm-font-family-monospace: CourierPrime, SFMono-Regular, Menlo, Monaco, Consolas,
+  //   'Liberation Mono', 'Courier New', monospace;
 
   --ifm-footer-background-color: transparent;
   --ifm-footer-color: var(--ifm-color-black);
@@ -163,7 +163,7 @@ html,
 body {
   background: var(--ifm-background-color) !important;
   color: unset !important;
-  font-family: var(--ifm-font-family-base) !important;
+  //font-family: var(--ifm-font-family-base) !important;
 }
 
 header,

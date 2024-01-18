@@ -8,58 +8,67 @@ import { Widget } from '@site/src/components/one';
 
 # How to integrate a widget in your website
 
-In this tutorial we show how you can integrate a widget showing your assets registered on Nevermined on your website.
+In this tutorial we show how you can integrate a widget showing your asset on your own website.
+
+:::note
+You can visit previous tutorials to see [how to create a Smart Subscription](../builders/create-subscription), [how to register a dataset](../builders/register-file-asset) and [how to register an AI service](../builders/register-webservice).
+:::
 
 ## Getting ready
 
-
 ## How to generate the widget code
 
-The steps to generate the widget are the following:
+The steps to generate and integrate the widget are the following:
 
-### 1. Go to `My Assets` or `My Plans` and select Edit widget:
+### 1. Go to `My Assets` or `My Plans` and select Edit widget
 
-![My Assets](/images/tutorials/widget/widget_edit_select.png)
+<p align="center"><img src="/images/tutorials/05-06-My-assets.png" width="600"/></p>
 
-![My Plans](/images/tutorials/widget/edit_widget_plans.png)
+Just click on the three dots icon and select "Edit Widget".
 
+<p align="center"><img src="/images/tutorials/builders/assets-published-options.png" width="600"/></p>
 
 ### 2. Configure the widget properties
 
-![Config Widget](/images/tutorials/widget/widget_config_sceen.png)
+<p align="center"><img src="/images/tutorials/widget/widget_config_sceen.png" width="600"/></p>
 
-### 3. Set the layout design between Light or Dark
+### 3. Set the layout design between Vertical or Horizontal
 
-![Layout design](/images/tutorials/widget/edit_theme.png)
+<p align="center"><img src="/images/tutorials/widget/widget_layout_horizontal.png" width="600"/></p>
+
+### 3. Set the style between Light or Dark
+
+<p align="center"><img src="/images/tutorials/widget/edit_theme.png" width="600"/></p>
 
 ### 4. Change the label text and set the text and button color
 
-![Button Config](/images/tutorials/widget/change_label.png)
+<p align="center"><img src="/images/tutorials/widget/widget_change_color.png" width="600"/></p>
 
 ### 5. Choose a default language which the asset or plan details will show
 
-![Select Language](/images/tutorials/widget/select_lang.png)
+<p align="center"><img src="/images/tutorials/widget/select_lang.png" width="600"/></p>
 
-### 6. Save the code:
+### 6. Save and generate the widget code
 
-![Save the code](/images/tutorials/widget/save_config.png)
-
-### 7. Click in Show HTML and Copy the code
-
-![Copy de code](/images/tutorials/widget/copy_code.png)
+<p align="center"><img src="/images/tutorials/widget/save_config.png" width="600"/></p>
 
 ## Code example
 
 Here is a example of a code generated:
 
 ```html
-<div class="nvm-one-widget" nvm-did="did:nv:953574e93054b943a5c5935203024794e32e692154761442b70c1fcc0da362b8" nvm-wid="wid-74aabcf4-9441-4fb4-946b-38242928cc6e" nvm-cta-text="See more" nvm-cta-text-color="#cf0a0a" nvm-cta-bg-color="#3effe4" nvm-theme="dark"></div>
-<script defer src="https://widgets.goerli.nevermined.one/nvm-one-widget-loader.js"></script>
+<div class="nvm-one-widget" nvm-did="did:nv:e51f0c4befe8bda1a5bc741f7b2cef2389a935119c5f9d06ecf0d0670659403f" nvm-wid="wid-801506b6-8936-4261-b183-43005b2e4352" nvm-cta-text="Tell me baby" nvm-cta-bg-color="#3e95ff" nvm-theme="dark" nvm-layout="horizontal"></div>
+<script defer src="https://widgets.testing.nevermined.app/nvm-one-widget-loader.js"></script>
 ```
 
-And here another example of the widget generated:
+And here is how the widget looks like once integrated in a website:
 
 <BrowserOnly fallback={<div>Loading demo...</div>}>
   {()=> <Widget/>}
 </BrowserOnly>
 
+---
+
+:::info
+Send us via Discord your integration! We will be happy to share it with the community.
+:::
