@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[36],{20036:(s,e,a)=>{a.r(e),a.d(e,{default:()=>c});const c=a.p+"assets/images/11-01-create-model-a77898bc83dc8c246841a3fb1d827960.png"}}]);

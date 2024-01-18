@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8390],{38390:(s,e,p)=>{p.r(e),p.d(e,{default:()=>a});const a=p.p+"assets/images/copy_code-80db6340ff7fa109e9fff4a6536b1e3d.png"}}]);

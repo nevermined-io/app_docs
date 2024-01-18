@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[4930],{34930:(s,a,t)=>{t.r(a),t.d(a,{default:()=>c});const c=t.p+"assets/fonts/Exo-Italic-da6d54c596a40ea30db4944ad589f5f6.ttf"}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[6960],{16960:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/01_Registering_new_Plan-28f3d837822fb21b93306ee3a2dbc4b5.png"}}]);

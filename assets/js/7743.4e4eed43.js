@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[7743],{77743:(e,s,a)=>{a.r(s),a.d(s,{default:()=>c});const c=a.p+"assets/images/widget_config_sceen-f93904f5c840a67c208dfa8e1a20e04b.png"}}]);

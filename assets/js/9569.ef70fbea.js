@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[9569],{39569:(a,s,e)=>{e.r(s),e.d(s,{default:()=>c});const c=e.p+"assets/images/015-Install_Plugin_Validate_Manifest-e67053e7b7abb5ae77c21c17cfa3acc5.png"}}]);

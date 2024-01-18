@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[5357],{95357:(s,e,d)=>{d.r(e),d.d(e,{default:()=>p});const p=d.p+"assets/fonts/Exo-Bold-262e5bf42773e5ddb032844810d7d61e.ttf"}}]);

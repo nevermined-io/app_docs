@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8396],{28396:(e,s,a)=>{a.r(s),a.d(s,{default:()=>c});const c=a.p+"assets/images/50-Testnet-Goerli-ETH-f69c58e81ca1da97c7e59836be21e95b.png"}}]);

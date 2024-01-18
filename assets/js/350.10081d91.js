@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[350],{30350:(e,s,p)=>{p.r(s),p.d(s,{default:()=>a});const a=p.p+"assets/images/11-06-new-endpoint-form-3e6caea1014d0f82250f985d1f4d0f06.png"}}]);

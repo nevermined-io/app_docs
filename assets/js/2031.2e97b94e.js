@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2031],{32031:(s,e,p)=>{p.r(e),p.d(e,{default:()=>a});const a=p.p+"assets/images/11-02-create-form-85857d390339f4065c4e088469db4621.png"}}]);

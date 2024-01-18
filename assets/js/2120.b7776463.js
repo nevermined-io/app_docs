@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[2120],{62120:(e,a,s)=>{s.r(a),s.d(a,{default:()=>c});const c=s.p+"assets/images/change_label-ee57e5ec0f7ea4abaccbdbef901f1b3f.png"}}]);

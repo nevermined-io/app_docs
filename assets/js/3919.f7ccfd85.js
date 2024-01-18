@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[3919],{93919:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/05-03-Webservice-Integration-a6070f6b7b45b6d54b70852b31d29ffe.png"}}]);

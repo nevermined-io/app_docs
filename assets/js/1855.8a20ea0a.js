@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1855],{91855:(s,e,a)=>{a.r(e),a.d(e,{default:()=>c});const c=a.p+"assets/images/11-11-creating-service-nvm-bb823bf62c2948dac647551d8f48840a.png"}}]);

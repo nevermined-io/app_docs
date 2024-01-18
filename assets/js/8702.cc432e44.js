@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[8702],{78702:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/Elvis-425d1e76bf964baa898a1b15243f3c4b.png"}}]);

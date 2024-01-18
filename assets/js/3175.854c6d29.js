@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[3175],{93175:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p});const p=a.p+"assets/images/widget_edit_select-4116642fae64203aad1a4ef2b573cff1.png"}}]);

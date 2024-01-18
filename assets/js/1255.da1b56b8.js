@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[1255],{91255:(s,c,e)=>{e.r(c),e.d(c,{default:()=>a});const a=e.p+"assets/images/Proxy_integration-266ca3bc372dc21790f42658b88e9cb8.png"}}]);

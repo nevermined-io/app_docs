@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp_docs=self.webpackChunkapp_docs||[]).push([[9834],{79834:(s,a,e)=>{e.r(a),e.d(a,{default:()=>p});const p=e.p+"assets/images/MM_Matic_Asset-61a3580073f544c9b0f106e9f2faab88.png"}}]);
