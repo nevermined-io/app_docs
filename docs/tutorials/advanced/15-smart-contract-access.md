@@ -47,13 +47,20 @@ In our example we are going to protect the `claim` method. This method is used t
 
 ```solidity
     modifier onlySubscribers(address _address) {
-        require(
-            subscriptionNFT.balanceOf(_address) > 0,
+        require(            
+            subscriptionNFT.balanceOf(_address, uint256(tokenId)) > 0,
             'You are not a subscriber'
         );
         _;
     }
 ```
+
+The `tokenId` is the id of the Smart Subscription NFT you want to use to protect your Smart Contract. In our example we purchased the following subscription:
+```
+https://testing.nevermined.app/en/subscription/did:nv:54c76f49dcfde63b1ce75412a3105bfb702b3e123a7e61320937f0ca792736e7
+```
+
+The `tokenId` is the last part of the URL (after `did:nv:`): `54c76f49dcfde63b1ce75412a3105bfb702b3e123a7e61320937f0ca792736e7`. 
 
 Next, we use this modifier in the `claim` method:
 
@@ -65,14 +72,13 @@ Next, we use this modifier in the `claim` method:
 
 You can see all the contract code [here](https://github.com/nevermined-io/tutorials/blob/main/subscriptions/001-Smart_Contract_Access/contracts/MyToken.sol).
 
-
 ### 4. Testing the integration
 
 You can the complete the test [here](https://github.com/nevermined-io/tutorials/blob/main/subscriptions/001-Smart_Contract_Access/test/MyToken.ts).
 
 ### 5. Users can subscribe to your Smart Subscription
 
-Once the Smart Subscription is deployed and the Smart Contract is connected to it, users can subscribe to the plan to claim the airdrop. 
+Once the Smart Subscription is deployed and the Smart Contract is connected to it, users can subscribe to the plan to claim the airdrop.
 
 ![Purchase the Plan](/images/tutorials/plans/03_Plan_details.png)
 
