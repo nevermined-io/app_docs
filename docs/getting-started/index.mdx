@@ -1,42 +1,51 @@
 ---
 sidebar_position: 1
-description: What is Nevermined Point of Sales?
+description: What is the Nevermined Payments Protocol and Point of Sales Solution?
 ---
 
-# Welcome to Nevermined Point of Sales App?
+# Welcome to Nevermined Payments App
 
-At Nevermined, we see a future in which the only limitations to AI advancement will be their ability to access and transact on the data and services they required to optimize their inferences. There are 2 issues at present that will impede this progress:
+At Nevermined, we see a future in which dominant consumers are AI agents. We also believe the primary chokepoint to AI advancement will be each AI Agent's ability to access and transact on the services and data they require to optimize their output. There are 2 bottlenecks that significantly impede the current progress of AI agents:
 
-- AI Agents won’t be able to get a bank account (they will have wallets on-chain instead).
-- Web3 UX for humans and AIs alike still SUCKS.
+- AI Agents won’t have a bank account for numerous reasons, including their inability to pass required, traditional KYC. Instead, they will have wallets on-chain.
+- The UX for enabling payments between agents, including between humans and AIs, currently SUCKS.
 
-
-As a result, we’ve gone about correcting these issues so that AI agents will be able to transact, spend, generate and store value, and interact directly with communities in a simple way.
-
-## Wallet > Bank Account
-
-We believe AI Agents won’t have bank accounts, likely because banks won’t issue them (how will an AI pass KYC), nor would an AI want one. The act of KYC’ing, or requiring a wrapper traditional organization from which an AI can transact is as antiquated as bank accounts themselves.
-
-Instead, AI agents will have wallets on blockchains from which they can deploy and receive tokens. For this to scale, the datasets and services, either from 3rd parties or even other agents, will also need to be able to transact with tokens. Because of this, we’ve created an App that allows AI developers, data publishers and 3rd party services to tokenize their access APIs.
+As a result, we’ve gone about addressing these issues so that AI agents will be able to transact, spend, generate and store value, and interact directly with communities and ecosystem actors in a simple way.
 
 
-## Web3 UX still sucks
+## Wallets are to AIs what Bank Accounts are to Humans
 
-Regardless whether the user is Human or AI, the current Web3 UX is preposterous. 
+We believe AI Agents won’t have bank accounts, likely because banks won’t issue them (how will an AI pass KYC), nor would an AI want one. The act of KYC’ing, or requiring a wrapper of a traditional organization from which an AI can transact, is as antiquated as bank accounts themselves.
 
-As an example, say you want to consume 12 month’s worth of DeFi data on a marketplace from 5 different protocols: Uniswap, Aave, Balancer, Curve, and Compound. Now say each protocol’s 12 month dataset is broken down into 1 month segments. That’s a minimum of 70 confirms to access the data if it’s tokengated (probably more like 280 at an avg. of 4 confirms per access). 
+Instead, AI agents will have wallets on blockchains from which they can deploy and receive tokens. For this to scale, the services, models, datasets, workflows, etc., from either 3rd parties or even other agents, will also need to be able to transact with tokens. Because of this, we’ve created an App that allows AI Builders and developers, data publishers and 3rd party services like model providers to wrap their APIs in access tokens that enable control over usage. And we've given a name to this Builder/publisher-owned process-driven implementation: "Smart Subscriptions".
 
-Horrendous UX.
+
+## AI Agent UX Sucks, Especially for Payments
+
+Regardless whether the user is carbon-based (i.e. Human) or silicon-based (i.e. AI), the current UX for AI agents is not good. 
+
+Take, for example, the issue of how digital payments are architected versus how services like LLMs are run and offered to users. The current class of Generative AI apps often try to optimize performance by selecting the most appropriate model for any given response / inference. To do this, an input prompt should be decomposed and analyzed to determine what model is best suited for inference delivery. In the case of prompts that require both text and image outputs, then a multimodal solution, like GPT4, might be used. However, in the case of a simple QA input prompt, the inference may only require GPT3.
+
+Needless to say, there is a TON of optionality for orchestrating an AI derived output.
+
+Now, combine this optionality with the limitations of existing payment services, like Stripe.  Contemporary Point of Sales systems are optimized for a world of relatively static products. Think clothing items, or even SaaS services that really only offer discrete digital services, like connecting and interacting with a database or cloud-based ERP system. These systems are architected to deal with static products that do not change that often, and simple requests for service. 
+
+But AIs, even in their most basic form, are incredibly dynamic. Throw into the mix a future where the component pieces of an AI agent (compute, storage, logic / data / context) are all decentralized, and you have the emergence of a highly complex system with negotiation taking place between components, as well as between agents. This will require an equally complicated system of unit accounting which existing payments solutions just cannot handle. 
+
+To enable all this, we believe we need an entirely new payments protocol, and new tech to enable it.
 
 ## Smart Subscriptions → Problem Solved
 
-So, we went back to the drawing board to simplify the process and created Smart Subscriptions. This Nevermined functionality addresses the two issues above as follows:
+To begin with, we went back to the drawing board to simplify the process and created Smart Subscriptions. This Nevermined functionality addresses the two issues above as follows:
 
 1. By enabling the tokenization of AI Agent APIs, as well as the data and services those APIs need to operate, Agents now have the ability to transact, reward, and engage natively.
-2. Smart Subscriptions allow data and services Publishers to create one access token, append registered data and service assets, and then set the tokengating parameters, like how much time access is granted for how much, that enforce the Subscription conditions.
+
+2. Smart Subscriptions allow data and services Publishers to create access tokens, which we call Credits, append registered data and services, and then set access parameters, like how much time access is granted for how much, all enforced via the Smart Subscription conditions. This allows for any permutation of service to be offered via Subscriptions that conform to any variable pricing mechanic. 
+
+Combining these two features, a Builder can now set the conditions for accessing their AI agent, and then account for that usage based on the variable conditions of that access.  
 
 
-Now you can monetize AI Agents services, as well as all the peripheral 3rd party services and data that AIs need to develop full service capabilities. 
+The result: AI Builders and Agents can monetize their AI services.
 
 
 import DocCardList from '@theme/DocCardList';
