@@ -4,16 +4,16 @@ description: Steps to publish a Smart Subscription
 ---
 
 
-# How to create a Subscription
+# How to create a Smart Subscription
 
-Publishers can use Nevermined to create Smart Subscriptions and receive payments from their subscribers. These function as access tokens and help AI or Data Publishers to control the access to their AI or Data Services.  
+Publishers can use Nevermined to create Smart Subscriptions and receive payments from their users when they pay to subscribe. Smart Subscriptions enable the creation of credits that function as access tokens, and help AI Builders control the access to their AI services / apps / agents.  
 
 Creating a Smart Subscription is the first of two steps:
 
-* First, you create a subscription.
-* Then, you register your asset (an AI web service, a Data set,...) and you link it to your subscription. This is explained in the [web service tutorial](register-webservice) and [data tutorial](register-file-asset).
+* First, you create a Smart Subscription.
+* Then, you register your AI web service and you link it to a Smart Subscription that you previously created. This is explained in the [web service tutorial](register-webservice).
 
-When you’ve completed those 2 steps, the Smart Subscription becomes an access control mechanism to your asset.
+When you’ve completed those 2 steps, the Smart Subscription becomes an access control mechanism to your AI service.
 
 :::info
 
@@ -21,23 +21,23 @@ Remember that you need to have your account configured to accept payments. You c
 
 :::
 
-## How to create a Smart Subscription
+## Creating a Smart Subscription
 
-You can use the [Nevermined Payments App](https://nevermined.app/) to create a new subscription, as a way to protect the access to your digital asset. The steps to create a subscription are:
+You can use the [Nevermined Payments App](https://nevermined.app/) to create a new subscription, as a way to protect the access to your AI service.
 
-### 1. Login to the App
+### Step 1 - Login to the App
 
 Login into the app as we show [here](../first-steps/02-loggin.md).
 
 <p align="center"><img src="/images/tutorials/00_Connect_Wallet.png" width="300" /></p>
 
-### 2. Configure your account
+### Step 2 - Configure your account
 
-Complete some basic account information and the prefered payments method as we saw [here](configure-account).
+Enter some basic account information and the prefered payments method, as we saw [here](configure-account).
 
 
 
-### 3. Open the New Asset page
+### Step 3 - Open the New Asset page
 
 - Click on the New button in the top right to go the New Asset page. 
 - Then click 'Create Plan'
@@ -45,17 +45,16 @@ Complete some basic account information and the prefered payments method as we s
 <p align="center"><img src="/images/tutorials/04_01_New_Subscription.png" /></p>
 
 
-### 4. Add some metadata to your Subscription
+### Step 4 - Add some metadata to your Smart Subscription
 
 #### Provide a description
 
-We recommend you to explain what your Subscription gives access to and for how long.
-This can be long. You will add a (short) title in the next step.
+We recommend taht you explain what your Smart Subscription gives access to, the access conditions like access duration, etc.
 
 Some examples:
-* Monthly pass to our OpenAI copilot that summarizes 35 Elvis songs. 
+* A Monthly pass to our OpenAI copilot that summarizes 35 Elvis songs. 
 * 1-Year subscription to our Defi Data web service, which indexes from 5 major DeFi platforms. 
-* Free & forever access to my Discord server about best AI Coding practices. 
+* 10,000 credits to access to my Discord server about best AI Coding practices. 
 
 #### Add an image
 
@@ -63,30 +62,30 @@ You can add an image to highlight your Plan. Pro tip: use your company's logo.
 
 #### Add tags
 
-Tags are optional but can make it easier to find your Subscription in our Marketplace. Click '+' to add a tag. 
+Tags are optional but can make it easier to search for Smart Subscriptions. Click '+' to add a tag. 
 
 <p align="center"><img src="/images/tutorials/04_02_Subscription_Description.png" /></p>
 
-### 5. Configure the Subscription
+### Step 5 - Configure Access for a Smart Subscription
 
-Nevermined allows to configure 2 types of subscriptions:
+Nevermined lets Builders configure Smart Subscriptions with 2 types of controls / access management mechanisms:
 
-* Limited by usage (credits). Every time a user accesses any resouce associated to the subscription, the usage consumes credits. When the user consumes all the credits, the subscription is automatically expired and the user needs to top up.
-* Time limited. You can specify the duration of the subscription (1 month, 1 year, etc.). When the time is over, the subscription is automatically expired and the user needs to renew it.
+* Limited by usage - Builders control the number of requests that can be made to a service. Every time a user accesses any resouce associated to the Smart Subscription, the usage consumes from a capped amount of credits. When the user consumes all the credits, the subscription automatically expires and the user needs to top up to continue using the service.
+* Limited by time - Builders can specify the duration of the Smart Subscription (1 month, 1 year, etc.). When the time period is over, the subscription automatically expires and the user needs to renew it.
 
 :::tip
 
-Credit subscriptions are specilly useful for AI services if you want to protect your AI service against overuse.
+Credit Smart Subscriptions are specilly useful for AI services if you want to protect your AI service against overuse.
 
 :::
 
-Depending on the type of subscription you want to create, you will need to configure different parameters.
+Depending on the type of Smart Subscription you want to create, you will need to configure different parameters.
 
-If the subscription is **Limitted by credits**, you will need to configure:
+If the subscription is **Limitted by usage**, you will need to configure:
 
 * The title of the plan
-* The price of the plan (in USD / USDC)
-* The number of credits the user gets when they purchase the subscription
+* The price of the plan in either fiat (i.e. USD) or crypto (i.e. USDC)
+* The number of credits the user gets when they purchase the Smart Subscription
 
 <p align="center"><img src="/images/tutorials/04_03_credit_options.png" width="600"/></p>
 
@@ -94,28 +93,28 @@ If the subscription is **Limitted by credits**, you will need to configure:
 If the subscription is **Limitted by time**, you will need to configure:
 
 * The title of the plan
-* The price of the plan (in USD / USDC)
+* The price of the plan in either fiat (i.e. USD) or crypto (i.e. USDC)
 * The duration of the subscription (1 month, 1 year, forever, etc.) 
 
-Click on “Next” when you’re happy with the configuration.
+Click “Next” when you’re happy with the configuration.
 
 <p align="center"><img src="/images/tutorials/04_03_Subscription_Pricing.png" /></p>
 
-### 5. Review everything is okay
+### Step 6 - Review that everything is okay
 
-Before creating the subscription, you can review the description, duration and price. Click on “Create” if everything is okay or click on “Back” if you want to modify anything.
+Before creating the Smart Subscription, you can review the description, limit conditions and price. Click on “Create” if everything is okay or click on “Back” if you want to modify anything.
 
 <p align="center"><img src="/images/tutorials/04_04_Subscription_Review.png" /></p>
 
-### 6. Register the subscription
+### Step 7 - Register the Smart Subscription
 
 The Nevermined App will register your new subscription. This will take just a few seconds and once it's done, you will see a success message.  
 
 ![Finish the subscription creation](/images/tutorials/05_New_Subscription_04.png)
 
-### 7. Add an asset to your Subscription
+### Step 8 - Add an AI Service to your Smart Subscription
 
-Now, you can move on the next step: append an asset to your Smart Subscription, either an [AI Service](05-register-webservice.md) or a [file Asset](06-register-file-asset.md).
+Now, you can move on the next step: adding an AI Service to your Smart Subscription via the following flow: [AI Service](05-register-webservice.md).
 Alternatively, you can go to your dashboard to see the new subscription you created. 
 
 <p align="center"><img src="/images/tutorials/04_05_Subscription_AddAsset.png" /></p>
