@@ -28,3 +28,7 @@ Now you can go to the subscription page to see any of the assets included into t
 You can find all the subscriptions you purchased on your personal area "My Area" > "My Plans" > "Purchased".
 
 :::
+
+You can watch a video tutorial showing how to buy a subscription with crypto here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Ba5RuTQY68?si=3gJqKfn8P8t4A7ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
