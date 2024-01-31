@@ -8,6 +8,20 @@ import { SuperAgentWidget } from '@site/src/components/one';
 
 # How to accept payments in your Super Agent AI application
 
+Here's a short video of How a [Super Agent AI agent](https://www.superagent.sh/) can be used by a subscriber and monetized:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JgpUeb45tEk?si=YGgqWr-5H5wy68kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+:::info
+
+If you want to see how an AI Publisher can monetize their Super Agent AI services, please take a look at the rest of the tutorial.
+
+:::
+
+
+
 ## Step 1 - Set up your Builder Account in Nevermined and a Smart Subscription
 
 In a previous tutorial we showed how to [setup your Nevermined account](../builders/configure-account) and [how to create a Smart Subscription](../builders/create-subscription). Here we go through the required steps of registering a new AI agent existing on Super Agent and linking it to your Smart Subscription. User who purchase a subscription will get access to the Super Agent AI service that is included in the subscription plan.
