@@ -58,7 +58,7 @@ You can't register an AI Service without first configuring a Smart Subscription.
 
 :::note
 Please note that Nevermined fully encrypts the Bearer Token information that you submit so that
-this information is never disclosed to anyone but yourse.
+this information is never disclosed to anyone but yourself.
 :::
 
 - Now select the subscription plan that you created earlier and attach your AI service to this plan.
