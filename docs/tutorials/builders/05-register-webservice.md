@@ -11,6 +11,10 @@ In a previous tutorial we showed [how to create a Smart Subscription](create-sub
 You can't register an AI Service without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
 :::
 
+If you don't want to read the whole tutorial, you can watch the video tutorial:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/65rVHScjoGU?si=UkrpJK7tjtoXGlWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## How to register an AI web service
 
