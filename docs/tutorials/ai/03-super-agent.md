@@ -10,7 +10,9 @@ import { SuperAgentWidget } from '@site/src/components/one';
 
 Here's a short video of How a [Super Agent AI agent](https://www.superagent.sh/) can be used by a subscriber and monetized:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JgpUeb45tEk?si=YGgqWr-5H5wy68kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p align="center">
+<iframe width="840" height="470"src="https://www.youtube.com/embed/JgpUeb45tEk?si=YGgqWr-5H5wy68kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
 
 ---
 

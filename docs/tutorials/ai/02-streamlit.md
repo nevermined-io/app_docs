@@ -8,7 +8,9 @@ description: How to accept payments in your Streamlit application
 First here's a short demo of the AI Streamlit Subscription app and how it works with Stripe
 payments:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SrC6yju6dms?si=iaJOhDJp9rL1lpw6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p align="center">
+<iframe width="840" height="470" src="https://www.youtube.com/embed/SrC6yju6dms?si=iaJOhDJp9rL1lpw6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
 
 In this video, you will see how a user is prompted via your Streamlit app to first log into your
 app. Once logged in and authenticated, users without credits will be prompted to subscribe to your
