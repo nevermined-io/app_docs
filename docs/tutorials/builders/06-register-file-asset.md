@@ -25,6 +25,12 @@ The registration of any of those is very similar. In this tutorial we will focus
 
 These are the steps to make your dataset available to holders of your Smart Subscription.
 
+If you don't want to read the whole tutorial, you can watch the video tutorial:
+
+<p align="center">
+<iframe width="840" height="470" src="https://www.youtube.com/embed/MepagutRdrM?si=Gwsyj8BRrf5_PKs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
 ### 1. Open the New Asset page
 
 * Click on the New button in the top right to go the New Asset page.
