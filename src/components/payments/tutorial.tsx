@@ -8,7 +8,8 @@ export default function PaymentsTutorial() {
 
   const payments = useRef(
     new Payments({
-      returnUrl: 'http://localhost:3000/docs/tutorials/integration/nextjs-react-payments',
+      returnUrl:
+        'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
       environment: 'staging',
     }),
   )
