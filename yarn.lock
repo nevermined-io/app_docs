@@ -1814,6 +1814,11 @@
   dependencies:
     "@types/mdx" "^2.0.0"
 
+"@nevermined-io/payments@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@nevermined-io/payments/-/payments-0.1.2.tgz#ffff6a053dacf1755a51bd99a35644693d8c7575"
+  integrity sha512-40KjPcLU9KuyTyBbHDuxISAFxXPyHJX4aEtu9M/SQX+mQiIi8D+Tzn/IFgA2bxXtLjJxOWO4ZVZ0mLvrNDgFYA==
+
 "@nevermined-io/styles@^0.1.1":
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/@nevermined-io/styles/-/styles-0.1.9.tgz#33cd2b8e1ca2939844f2052bfeed77933ed895d6"

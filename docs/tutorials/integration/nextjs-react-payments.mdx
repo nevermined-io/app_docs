@@ -1,0 +1,174 @@
+---
+sidebar_position: 3
+description: How to integrate the Nevermined Payments library in a react application
+---
+
+import PaymentsTutorial from '@site/src/components/payments/tutorial'
+
+# Tutorial on how to use the Nevermined Payments Protocol in a React app
+
+### Initializing the project
+
+For this tutorial we will be using [nextjs](https://nextjs.org/docs/getting-started/installation)
+create our react application.
+
+1. Initialize the react project
+
+```
+npx create-next-app@latest
+```
+
+2. Install the Nevermined [payments library](https://github.com/nevermined-io/payments)
+
+```
+yarn add @nevermined-io/payments
+```
+
+3. Starting the development server
+
+```
+yarn dev
+```
+
+### Initialize the payments library
+
+In order to initialize the payments library we need to have the user login to Nevermined. This can
+be achieved by calling the `connect` method that will redirect the user to the Nevermined for Login
+and once the user is returned to the app calling the `init` method to finalize the initialization of
+the payments library.
+
+```tsx title="/app/page.tsx"
+'use client'
+
+import { useEffect } from 'react'
+import { Payments } from '@nevermined-io/payments'
+
+export default function Home() {
+  const payments = new Payments({
+    returnUrl:
+      'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
+    environment: 'staging',
+  })
+
+  const onLogin = () => {
+    payments.connect()
+  }
+
+  useEffect(() => {
+    payments.init()
+  }, [])
+
+  return (
+    <main>
+      <div>
+        <button onClick={onLogin}>Login</button>
+      </div>
+    </main>
+  )
+}
+```
+
+### Create a subscription
+
+Once the app is initialized we can start interacting with the Nevermined Payments Protocol. Here is
+a example for creating a subscription
+
+```tsx title="/app/page.tsx"
+  ...
+
+  async function createSubscription() {
+    if (payments.isLoggedIn) {
+      const { did } = await payments.createSubscription({
+        name: 'test subscription',
+        description: 'test',
+        price: 10000000n,
+        tokenAddress: '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d',
+        duration: 30,
+        tags: ['test'],
+      })
+    }
+
+    return (
+    <main>
+      <div>
+        <button onClick={onLogin}>Login</button>
+        <button onClick={createSubscription}>Create Subscription</button>
+      </div>
+    </main>
+  )
+  }
+```
+
+### Try it out
+
+<PaymentsTutorial></PaymentsTutorial>
+
+### Full code
+
+For the full nextjs example please check
+[payments-nextjs-example](https://github.com/nevermined-io/tutorials/tree/main/payments-nextjs-example)
+
+```tsx title="app/page.tsx"
+import { useEffect, useState, useRef } from 'react'
+import { Payments } from '@nevermined-io/payments'
+
+export default function PaymentsTutorial() {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false)
+  const [creatingSubscription, setCreatingSubscription] = useState<boolean>(false)
+  const [did, setDid] = useState<string>('')
+
+  const payments = useRef(
+    new Payments({
+      returnUrl: 'http://localhost:3000/docs/tutorials/integration/nextjs-react-payments',
+      environment: 'staging',
+    }),
+  )
+
+  const onLogin = () => {
+    payments.current.connect()
+  }
+
+  useEffect(() => {
+    payments.current.init()
+  }, [])
+
+  useEffect(() => {
+    if (payments.current.isLoggedIn) {
+      setIsUserLoggedIn(true)
+    }
+  }, [payments.current.isLoggedIn])
+
+  async function createSubscription() {
+    if (payments.current.isLoggedIn) {
+      setCreatingSubscription(true)
+      const { did } = await payments.current.createSubscription({
+        name: 'test subscription',
+        description: 'test',
+        price: 10000000n,
+        tokenAddress: '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d',
+        duration: 30,
+        tags: ['test'],
+      })
+      setCreatingSubscription(false)
+      setDid(did)
+    }
+  }
+
+  return (
+    <main>
+      <div>
+        <button onClick={onLogin}>Login</button>
+        <p>{isUserLoggedIn ? 'Logged in' : 'Not logged in'}</p>
+        <button onClick={createSubscription}>Create Subscription</button>
+        <p>
+          {creatingSubscription && did === '' ? (
+            'Creating Subscription, please wait a few seconds...'
+          ) : (
+            <a href={`https://staging.nevermined.app/subscription/${did}`}>{did}</a>
+          )}
+        </p>
+      </div>
+    </main>
+  )
+}
+```
