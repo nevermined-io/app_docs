@@ -7,35 +7,32 @@ description: FAQ
 
 ## What is Nevermined?
 
-Nevermined brings together Data and AI to develop next generation services for developers. 
-One of the standout features of Nevermined is the full data & AI provenance tracking. This grants users full transparency over the sources AI is accessing when replying to prompts and sets the infrastructure for rewarding the data publishers.
+Nevermined is the AI payments protocol delivering the Web3 standard for AI-to-AI transactions. At Nevermined, we AI payments are a protocol, not a feature, and we're building the Open Source software to power AI's future.
 
 ## What is Nevermined App?
 
-The Nevermined App allows Data & AI developers to create tokenized subscriptions that allow them to monetize their data assets or web services. These Smart Subscriptions simply create access tokens according to the time and price conditions set by the publisher. This smart contract then tokengates your assets for a set period of time to wallets that own the access token. No Smart Subscription token = No Access.
+The Nevermined App allows AI builders to monetize their AI agents and associated assets, like context data, etc. You do this by creating a Smart Subscription in which you specify the access parameters to your AI agent, such as price, time limit, and/or number of requests that can be made to use your AI agent. You then add your AI agent API to the subscription, and make the AI available to your users.
 
 ## Who can use Nevermined App?
 
-### Publishers
+### AI Builders
 
 AI Owners can use Nevermined to tokenize the Web Service of their AI model or agent by defining access conditions and making it available to app developers who want to integrate AI services into their product, but don’t want to build it from scratch.
 
-Data Owners can use Nevermined to tokenize data sets or services, set pricing and access control conditions and then make it available to AI builders to train their models.
+You can use Nevermined to tokenize datasets or services, set pricing and access control conditions and then make it available to AI builders to train their models.
 
-### Consumers
+### AI Users
 
-AI developers can use Nevermined to purchase access to datasets that are relevant to their model. 
+AI users can use Nevermined to purchase access to datasets that are relevant to their model. 
 
 App developers can purchase access to a broad range of AI Services and integrate them into their product, so they don’t need to build AI services from scratch.  
 
-Researchers or data consumers who require access to specific or specialized data that is not readily accessible to the public, can purchase access to datasets, in order to advance their research.
-
 ## How does Nevermined App work?
 
-* AI service publishers can tokenize their API endpoint and embed time and price access conditions. Data publishers will simply go through an upload flow.
-* Once the subscription terms are created, a DID associated with the publisher’s wallet is issued and it can be then linked to a specific subscription.
-* At the end of the process, the App will automatically create a widget containing the subscription information and display it on the marketplace, but publishers also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
-* Purchasing access means the asset's smart contract sends the buyer a non-fungible Subscription token, using ERC-standards, that can be simply copied into the Buyer’s application.
+* AI agent / service builders can monetize their API endpoint and embed time and price access conditions. 
+* Once the subscription terms are created, a DID associated with the builder’s wallet is issued and it can be then linked to a specific subscription.
+* At the end of the process, the App will automatically create a widget containing the subscription information and display it on the marketplace, but builders also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
+* Purchasing access means the asset's smart contract sends the buyer a non-fungible Subscription token, using ERC-standards, that can be simply copied into the users' application.
 * This Smart Subscription proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
 
 ## What are Smart Subscriptions
@@ -56,27 +53,18 @@ The result? Much greater usability and a big step change in overall utility.
 
 Web services allow applications to interact with each other over the internet, enabling data exchange, communication, and functionality.
 
-## What do I need to get started as an AI Services Publisher?
+## What do I need to get started as an AI Agent Builder?
 
 * A Metamask wallet;
 * If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network;
 * If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network;
 * If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network;
 * Your assets: Server link and authentication token.
-* Standard Contract for Marketplace (SCMP) agreement that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Publishers to apply their own SCMP.
+* Standard Contract for Marketplace (SCMP) agreement that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Builders to apply their own SCMP.
 
-## What do I need to get started as a Data Publisher?
+## What do I need to get started as a user?
 
-* A Metamask wallet;
-* If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network;
-* If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network;
-* If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network;
-* Your data assets. All file formats are supported. Max file size: 50 MB;
-* End user license agreement (EULA) that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Publishers to apply their own EULA.
-
-## What do I need to get started as a consumer?
-
-* A wallet;
+* An account which is linked to a wallet (don't worry, Nevermined can handle the wallet part);
 * If you’re buying an asset on [Polygon Network](https://matic.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
 * If you’re buying an asset on [Gnosis Network](https://gnosis.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of xDAI for the network gas fees.
 * If you’re buying an asset on [Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
@@ -124,7 +112,3 @@ At the moment, the Nevermined App is deployed on the Polygon, Gnosis and Arbitru
 ## How do I claim back my locked tokens if a transaction fails during processing?
 
 In order to claim payment tokens that get locked during a failed transaction, you need the agreementID for the transaction. This agreementID is displayed in the Nevermined App with a failure message in the case that the transaction fails. In the event of a transaction failure, please record the agreementID and then contact Nevermined App Support via the [Nevermined Discord](https://discord.com/invite/GZju2qScKq) Support channel.
-
-## What is a Data Schema?
-
-A database schema is the skeleton structure that represents the logical view of the entire database. It defines how the data is organized and how the relations among them are associated. It formulates all the constraints that are to be applied on the data.
