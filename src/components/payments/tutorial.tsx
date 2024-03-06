@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from 'react'
 import { Payments } from '@nevermined-io/payments'
+import { useEffect, useRef, useState } from 'react'
 
 export default function PaymentsTutorial() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false)
@@ -8,14 +8,20 @@ export default function PaymentsTutorial() {
 
   const payments = useRef(
     new Payments({
-      returnUrl:
-        'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
-      environment: 'staging',
+      returnUrl: 'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
+      environment: 'appStaging',
+      appId: 'app-docs',
+      version: 'v0.1.4',
     }),
   )
 
   const onLogin = () => {
     payments.current.connect()
+  }
+
+  const onLogout = () => {
+    payments.current.logout()
+    setIsUserLoggedIn(payments.current.isLoggedIn)
   }
 
   useEffect(() => {
@@ -47,9 +53,11 @@ export default function PaymentsTutorial() {
   return (
     <main>
       <div>
-        <button onClick={onLogin}>Login</button>
-        <p>{isUserLoggedIn ? 'Logged in' : 'Not logged in'}</p>
-        <button onClick={createSubscription}>Create Subscription</button>
+        {!isUserLoggedIn && <button onClick={onLogin}>{'Log in'}</button>}
+        {isUserLoggedIn && <button onClick={onLogout}>{'Log out'}</button>}
+        <button disabled={!isUserLoggedIn} onClick={createSubscription}>
+          Create Subscription
+        </button>
         <p>
           {creatingSubscription && did === '' ? (
             'Creating Subscription, please wait a few seconds...'

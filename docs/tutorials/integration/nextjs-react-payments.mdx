@@ -121,12 +121,19 @@ export default function PaymentsTutorial() {
     new Payments({
       returnUrl:
         'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
-      environment: 'staging',
+      environment: 'appStaging',
+      appId: 'app-docs',
+      version: 'v0.1.4'
     }),
   )
 
   const onLogin = () => {
     payments.current.connect()
+  }
+
+  const onLogout = () => {
+    payments.current.logout()
+    setIsUserLoggedIn(payments.current.isLoggedIn)
   }
 
   useEffect(() => {
@@ -158,8 +165,9 @@ export default function PaymentsTutorial() {
   return (
     <main>
       <div>
-        <button onClick={onLogin}>Login</button>
-        <p>{isUserLoggedIn ? 'Logged in' : 'Not logged in'}</p>
+        {!isUserLoggedIn && <button onClick={onLogin}>{"Log in"}</button>}
+        {isUserLoggedIn && <button onClick={onLogout}>{"Log out"}</button>}
+
         <button onClick={createSubscription}>Create Subscription</button>
         <p>
           {creatingSubscription && did === '' ? (
