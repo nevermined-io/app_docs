@@ -4,7 +4,7 @@
         <title>Nevermined Payments Documentation Blog</title>
         <link>https://docs.nevermined.app/blog</link>
         <description>Nevermined Payments Documentation Blog</description>
-        <lastBuildDate>Wed, 06 Mar 2024 09:30:09 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Mar 2024 14:33:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[The last 10 posts of Nevermined Medium]]></title>
             <link>https://docs.nevermined.app/blog/index</link>
             <guid>https://docs.nevermined.app/blog/index</guid>
-            <pubDate>Wed, 06 Mar 2024 09:30:09 GMT</pubDate>
+            <pubDate>Wed, 06 Mar 2024 14:33:26 GMT</pubDate>
             <description><![CDATA[Blog Posts]]></description>
             <content:encoded><![CDATA[<div></div>]]></content:encoded>
         </item>
