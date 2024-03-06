@@ -9,7 +9,7 @@ export default function PaymentsTutorial() {
   const payments = useRef(
     new Payments({
       returnUrl: 'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
-      environment: 'appStaging',
+      environment: 'appTesting',
       appId: 'app-docs',
       version: 'v0.1.4',
     }),
