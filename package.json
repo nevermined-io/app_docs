@@ -33,7 +33,7 @@
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.2",
     "get-func-name": "2.0.2",
-    "jose": "^4.10.0",
+    "jose": "^4.15.5",
     "postcss": "8.4.31",
     "prism-react-renderer": "^2.3.0",
     "promise-polyfill": "8.2.3",
