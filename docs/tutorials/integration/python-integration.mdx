@@ -1,0 +1,51 @@
+---
+sidebar_position: 3
+description: How to integrate the Nevermined Payments Python library
+---
+
+# Payments-py library
+
+The objective of this library is to make possible the integration of Nevermined payments in the Python code ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
+
+## Installation
+
+Install the [nevermined payments library](https://pypi.org/project/payments-py/) using pip:
+
+```
+pip install payments-py
+```
+
+### Initialize the payments library
+
+To initialize the payments library, you need to provide the following parameters:
+
+- Session key: It's a string that identifies the session of the account abstraction. It works similar to a jwt but for blockchain accounts. You can find more in [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
+- Environment: It's an enum that represents the environment where the library will interact with the Nevermined network. It can be `Environment.appTesting` or `Environment.appArbitrum`, `Environment.appGnosis` or `Environment.appMatic`.
+- App id: It's a string that represents the app id. Currently is optional.
+- Version: It's a string that represents the version of the app. Currently is optional.
+- Marketplace auth token: It's a string that represents the marketplace auth token.
+
+```
+from nevermined_payments import Payments
+
+payments = Payments(session_key=session_key, environment=Environment.appTesting, app_id="your_app_id", version="1.0.0", marketplace_auth_token=marketplace_auth_token)
+
+```
+
+:::info
+
+You can find your `marketplace_auth_token` and `session_key` in the [your profile page](https://testing.nevermined.app/en.account). Just click the button and sign the session key.
+
+:::
+
+### Using payments library
+
+Once you have initialized the payments library, you can use the methods as following:
+
+
+```
+    response = payment.create_subscription(name="test-py", description="test", price=1000000, token_address="0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d", amount_of_credits=100, duration=30, tags=["test"])
+```
+
+In the following link you can find the complete documentation of the library: [payments-py](https://nevermined-io.github.io/payments-py/). 
+
