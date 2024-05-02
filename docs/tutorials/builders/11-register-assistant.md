@@ -70,7 +70,7 @@ Give specific info about how other Builders can integrate your OpenAI assistant.
 
 Next, you need to specify which Smart Subscription a user needs to purchase to get access to the OpenAI assistant.
 
-![Assistant Plan](/images/tutorials/builders/ai-agent-subscription-credits.png)
+![Assistant Plan](/images/tutorials/11-06-OpenAI-Assistant-Plan.png)
 
 If the subscription is **Limited by usage**, you will need to specify how many credits are consumed every time a user accesses the OpenAI assistant. This is very useful to **protect** your OpenAI assistant against **overuse**.
 
