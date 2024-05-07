@@ -62,7 +62,7 @@ export default function PaymentsTutorial() {
           {creatingSubscription && did === '' ? (
             'Creating Subscription, please wait a few seconds...'
           ) : (
-            <a href={`https://staging.nevermined.app/subscription/${did}`}>{did}</a>
+            <a href={`https://testing.nevermined.app/subscription/${did}`}>{did}</a>
           )}
         </p>
       </div>
