@@ -1,11 +1,17 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 description: How to integrate the Nevermined Payments Python library
 ---
 
 # Tutorial on how to use the Nevermined Payments Protocol in Python
 
 The objective of this library is to make possible the integration of Nevermined payments in the Python code ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
+
+:::info
+ 
+In a previous tutorial we showed [what is a Nvm Api Key and how to obtain it](nvm-api-keys).
+
+:::
 
 ## Installation
 
@@ -31,11 +37,6 @@ payments = Payments(nvm_api_key=nvm_api_key, environment=Environment.appTesting,
 
 ```
 
-:::info
-
-You can find your `nvm_api_key` in the [your profile page](https://testing.nevermined.app/en/account). Just click the button and sign the session key. It will take some seconds.
-
-:::
 
 ### Using payments library
 
