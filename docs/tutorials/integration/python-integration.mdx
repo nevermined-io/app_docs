@@ -19,22 +19,21 @@ pip install payments-py
 
 To initialize the payments library, you need to provide the following parameters:
 
-- Session key: It's a string that identifies the session of the account abstraction. It works similar to a jwt but for blockchain accounts. You can find more in [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
+- Nvm Api key: It's a string that identifies the session key of the account abstraction and some extra data as the marketplace auth token. It works similar to a jwt but for blockchain accounts. You can find more in [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
 - Environment: It's an enum that represents the environment where the library will interact with the Nevermined network. It can be `Environment.appTesting` or `Environment.appArbitrum`, `Environment.appGnosis` or `Environment.appMatic`.
 - App id: It's a string that represents the app id. Currently is optional.
 - Version: It's a string that represents the version of the app. Currently is optional.
-- Marketplace auth token: It's a string that represents the marketplace auth token.
 
 ```
 from nevermined_payments import Payments
 
-payments = Payments(session_key=session_key, environment=Environment.appTesting, app_id="your_app_id", version="1.0.0", marketplace_auth_token=marketplace_auth_token)
+payments = Payments(nvm_api_key=nvm_api_key, environment=Environment.appTesting, app_id="your_app_id", version="1.0.0")
 
 ```
 
 :::info
 
-You can find your `marketplace_auth_token` and `session_key` in the [your profile page](https://testing.nevermined.app/en.account). Just click the button and sign the session key.
+You can find your `nvm_api_key` in the [your profile page](https://testing.nevermined.app/en/account). Just click the button and sign the session key. It will take some seconds.
 
 :::
 
