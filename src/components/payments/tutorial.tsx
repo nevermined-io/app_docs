@@ -11,7 +11,7 @@ export default function PaymentsTutorial() {
       returnUrl: 'https://docs.nevermined.app/docs/tutorials/integration/nextjs-react-payments#try-it-out',
       environment: 'appTesting',
       appId: 'app-docs',
-      version: 'v0.1.4',
+      version: 'v0.1.5',
     }),
   )
 
