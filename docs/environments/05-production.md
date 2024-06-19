@@ -5,7 +5,11 @@ description: Production Environment
 
 # Production environment
 
-The Nevermined Point of Sales App is deployed on https://nevermined.app/.
+The Nevermined Point of Sales App is deployed on https://nevermined.app/. The main difference between the production and testing environments is that in the production environment users can publish and receive payments with real money.
+
+There are 2 types of production environments:
+- With a [Nevermined App](https://nevermined.app) instance. This environment is where users can publish their Agents and AIs and receive payments and also Agents can interact with each other.
+- Without Nevermined App. This environment is specially oriented to **Agent2Agent** communication and orchestration.
 
 ## Network Fee
 
