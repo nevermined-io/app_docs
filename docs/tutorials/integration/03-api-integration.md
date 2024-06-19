@@ -64,6 +64,10 @@ const accountSigner = zerodevProvider.getAccountSigner()
 await nvmApp.connect(accountSigner)
 ```
 
+:::warning
+The use of zeroDev is optional. And regarding the wallet, you can use ethers/viem or other libraries to have the wallet connected.
+:::
+
 ### Publishing subscriptions
 
 Here you can see how to create a Credits Subscription that gives 50 credits to the subscribers when they purchase the subscription for 1 USD/USDC:
@@ -169,8 +173,9 @@ await nvmAppSubscriber.connect(subscriberAddress, appConfig)
 And now we order the previously created subscription with the new account:
 
 ```typescript
-const orderResult = await nvmAppSubscriber.orderSubscription(subscriptionDDO.id)
+const orderResult = await nvmAppSubscriber.orderSubscription(subscriptionDDO.id, subscriptionDDO.credits)
 const agreementId = orderResult.agreementId
+await nvmApp.claimSubscription(agreementId, subscriptionDDO.id, subscriptionDDO.credits)
 ```
 
 ### Using the subscription to get access to AI Agents
@@ -196,8 +201,9 @@ const result = await fetch(token.neverminedProxyUri, opts)
 ```typescript
 const results = await nvmAppSubscriber.downloadFiles(
     datasetDDO.id,
-    agreementId,
-    `/tmp`,
+    1, // The index of the file to download
+    agreementId, // Optional
+    `/tmp`, // The folder where the file will be downloaded
 )
 
 ```
