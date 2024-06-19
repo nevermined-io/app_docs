@@ -5,7 +5,7 @@ description: Point of Sales Testing Environment
 
 # Testing environment
 
-The Point of Sales testing environment is free to use and where users can interact with the application without using real money.
+The Point of Sales testing environment is free to use and where users can interact with the application without using real money. The existing testing environment (Environment id: `appTesting`) is available at [https://testing.nevermined.app/](https://testing.nevermined.app/).
 
 ## Network Fee
 

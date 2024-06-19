@@ -27,6 +27,12 @@ Once you added the Nevermined App API to your project, you can connect to any of
 const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing)
 ```
 
+:::info
+
+You can connect to different environments by using any of the existing `NVMAppEnvironments`
+
+:::
+
 The default instance of the nvmApp will be connected to the Testing environment and allows using the search API:
 
 ```typescript
