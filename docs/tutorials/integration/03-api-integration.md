@@ -54,18 +54,14 @@ You can download the Smart Contracts artifacts using the [download script](https
 You can connect with your account using the `connect` method:
 
 ```typescript
-const randomWallet = ethers.Wallet.createRandom()
-const zerodevProvider = await ZeroDevEthersProvider.init('ECDSA', {
-    projectId,
-    owner: convertEthersV6SignerToAccountSigner(randomWallet),
-})
-const accountSigner = zerodevProvider.getAccountSigner()
-
+const accountSigner = makeWallet(process.env.SEED_WORDS)
 await nvmApp.connect(accountSigner)
 ```
 
+Regarding the wallet, you can use ethers/viem or other libraries to have the wallet connected.
+
 :::warning
-The use of zeroDev is optional. And regarding the wallet, you can use ethers/viem or other libraries to have the wallet connected.
+You can pass a ZeroDev account to the `connect` method. The use of zeroDev is optional.
 :::
 
 ### Publishing subscriptions
@@ -173,9 +169,15 @@ await nvmAppSubscriber.connect(subscriberAddress, appConfig)
 And now we order the previously created subscription with the new account:
 
 ```typescript
-const orderResult = await nvmAppSubscriber.orderSubscription(subscriptionDDO.id, subscriptionDDO.credits)
+const orderResult = await nvmAppSubscriber.orderSubscription(subscriptionDDO.id)
 const agreementId = orderResult.agreementId
 await nvmApp.claimSubscription(agreementId, subscriptionDDO.id, subscriptionDDO.credits)
+```
+
+Now you should be able to check the balance of credits of the subscription ordered:
+
+```typescript
+const creditsBalance = await nvmApp.getBalance(subscriptionDDO.id)
 ```
 
 ### Using the subscription to get access to AI Agents
