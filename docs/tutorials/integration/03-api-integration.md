@@ -43,6 +43,15 @@ If you want to connect to Nevermined not only for searching purposes but for blo
 
 ```typescript
 const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing, {
+    contractsVersion: 'v3.5.6', // The version of the contracts to use. If you don't pass will automatically fetch the latest version
+})
+```
+
+Alternatively, you can pass the artifacts folder where you download the artifacts:
+
+
+```typescript
+const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing, {
         artifactsFolder: './artifacts', // The folder where the contracts artifacts are stored
       })
 ```
