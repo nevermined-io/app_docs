@@ -1,10 +1,20 @@
 .navbar {
+  background: linear-gradient(
+      172.48deg,
+      rgb(207, 210, 243) 2%,
+      rgb(255, 255, 255) 35.57%,
+      rgb(207, 210, 243) 73.43%
+    )
+    fixed;
+
   &__brand {
     margin-left: 2rem;
-    // margin-right: 4rem;
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+
     img {
       height: 22.85px;
     }
@@ -22,13 +32,7 @@
     }
 
     &--active {
-      border-bottom: 4px solid;
-      border-image-source: linear-gradient(
-        107.16deg,
-        #2f12dc 9.77%,
-        #1ddef9 100%
-      );
-      border-image-slice: 1;
+      border-bottom: 4px solid rgb(118, 62, 255);
     }
 
     img {
