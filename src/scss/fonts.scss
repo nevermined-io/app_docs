@@ -1,0 +1,80 @@
+/* IBM_Plex_Mono */
+$ibm_plex_mono-light-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-Light';
+$ibm_plex_mono-light-italic-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-LightItalic';
+
+$ibm_plex_mono-normal-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-Regular';
+$ibm_plex_mono-normal-italic-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-Italic';
+
+$ibm_plex_mono-medium-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-Medium';
+
+$ibm_plex_mono-semi-bold-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold';
+
+$ibm_plex_mono-bold-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-Bold';
+$ibm_plex_mono-bold-italic-font-path: '/fonts/IBM_Plex_Mono/IBMPlexMono-BoldItalic';
+
+/* CourierPrime */
+$courierprime-normal-font-path: '/fonts/CourierPrime/CourierPrime-Regular';
+
+/* Light */
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-light-font-path + '.ttf');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-light-italic-font-path + '.ttf');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Normal */
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-normal-font-path + '.ttf');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Exo;
+  src: url($ibm_plex_mono-normal-italic-font-path + '.ttf');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-medium-font-path + '.ttf');
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-semi-bold-font-path + '.ttf');
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: IBM_Plex_Mono;
+  src: url($ibm_plex_mono-bold-font-path + '.ttf');
+  font-weight: bold;
+  font-display: swap;
+}
+
+/* CourierPrime Normal */
+@font-face {
+  font-family: CourierPrime;
+  src: url($courierprime-normal-font-path + '.ttf');
+  font-weight: normal;
+  font-display: swap;
+}

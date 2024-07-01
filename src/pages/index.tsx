@@ -9,7 +9,6 @@ import { BEM } from '@nevermined-io/styles'
 import styles from './index.module.scss'
 import nvmSVGIcon from '@site/static/nevermined/neverminedDocs.svg'
 import integrationDocsSVGIcon from '@site/static/nevermined/integrationDocs.svg'
-import tutorialPNGIcon from '@site/static/nevermined/tutorialsDocs.png'
 
 const b = BEM('nvm', styles)
 
@@ -43,7 +42,6 @@ const FeatureList: BoxItem[] = [
     link: 'docs/getting-started',
     Svg: nvmSVGIcon,
     description: <>What is the Nevermined Point of Sales? And what can I use it for?</>,
-    overlay: <div className={b('box-overlay')} />,
   },
   {
     title: 'Tutorials',
@@ -51,21 +49,15 @@ const FeatureList: BoxItem[] = [
     link: 'docs/tutorials',
     Svg: integrationDocsSVGIcon,
     description: (
-      <>
-        Everything you need to know about using the Nevermined Payments infrastructure.
-      </>
+      <>Everything you need to know about using the Nevermined Payments infrastructure.</>
     ),
   },
   {
     title: 'Environments',
     className: b('box'),
     link: 'docs/environments',
-    png: tutorialPNGIcon,
-    description: (
-      <>
-        Where is the application available?
-      </>
-    ),
+    Svg: integrationDocsSVGIcon,
+    description: <>Where is the application available?</>,
   },
 ]
 
@@ -108,7 +100,6 @@ export default function Home(): JSX.Element {
           <HomepageFeatures />
         </main>
       </div>
-      <div className="overlay" />
     </Layout>
   )
 }
