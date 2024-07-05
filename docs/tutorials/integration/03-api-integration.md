@@ -218,3 +218,5 @@ const results = await nvmAppSubscriber.downloadFiles(
 )
 
 ```
+
+You can find a full example of how to use the nvm sdk here: [nvm-sdk-example](https://codesandbox.io/p/devbox/nvm-example-new-flcr8f)
