@@ -304,7 +304,7 @@ You can find a complete guide to register your service [here](https://docs.never
 
  ### Consuming your AI Service
 
-Every user that have purchased your Subscription will be able to use your AI Service through Nevermined. In this [guide](https://docs.nevermined.app/docs/tutorials/webservice-integration/) you can find how users can integrate your service.
+Every user that have purchased your Subscription will be able to use your AI Service through Nevermined. In this [guide](../advanced/08-webservice-integration.md) you can find how users can integrate your service.
 
 #### Examples
 
