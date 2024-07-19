@@ -9,6 +9,8 @@ import { BEM } from '@nevermined-io/styles'
 import styles from './index.module.scss'
 import nvmSVGIcon from '@site/static/nevermined/neverminedDocs.svg'
 import integrationDocsSVGIcon from '@site/static/nevermined/integrationDocs.svg'
+import chatBubblePencil from '@site/static/nevermined/chat-bubble-pencil.svg'
+import desktopCode from '@site/static/nevermined/desktop-code.svg'
 
 const b = BEM('nvm', styles)
 
@@ -47,7 +49,7 @@ const FeatureList: BoxItem[] = [
     title: 'Tutorials',
     className: b('box'),
     link: 'docs/tutorials',
-    Svg: integrationDocsSVGIcon,
+    Svg: chatBubblePencil,
     description: (
       <>Everything you need to know about using the Nevermined Payments infrastructure.</>
     ),
@@ -56,7 +58,7 @@ const FeatureList: BoxItem[] = [
     title: 'Environments',
     className: b('box'),
     link: 'docs/environments',
-    Svg: integrationDocsSVGIcon,
+    Svg: desktopCode,
     description: <>Where is the application available?</>,
   },
 ]
