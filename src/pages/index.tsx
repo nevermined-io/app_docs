@@ -8,7 +8,6 @@ import { UiText } from '@nevermined-io/styles'
 import { BEM } from '@nevermined-io/styles'
 import styles from './index.module.scss'
 import nvmSVGIcon from '@site/static/nevermined/neverminedDocs.svg'
-import integrationDocsSVGIcon from '@site/static/nevermined/integrationDocs.svg'
 import chatBubblePencil from '@site/static/nevermined/chat-bubble-pencil.svg'
 import desktopCode from '@site/static/nevermined/desktop-code.svg'
 
