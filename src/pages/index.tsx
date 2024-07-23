@@ -67,7 +67,7 @@ const HomepageFeatures = (): JSX.Element => {
     <section className={b('boxes')}>
       <div className="container">
         <div className={clsx('row', b('row'))}>
-          <div className={clsx('col col--6', b('col'), b('gutter', ['main']))}>
+          <div id="main" className={clsx('col col--6', b('col'), 'main')}>
             <Box {...FeatureList[0]} />
           </div>
           <div className={clsx('col col--6', b('col'))}>
