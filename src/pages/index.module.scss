@@ -24,7 +24,7 @@
   &__box {
     &--main {
       height: 100%;
-      background: linear-gradient(107.16deg, #2f12dc 9.77%, #1ddef9 100%);
+      background: linear-gradient(107.16deg, #763eff 9.77%, rgba(118, 62, 255, 26%) 100%);
       position: relative;
 
       svg {
@@ -130,6 +130,12 @@
 
   &__col {
     max-width: 544px;
+  }
+}
+
+@media (max-width: 996px) {
+  *[id^="main"] {
+    margin-bottom: 40px;
   }
 }
 

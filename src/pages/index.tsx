@@ -8,8 +8,8 @@ import { UiText } from '@nevermined-io/styles'
 import { BEM } from '@nevermined-io/styles'
 import styles from './index.module.scss'
 import nvmSVGIcon from '@site/static/nevermined/neverminedDocs.svg'
-import integrationDocsSVGIcon from '@site/static/nevermined/integrationDocs.svg'
-import tutorialPNGIcon from '@site/static/nevermined/tutorialsDocs.png'
+import chatBubblePencil from '@site/static/nevermined/chat-bubble-pencil.svg'
+import desktopCode from '@site/static/nevermined/desktop-code.svg'
 
 const b = BEM('nvm', styles)
 
@@ -43,29 +43,22 @@ const FeatureList: BoxItem[] = [
     link: 'docs/getting-started',
     Svg: nvmSVGIcon,
     description: <>What is the Nevermined Point of Sales? And what can I use it for?</>,
-    overlay: <div className={b('box-overlay')} />,
   },
   {
     title: 'Tutorials',
     className: b('box'),
     link: 'docs/tutorials',
-    Svg: integrationDocsSVGIcon,
+    Svg: chatBubblePencil,
     description: (
-      <>
-        Everything you need to know about using the Nevermined Payments infrastructure.
-      </>
+      <>Everything you need to know about using the Nevermined Payments infrastructure.</>
     ),
   },
   {
     title: 'Environments',
     className: b('box'),
     link: 'docs/environments',
-    png: tutorialPNGIcon,
-    description: (
-      <>
-        Where is the application available?
-      </>
-    ),
+    Svg: desktopCode,
+    description: <>Where is the application available?</>,
   },
 ]
 
@@ -74,7 +67,7 @@ const HomepageFeatures = (): JSX.Element => {
     <section className={b('boxes')}>
       <div className="container">
         <div className={clsx('row', b('row'))}>
-          <div className={clsx('col col--6', b('col'), b('gutter', ['main']))}>
+          <div id="main" className={clsx('col col--6', b('col'), 'main')}>
             <Box {...FeatureList[0]} />
           </div>
           <div className={clsx('col col--6', b('col'))}>
@@ -108,7 +101,6 @@ export default function Home(): JSX.Element {
           <HomepageFeatures />
         </main>
       </div>
-      <div className="overlay" />
     </Layout>
   )
 }
