@@ -57,7 +57,7 @@ const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing, {
 ```
 
 :::info
-You can download the Smart Contracts artifacts using the [download script](https://github.com/nevermined-io/sdk-js/blob/main/scripts/download-artifacts.sh). For example running `./download-artifacts.sh v3.5.6 arbitrum-sepolia`
+You can download the Smart Contracts artifacts using the [download script](https://github.com/nevermined-io/sdk-js/blob/main/scripts/download-artifacts.sh). For example running `./download-artifacts.sh v3.5.8 arbitrum-sepolia`
 :::
 
 You can connect with your account using the `connect` method:

@@ -16,11 +16,13 @@ There are 2 types of production environments:
 Environment ID  | Nevermined App | Marketplace API (Metadata) | Node
 ----------------|----------------|----------------------------|------------------
 **appArbitrum** | https://nevermined.app | https://marketplace-api.arbitrum.nevermined.app | https://node.arbitrum.nevermined.app
+**appPeaq**     | https://peaq.nevermined.app | https://marketplace-api.peaq.nevermined.app | https://node.peaq.nevermined.app
 **appMatic**    | - | https://marketplace-api.matic.nevermined.app | https://node.matic.nevermined.app
 **appGnosis**   | - | https://marketplace-api.gnosis.nevermined.app | https://node.gnosis.nevermined.app
 **appOptimism** | - | https://marketplace-api.optimism.nevermined.app | https://node.optimism.nevermined.app
 **appBase**     | - | https://marketplace-api.base.nevermined.app | https://node.base.nevermined.app
 **appCelo**     | - | https://marketplace-api.celo.nevermined.app | https://node.celo.nevermined.app
+
 
 ## Network Fees
 
