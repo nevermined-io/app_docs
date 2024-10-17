@@ -11,7 +11,7 @@ import { Widget } from '@site/src/components/one';
 In this tutorial we show how you can integrate a widget showing your asset on your own website.
 
 :::note
-You can visit previous tutorials to see [how to create a Payment Plan](../builders/create-plan), [how to register a dataset](../builders/register-file-asset) and [how to register an AI service](../builders/register-webservice).
+You can visit previous tutorials to see [how to create a Payment Plan](../builders/create-plan), [how to register a dataset](../builders/register-file-asset) and [how to register an AI service](../builders/register-agent).
 :::
 
 ## Getting ready

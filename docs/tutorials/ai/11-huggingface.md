@@ -198,7 +198,7 @@ You will register your AI Service associated with this Subscription you are abou
 
 So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Model in Nevermined App.
 
-You can find a complete guide to register your service [here](../builders/register-webservice/)
+You can find a complete guide to register your service [here](../builders/register-agent/)
 
 In the *details* step you need to add the endpoint. As the Inference Endpoint does not generate any OpenAPI document, we need to do it manually. 
 

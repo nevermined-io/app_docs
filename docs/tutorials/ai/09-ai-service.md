@@ -279,7 +279,7 @@ You will register your AI Service associated with this Subscription you are abou
 
 So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Service in Nevermined App.
 
-You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-webservice/)
+You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-agent/)
 
 
  #### Defining Endpoints URLs
