@@ -261,7 +261,7 @@ Take into account that any time you run ngrok to tunnel your local service, a ne
 
 So you have implemented some endpoints to access your AI service, you have protected them and this endpoints are available to anyone who want to use them.
 
-You can share your service with the Community in a safety way, and even monetize them, if you want, using a Nevermined Smart Subscription.
+You can share your service with the Community in a safety way, and even monetize them, if you want, using a Nevermined Payment Plan.
 
 In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
@@ -271,13 +271,13 @@ You can access to this test version of Nevermined App [here](https://testing.nev
 
 We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
 
-The next step is to create a brand new [Smart Subscription](https://docs.nevermined.app/docs/builders/smart-subscriptions)
+The next step is to create a brand new [Payment Plan](https://docs.nevermined.app/docs/builders/smart-subscriptions)
 
-You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/create-subscription) you can find some help to guide you.
+You will register your AI Service associated with this Subscription you are about to create. The process to create a new Plan is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/builders/create-plan) you can find some help to guide you.
 
 ### Registering your AI Service
 
-So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Service in Nevermined App.
+So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Service in Nevermined App.
 
 You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-webservice/)
 
@@ -304,7 +304,7 @@ You can find a complete guide to register your service [here](https://docs.never
 
  ### Consuming your AI Service
 
-Every user that have purchased your Subscription will be able to use your AI Service through Nevermined. In this [guide](../advanced/08-webservice-integration.md) you can find how users can integrate your service.
+Every user that have purchased your Plan will be able to use your AI Service through Nevermined. In this [guide](../advanced/agent-integration) you can find how users can integrate your service.
 
 #### Examples
 

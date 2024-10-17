@@ -180,7 +180,7 @@ If you have deployed the Inference endpoint under an organization, any user who 
 
 ## Publish the Inference Endpoint in Nevermined
 
-Once you have implemented and deployed and protected your own AI model or pipeline in HuggingFace, you can share it with the Community in a safe way, and even monetize them, if you want, using a Nevermined Smart Subscription.
+Once you have implemented and deployed and protected your own AI model or pipeline in HuggingFace, you can share it with the Community in a safe way, and even monetize them, if you want, using a Nevermined Payment Plan.
 
 In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
@@ -190,13 +190,13 @@ You can access to this test version of Nevermined App [here](https://testing.nev
 
 We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](../../getting-started/)
 
-The next step is to create a brand new [Smart Subscription](../builders/create-subscription)
+The next step is to create a brand new [Payment Plan](../builders/create-plan)
 
-You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](../builders/create-subscription) you can find some help to guide you.
+You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](../builders/create-plan) you can find some help to guide you.
 
 ### Registering the AI Model
 
-So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Model in Nevermined App.
+So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Model in Nevermined App.
 
 You can find a complete guide to register your service [here](../builders/register-webservice/)
 
@@ -220,7 +220,7 @@ Make sure you provide enough information about your service in the *Description*
 
 ### Consuming your AI Model
 
-Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](../advanced/webservice-integration/) you can find how users can integrate your service.
+Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](../advanced/agent-integration/) you can find how users can integrate your service.
 
 #### Examples
 

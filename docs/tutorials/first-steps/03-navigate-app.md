@@ -5,11 +5,11 @@ description: Navigating the payments app
 
 # Navigating the payments app
 
-Once you have logged into the app, you will be able to navigate the app and use its features. 
+Once you have logged into the app, you will be able to navigate the app and use its features.
 
 ## Personal Area
 
-In the header, you will see a new menu item called "My Area". If you click on it you, will be able to navigate through your personal area where you will be able to find all the assets and subscriptions you published, etc.
+In the header, you will see a new menu item called "Dashboard". If you click on it you, will be able to navigate through your personal area where you will be able to find all the assets and plans you published, etc.
 
 
 <p align="center"><img src="/images/tutorials/my-area/my-area-submenu.png"/></p>

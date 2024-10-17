@@ -3,9 +3,9 @@ sidebar_position: 20
 description: How to charge credits dynamically
 ---
 
-# How a AI Service/Agent can charge credits dynamically
+# How an AI Agent or Service can charge credits dynamically
 
-When a builder is registering a new AI Service or Agent (see [tutorial](../builders/05-register-webservice.md)) it's possible to specify the cost of each request to the service. This cost can be fixed or dynamic, depending on the service logic.
+When a builder is registering a new AI Agent or service (see [tutorial](../builders/register-agent)) it's possible to specify the cost of each request to the service. This cost can be fixed or dynamic, depending on the service logic.
 
 If the cost is fixed (for example 3 credits) each successful request to the service will cost 3 credits to the user ending the request. Easy.
 But if the cost is dynamic, the service can report back to Nevermined how many credits need to be charged. To do that the AI service/agent needs to return a HTTP header `NVMCreditsConsumed` with the number of credits to be charged.
