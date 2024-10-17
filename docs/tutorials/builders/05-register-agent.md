@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
-description: How to register your AI web service and link to a Smart Subscription
+description: How to register your AI agent and link to a Payment Plan
 ---
 
-# How to register your AI web service and link to a Smart Subscription
+# How to register your AI agent and link to a Payment Plan
 
-In a previous tutorial we showed [how to create a Smart Subscription](create-subscription). Here we go through the required steps of registering a new AI web service and linking it to your Smart Subscription. User who purchase a subscription will get access to the AI web service that is included in the subscription plan.
+In a previous tutorial we showed [how to create a Payment Plan](create-plan). Here we go through the required steps of registering a new AI agent or service and linking it to your Payment Plan. User who purchase a plan will get access to the AI agents or services that are included in the plan.
 
 :::note
-You can't register an AI Service without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
+You can't register an AI agent without first configuring a Payment Plan. So if you skipped that part, please go to the tutorial about [How to create a Payment Plan](create-plan) first.
 :::
 
 If you don't want to read the whole tutorial, you can watch the video tutorial:
@@ -17,9 +17,9 @@ If you don't want to read the whole tutorial, you can watch the video tutorial:
 <iframe width="840" height="470" src="https://www.youtube.com/embed/65rVHScjoGU?si=UkrpJK7tjtoXGlWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </p>
 
-## How to register an AI web service
+## How to register an AI agent
 
-These are the steps to make your web service accessible to Users that buy your Smart Subscription.
+These are the steps to make your agent or service accessible to Users that buy your Payment Plan.
 
 ### 1. Open the New Asset page
 
@@ -28,7 +28,7 @@ These are the steps to make your web service accessible to Users that buy your S
 
 <p align="center"><img src="/images/tutorials/builders/new-agent-tile.png"/></p>
 
-### 2. Describe the AI service with metadata
+### 2. Describe the AI agent with metadata
 
 #### Provide a short title
 
@@ -93,9 +93,9 @@ Give specific info about how other Builders can integrate your AI Service. This 
 
 ![Service Integration](/images/tutorials/builders/ai-agent-additional-info.png)
 
-### 5. Choose a Smart Subscription plan
+### 5. Choose a Payment Plan
 
-Next, you need to specify which Smart Subscription a user needs to purchase to get access to the AI service.
+Next, you need to specify which Payment Plan a user needs to purchase to get access to the AI service.
 
 ![Service Plan](/images/tutorials/builders/ai-agent-subscription-credits.png)
 
@@ -103,7 +103,7 @@ If the subscription is **Limitted by usage**, you will need to specify how many 
 
 :::tip
 If you want your web service to be available via different plans, you can go through this process once more. 
-Register the AI Web Service again and add it to another Smart Subscription plan. For now ;-)
+Register the AI Web Service again and add it to another Payment Plan. For now ;-)
 :::
 
 ### 6. Review that everything is okay

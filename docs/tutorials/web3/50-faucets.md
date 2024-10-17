@@ -17,7 +17,7 @@ Note that you shouldn't register your real assets, as they will become available
   
 ## Getting tokens for Sepolia, the testnet for Arbitrum
 
-To publish a Smart Subscription (and the associated AI web service or Data) you need some Arbitrum ETH, to pay for the network transaction fees.
+To publish a Payment Plan (and the associated AI web service or Data) you need some Arbitrum ETH, to pay for the network transaction fees.
 
 ### Getting testnet ETH
 
@@ -38,7 +38,7 @@ Alternatively, you can use the [Sepolia Faucet](https://sepoliafaucet.com/) to g
 
 ## Getting tokens for Mumbai, the testnet for Polygon
 
-To publish a Smart Subscription (and the associated AI web service or Data) you need some MATIC, to pay for the network transaction fees. 
+To publish a Payment Plan (and the associated AI web service or Data) you need some MATIC, to pay for the network transaction fees. 
 
 ### Getting testnet MATIC
 

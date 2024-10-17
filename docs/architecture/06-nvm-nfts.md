@@ -3,9 +3,9 @@ sidebar_position: 6
 description: Some background on NFT
 ---
 
-# Smart Subscriptions: the evolution of NFTs
+# Payment Plans: the evolution of NFTs
 
-Smart Subscriptions is an example of next generation NFT utility. After the hype of JPEGs on a blockchain, the technology is being improved, enabling much more interesting and advanced use cases. 
+Payment Plans is an example of next generation NFT utility. After the hype of JPEGs on a blockchain, the technology is being improved, enabling much more interesting and advanced use cases. 
 
 ## What's an NFT
 

@@ -11,7 +11,7 @@ Nevermined is the AI payments protocol delivering the Web3 standard for AI-to-AI
 
 ## What is Nevermined App?
 
-The Nevermined App allows AI builders to monetize their AI agents and associated assets, like context data, etc. You do this by creating a Smart Subscription in which you specify the access parameters to your AI agent, such as price, time limit, and/or number of requests that can be made to use your AI agent. You then add your AI agent API to the subscription, and make the AI available to your users.
+The Nevermined App allows AI builders to monetize their AI agents and associated assets, like context data, etc. You do this by creating a Payment Plans in which you specify the access parameters to your AI agent, such as price, time limit, and/or number of requests that can be made to use your AI agent. You then add your AI agent API to the plan, and make the AI available to your users.
 
 ## Who can use Nevermined App?
 
@@ -23,29 +23,29 @@ You can use Nevermined to tokenize datasets or services, set pricing and access 
 
 ### AI Users
 
-AI users can use Nevermined to purchase access to datasets that are relevant to their model. 
+AI users can use Nevermined to purchase access to datasets that are relevant to their model.
 
 App developers can purchase access to a broad range of AI Services and integrate them into their product, so they don’t need to build AI services from scratch.  
 
 ## How does Nevermined App work?
 
-* AI agent / service builders can monetize their API endpoint and embed time and price access conditions. 
-* Once the subscription terms are created, a DID associated with the builder’s wallet is issued and it can be then linked to a specific subscription.
-* At the end of the process, the App will automatically create a widget containing the subscription information and display it on the marketplace, but builders also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
-* Purchasing access means the asset's smart contract sends the buyer a non-fungible Subscription token, using ERC-standards, that can be simply copied into the users' application.
-* This Smart Subscription proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
+* AI agent / service builders can monetize their API endpoint and embed time and price access conditions.
+* Once the Payment Plans terms are created, a DID associated with the builder’s wallet is issued and it can be then linked to a specific plan.
+* At the end of the process, the App will automatically create a widget containing the plan information and display it on the marketplace, but builders also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
+* Purchasing access means the asset's smart contract sends the buyer a non-fungible Payment Plan token, using ERC-standards, that can be simply copied into the users' application.
+* This Payment Plan proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
 
-## What are Smart Subscriptions
+## What are Payment Plans
 
-*Smart Contracts + Subscription Logic = Smart Subscriptions!*
+*Smart Contracts + Plan Logic = Payment Plans!*
 
-Smart Subscriptions is a new concept that builds on blockchain smart contract and NFT technology, but provides much greater utility and flexibility than current NFTs. Traditionally, NFT technology has been applied to represent a unique asset, in a 1-to-1 relationship. For example, a Bored Ape NFT has one JPEG for each token. While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets. 
+Payment Plans is a new concept that builds on blockchain smart contract and NFT technology, but provides much greater utility and flexibility than current NFTs. Traditionally, NFT technology has been applied to represent a unique asset, in a 1-to-1 relationship. For example, a Bored Ape NFT has one JPEG for each token. While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets.
 
 In the case of AI, a workflow might require access to dozens of assets (i.e. data, models and analysis services). If each dataset. model, or analysis service was represented by an NFT, this would correspond to dozens of onchain confirmations, performed via your wallet, to orchestrate the end-to-end process. The result? Horrendous UX.
 
-Instead, Smart Subscriptions facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one Smart Subscription can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference or output. 
+Instead, Payment Plans facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one Payment Plans can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference or output.
 
-In addition, Nevermined has added the ability to add a time-related access parameter to the Smart Subscriptions and its related assets. This means you can tokengate access for 1 hour, 1 day, 1 month, 1 year…The sky’s the limit!
+In addition, Nevermined has added the ability to add a time-related access parameter to the Payment Plans and its related assets. This means you can tokengate access for 1 hour, 1 day, 1 month, 1 year… The sky’s the limit!
 
 The result? Much greater usability and a big step change in overall utility.
 
@@ -69,11 +69,10 @@ Web services allow applications to interact with each other over the internet, e
 * If you’re buying an asset on [Gnosis Network](https://gnosis.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of xDAI for the network gas fees.
 * If you’re buying an asset on [Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
 
-
 ## What is the publishing flow?
 
-* Create a Subscription plan for your asset(s)
-* Register your asset or your web service and attach it to the Subscription
+* Create a Payment Plans for your asset(s)
+* Register your asset or your web service and attach it to the Payment Plans
 * Publish it to our Marketplace. (Soon you will also be able to create a widget to embed it in your own website.)
 
 You can find more detailed tutorials for each step [here](../tutorials/).
@@ -81,7 +80,7 @@ You can find more detailed tutorials for each step [here](../tutorials/).
 ## What is the buying flow?
 
 * Find the asset you’re interested in on the Marketplace;
-* Purchase a subscription to that asset, with your USDC.
+* Purchase a plan to that asset, with your USDC.
 * If you buy access to an AI: integrate the AI API with JWT token into your software.
 * If you buy access to data: integrate the data into your AI workflow.
 
@@ -94,16 +93,16 @@ You can find more detailed tutorials for each step [here](../tutorials/).
 
 ## What is the price for using Nevermined App?
 
-Using Nevermined to create subscriptions is free. It’s only when you sell subscriptions that you will pay a small 1% fee to Nevermined.
+Using Nevermined to create Payment Plans is free. It’s only when you sell plans that you will pay a small 1% fee to Nevermined.
 
-## What type of plans are available for the subscription configuration?
+## What type of plans are available for the Payment Plans configuration?
 
 Nevermined App offers 3 pre-defined plans, as well as a customized option:
 
 * Free Plan - Optimal for creating open ended exclusive access that boosts community loyalty and engagement.
 * One month Plan - Great for creating time-critical gated assets that follow the latest trends.
 * One year Plan - Perfect for creating valuable gated assets with long-term access.
-* Custom Plan - Creates a bespoke subscription configuration with your desired duration & price.
+* Custom Plan - Creates a bespoke plan configuration with your desired duration & price.
 
 ## What blockchain network does the Nevermined App use?
 

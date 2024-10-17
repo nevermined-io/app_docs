@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
-description: How to register your file assets and link to a Smart Subscription
+description: How to register your file assets and link to a Payment Plan
 ---
 
-# How to register your file assets and link to a Smart Subscription
+# How to register your file assets and link to a Payment Plan
 
-Here we go through the required steps of registering a new dataset and link it to your Smart Subscription. Owners who purchase that subscription will get access to the one or more file assets that are included in the plan.
+Here we go through the required steps of registering a new dataset and link it to your Payment Plan. Owners who purchase that plan will get access to the one or more file assets that are included in the plan.
 
 :::note
-You can't register an asset without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](04-create-subscription.md) first.
+You can't register an asset without first configuring a Payment Plan. So if you skipped that part, please go to the tutorial about [How to create a Payment Plan](create-plan) first.
 :::
 
 In Nevermined you can register different types of file assets:
@@ -23,7 +23,7 @@ The registration of any of those is very similar. In this tutorial we will focus
 
 ## How to register a dataset
 
-These are the steps to make your dataset available to holders of your Smart Subscription.
+These are the steps to make your dataset available to holders of your Payment Plan.
 
 If you don't want to read the whole tutorial, you can watch the video tutorial:
 
@@ -76,20 +76,20 @@ If you have sample files or addional information that you want to share with pot
 
 <p align="center"><img src="/images/tutorials/06-02-Dataset-Upload.png" width="600"/></p>
 
-### 4. Choose a subscription plan 
+### 4. Choose the Payment Plan
 
-Next, you need to specify what type of subscription a user requires to get access to your dataset. 
+Next, you need to specify what type of plan a user requires to get access to your dataset. 
 
 :::tip
 If you want your data set to be available via different plans, you can go through this process once more. 
-Register the asset again and add it to another Smart Subscription plan. For now ;-)
+Register the asset again and add it to another Payment Plan. For now ;-)
 :::
 
 <p align="center"><img src="/images/tutorials/06-03-Dataset-Plan.png" width="600"/></p>
 
 ### 5. Review everything is okay
 
-Finally, review your data subscription.Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
+Finally, review your data plan. Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
 
 <p align="center"><img src="/images/tutorials/06_04_Dataset_review.png" /></p>
 

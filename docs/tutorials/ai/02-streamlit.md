@@ -5,7 +5,7 @@ description: How to accept payments in your Streamlit application
 
 # How to accept payments in your Streamlit application
 
-First here's a short demo of the AI Streamlit Subscription app and how it works with Stripe
+First here's a short demo of the AI Streamlit app and how it works with Stripe
 payments:
 
 <p align="center">
@@ -14,13 +14,13 @@ payments:
 
 In this video, you will see how a user is prompted via your Streamlit app to first log into your
 app. Once logged in and authenticated, users without credits will be prompted to subscribe to your
-AI. You have the choice to set up different subscription options, such as Free and Paid subscription
+AI. You have the choice to set up different plan options, such as Free and Paid plan
 plans. Once a user has subscribed, they will be able to access your AI under the conditions you set
-via each plan’s subscription prerequisites.
+via each plan’s plan prerequisites.
 
-## How to setup a Streamlit Subscription Plan
+## How to setup a Streamlit Payment Plan
 
-The following is a step-by-step guide to creating your own Subscription Plan for your Streamlit app.
+The following is a step-by-step guide to creating your own Payment Plan for your Streamlit app.
 Please note that this product is still a work in progress, and we have not yet made the Stripe
 payment piece fully available in production. If you would like to use the production Stripe
 integration to get paid, please contact us on [Discord](https://discord.gg/PP4dQFd8) or at
@@ -63,21 +63,21 @@ integration to get paid, please contact us on [Discord](https://discord.gg/PP4dQ
 ![Finalize Account Setup](/images/tutorials/streamlit/step2_7_c.png)
 
 Congratulations! You’ve successfully set up your Stripe account. Now let’s create your first
-subscription plan.
+payment plan.
 
 ![Congratulations](/images/tutorials/streamlit/step2_4.png)
 
-### Step 3 - Create a Subscription Plan
+### Step 3 - Create a Payment Plan
 
 - Click the “New” button, then the “Create a plan” button
 
 ![Create a Plan](/images/tutorials/streamlit/step3_8.png)
 
-- Describe the type of subscription plan you wish to create for your users. For example, you may
-  want to create a subscription plan that allows your users to buy a set number of access credits
+- Describe the type of payment plan you wish to create for your users. For example, you may
+  want to create a payment plan that allows your users to buy a set number of access credits
   for a certain price that your users will use to redeem access to your Streamlit app.
 
-![Subscription Type](/images/tutorials/streamlit/step3_9.png)
+![Plan Type](/images/tutorials/streamlit/step3_9.png)
 
 - Next, choose the type of plan you want to enable for your users. Here you have the selection of
   allowing your users to access your app for a period of time, or by a set number of requests. We’ve
@@ -86,16 +86,16 @@ subscription plan.
 
   - Request based plan - you can choose from a number of options, or create your own Custom plan.
     You are able to edit:
-    - Title - Give your plan a descriptive Subscription title.
+    - Title - Give your plan a descriptive Plan title.
     - Price - Set the price for you credits based plan.
     - No. of Credits - Set the number of credits your users receive when they buy this plan.
 
-![Subscription Details](/images/tutorials/streamlit/step3_10_a.png)
+![Plan Details](/images/tutorials/streamlit/step3_10_a.png)
 
 - Time period based plan - you can choose from a number of options, or create your own Custom plan.
   You are able to edit:
 
-      - Title - Give your plan a descriptive Subscription title.
+      - Title - Give your plan a descriptive Plan title.
       - Price - Set the price for you credits based plan.
       - Duration - Set the duration of time that your users can access your app when they buy this plan. Options include:
 
@@ -105,11 +105,11 @@ subscription plan.
         - Months
         - Years
 
-![Subscription Details](/images/tutorials/streamlit/step3_10_b.png)
+![Plan Details](/images/tutorials/streamlit/step3_10_b.png)
 
-- Now review the subscription plan set up and confirm by clicking “Next”
+- Now review the payment plan set up and confirm by clicking “Next”
 
-![Subscription Review](/images/tutorials/streamlit/step3_11.png)
+![Plan Review](/images/tutorials/streamlit/step3_11.png)
 
 ## Step 4 - Specify your AI Service
 
@@ -147,11 +147,11 @@ provider.
 (Please note that Nevermined fully encrypts the Bearer Token information that you submit so that
 this information is never disclosed to anyone but yourse
 
-- Now select the subscription plan that you created earlier and attach your AI service to this plan.
+- Now select the Payment plan that you created earlier and attach your AI service to this plan.
   This will enable the controls you’ve set for your AI app using this service. In this step you can
   also set the number of credits needed for each user to make one request for this AI service.
 
-![Select Subscription](/images/tutorials/streamlit/step4_16.png)
+![Select Plan](/images/tutorials/streamlit/step4_16.png)
 
 - Lastly, review your AI-service setup and click “Create”.
 
@@ -162,7 +162,7 @@ this information is never disclosed to anyone but yourse
 
 ## Step 5 - Get your Streamlit Embeddable Widget
 
-- To create your embeddable widget into your Streamlit app, you will need your unique subscription
+- To create your embeddable widget into your Streamlit app, you will need your unique payment
   plan identifier, or DID. You can get this by copying the URL for the AI API / webservice that you
   just created. To do this, first navigate to “My area → My assets”.
 

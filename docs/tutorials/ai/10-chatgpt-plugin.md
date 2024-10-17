@@ -98,7 +98,7 @@ At this point you should have your plugin ready to be deployed using your favori
 
 ## Register your ChatGPT plugin in Nevermined
 
-So at this point you should you have implemented your plugin and deploy it somewhere. Now you can share your plugin with the other ChatGPT users in a safety way, and even monetize it if you want, using a Nevermined Smart Subscription.
+So at this point you should you have implemented your plugin and deploy it somewhere. Now you can share your plugin with the other ChatGPT users in a safety way, and even monetize it if you want, using a Nevermined Payment Plan.
 
 In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
@@ -108,15 +108,15 @@ You can access to this test version of Nevermined App [here](https://testing.nev
 
 We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
 
-The next step is to create a brand new [Smart Subscription](https://docs.nevermined.app/docs/tutorials/builders/smart-subscriptions)
+The next step is to create a brand new [Payment Plan](https://docs.nevermined.app/docs/tutorials/builders/smart-subscriptions)
 
-You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/create-subscription) you can find some help to guide you.
+You will register your AI Service associated with this Subscription you are about to create. The process to create a new Subscription is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/builders/create-plan) you can find some help to guide you.
 
 ### Registering your AI Service
 
-So now that you have all set up and you have created a Smart Subscription, you can create a Web Service Asset to register your AI Service in Nevermined App.
+So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Service in Nevermined App.
 
-You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-webservice/)
+You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-agent/)
 
  ![Plugin Service Registration](/images/tutorials/plugins/001_Service_Registration_01.png)
 
@@ -139,15 +139,15 @@ Now this step is important, the ChatGPT plugins require to have full read access
 
 The final `(.*)` part is a wildcard that will allow the ChatGPT plugin to access to any file included in the `.well-known` folder. Use your own domain instead of `YOUR_SERVICE`. For example using the previous Elvis ChatGPT plugin example, the URL will be `https://chatgpt-plugin.nevermined.app/.well-known/(.*)`
 
-#### Add some metadata and associate the Smart Subscription
+#### Add some metadata and associate the Payment Plan
 
-In the next 2 screens you just need to include some additional metadata that facilitates the integration by a third-party. And finally we just need to associate the Smart Subscription you created before. If you select any non-free Smart Subscription, the users who want to use your plugin will need to pay for it.
+In the next 2 screens you just need to include some additional metadata that facilitates the integration by a third-party. And finally we just need to associate the Payment Plan you created before. If you select any non-free Payment Plan, the users who want to use your plugin will need to pay for it.
 
 When you finish the process you will see your new Web Service Asset registered in the Nevermined App.
 
 ![Plugin Details Page](/images/tutorials/plugins/009_Service_Details_02.png)
 
-Now if you go to the `Integration Details` tab of the service you will see the `Proxy URL` and the `JWT` token. The JWT token is only available to you or the users who have access to the Smart Subscription associated with the service. This token is used to authenticate the requests to the protected endpoints.
+Now if you go to the `Integration Details` tab of the service you will see the `Proxy URL` and the `JWT` token. The JWT token is only available to you or the users who have access to the Payment Plan associated with the service. This token is used to authenticate the requests to the protected endpoints.
 
 Remember them because you are gonna need it when you integrate your plugin in OpenAI.
 

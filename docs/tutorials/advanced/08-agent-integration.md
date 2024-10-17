@@ -1,18 +1,18 @@
 ---
 sidebar_position: 8
-description: How to generate the JWT access token that gives access to a web service
+description: How to generate the JWT access token that gives access to an AI Agent or service
 ---
 
-# How to integrate an AI service in an application
+# How to integrate an AI agent in another application
 
-In this tutorial we show how you can integrate an AI service in an application, after you bought a subscription.
+In this tutorial we show how you can integrate an AI agent or service in a third-party application, after you bought a payment plan.
 
 
 :::info
-You can test AI services from the App even before you start any integration of the service in your application.
+You can test AI agents from the App even before you start any integration of the service in your application.
 :::
 
-## How to integrate a web service
+## How to integrate an agent
 
 The steps to integrate are the following:
 

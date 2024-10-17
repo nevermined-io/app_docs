@@ -14,8 +14,8 @@ If you want to get tokens for the respective testnets, please go to [this tutori
 
 ## How to get MATIC and USDC for Polygon
 
-* To buy a Smart Subscription for an asset you need some MATIC tokens to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
-* To publish a Smart Subscription (and the associated AI web service or Data) you only need MATIC, to pay for the network transaction fees. 
+* To buy a Payment Plan for an asset you need some MATIC tokens to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Payment Plan (and the associated AI web service or Data) you only need MATIC, to pay for the network transaction fees. 
 You will receive USDC when someone buys access to your asset. 
 
 
@@ -105,8 +105,8 @@ If this feature is available, you can buy USDC on your favourite exchange and wi
 
 ## How to get xDAI and USDC for Gnosis
 
-* To buy a Smart Subscription on Gnosis you need xDAI to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
-* To publish a Smart Subscription (and the associated AI web service or Data), you only need xDAI, to pay for the network transaction fees. 
+* To buy a Payment Plan on Gnosis you need xDAI to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Payment Plan (and the associated AI web service or Data), you only need xDAI, to pay for the network transaction fees. 
 You will receive USDC when someone buys access to your asset. 
 
 As often, these things change, so do your own research. And if you have any questions, join our Discord. 
@@ -133,8 +133,8 @@ This [StakingBits article](https://medium.com/stakingbits/setting-up-metamask-fo
 
 ## How to get ETH and USDC for Arbitrum
 
-* To buy a Smart Subscription on Arbitrum you need ETH to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
-* To publish a Smart Subscription (and the associated AI web service or Data), you only need ETH, to pay for the network transaction fees. 
+* To buy a Payment Plan on Arbitrum you need ETH to pay for the network transaction fee and you need USDC to pay for the assets you're purchasing. 
+* To publish a Payment Plan (and the associated AI web service or Data), you only need ETH, to pay for the network transaction fees. 
 You will receive USDC when someone buys access to your asset. 
 
 As often, these things change, so do your own research. And if you have any questions, join our Discord. 

@@ -5,7 +5,7 @@ description: Monetize your Open AI Assistant with Nevermined
 
 # Monetize your Open AI Assistant
 
-With Nevermined is possible to monetize any assistant you created via [OpenAI](https://platform.openai.com/assistants). In previous tutorials we showed [how to register an AI service](register-webservice). Now it's time to distribute and monetize a different type of an AI Service, in this case an OpenAI assistant.
+With Nevermined is possible to monetize any assistant you created via [OpenAI](https://platform.openai.com/assistants). In previous tutorials we showed [how to register an AI service](register-agent). Now it's time to distribute and monetize a different type of an AI Service, in this case an OpenAI assistant.
 
 ## From where can I copy the Assistant ID?
 

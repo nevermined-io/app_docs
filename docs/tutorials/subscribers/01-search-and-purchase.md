@@ -1,26 +1,19 @@
 ---
 sidebar_position: 1
-description: How to find an asset and purchase the Smart Subscription
+description: How to find an asset and purchase the Payment Plans
 ---
 
-# Searching assets and buying subscriptions
+# Searching assets and buying plans
 
 The Nevermined App allows you to browse, search and purchase access to any of the assets that have been registered.
 
-## How to buy a Smart Subscription for the asset you want
-
-Navigate to the list of all the assets available clicking on the "Search" option of the header.
+## How to buy a Payment Plan for the asset you want
 
 ### 1. Find the asset you're interested in
 
-The App has different ways to find assets:
+There are different ways to find the asset you're interested in, but mostly you can find AI agents, services and file assets promoted in the websites of the owners of these assets (via widgets, links, etc.).
 
-* Use the search field to type in keywords related to the title of the asset.
-* Use the filter function to restrict your search to certain assets types, subscription durations, tags,...
-
-<p align="center"><img src="/images/tutorials/metamask/07-01-Buying-Filter.png" width="600"/></p>
-
-### 2. Get more detailed information
+### 2. Review the details
 
 Click on 'Learn More' to go to an overview page of the asset, including:
 
@@ -38,7 +31,7 @@ The publisher of the subscription can select wich payment method is available fo
 
 :::info
 
-If the asset is associated to a **Free Subscription** you don't to select any payment method. 
+If the asset is associated to a **Free Plan** you don't to select any payment method. 
 
 :::
 

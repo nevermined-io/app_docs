@@ -7,52 +7,89 @@ description: Payments for AI Agents and Apps. What can you do with Nevermined Pa
 
 What can you do with the Nevermined Payments App?
 
-AI payments are hard. Price your AI agent too low and you may be stuck with a hefty Open AI bill. Price your AI agent too high and you won’t be competitive. Nevermined allows you to take control over your pricing and connect it to actual app usage.	
+AI payments are hard. Price your AI agent too low and you may be stuck with a hefty Open AI bill.
+Price your AI agent too high and you won’t be competitive. Nevermined allows you to take control
+over your pricing and connect it to actual app usage.
 
-## Create Smart Subscriptions
+## Create Payment Plans
 
-Smart Subscriptions give AI Builders the ability to control how and when users can use an AI agent or service. They are entirely controlled and managed by the AI Builder that creates them with no interference from Nevermined.
+Payment Plans give AI Builders the ability to control how and when users can use an AI agent or
+service. They are entirely controlled and managed by the AI Builder that creates them with no
+interference from Nevermined.
 
-As an AI Builder, you can create a Smart Subscription for your AI that give you the ability to:
+As an AI Builder, you can create a Payment Plan for your AI that give you the ability to:
+
 - Create a time-based or request-based access token, called Credits, for your AI
 - Set a price, starting from Free, to access your AI (supporting any type of currency)
-- Combine different AI services, like API web services for your AI, data sets for context, model weights for training, etc.  
-- Set the number of Credits required to access a particular AI service, giving the Builder even greater pricing flexibility for each unique AI service, dataset, etc.
+- Combine different AI agent services, like API web services for your AI, data sets for context,
+  model weights for training, etc.
+- Set the number of Credits required to access a particular AI service, giving the Builder even
+  greater pricing flexibility for each unique AI service, dataset, etc.
 
 ## Time-Based vs. Request-Based Access to AIs
 
-Nevermined Smart Subscriptions enable the set up of time-based or request-based gating of a Builder's AI. 
+Nevermined Payment Plans enable the set up of time-based or request-based gating of a Builder's AI.
 
-- Time-Based: Provisions User access with time-gating. Builders can set the time period that a User will be allowed access to the AI. For example, this could be 1 year, 1 month, 1 week, 1 day, 1 hour, etc. When a user makes a request, the corresponding access credit will be redeemed and grant that User access to the AI service for the period designated by the Builder. Once the time period has elapsed, the User will no longer have access, and will need to redeem another credit if additional access is required.
-- Request-Based: Provisions User access with request-gating. In this case, Builders can manage the number of requests that a User can make to access their AI service. This is done by prompting the Builder to set the number of credits needed to make a request to the AI service / app when they add that service to a Smart Subscription package. Once set, each time a request is made by a User, Nevermined will redeem the specified number of credits needed to make the request. If the User does not have enough credits, they will be prompted to purchase more credits and denied access to the Builder's AI service / app.
+- Time-Based: Provisions User access with time-gating. Builders can set the time period that a User
+  will be allowed access to the AI. For example, this could be 1 year, 1 month, 1 week, 1 day, 1
+  hour, etc. When a user makes a request, the corresponding access credit will be redeemed and grant
+  that User access to the AI service for the period designated by the Builder. Once the time period
+  has elapsed, the User will no longer have access, and will need to redeem another credit if
+  additional access is required.
+- Request-Based: Provisions User access with request-gating. In this case, Builders can manage the
+  number of requests that a User can make to access their AI service. This is done by prompting the
+  Builder to set the number of credits needed to make a request to the AI service / app when they
+  add that service to a Payment Plan package. Once set, each time a request is made by a User,
+  Nevermined will redeem the specified number of credits needed to make the request. If the User
+  does not have enough credits, they will be prompted to purchase more credits and denied access to
+  the Builder's AI service / app.
 
 ## AI Credits
 
-The Nevermined Credits system is a sophisticated backend "SaaS" component that gives AI Builders flexibility to monitor and manage usage of their AI agent and apps. Credits are sold to users and then redeemed for access to the AI service, dataset, etc. How these credits are redeemed is set by the AI Builder. Nevermined then manages the redemption on their behalf with no additional work required from the AI Builder.
+The Nevermined Credits system is a sophisticated backend "SaaS" component that gives AI Builders
+flexibility to monitor and manage usage of their AI agent and apps. Credits are sold to users and
+then redeemed for access to the AI service, dataset, etc. How these credits are redeemed is set by
+the AI Builder. Nevermined then manages the redemption on their behalf with no additional work
+required from the AI Builder.
 
-## Registering an AI Agent / App 
+## Registering an AI Agent / App
 
-You can register AI web services in just a few easy steps through Nevermined's simple registration flow. 
+You can register AI web services in just a few easy steps through Nevermined's simple registration
+flow.
 
-To register an AI, you will need your AI's web services endpoint plus JWT. The Nevermined app then encrypts that information.
+To register an AI, you will need your AI's web services endpoint plus JWT. The Nevermined app then
+encrypts that information.
 
-The outcome of the registration process are AI identification numbers, called DIDs, that are associated with each Builder. These AI services can then be linked to your Smart Subscription(s).
+The outcome of the registration process are AI identification numbers, called DIDs, that are
+associated with each Builder. These AI services can then be linked to your Payment Plan(s).
 
 ## Type of Payment
 
-Nevermined supports two major types of purchase: fiat / cash purchases, and crypto purchases. AI Builders are given the choice of the purchase type they want to support. This selection is done when setting up a Builder profile within the Nevermined app. Once selected, the purchase type(s) will be propogated through to each Smart Subscription that the AI Builder creates. Then, when a User subscribes, they will be presented with the default purchase types.
+Nevermined supports two major types of purchase: fiat / cash purchases, and crypto purchases. AI
+Builders are given the choice of the purchase type they want to support. This selection is done when
+setting up a Builder profile within the Nevermined app. Once selected, the purchase type(s) will be
+propogated through to each Payment Plan that the AI Builder creates. Then, when a User subscribes,
+they will be presented with the default purchase types.
 
 ## Stripe Subscription
 
-When an AI Builder selects Stripe as the purchase mechanism for their Smart Subscriptions, they will be asked to go through the Stripe onboarding flow. This flow is independent from the Nevermined app, and is required to open an account with Stripe. [To Do]
+When an AI Builder selects Stripe as the purchase mechanism for their Payment Plans, they will be
+asked to go through the Stripe onboarding flow. This flow is independent from the Nevermined app,
+and is required to open an account with Stripe. [To Do]
 
-## Buying Smart Subscriptions with User Checkout Flow 
+## Buying Payment Plans with User Checkout Flow
 
-We've created a Smart Subscription widget that AI Builders can embed in their own websites or platforms, so users can purchase the Subscription from there. The purchase flow operates like PayPal, routing the User through Nevermined's Checkout flow service. During this flow, Users will choose how they wish to make the purchase, depending on the payment options made available by the AI Builder. Once a purchase is made, the User's account will be updated with the new Credits and can then start using the corresponding AI service or agent.  
+We've created a Payment Plan widget that AI Builders can embed in their own websites or platforms,
+so users can purchase the Plan from there. The purchase flow operates like PayPal, routing the User
+through Nevermined's Checkout flow service. During this flow, Users will choose how they wish to
+make the purchase, depending on the payment options made available by the AI Builder. Once a
+purchase is made, the User's account will be updated with the new Credits and can then start using
+the corresponding AI service or agent.
 
-People that buy from a widget will be routed to the Nevermined access flow. This is where they can redeem access to the AI web service's end point that is included in the Smart Subscription.
+People that buy from a widget will be routed to the Nevermined access flow. This is where they can
+redeem access to the AI web service's end point that is included in the Payment Plan.
 
-## Smart Subscriptions give AI Agents Superpowers!
+## Payment Plans give AI Agents Superpowers!
 
-Now AI agents have a means to monetize and to transact with external services! In other words, we've given agents (and associated services) a payment superpowers!
-
+Now AI agents have a means to monetize and to transact with external services! In other words, we've
+given agents (and associated services) a payment superpowers!

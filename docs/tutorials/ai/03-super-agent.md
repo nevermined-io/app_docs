@@ -24,17 +24,17 @@ If you want to see how an AI Publisher can monetize their Super Agent AI service
 
 
 
-## Step 1 - Set up your Builder Account in Nevermined and a Smart Subscription
+## Step 1 - Set up your Builder Account in Nevermined and a Payment Plan
 
-In a previous tutorial we showed how to [setup your Nevermined account](../builders/configure-account) and [how to create a Smart Subscription](../builders/create-subscription). Here we go through the required steps of registering a new AI agent existing on Super Agent and linking it to your Smart Subscription. User who purchase a subscription will get access to the Super Agent AI service that is included in the subscription plan.
+In a previous tutorial we showed how to [setup your Nevermined account](../builders/configure-account) and [how to create a Payment Plan](../builders/create-plan). Here we go through the required steps of registering a new AI agent existing on Super Agent and linking it to your Payment Plan. User who purchase a plan will get access to the Super Agent AI service that is included in the payment plan.
 
 :::note
-You can't register an AI Service without first configuring a Smart Subscription. So if you skipped that part, please go to the tutorial about [How to create a Smart Subscription](../builders/create-subscription) first.
+You can't register an AI Service without first configuring a Payment Plan. So if you skipped that part, please go to the tutorial about [How to create a Payment Plan](../builders/create-plan) first.
 :::
 
 ## Step 2 - Register your Super Agent AI service
 
-- Next, you need to register the Super Agent AI service and link to your Smart Subscription. To do this, click in the "New +" button of the header.
+- Next, you need to register the Super Agent AI service and link to your Payment Plan. To do this, click in the "New +" button of the header.
 
 - You will see a page where you can select the type of asset you want to create. Select the "AI Apps/Agents" option.
 
@@ -63,7 +63,7 @@ Please note that Nevermined fully encrypts the Bearer Token information that you
 this information is never disclosed to anyone but yourself.
 :::
 
-- Now select the subscription plan that you created earlier and attach your AI service to this plan.
+- Now select the payment plan that you created earlier and attach your AI service to this plan.
   This will enable the controls you’ve set for your AI app using this service. In this step you can
   also set the number of credits needed for each user to make one request for this AI service.
 
