@@ -48,7 +48,7 @@ Once a user is a subscriber sending a request is quite simple.
 
 ## Sending a task to the AI Agent implementing the Nevermined Query Protocol
 
-The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) standarizes the interface of AI Agents and Services. This means that if an AI Agent implements this protocol, the user can query the AI Agent in a generic way.
+The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) standardizes the interface of AI Agents and Services. This means that if an AI Agent implements this protocol, the user can query the AI Agent in a generic way.
 
 <Tabs
   defaultValue="python"
