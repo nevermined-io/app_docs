@@ -92,7 +92,7 @@ The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-p
 
 ## Sending a task to the AI Agent or Service
 
-Nevermined recomends to use the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) but doesn't enforce it. 
+Nevermined recommends to use the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) but doesn't enforce it. 
 
 :::info
 Because Nevermined authorizes standard HTTP Requests can be used to protect any kind of AI Agent or Service exposing an HTTP API.
