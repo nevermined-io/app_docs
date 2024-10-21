@@ -40,15 +40,15 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
   callback_function = (step) => {
     print('Step received', step)
     await payments.ai_protocol.update_step(did=step['did'], 
-                                          task_id=step['task_id'], 
-                                          step_id=step['step_id'], 
-                                          step={'step_id': step['step_id'],
-                                              'task_id': step['task_id'], 
-                                              'step_status': AgentExecutionStatus.Completed.value,
-                                              'output': 'success',
-                                              'is_last': True,
-                                              'cost': 1
-                                          })
+      task_id=step['task_id'], 
+      step_id=step['step_id'], 
+      step={'step_id': step['step_id'],
+        'task_id': step['task_id'], 
+        'step_status': AgentExecutionStatus.Completed.value,
+        'output': 'success',
+        'is_last': True,
+        'cost': 1
+      })
   }
   ```
   </TabItem>

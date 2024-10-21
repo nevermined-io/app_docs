@@ -23,7 +23,8 @@ With the Payments Library, Subscribers can order Plans paying in Crypto. The pro
   # Here we are ordering the Plan created in the previous steps
   order_result = payments.order_plan(plan_DID)  
   # OUTPUT: orderResult: 
-  #  { success: True, agreementId: '0xaabbcc' }   ```
+  #  { success: True, agreementId: '0xaabbcc' }   
+  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript

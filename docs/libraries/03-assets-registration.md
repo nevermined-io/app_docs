@@ -76,7 +76,8 @@ Nevermined Payment Plans enable the set up of time-based or request-based gating
     token_address: USDC_ERC20_TESTING,
     duration: 30, # 30 days
     tags: ["test"]
-  })  ```
+  })  
+  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript  
@@ -128,7 +129,8 @@ Before registering an AI Agent, you need to have a Payment Plan created.
     amountOfCredits: 1,
     endpoints: agent_endpoints,
     openEndpoints: ['https://example.com/api/v1/rest/docs-json']
-  })  ```
+  })  
+  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
