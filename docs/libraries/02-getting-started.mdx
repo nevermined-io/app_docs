@@ -67,7 +67,8 @@ You need to keep your API Key secure and never share it with anyone.
   </TabItem>
   <TabItem value="typescript">
   ```typescript
-  // @see https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys  
+  // To get your own Nevermined API Key, follow the instructions here:
+  // https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys  
   const nvmApiKey = 'eyJhbGciOiJFUzI1NksifQ.ey .....'
 
   // If you want to connect to production use 'arbitrum' as environment
@@ -81,7 +82,7 @@ You need to keep your API Key secure and never share it with anyone.
   ```typescript
   // If you want to connect to production use 'arbitrum' as environment
   const payments = Payments.getBrowserInstance({
-    returnUrl: 'https://mysite.example',
+    returnUrl: 'https://mysite.example.com',
     environment: 'testing'
   })
   payments.connect()

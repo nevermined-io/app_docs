@@ -7,9 +7,9 @@ description: How to integrate the Nevermined Payments Python library
 
 The objective of this library is to make possible the integration of Nevermined payments in the Python code ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
 
-:::info
- 
-In a previous tutorial we showed [what is a Nvm Api Key and how to obtain it](nvm-api-keys).
+:::tip
+
+To have full details about how to use the [Payments Library](../../libraries/), please visit the [documentation section](../../libraries/)
 
 :::
 
@@ -23,12 +23,19 @@ pip install payments-py
 
 ### Initialize the payments library
 
+:::info
+ 
+In a previous tutorial we showed [what is a Nvm Api Key and how to obtain it](nvm-api-keys).
+
+:::
+
 To initialize the payments library, you need to provide the following parameters:
 
 - Nvm Api key: It's a string that identifies the session key of the account abstraction and some extra data as the marketplace auth token. It works similar to a jwt but for blockchain accounts. You can find more in [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
 - Environment: It's an enum that represents the environment where the library will interact with the Nevermined network. It can be `Environment.appTesting` or `Environment.appArbitrum`.
 - App id: It's a string that represents the app id. Currently is optional.
 - Version: It's a string that represents the version of the app. Currently is optional.
+
 
 ```
 from nevermined_payments import Payments
