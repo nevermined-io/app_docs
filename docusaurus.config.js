@@ -90,6 +90,11 @@ const config = {
           },
           {
             position: 'left',
+            label: 'Libraries',
+            to: 'docs/libraries',
+          },
+          {
+            position: 'left',
             label: 'Tutorials',
             to: 'docs/tutorials',
           },
@@ -97,6 +102,11 @@ const config = {
             position: 'left',
             label: 'App',
             href: 'https://nevermined.app/',
+          },
+          {
+            position: 'left',
+            label: 'Protocol',
+            href: 'https://docs.nevermined.io/docs/protocol',
           },
           {
             position: 'right',
@@ -120,12 +130,20 @@ const config = {
                 to: '/docs/getting-started',
               },
               {
+                label: 'Libraries',
+                to: 'docs/libraries',
+              },              
+              {
                 label: 'Tutorials',
                 to: 'docs/tutorials',
               },
               {
                 label: 'FAQ',
                 to: '/docs/getting-started/faq',
+              },
+              {
+                label: 'Protocol',
+                href: 'https://docs.nevermined.io/docs/protocol',
               },
             ],
           },
