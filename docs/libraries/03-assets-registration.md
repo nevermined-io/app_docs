@@ -30,7 +30,15 @@ Nevermined Payment Plans enable the set up of time-based or request-based gating
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
+  USDC_ERC20_TESTING = '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d' # This is the USDC ERC20 address in the testing network
+
+  plan_DID = payments_builder.create_credits_plan({
+    name: 'E2E Payments Plan', 
+    description: 'description', 
+    price:15000000n, # 15 USDC
+    token_address: USDC_ERC20_TESTING,
+    amount_of_credits: 100 # It means when someone purchase this plan, they will get 100 credits
+  })
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -59,8 +67,16 @@ Nevermined Payment Plans enable the set up of time-based or request-based gating
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
-  ```
+  USDC_ERC20_TESTING = '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d' # This is the USDC ERC20 address in the testing network
+
+  plan_DID = payments.create_time_plan({
+    name: "My 1 Month Plan",
+    description: "test",
+    price:15000000n, # 15 USDC
+    token_address: USDC_ERC20_TESTING,
+    duration: 30, # 30 days
+    tags: ["test"]
+  })  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript  
@@ -93,8 +109,26 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
-  ```
+  # When you create an agent, you need to provide the endpoints that the agent exposes and are protected by the Payment Plan
+  # You must specify the HTTP method and the URL pattern that the agent exposes
+  # You can use wildcards (.*) to match any string
+  agent_endpoints = [
+     { 'POST': 'https://example.com/api/v1/agents/(.*)/tasks' },
+     { 'GET': 'https://example.com/api/v1/agents/(.*)/tasks/(.*)' }
+  ]
+
+  agent_DID = payments_builder.create_service({
+    plan_DID, # The DID of the Payment Plan we created before
+    name: 'My AI Assistant',
+    description: 'description of the assistant',
+    serviceType: 'agent',
+    serviceChargeType: 'fixed',
+    authType: 'bearer',
+    token: 'changeme',
+    amountOfCredits: 1,
+    endpoints: agent_endpoints,
+    openEndpoints: ['https://example.com/api/v1/rest/docs-json']
+  })  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript

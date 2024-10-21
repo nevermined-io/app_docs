@@ -20,8 +20,10 @@ With the Payments Library, Subscribers can order Plans paying in Crypto. The pro
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
-  ```
+  # Here we are ordering the Plan created in the previous steps
+  order_result = payments.order_plan(plan_DID)  
+  # OUTPUT: orderResult: 
+  #  { success: True, agreementId: '0xaabbcc' }   ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
@@ -50,8 +52,15 @@ Time-based Plans have a balance of 1 credit for subscribers. When the plan expir
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
-  ```
+    balance_result = payments.get_plan_balance(plan_DID)
+    # OUTPUT: balanceResult:
+    # {
+    #  "planType": 'credits",
+    #  "isSubscriptor": True,
+    #  "isOwner": False,
+    #  "balance": 10000000
+    #}  
+    ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript

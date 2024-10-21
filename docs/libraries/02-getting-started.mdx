@@ -41,7 +41,7 @@ You need to keep your API Key secure and never share it with anyone.
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
+  pip install payments-py
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -62,7 +62,11 @@ You need to keep your API Key secure and never share it with anyone.
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
+  # @see https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys  
+  nvm_api_key = 'eyJhbGciOiJFUzI1NksifQ.ey .....'
+
+  # If you want to connect to production use 'arbitrum' as environment
+  payments = Payments(nvm_api_key, environment=Environment.get_environment('testing'))  # 'local' | 'staging' | 'testing' | 'arbitrum' | 'peaq' | 'custom'
   ```
   </TabItem>
   <TabItem value="typescript">

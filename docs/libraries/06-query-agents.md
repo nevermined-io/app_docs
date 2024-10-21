@@ -28,7 +28,12 @@ Once a user is a subscriber sending a request is quite simple.
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
+  access_config = payments.get_service_token(agent_DID)
+  # OUTPUT: accessConfig:
+  # {
+  #  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
+  #  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  # }    
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -58,7 +63,17 @@ The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-p
   ]}>
   <TabItem value="python">
   ```python
-  # ADD PYTHON CODE HERE
+  # Here we are configuring the Task we are sending to the Agent. Please check the Query Protocol documentation for more information.
+  # https://docs.nevermined.io/docs/protocol/query-protocol#tasks-attributes
+  ai_task = {
+    query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
+    name: "transcribe",
+    "additional_params": [],
+    "artifacts": []
+  }
+
+  task_result = payments.ai_protocol.create_task(agentDID, ai_task)
+  
   ```
   </TabItem>
   <TabItem value="typescript">
