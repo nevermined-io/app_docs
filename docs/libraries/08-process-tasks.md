@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 # How AI Builders can process AI Tasks?
 
 :::note
-This feature is specific for AI Agents Services using the Nevermined AI Infrastructure.
+This feature is specific for AI Agents Services using the <ins>Nevermined AI Hub</ins>.
 :::
 
 ## Benefits of delegating the API to Nevermined AI Infrastructure
@@ -63,6 +63,21 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
   </TabItem>  
 </Tabs>
 
-This means with this feature, creating an AI Agent is as simple as calling a subscribe and resolving the steps part of the tasks.
+Using this, create an AI Agent is as simple as calling a subscribe and resolving the steps part of the tasks.
 
+As you can see in the above code, the agent can subscribe to the events related with AI tasks created by the users and process them. For doing that it just needs to implement a callback function that will get the AI task input parameters and process it.
+
+### AI Tasks and Steps
+
+The AI tasks are composed by several steps. Each step is a part of the task that the AI Agent needs to process. The steps are processed sequentially and the agent can update the status of the step and the output of the step. You can see the steps as a workflow that the AI Agent needs to process to be completed.
+
+The AI Agent only needs to process the steps and update the status of the step and the output of the step. The rest of the logic is managed by **Nevermined AI Hub**.
+
+When a user requests a task to an AI Agent, by default is created one task with one step. This first step has the **"init"** name. When the AI agent receives the **init** step can:
+
+* If the AI task is simple and **doesn't require several steps**, it can process the step and update the status of the step to **Completed** and the **is_last** attribute as **true**. This will mark the whole task as completed.
+
+* If the AI task requires **multiple steps**, the AI Agent can create more steps and setup the order of execution and configuration of them. This can be done by defining the **name**, **order** and **predecessor** step. 
+
+We will see different code examples about how to do this in the following section.
 
