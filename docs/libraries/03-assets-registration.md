@@ -110,25 +110,15 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   ]}>
   <TabItem value="python">
   ```python
-  # When you create an agent, you need to provide the endpoints that the agent exposes and are protected by the Payment Plan
-  # You must specify the HTTP method and the URL pattern that the agent exposes
-  # You can use wildcards (.*) to match any string
-  agent_endpoints = [
-     { 'POST': 'https://example.com/api/v1/agents/(.*)/tasks' },
-     { 'GET': 'https://example.com/api/v1/agents/(.*)/tasks/(.*)' }
-  ]
-
-  agent_DID = payments_builder.create_service({
+  agent_DID = payments_builder.create_agent({
     plan_DID, # The DID of the Payment Plan we created before
     name: 'My AI Assistant',
     description: 'description of the assistant',
-    serviceType: 'agent',
-    serviceChargeType: 'fixed',
-    authType: 'bearer',
+    service_charge_type: 'fixed',
+    auth_type: 'bearer',
     token: 'changeme',
-    amountOfCredits: 1,
-    endpoints: agent_endpoints,
-    openEndpoints: ['https://example.com/api/v1/rest/docs-json']
+    amount_of_credits: 1,
+    use_ai_hub: True,
   })  
   ```
   </TabItem>
