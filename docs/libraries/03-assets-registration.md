@@ -131,8 +131,8 @@ Before registering an AI Agent, you need to have a Payment Plan created.
      { 'POST': 'https://example.com/api/v1/agents/(.*)/tasks' },
      { 'GET': 'https://example.com/api/v1/agents/(.*)/tasks/(.*)' }
   ]
-
-  const agentDID = await paymentsBuilder.createService({
+  
+  const agentDID = await payments.createAgent({
     planDID, // The DID of the Payment Plan we created before
     name: 'My AI Assistant',
     description: 'description of the assistant',
@@ -144,7 +144,20 @@ Before registering an AI Agent, you need to have a Payment Plan created.
     endpoints: ENDPOINTS,
     openEndpoints: ['https://example.com/api/v1/rest/docs-json']
   })
-  
+
+  // If you want to use the AI Hub, you can create an agent with the following code
+  // As you can see you don't need to pass the endpoint urls because the subscribers will be using the Nevermined Query Protocol endpoints
+  const agentDIDwithAIHub = await payments.createAgent({
+    planDID, // The DID of the Payment Plan we created before
+    name: 'My AI Assistant',
+    description: 'description of the assistant',
+    serviceType: 'agent',
+    serviceChargeType: 'fixed',
+    amountOfCredits: 1,
+    usesAIHub: true,
+  })
+
+
   ```
   </TabItem>  
 </Tabs>

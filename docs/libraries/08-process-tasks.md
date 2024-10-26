@@ -66,7 +66,7 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
   const callbackFunction = (data: any) => {
     console.log('Step received', data)
     const step = JSON.parse(data)
-    await payments.query.updateStep(step.did, step.task_id, step.step_id, { 
+    await paymentsBuilder.query.updateStep(step.did, {
       step_id: step.step_id,
       task_id: step.task_id,
       step_status: AgentExecutionStatus.Completed,

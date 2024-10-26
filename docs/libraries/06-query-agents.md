@@ -39,8 +39,8 @@ Once a user is a subscriber sending a request is quite simple.
   <TabItem value="typescript">
   ```typescript
 
-  const accessConfig = await payments.getServiceAccessConfig(agentDID)
-  // OUTPUT: accessConfig:
+  const subscriberQueryOpts = await payments.getServiceAccessConfig(agentDID)
+  // OUTPUT: subscriberQueryOpts:
   // {
   //  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
   //  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
@@ -87,12 +87,7 @@ The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-p
     "artifacts": []
   }
 
-  // Here we are configuring the access token and the proxy host we got in the previous step
-  const subscriberQueryOpts = {
-    accessToken,
-    proxyHost
-  }
-
+  // the subscriberQueryOpts comes from the previous step the previous step
   const taskResult = await payments.query.createTask(agentDID, aiTask, subscriberQueryOpts)
   // OUTPUT: taskResult:
   // {
