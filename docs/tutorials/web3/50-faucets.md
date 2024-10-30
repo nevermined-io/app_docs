@@ -11,9 +11,7 @@ For testing purposes, we have also deployed the application on the following tes
 
 Note that you shouldn't register your real assets, as they will become available in the App. 
 
-- [Testing](https://testing.nevermined.app/) (for Arbitrum) (**prefered for testing**)
-- [Mumbai](https://mumbai.nevermined.app) (for Polygon)
-- [Chiado](https://chiado.nevermined.app) (for Gnosis)
+- [Testing](https://testing.nevermined.app/) (for Arbitrum)
   
 ## Getting tokens for Sepolia, the testnet for Arbitrum
 
@@ -35,22 +33,6 @@ To publish a Payment Plan (and the associated AI web service or Data) you need s
 Alternatively, you can use the [Sepolia Faucet](https://sepoliafaucet.com/) to get some ETH.
 
 :::
-
-## Getting tokens for Mumbai, the testnet for Polygon
-
-To publish a Payment Plan (and the associated AI web service or Data) you need some MATIC, to pay for the network transaction fees. 
-
-### Getting testnet MATIC
-
-Faucets are applications where you can claim some (valueless) test tokens. 
-For Mumbai, you can use https://faucet.polygon.technology or https://faucet.quicknode.com/
-
-- Go to the MetaMask extension in your browser.
-- Hover over your account and copy your wallet address (starting with 0x)
-- Paste it in the Wallet Address Field
-
-<p align="center"><img src="/images/tutorials/50-Testnet-Mumbai-Matic.png" /></p>
-
 
 ## Getting testnet USDC 
 

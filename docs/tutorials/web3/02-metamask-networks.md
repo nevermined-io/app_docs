@@ -13,11 +13,7 @@ The Nevermined App is currently available on 4 blockchain networks.
 
 Depending on the network you prefer to use, you need to add some network data to your MetaMask wallet.
 
-For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
-
-- [Arbitrum Sepolia](https://testing.nevermined.app/) (for Arbitrum) - This is the **default test network** for the Nevermined App.
-- [Polygon Mumbai](https://mumbai.nevermined.app) (for Polygon)
-- [Gnosis Chiado](https://chiado.nevermined.app) (for Gnosis)
+For testing purposes, we have also deployed the application on the [Arbitrum Sepolia](https://testing.nevermined.app/) testnet. Using the testing environment has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
 ## Get Ready
 
@@ -104,26 +100,3 @@ Currency Symbol: ETH
 Block Explorer URL: https://sepolia.arbiscan.io/ 
 ```
 
-### Polygon Mumbai Testnet
-
-For the most up to date network details, visit the Polygon [website](https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask#add-the-polygon-network-manually).
-
-```
-Network Name: Mumbai Testnet
-New RPC URL: https://rpc-mumbai.maticvigil.com/
-ChainID: 80001
-Currency Symbol: MATIC
-Block Explorer URL: https://mumbai.polygonscan.com/
-```
-
-### Gnosis Chiado Testnet
-
-For the most up to date network details, visit the [Gnosis website](https://docs.gnosischain.com/tools/wallets/metamask/).
-
-```
-Network Name: Chiado Testnet
-New RPC URL: https://rpc.chiadochain.net
-ChainID: 10200
-Currency Symbol: XDAI
-Block Explorer URL: https://blockscout.com/gnosis/chiado
-```

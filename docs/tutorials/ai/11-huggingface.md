@@ -220,7 +220,7 @@ Make sure you provide enough information about your service in the *Description*
 
 ### Consuming your AI Model
 
-Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](../advanced/agent-integration/) you can find how users can integrate your service.
+Every user that have purchased your Subscription will be able to use your AI Model through Nevermined. In this [guide](../integration/agent-integration/) you can find how users can integrate your service.
 
 #### Examples
 

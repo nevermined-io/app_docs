@@ -3,10 +3,10 @@ sidebar_position: 9
 description: How to expose an AI agent and publish it into Nevermined
 ---
 
-# How to expose an AI agent and publish it into Nevermined
+# How to expose a Python AI agent and publish it into Nevermined
 
 
-In the following sections we will show how you can easily expose your AI model through web services endpoints. 
+In the following sections we will show how you can easily expose your AI model through web services endpoints.
 With this endpoints up & running you will be able to register this service in Nevermined so you can safely share, and monetize, your AI model
 
 
@@ -304,7 +304,7 @@ You can find a complete guide to register your service [here](https://docs.never
 
  ### Consuming your AI Service
 
-Every user that have purchased your Plan will be able to use your AI Service through Nevermined. In this [guide](../advanced/agent-integration) you can find how users can integrate your service.
+Every user that have purchased your Plan will be able to use your AI Service through Nevermined. In this [guide](../integration/agent-integration) you can find how users can integrate your service.
 
 #### Examples
 

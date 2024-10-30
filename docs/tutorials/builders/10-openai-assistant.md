@@ -111,4 +111,4 @@ The Nevermined App will register the new OpenAI assistant. This will take just a
 
 **You’re done!**
 
-If you are interested on promoting your new OpenAI assistant and make some money, please to the tutorial about [How to distribute your AI services and files and make some money](09-distribute.md).
+If you are interested on promoting your new OpenAI assistant and make some money, please go to the tutorial about [How to distribute your AI services and files and make some money?](09-distribute.md).
