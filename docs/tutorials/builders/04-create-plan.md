@@ -70,7 +70,7 @@ Optionally you can add an image to highlight your Plan. Pro tip: use your compan
 
 Nevermined lets Builders configure Payment Plans with 2 types of controls / access management mechanisms:
 
-* Limited by usage - Builders control the number of requests that can be made to a service. Every time a user accesses any resouce associated to the Payment Plan, the usage consumes from a capped amount of credits. When the user consumes all the credits, the plan automatically expires and the user needs to top up to continue using the service.
+* Limited by usage - Builders control the number of requests that can be made to a service. Every time a user accesses any resource associated with the Payment Plan, the usage consumes from a capped amount of credits. When the user consumes all the credits, the plan automatically expires and the user needs to top up to continue using the service.
 * Limited by time - Builders can specify the duration of the Payment Plan (1 month, 1 year, etc.). When the time period is over, the plan automatically expires and the user needs to renew it.
 
 :::tip

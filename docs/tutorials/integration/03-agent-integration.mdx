@@ -1,0 +1,171 @@
+---
+sidebar_position: 3
+description: How to generate the JWT access token that gives access to an AI Agent or service
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# How to integrate an AI agent in another application
+
+In this tutorial we show how you can integrate an AI agent or service in a third-party application, after you bought a payment plan.
+
+:::info
+You can test AI agents from the App even before you start any integration of the agent in your application.
+:::
+
+## How to integrate an agent from the App
+
+In this case we are going to use the Nevermined App to test the AI agent and get the access token that allows to query it. The steps to integrate are the following:
+
+### 1. Open your Dashboard page
+
+Click on the "My Assets" link on the header of the application. Select the "My Assets" option in the menu, and click on the "Purchased" tab.
+
+You will see a list of all the assets you can access. Use the filters in the Search Bar to see only the Agents or Services.
+
+<p align="center"><img src="/images/tutorials/integration/08-01-Integration-Dashboard.png" /></p>
+
+### 2. Get information about the Agent
+
+You can access to detailed information about the agent clicking the **eye icons** on the right hand side.
+
+The fist tab, **"Service Information"**, shows some information about the agent, like the description and the information provided by the publisher about how to integrate it.
+
+In the tab **"Endpoints"** you'll see detailed information about the endpoints this agent exposes, where you can find information about the parameters and the responses.
+
+:::warning
+This Endpoints tab is only showed if the publisher provided an OpenAPI definition.
+:::
+
+<p align="center"><img src="/images/tutorials/08-03-Service-endpoints.png" width="600" /></p>
+
+In the tab **"Integration Details"** you'll find the details about how to make HTTP requests to the AI agent. There you will find the agent's JWT access token, along with the Proxy URL and an example of how to call the agent:
+
+<p align="center"><img src="/images/tutorials/integration/08-02-Service-Info.png" width="600" /></p>
+
+
+### 3. Testing the agent from the App
+
+If you are the publisher of the agent OR a subscriber, you can test the agent directly from the App. Go to the **"Endpoints"** tab and select the endpoint of the list you want to test. Then click on the **"Try out"** button.
+Provide the parameters, body, etc. required by the agent and click on the **"Execute"** button.
+
+<p align="center"><img src="/images/tutorials/webservice_try_endpoint.png" width="600" /></p>
+
+At this point the Nevermined App will send a HTTP request to the upstream agent via the Proxy (including the JWT access token). The Proxy will validate the user is a subscriber and if that's the case will forward the request to the upstream agent and return the result.
+
+<p align="center"><img src="/images/tutorials/webservice_tryout_response.png" width="600" /></p>
+
+You can see a detailed view of the complete request and HTTP parameters. All this information is very valuable because shows how to make the request to the agent using standard HTTP.
+
+### 4. Get the JWT access token
+
+The JWT token is the access key identifying you as a subscriber. It allows you to make HTTP requests to the AI agent. Once you have it, you can make requests to all the endpoints that are included in the agent that you subscribed to.
+
+Copy both the JWT token and the Proxy url for the network you're using (e.g. https://proxy.testing.nevermined.app/). You need these to enable your app to send HTTP requests.
+
+:::info
+
+If you want to know more about how everything works under the hood, please check the [How everything works](../../architecture/04-how-works.mdx) section of the documentation.
+
+:::
+
+## How to integrate an agent programatically
+
+Next we will show how you can integrate the agent into your app (or another agent) programatically.
+
+First you need to compose the **Proxy URL**. The Proxy URL is the full URL you are gonna call to interact with the agent. It is compose by the Proxy host + the endpoint of the agent you want to use (including parameters). For example if the proxy you are using is `https://proxy.testing.nevermined.app/` and the URL (including parameters) of the agent you are integrating is `/ask?param1=xxx`, the full proxy URL will be: `https://proxy.testing.nevermined.app/ask?param1=xxx`.
+
+### 4.a Using raw HTTP requests to integrate the agent
+
+Here we will use **curl** but the same works for any HTTP client application or library. You just need to export the JWT access token and use it in the Authorization header sending the request through the Proxy.
+
+:::info
+When you integrate an agent you can pass **any url paratemer**, **body message** or **additional headers** that the agent requires. After authorize your request the Proxy will forward all this information to the agent.
+:::
+
+```bash
+# Here we export the JWT token pasted from the NVM App
+export $JWT_TOKEN=””
+
+# In our example we are sending a body message via HTTP POST. 
+# For sake of clarity, here we export the body message we are gonna send to the agent
+export REQUEST_DATA='{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
+
+# With curl we make a POST request and we add the $JWT_TOKEN as Bearer token in the Authorization header
+# The url where we send the request is the host name of the proxy: "https://proxy.testing.nevermined.app" plus the endpoint of the agent 
+# we are calling, int this case "/ask"
+curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.testing.nevermined.app/ask
+
+{"response":"\nThe song is about a person who is in love with someone who is not perfect, but they cannot live without them. Despite knowing that loving this person will bring heartache, they are willing to take the risk and accept the consequences. The song also compares the relationship to the story of Adam and Eve, with the person in the song being like Adam and their love interest being like Eve.","source_nodes":[{"node":{"text":"...","doc_id":"8e748293-f8d2-41b8-a225-7479455b1899","embedding":null,"doc_hash":"451d68b33de1e8034e48c6a98865364e52edd02837f06c34c662ba6d6d462c76","extra_info":null,"node_info":{"start":0,"end":1030},"relationships":{"1":"did:nv:3e0a13a6dba0ab20e83bf25c3e820af8b71c94cea0ab0763b4f822a6998009e6"}},"score":0.7585169416635178}],"extra_info":null}
+```
+
+#### 4.b Using the Nevermined Payment Libraries to integrate the agent
+
+Nevermined provides the [Payments Libraries](../../libraries/) which allow you to integrate the agent in your application. The libraries are available in different languages and provide a simple way to interact with the Nevermined ecosystem and another agents.
+
+Here we assume you already ordered a plan. We are going to generate the JWT access token and send the request to the agent through the Proxy.
+
+:::info
+If you want to learn more about how order payment plans, please check the [How Subscribers can order Plans?](../../libraries/order-plans) section of the documentation.
+:::
+
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'Typescript', value: 'typescript'}
+  ]}>
+  <TabItem value="python">
+  ```python
+  access_config = payments.get_service_token(agent_DID)
+  # OUTPUT: accessConfig:
+  # {
+  #  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
+  #  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  # }
+  
+  proxy_endpoint = f"{subscriberQueryOpts.neverminedProxyUri}/ask"
+
+  headers = {
+    // The proxy expects the `HTTP Authorization` header with the JWT
+    "authorization": f"Bearer {subscriberQueryOpts.accessToken}",
+    "content-type": "application/json"
+  }   
+  
+  data = '{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
+
+  requests.post(proxy_endpoint, json=data, headers=headers)
+  ```
+  </TabItem>
+  <TabItem value="typescript">
+  ```typescript
+
+  const subscriberQueryOpts = await payments.getServiceAccessConfig(agentDID)
+  // OUTPUT: subscriberQueryOpts:
+  // {
+  //  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
+  //  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  // }  
+  
+  const proxyEndpoint = `${subscriberQueryOpts.neverminedProxyUri}/ask`
+
+  opts.headers = {
+    // The proxy expects the `HTTP Authorization` header with the JWT
+    authorization: `Bearer ${subscriberQueryOpts.accessToken}`,
+    'content-type': 'application/json'
+  }   
+
+  opts.method = 'POST'
+  opts.body = '{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
+
+  const result = await fetch(proxyEndpoint, opts)
+  assert.isTrue(result.ok)
+  assert.equal(result.status, 200)
+  ```  
+  
+  </TabItem>  
+</Tabs>
+
+

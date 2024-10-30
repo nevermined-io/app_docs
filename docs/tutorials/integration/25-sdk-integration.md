@@ -1,13 +1,17 @@
 ---
-sidebar_position: 3
-description: How to generate the JWT access token that gives access to a web service
+sidebar_position: 25
+description: How to build sophisticated web applications on top of the Nevermined network with the Nevermined SDK
 ---
 
-# Using the Nvm App API
+# Using the Nvm App SDK for building web applications
 
-The Nevermined App provides a Typescript library which allow you to build web applications on top of the Nevermined ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
+The Nevermined App provides a Typescript library (aka [Nevermined SDK](https://github.com/nevermined-io/sdk-js)) which allow you to build web applications on top of the Nevermined ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
 
-## Install the NVM App API
+:::warning
+Don't confuse the [Nevermined SDK](https://github.com/nevermined-io/sdk-js) with the [Nevermined Payment Libraries](../../libraries/). The SDK is oriented to build complex web applications on top of Nevermined network (like Marketplaces), while the Payment Libraries are oriented to facilitate monetization of AI agents and interaction with other agents.
+:::
+
+## Install the NVM App SDK
 
 The NVM App API is included as part of the [Nevermined SDK](https://www.npmjs.com/package/@nevermined-io/sdk). Start by adding the package to your dependencies:
 
