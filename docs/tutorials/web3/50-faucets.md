@@ -9,9 +9,9 @@ description: What faucets can you use to start playing with Nevermined environme
 
 For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
-Note that you shouldn't register your real assets, as they will become available in the marketplace. 
+Note that you shouldn't register your real assets, as they will become available in the App. 
 
-- [Testing](https://testing.nevermined.app/) (for Arbitrum)
+- [Testing](https://testing.nevermined.app/) (for Arbitrum) (**prefered for testing**)
 - [Mumbai](https://mumbai.nevermined.app) (for Polygon)
 - [Chiado](https://chiado.nevermined.app) (for Gnosis)
   
