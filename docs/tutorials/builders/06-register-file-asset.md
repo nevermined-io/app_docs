@@ -51,7 +51,7 @@ For example:
 
 #### Include tags
 
-Add tags to help buyers find your Data set(s) in the Nevermined marketplace. Click the '+' symbol to add new tags. 
+Add tags to help buyers find your Dataset(s) in the Nevermined App. Click the '+' symbol to add new tags. 
 
 <p align="center"><img src="/images/tutorials/06-01-Dataset-Description.png" width="600"/></p>
 
