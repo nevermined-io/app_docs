@@ -120,10 +120,11 @@ Finally, review your web service subscription. Click on “Create” if everythi
 
 The Nevermined App will register the new AI service or agent. This will take just a few seconds and once it's done, you will see a success message.
 
-![Register Agent page](/images/tutorials/10_New_Service_05.png)
+![Register Agent page](/images/tutorials/builders/added_asset_plan.png)
 
 ---
 
 **You’re done!**
 
 If you are interested on promoting your new AI Agent or Service and make some money, please to the tutorial about [How to distribute your AI agents or services and files and make some money](09-distribute.md).
+
