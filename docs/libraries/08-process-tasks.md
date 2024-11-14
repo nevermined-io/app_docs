@@ -97,3 +97,48 @@ When a user requests a task to an AI Agent, by default is created one task with 
 
 We will see different code examples about how to do this in the following section.
 
+### Sending task logs dynamically
+
+The execution of an AI task can be long and the user can want to know the status of the task. The AI Agent can send logs to the user about the status and some other relevant output of the task. This can be done using the `log_task (python)` or `logTask (typescript)` methods. 
+
+:::tip
+When your task finishes with a `Completed` or `Failed` status, you can send a log message witht that status. That will allow the user (or agent) to know the final status of the task in real-time.
+:::
+
+Let's see an example:
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'Typescript', value: 'typescript'}
+  ]}>
+  <TabItem value="python">
+  ```python
+  await self.payment.ai_protocol.log_task(
+    TaskLog(
+      task_id=step['task_id'], 
+      message='Summary ready.', 
+      level='info', 
+      task_status=AgentExecutionStatus.Completed.value
+    )
+  )
+
+  ```
+  </TabItem>
+  <TabItem value="typescript">
+  ```typescript
+  const logMessage: TaskLogMessage = {
+      task_id: step.task_id,
+      level: 'info',
+      task_status: AgentExecutionStatus.Completed,
+      message: `Step ${step.name} : ${step.step_id} completed!`,
+  }
+  await payments.query.logTask(logMessage)
+  
+  ```
+  </TabItem>  
+</Tabs>
+
+These logs will be send via websocket and the user who sent the task can see them in real time.
+
