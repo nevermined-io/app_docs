@@ -27,24 +27,39 @@ class YoutubeAgent:
     async def run(self, data):
         print("Data received:", data)
         step = self.payment.ai_protocol.get_step(data['step_id'])
+        if(step['step_status'] != AgentExecutionStatus.Pending.value):
+            print('Step status is not pending')
+            return
 
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Fetching steps...', level='info'))
         loader = YoutubeLoader.from_youtube_url(
             youtube_url=step['input_query'],
             add_video_info=False, 
-            language=["en"],
+            language=["en", "es", "pt", "uk", "ru", "fr", "zh-Hans", "zh-Hant", "de"],           
             transcript_format=TranscriptFormat.CHUNKS, 
             chunk_size_seconds=30,
         )
         # Load the documents from the video
-        docs = loader.load()
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Load the documents from the video', level='info'))
+        try:
+            docs = loader.load()
+            if not docs:
+                print("No transcript available for the video.")
+                await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='No transcript available.', level='error', task_status=AgentExecutionStatus.Failed.value))
+                return
+        except Exception as e:
+            print("Error parsing transcript:", e)
+            await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Error parsing transcript', level='error', task_status=AgentExecutionStatus.Failed.value))
+            return
         result = " ".join(doc.page_content for doc in docs)
+        
 
         llm = OpenAI(api_key=openai_api_key)
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summarizing...', level='info'))
         summarize_chain = load_summarize_chain(llm, chain_type="map_reduce")
         docs = [Document(page_content=result)]
         summary = summarize_chain.invoke(docs)
         print('Summary:', summary['output_text'])
-
 
         # Use the `payment` object to update the step
         self.payment.ai_protocol.update_step(
@@ -58,6 +73,7 @@ class YoutubeAgent:
                     'is_last': True
                     },
         )
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summary ready.', level='info', task_status=AgentExecutionStatus.Completed.value))
 ``` 
 
 As you can see the fuction `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the Youtube video URL, transcribe it, and summarize it. After processing you have to update the step with the result.
@@ -305,14 +321,30 @@ if (step.name === 'init') {
         is_last: true,
         order: 3
     }]})
-    createResult.status === 201 ? logger.info('Steps created successfully') : logger.error(`Error creating steps: ${JSON.stringify(createResult.data)}`)      
+    createResult.status === 201
+      ? payments.query.logTask({ task_id: step.task_id, level: 'info', message: 'Steps created successfully' })
+      : payments.query.logTask({
+          task_id: step.task_id,
+          level: 'error',
+          message: `Error creating steps: ${JSON.stringify(createResult.data)}`,
+        })
 
     const updateResult = await payments.query.updateStep(step.did, {
       ...step,
       step_status: AgentExecutionStatus.Completed,
-      output: step.input_query
+      output: step.input_query,
     })
-    updateResult.status === 201 ? logger.info(`Step ${step.name} : ${step.step_id} completed!`) : logger.error(`Error updating step ${step.step_id} - ${JSON.stringify(updateResult.data)}`)
+    updateResult.status === 201
+      ? payments.query.logTask({
+          task_id: step.task_id,
+          level: 'info',
+          message: `Step ${step.name} : ${step.step_id} completed!`,
+        })
+      : payments.query.logTask({
+          task_id: step.task_id,
+          level: 'error',
+          message: `Error updating step ${step.step_id} - ${JSON.stringify(updateResult.data)}`,
+        })
 
   } else if (step.name === 'transcribe') {
     // Here we integrate with the Youtube Summarizer agent
@@ -335,11 +367,18 @@ When the step `init` is completed, it will add 2 additional steps to the task an
 
     // First we check if we have enough balance to query the Youtube AI Agent
     const balanceResult = await payments.getPlanBalance(PLAN_YOUTUBE_DID)
-    logger.info(`Youtube Plan balance: ${balanceResult.balance}`)
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Youtube Plan balance: ${balanceResult.balance}`,
+    })
 
     if (balanceResult.balance < 1) { // If we don't have enough balance, we order more credits
-      logger.warn('Insufficient balance to query the Youtube AI Agent')
-      logger.info('Ordering more credits...')
+      payments.query.logTask({
+        task_id: step.task_id,
+        level: 'warning',
+        message: `Insufficient balance to query the Youtube AI Agent. Ordering more credits.`,
+      })
       await payments.orderPlan(PLAN_YOUTUBE_DID)
     }
 
@@ -351,70 +390,61 @@ When the step `init` is completed, it will add 2 additional steps to the task an
       "artifacts": []
     }
 
-    logger.info(`Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`)
-
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
+    })
     // Get the JWT access token and the Proxy we must use to query theYoutube Agent
     const accessConfig = await payments.getServiceAccessConfig(AGENT_YOUTUBE_DID)
 
     // Create the task
-    const taskResult = await payments.query.createTask(AGENT_YOUTUBE_DID, aiTask, accessConfig)
+    const taskResult = await payments.query.createTask(
+      AGENT_YOUTUBE_DID,
+      aiTask,
+      accessConfig,
+      async (data) => {
+        const taskLog: TaskLogMessage = JSON.parse(data)
 
-    if (taskResult.status !== 201) {
-      logger.error(`Failed to create task: ${taskResult.data}`)
-      return
-    }
-    logger.info(`Task created: ${JSON.stringify(taskResult.data)}`)
+        console.log(`Received ws task log: ${JSON.stringify(data)}`)
 
-    const taskId = taskResult.data.task.task_id
-    const did = taskResult.data.task.did
+        if (!taskLog.task_status) {
+          payments.query.logTask({
+            task_id: taskLog.task_id,
+            level: 'info',
+            message: `LOG: ${taskLog.task_id} :: ${taskLog.message}`,
+          })
+          return
+        }
 
-    let fullTask
-    let resultFound = false
-    let counter = 1
+        return await validateExternalYoutubeSummarizerTask(taskLog.task_id, step)
+      },
+    )
 
-    // We iterate a few times until the task is completed
-    while (counter <= MAX_RETRIES) {
-      logger.info(`Checking Youtube task status for task ID [${counter}]: ${taskId}`)
-      const fullTaskResult = await payments.query.getTaskWithSteps(did, taskId, accessConfig)
-      
-      if (fullTaskResult.status !== 200) {
-        logger.error(`Failed to get Youtube task: ${fullTaskResult.data}`)
-        process.exit(1)  
-      }
-      fullTask = fullTaskResult.data.task
-      logger.info(`Youtube Task status: ${JSON.stringify(fullTask.task_status)}`)
-      if (fullTask.task_status === AgentExecutionStatus.Completed) {
-        logger.info(`Youtube Task completed with cost: ${fullTask.cost}`)
-        logger.info(`  Output: ${fullTask.output}`)
-        resultFound = true
-        break
-      } else if (fullTask.task_status === AgentExecutionStatus.Failed) {
-        logger.error(`Task failed with message ${fullTask.output}`)        
-        break
-      }
-      counter++
-      await sleep(SLEEP_INTERVAL)
-    }
-
-    let updateResult    
-    if (!resultFound) { // If for whatever reason the task is not completed in time, we update the step with the error
-      logger.error('Task not completed in time')
-      updateResult = await payments.query.updateStep(step.did, {
+   if (taskResult.status !== 201) {
+      payments.query.logTask({
+        task_id: step.task_id,
+        task_status: AgentExecutionStatus.Failed,
+        level: 'error',
+        message: `Failed to create task on Youtube Summarizer external agent: ${taskResult.data}`,
+      })
+      // Because we couldnt summarize the Youtube video on the external agent:
+      // we UPDATE the Step to FAILED
+      await payments.query.updateStep(step.did, {
         ...step,
         step_status: AgentExecutionStatus.Failed,
         is_last: true,
-        output: 'Task not completed in time '
+        output: `Error creating task on Youtube Summarizer external agent: ${JSON.stringify(taskResult.data)}`,
       })
-    } else { // If the task is completed, we update the step with the output result
-      updateResult = await payments.query.updateStep(step.did, {
-        ...step,
-        step_status: AgentExecutionStatus.Completed,
-        output: fullTask.output,
-        output_additional: fullTask.output_additional,
-        output_artifacts: fullTask.output_artifacts,
-        cost: fullTask.cost
-      })
-    }    
+      return
+    }
+
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Task on external agent created [${taskResult.data.task.task_id}] created: ${taskResult.data.task.input_query}`,
+    })
+    
 
 ```
 
@@ -424,21 +454,51 @@ At this stage if everything worked correctly we must have a few credits and the 
 
   } else if (step.name === 'text2speech') {
 
-    logger.info(`Converting text to audio ...`)
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Converting text to audio ...`,
+    })
     const fileSpeech = await openaiTools.text2speech(step.input_query)
-    logger.info(`Speech file generated: ${fileSpeech}`)
+
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Speech file generated`,
+    })
     const cid = await uploadSpeechFileToIPFS(fileSpeech)
-    logger.info(`Speech file uploaded to IPFS: ${cid}`)
-    
+
+    payments.query.logTask({
+      task_id: step.task_id,
+      level: 'info',
+      message: `Speech file generated uploaded to IPFS`,
+    })
+
     const updateResult = await payments.query.updateStep(step.did, {
       ...step,
       step_status: AgentExecutionStatus.Completed,
       is_last: true,
-      output: 'hey baby, we got this!',
-      output_additional: '{"result": "success"}',
-      output_artifacts: [cid],
-      cost: 5
+      output: `Text converted to audio: ${cid}`,
+      output_additional: 'success',
+      output_artifacts: [IpfsHelper.cidToUrl(cid)],
+      cost: 20,
     })
+
+    if (updateResult.status === 201)
+      payments.query.logTask({
+        task_id: step.task_id,
+        task_status: AgentExecutionStatus.Completed,
+        step_id: step.step_id,
+        level: 'info',
+        message: `Step ${step.name} : ${step.step_id} completed!`,
+      })
+    else
+      payments.query.logTask({
+        task_id: step.task_id,
+        task_status: AgentExecutionStatus.Failed,
+        level: 'error',
+        message: `Error updating step ${step.step_id} - ${JSON.stringify(updateResult.data)}`,
+      })
   }
 ```
 
