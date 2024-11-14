@@ -27,24 +27,39 @@ class YoutubeAgent:
     async def run(self, data):
         print("Data received:", data)
         step = self.payment.ai_protocol.get_step(data['step_id'])
+        if(step['step_status'] != AgentExecutionStatus.Pending.value):
+            print('Step status is not pending')
+            return
 
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Fetching steps...', level='info'))
         loader = YoutubeLoader.from_youtube_url(
             youtube_url=step['input_query'],
             add_video_info=False, 
-            language=["en"],
+            language=["en", "es", "pt", "uk", "ru", "fr", "zh-Hans", "zh-Hant", "de"],           
             transcript_format=TranscriptFormat.CHUNKS, 
             chunk_size_seconds=30,
         )
         # Load the documents from the video
-        docs = loader.load()
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Load the documents from the video', level='info'))
+        try:
+            docs = loader.load()
+            if not docs:
+                print("No transcript available for the video.")
+                await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='No transcript available.', level='error', task_status=AgentExecutionStatus.Failed.value))
+                return
+        except Exception as e:
+            print("Error parsing transcript:", e)
+            await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Error parsing transcript', level='error', task_status=AgentExecutionStatus.Failed.value))
+            return
         result = " ".join(doc.page_content for doc in docs)
+        
 
         llm = OpenAI(api_key=openai_api_key)
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summarizing...', level='info'))
         summarize_chain = load_summarize_chain(llm, chain_type="map_reduce")
         docs = [Document(page_content=result)]
         summary = summarize_chain.invoke(docs)
         print('Summary:', summary['output_text'])
-
 
         # Use the `payment` object to update the step
         self.payment.ai_protocol.update_step(
@@ -58,6 +73,7 @@ class YoutubeAgent:
                     'is_last': True
                     },
         )
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summary ready.', level='info', task_status=AgentExecutionStatus.Completed.value))
 ``` 
 
 As you can see the fuction `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the Youtube video URL, transcribe it, and summarize it. After processing you have to update the step with the result.
