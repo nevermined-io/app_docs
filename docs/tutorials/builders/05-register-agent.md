@@ -34,21 +34,38 @@ These are the steps to make your agent or service accessible to Users that buy y
 
 #### Add a description
 
-Use the description box to explain to potential users what your web service is about. Some examples:
+Use the description box to explain to potential users what your agent is about. Some examples:
 
 - _An open source summarizer specialised in scientific research_
 - _A chatbot-style AI Agent that generates quotes based on Elvis lyrics. Built using Llama Index and an open source LLM. Good for devs who want to have some fun, build a Discord bot,..._
 
-#### Include tags (optional)
+#### Include a cover image and/or tags (optional)
 
-Add tags to help search for your AI Web Service.
-Click the '+' symbol to add new tags.
+Add tags or a cover image that helps look better your agent for users.
+Click the '+' symbol to add new tags or the upload button to add a cover image.
 
 ![AI Agent Description](/images/tutorials/05-01-Webservice-Describe.png)
 
-### 3. Define the attributes of the AI service
+### 3. Define the attributes of the AI agent
 
-In this second step you need to provide the endpoint URLs of your AI Web Service and the authentication credentials to access the service.
+In this second step you need to provide some information about how your Agent works.
+
+#### Do you want to use the Nevermined AI Hub?
+
+If **No** you can benefit of Nevermined infrastructure to host the interface of your AI agent. If you choose **Yes**, you will need to provide the URLs of your agent and the authentication credentials to access the service. 
+
+:::info
+Please read more about the [Nevermined AI Hub](../../environments/ai-hub) to understand the benefits of using it.
+:::
+
+If you choose **No**, you will need answer the following question: "Is the agent going to use the Nevermined Query Protocol?" 
+
+If you choose **Yes**, that means your agent is compatible with the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol). This protocol is a standard way to query AI agents and services. That helps to make your agent more discoverable and usable by other users and facilitate the integration with your agent.
+If you choose **No**, you will need to provide the URL of the Open API definition of the API of  and the authentication credentials to access the service.
+
+:::info
+Please read more about the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) to understand the benefits of using it.
+:::
 
 #### Include OpenAPI document
 
@@ -69,7 +86,7 @@ Also you can write URLs with tokens like `https://myapi.example.com/user/{userId
 
 #### Add the access token
 
-In case the endpoints of your AI Service are protected with an authentication token or a user/password mechanism, you need to add this information.
+In case the endpoints of your AI Agent or service are protected with an authentication token or a user/password mechanism, you need to add this information.
 
 :::info
 
@@ -77,48 +94,37 @@ PLEASE NOTE: Your authentication information is encrypted and will always be kep
 
 :::
 
-Nevermined can protect the access to a web service that uses a HTTP Bearer token or user/password mechanism for authentication.
+Nevermined can protect the access to an agent that uses a HTTP Bearer token or user/password mechanism for authentication.
 
 ![AI Agent Authentication](/images/tutorials/builders/ai-agent-authentication.png)
 
+### 4. Choose a Payment Plan
 
-### 4. Add integration instructions
+Next, you need to specify which Payment Plan a user needs to purchase to get access to the AI agent.
 
-Give specific info about how other Builders can integrate your AI Service. This information is **optional**. For example:
+![Agent Plan](/images/tutorials/builders/ai-agent-subscription-credits.png)
 
-- Tech Spec
-- API Calls 
-- Supported formats
-- Response info (error messages etc)
-
-![Service Integration](/images/tutorials/builders/ai-agent-additional-info.png)
-
-### 5. Choose a Payment Plan
-
-Next, you need to specify which Payment Plan a user needs to purchase to get access to the AI service.
-
-![Service Plan](/images/tutorials/builders/ai-agent-subscription-credits.png)
-
-If the subscription is **Limitted by usage**, you will need to specify how many credits are consumed every time a user accesses the AI service. This is very useful to **protect** your AI service against **overuse**.
+If the subscription is **Limitted by usage**, you will need to specify how many credits are consumed every time a user accesses the AI agent. This is very useful to **protect** your AI service against **overuse**.
 
 :::tip
-If you want your web service to be available via different plans, you can go through this process once more. 
-Register the AI Web Service again and add it to another Payment Plan. For now ;-)
+If you want your agent to be available via different plans, you can go through this process once more. 
+Register the AI Agent again and add it to another Payment Plan. For now ;-)
 :::
 
-### 6. Review that everything is okay
+### 5. Review that everything is okay
 
 Finally, review your web service subscription. Click on “Create” if everything looks good. Or go “Back” if you want to modify anything.
-![Service Review](/images/tutorials/05-05-Webservice-Review.png)
+![Agent Review](/images/tutorials/05-05-Webservice-Review.png)
 
-### 7. Web service registration
+### 7. Agent registration
 
 The Nevermined App will register the new AI service or agent. This will take just a few seconds and once it's done, you will see a success message.
 
-![Register Web Service page](/images/tutorials/10_New_Service_05.png)
+![Register Agent page](/images/tutorials/builders/added_asset_plan.png)
 
 ---
 
 **You’re done!**
 
-If you are interested on promoting your new AI Service and make some money, please to the tutorial about [How to distribute your AI services and files and make some money](09-distribute.md).
+If you are interested on promoting your new AI Agent or Service and make some money, please to the tutorial about [How to distribute your AI agents or services and files and make some money](09-distribute.md).
+
