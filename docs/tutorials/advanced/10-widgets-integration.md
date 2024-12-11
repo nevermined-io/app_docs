@@ -57,8 +57,8 @@ Just click on the three dots icon and select "Edit Widget".
 Here is a example of a code generated:
 
 ```html
-<div class="nvm-one-widget" nvm-did="did:nv:e51f0c4befe8bda1a5bc741f7b2cef2389a935119c5f9d06ecf0d0670659403f" nvm-wid="wid-801506b6-8936-4261-b183-43005b2e4352" nvm-cta-text="Tell me baby" nvm-cta-bg-color="#3e95ff" nvm-theme="dark" nvm-layout="horizontal"></div>
-<script defer src="https://widgets.testing.nevermined.app/nvm-one-widget-loader.js"></script>
+<div class="nvm-agent-widget" nvm-did="did:nv:67909ab36a0c6611acf03d189e8f5d2a45b826bd1b1fda79e5936ee9c0c8dbe6" nvm-wid="wid-76bb00df-09ba-411a-9c33-812923d3a8bd" nvm-theme="dark" nvm-layout="horizontal"></div>
+<script defer src="https://widgets.testing.nevermined.app/nvm-agent-widget-loader.js"></script>
 ```
 
 And here is how the widget looks like once integrated in a website:

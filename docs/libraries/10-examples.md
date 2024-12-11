@@ -24,6 +24,7 @@ class YoutubeAgent:
     def __init__(self, payment):
         self.payment = payment
 
+    # Callback function called when a user creates an AI Task that needs to be processed
     async def run(self, data):
         print("Data received:", data)
         step = self.payment.ai_protocol.get_step(data['step_id'])
@@ -31,7 +32,8 @@ class YoutubeAgent:
             print('Step status is not pending')
             return
 
-        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Fetching steps...', level='info'))
+        # logging, we inform we are initializing the youtube loader
+        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Initializing Youtube Loader...', level='info'))
         loader = YoutubeLoader.from_youtube_url(
             youtube_url=step['input_query'],
             add_video_info=False, 
@@ -39,9 +41,10 @@ class YoutubeAgent:
             transcript_format=TranscriptFormat.CHUNKS, 
             chunk_size_seconds=30,
         )
-        # Load the documents from the video
+        # We generate some logs saying that we are loading the documents
         await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Load the documents from the video', level='info'))
         try:
+            # Load the documents from the video
             docs = loader.load()
             if not docs:
                 print("No transcript available for the video.")
@@ -396,7 +399,7 @@ When the step `init` is completed, it will add 2 additional steps to the task an
       message: `Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
     })
     // Get the JWT access token and the Proxy we must use to query theYoutube Agent
-    const accessConfig = await payments.getServiceAccessConfig(AGENT_YOUTUBE_DID)
+    const accessConfig = await payments.query.getServiceAccessConfig(AGENT_YOUTUBE_DID)
 
     // Create the task
     const taskResult = await payments.query.createTask(

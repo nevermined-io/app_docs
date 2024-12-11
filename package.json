@@ -1,6 +1,6 @@
 {
   "name": "app_docs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -19,12 +19,12 @@
   },
   "dependencies": {
     "@babel/traverse": "7.23.7",
-    "@docusaurus/core": "^3.5.2",
-    "@docusaurus/plugin-google-analytics": "^3.5.2",
-    "@docusaurus/preset-classic": "^3.5.2",
-    "@docusaurus/theme-classic": "^3.5.2",
-    "@docusaurus/theme-common": "^3.5.2",
-    "@docusaurus/theme-search-algolia": "^3.5.2",
+    "@docusaurus/core": "^3.6.3",
+    "@docusaurus/plugin-google-analytics": "^3.6.3",
+    "@docusaurus/preset-classic": "^3.6.3",
+    "@docusaurus/theme-classic": "^3.6.3",
+    "@docusaurus/theme-common": "^3.6.3",
+    "@docusaurus/theme-search-algolia": "^3.6.3",
     "@mdx-js/react": "^3.0.0",
     "@nevermined-io/payments": "0.3.2",
     "@nevermined-io/styles": "^0.1.1",
@@ -44,8 +44,8 @@
     "sass": "^1.52.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.5.2",
-    "@docusaurus/tsconfig": "^3.5.2",
+    "@docusaurus/module-type-aliases": "^3.6.3",
+    "@docusaurus/tsconfig": "^3.6.3",
     "@docusaurus/types": "^3.5.2",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

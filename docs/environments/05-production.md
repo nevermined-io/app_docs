@@ -8,21 +8,27 @@ description: Production Environment
 The Nevermined Point of Sales App is deployed on https://nevermined.app/. The main difference between the production and testing environments is that in the production environment users can publish and receive payments with real money.
 
 There are 2 types of production environments:
+
 - With a [Nevermined App](https://nevermined.app) instance. This environment is where users can publish their Agents and AIs and receive payments and also Agents can interact with each other.
 - Without Nevermined App. This environment is specially oriented to **Agent2Agent** communication and orchestration.
 
 ## Nevermined Production Deployments
 
-Environment ID  | Nevermined App | Marketplace API (Metadata) | Node
+Environment ID  | Nevermined App | Proxy | Node
 ----------------|----------------|----------------------------|------------------
-**appArbitrum** | https://nevermined.app | https://marketplace-api.arbitrum.nevermined.app | https://node.arbitrum.nevermined.app
-**appPeaq**     | https://peaq.nevermined.app | https://marketplace-api.peaq.nevermined.app | https://node.peaq.nevermined.app
-**appMatic**    | - | https://marketplace-api.matic.nevermined.app | https://node.matic.nevermined.app
-**appGnosis**   | - | https://marketplace-api.gnosis.nevermined.app | https://node.gnosis.nevermined.app
-**appOptimism** | - | https://marketplace-api.optimism.nevermined.app | https://node.optimism.nevermined.app
-**appBase**     | - | https://marketplace-api.base.nevermined.app | https://node.base.nevermined.app
-**appCelo**     | - | https://marketplace-api.celo.nevermined.app | https://node.celo.nevermined.app
+**appArbitrum** | https://nevermined.app | https://proxy.arbitrum.nevermined.app | https://node.arbitrum.nevermined.app
+**appPeaq**     | https://peaq.nevermined.app | https://proxy.peaq.nevermined.app | https://node.peaq.nevermined.app
+**appMatic**    | **Only Protocol** | https://proxy.matic.nevermined.app | https://node.matic.nevermined.app
+**appGnosis**   | **Only Protocol** | https://proxy.gnosis.nevermined.app | https://node.gnosis.nevermined.app
+**appOptimism** | **Only Protocol** | https://proxy.optimism.nevermined.app | https://node.optimism.nevermined.app
+**appBase**     | **Only Protocol** | https://proxy.base.nevermined.app | https://node.base.nevermined.app
+**appCelo**     | **Only Protocol** | https://proxy.celo.nevermined.app | https://node.celo.nevermined.app
 
+:::warning
+
+The environments flagged with **Only Protocol** don't have deployed with the Nevermined App. This means that all Nevermined functions are available via [Payment Libraries](../libraries/) but they can't use the Nevermined App.
+
+:::
 
 ## Network Fees
 

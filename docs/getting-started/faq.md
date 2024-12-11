@@ -65,9 +65,14 @@ Web services allow applications to interact with each other over the internet, e
 ## What do I need to get started as a user?
 
 * An account which is linked to a wallet (don't worry, Nevermined can handle the wallet part);
-* If you’re buying an asset on [Polygon Network](https://matic.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
-* If you’re buying an asset on [Gnosis Network](https://gnosis.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of xDAI for the network gas fees.
-* If you’re buying an asset on [Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets you want to purchase and a small amount of MATIC for the network gas fees.
+* If you’re buying an asset on [Production / Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets.
+* If you’re buying an asset on [Testing / Arbitrum Sepolia](https://testing.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase. You can get some from the [Circle Faucet](https://faucet.circle.com/).
+* If you’re buying an asset on [PEAQ](https://peaq.nevermined.app/), you need PEAQ tokens to pay for the assets you want to purchase.
+* If you want to use any of the other environments without a Nevermined App, you need to have the respective tokens for the network you are using. 
+
+:::info
+You can find a complete list of the Nevermined App deployments [here](../environments/).
+:::
 
 ## What is the publishing flow?
 
@@ -106,7 +111,13 @@ Nevermined App offers 3 pre-defined plans, as well as a customized option:
 
 ## What blockchain network does the Nevermined App use?
 
-At the moment, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+At the moment, the Nevermined App is deployed on Arbitrum, PEAQ, Polygon, Gnosis, Optimism, Base and Celo networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+
+:::info
+
+You can find a complete list of the Nevermined App deployments [here](../environments/).
+
+:::
 
 ## How do I claim back my locked tokens if a transaction fails during processing?
 

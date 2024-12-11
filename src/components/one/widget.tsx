@@ -5,7 +5,7 @@ export const Widget = () => {
   const onWidgetElementMounted = (widgetElement: HTMLElement | null) => {
     if (widgetElement) {
       insertWidgetScriptBefore(
-        'https://widgets.testing.nevermined.app/nvm-one-widget-loader.js',
+        'https://widgets.testing.nevermined.app/nvm-agent-widget-loader.js',
         widgetElement,
       )
     }
@@ -14,11 +14,10 @@ export const Widget = () => {
   return (
     <div
       ref={onWidgetElementMounted}
-      className="nvm-one-widget"
+      className="nvm-agent-widget"
       {...{
-        ['nvm-did']: 'did:nv:e51f0c4befe8bda1a5bc741f7b2cef2389a935119c5f9d06ecf0d0670659403f',
-        ['nvm-wid']: 'wid-801506b6-8936-4261-b183-43005b2e4352',
-        ['nvm-cta-text']: 'Tell me baby',
+        ['nvm-did']: 'did:nv:67909ab36a0c6611acf03d189e8f5d2a45b826bd1b1fda79e5936ee9c0c8dbe6',
+        ['nvm-wid']: 'wid-76bb00df-09ba-411a-9c33-812923d3a8bd',
         ['nvm-theme']: 'dark',
         ['nvm-layout']: 'horizontal',
         ['nvm-cta-text-color']: '#ffffff',

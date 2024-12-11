@@ -9,13 +9,13 @@ You can log into the Nevermined App using your social credentials such as email 
 
 :::info
 
-If you want to play around with the app you can use the <ins>[Nevermined App on the Testing environment](https://testing.nevermined.app/)</ins>, if you want to use the app for real you can use the <ins>[Nevermined App on Live](https://nevermined.app/)</ins>.
+If you want to play around with the app you can use the <ins>[Nevermined App on the Testing environment](https://testing.nevermined.app/)</ins>, if you want to use the app for real you can use the <ins>[Nevermined App on Production](https://nevermined.app/)</ins>.
 
 :::
 
 ## Choose your method of authentication
 
-- Go to the Nevermined App on <ins>[Testing](https://testing.nevermined.app/)</ins> or <ins>[Live](https://nevermined.app/)</ins> environments.
+- Go to the Nevermined App on <ins>[Testing](https://testing.nevermined.app/)</ins> or <ins>[Production](https://nevermined.app/)</ins> environments.
 - Click "Log in" button at the top right of the app.
 - Choose one of the available authentication methods and click "Continue".
 - You will then navigate to an external authentication process (Google, Github, other).
