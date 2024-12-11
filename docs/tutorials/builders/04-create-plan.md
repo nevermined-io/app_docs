@@ -33,7 +33,7 @@ You can use the [Nevermined Payments App](https://nevermined.app/) to create a n
 
 ### Step 1 - Login to the App
 
-Login into the app as we show [here](../first-steps/02-loggin.md).
+Login into the app as we show [here](../first-steps/02-login.md).
 
 <p align="center"><img src="/images/tutorials/web2auth/login-modal.png" width="600" /></p>
 
