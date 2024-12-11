@@ -111,7 +111,13 @@ Nevermined App offers 3 pre-defined plans, as well as a customized option:
 
 ## What blockchain network does the Nevermined App use?
 
-At the moment, the Nevermined App is deployed on the Polygon, Gnosis and Arbitrum networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+At the moment, the Nevermined App is deployed on Arbitrum, PEAQ, Polygon, Gnosis, Optimism, Base and Celo networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+
+:::info
+
+You can find a complete list of the Nevermined App deployments [here](../environments/).
+
+:::
 
 ## How do I claim back my locked tokens if a transaction fails during processing?
 
