@@ -39,7 +39,7 @@ Once a user is a subscriber sending a request is quite simple.
   <TabItem value="typescript">
   ```typescript
 
-  const subscriberQueryOpts = await payments.getServiceAccessConfig(agentDID)
+  const subscriberQueryOpts = await payments.query.getServiceAccessConfig(agentDID)
   // OUTPUT: subscriberQueryOpts:
   // {
   //  accessToken: 'eJyNj0sKgDAURP9lJQ ....',

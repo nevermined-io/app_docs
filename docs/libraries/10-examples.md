@@ -396,7 +396,7 @@ When the step `init` is completed, it will add 2 additional steps to the task an
       message: `Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
     })
     // Get the JWT access token and the Proxy we must use to query theYoutube Agent
-    const accessConfig = await payments.getServiceAccessConfig(AGENT_YOUTUBE_DID)
+    const accessConfig = await payments.query.getServiceAccessConfig(AGENT_YOUTUBE_DID)
 
     // Create the task
     const taskResult = await payments.query.createTask(
