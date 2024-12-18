@@ -21,6 +21,10 @@ When a AI Builder creates an AI Agent and delegates the maintenance and executio
 * **Availability**: Nevermined will take care of having the AI Agent API available 24/7.
 * **Scalability**: Nevermined will take care of the scaling of the AI Agent HTTP API.
 
+:::info
+Builders using the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) can process AI tasks in a simple way and generic way. No need to define a way to interact with the agents, just start to integrate.
+:::
+
 ## How to process AI Tasks?
 
 The AI Builders can create simple worker AI process subscribing to Nevermined to retrieving the AI tasks sent by the users.
