@@ -111,7 +111,7 @@ Nevermined App offers 3 pre-defined plans, as well as a customized option:
 
 ## What blockchain network does the Nevermined App use?
 
-At the moment, the Nevermined App is deployed on Arbitrum, PEAQ, Polygon, Gnosis, Optimism, Base and Celo networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
+At the moment, the Nevermined App is deployed on Arbitrum, Base, Polygon, Gnosis, Optimism, PEAQ and Celo networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
 
 :::info
 

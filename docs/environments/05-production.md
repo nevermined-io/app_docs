@@ -17,12 +17,12 @@ There are 2 types of production environments:
 Environment ID  | Nevermined App | Proxy | Node
 ----------------|----------------|----------------------------|------------------
 **appArbitrum** | https://nevermined.app | https://proxy.arbitrum.nevermined.app | https://node.arbitrum.nevermined.app
-**appPeaq**     | https://peaq.nevermined.app | https://proxy.peaq.nevermined.app | https://node.peaq.nevermined.app
+**appBase**     | https://base.nevermined.app | https://proxy.base.nevermined.app | https://node.base.nevermined.app
 **appMatic**    | **Only Protocol** | https://proxy.matic.nevermined.app | https://node.matic.nevermined.app
 **appGnosis**   | **Only Protocol** | https://proxy.gnosis.nevermined.app | https://node.gnosis.nevermined.app
 **appOptimism** | **Only Protocol** | https://proxy.optimism.nevermined.app | https://node.optimism.nevermined.app
-**appBase**     | **Only Protocol** | https://proxy.base.nevermined.app | https://node.base.nevermined.app
 **appCelo**     | **Only Protocol** | https://proxy.celo.nevermined.app | https://node.celo.nevermined.app
+**appPeaq**     | **Only Protocol** | https://proxy.peaq.nevermined.app | https://node.peaq.nevermined.app
 
 :::warning
 
