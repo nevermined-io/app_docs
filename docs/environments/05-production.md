@@ -32,7 +32,7 @@ The environments flagged with **Only Protocol** don't have deployed with the Nev
 
 ## Network Fees
 
-Nevermined is free to use for builders. Anyone can publish AI services and data for free. Nevermined collects a `1%` fee when there is payment involved. So when a subscriber pay for a subscription, Nevermined collects a `1%` fee of that. If the payment is done via a credit card (with Stripe), Stripe will also collect a fee.
+Nevermined is free to use for builders. Anyone can publish AI services and data for free. Nevermined collects a `1%` fee when there is payment involved. So when a subscriber pays for a subscription, Nevermined collects a `1%` fee of that. If the payment is done via a credit card (with Stripe), Stripe will also collect a fee.
 
 :::info
 
