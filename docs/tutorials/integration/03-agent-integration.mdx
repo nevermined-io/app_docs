@@ -28,14 +28,14 @@ You will see a list of all the assets you can access. Use the filters in the Sea
 
 ### 2. Get information about the Agent
 
-You can access to detailed information about the agent clicking the **eye icons** on the right hand side.
+You can access detailed information about the agent clicking the **eye icons** on the right hand side.
 
-The fist tab, **"Service Information"**, shows some information about the agent, like the description and the information provided by the publisher about how to integrate it.
+The first tab, **"Service Information"**, shows some information about the agent, like the description and the information provided by the publisher about how to integrate it.
 
 In the tab **"Endpoints"** you'll see detailed information about the endpoints this agent exposes, where you can find information about the parameters and the responses.
 
 :::warning
-This Endpoints tab is only showed if the publisher provided an OpenAPI definition.
+This Endpoints tab is only shown if the publisher provided an OpenAPI definition.
 :::
 
 <p align="center"><img src="/images/tutorials/08-03-Service-endpoints.png" width="600" /></p>
@@ -56,7 +56,7 @@ At this point the Nevermined App will send a HTTP request to the upstream agent 
 
 <p align="center"><img src="/images/tutorials/webservice_tryout_response.png" width="600" /></p>
 
-You can see a detailed view of the complete request and HTTP parameters. All this information is very valuable because shows how to make the request to the agent using standard HTTP.
+You can see a detailed view of the complete request and HTTP parameters. All this information is very valuable because it shows how to make the request to the agent using standard HTTP.
 
 ### 4. Get the JWT access token
 
@@ -74,14 +74,14 @@ If you want to know more about how everything works under the hood, please check
 
 Next we will show how you can integrate the agent into your app (or another agent) programatically.
 
-First you need to compose the **Proxy URL**. The Proxy URL is the full URL you are gonna call to interact with the agent. It is compose by the Proxy host + the endpoint of the agent you want to use (including parameters). For example if the proxy you are using is `https://proxy.testing.nevermined.app/` and the URL (including parameters) of the agent you are integrating is `/ask?param1=xxx`, the full proxy URL will be: `https://proxy.testing.nevermined.app/ask?param1=xxx`.
+First you need to compose the **Proxy URL**. The Proxy URL is the full URL you are gonna call to interact with the agent. It is composed of the Proxy host + the endpoint of the agent you want to use (including parameters). For example if the proxy you are using is `https://proxy.testing.nevermined.app/` and the URL (including parameters) of the agent you are integrating is `/ask?param1=xxx`, the full proxy URL will be: `https://proxy.testing.nevermined.app/ask?param1=xxx`.
 
 ### 4.a Using raw HTTP requests to integrate the agent
 
 Here we will use **curl** but the same works for any HTTP client application or library. You just need to export the JWT access token and use it in the Authorization header sending the request through the Proxy.
 
 :::info
-When you integrate an agent you can pass **any url paratemer**, **body message** or **additional headers** that the agent requires. After authorize your request the Proxy will forward all this information to the agent.
+When you integrate an agent you can pass **any url parameter**, **body message** or **additional headers** that the agent requires. After authorizing your request the Proxy will forward all this information to the agent.
 :::
 
 ```bash
@@ -94,7 +94,7 @@ export REQUEST_DATA='{"queries": [{"query": "Adam And Evil", "filter": {}, "top_
 
 # With curl we make a POST request and we add the $JWT_TOKEN as Bearer token in the Authorization header
 # The url where we send the request is the host name of the proxy: "https://proxy.testing.nevermined.app" plus the endpoint of the agent 
-# we are calling, int this case "/ask"
+# we are calling, in this case "/ask"
 curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $JWT_TOKEN" -d "$REQUEST_DATA" https://proxy.testing.nevermined.app/ask
 
 {"response":"\nThe song is about a person who is in love with someone who is not perfect, but they cannot live without them. Despite knowing that loving this person will bring heartache, they are willing to take the risk and accept the consequences. The song also compares the relationship to the story of Adam and Eve, with the person in the song being like Adam and their love interest being like Eve.","source_nodes":[{"node":{"text":"...","doc_id":"8e748293-f8d2-41b8-a225-7479455b1899","embedding":null,"doc_hash":"451d68b33de1e8034e48c6a98865364e52edd02837f06c34c662ba6d6d462c76","extra_info":null,"node_info":{"start":0,"end":1030},"relationships":{"1":"did:nv:3e0a13a6dba0ab20e83bf25c3e820af8b71c94cea0ab0763b4f822a6998009e6"}},"score":0.7585169416635178}],"extra_info":null}
