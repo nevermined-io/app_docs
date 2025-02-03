@@ -29,7 +29,7 @@ In the "Profile" page, you should complete your name, email address and country 
 
 ## 3. Select your preferred payment method
 
-You can configure your prefered method receive payments: via Stripe integration for fiat and/or crypto. 
+You can configure your preferred method receive payments: via Stripe integration for fiat and/or crypto. 
 
 (Please Note: If you just want to accept crypto payments, no further configuration is needed. Any crypto payment will be received in the unique wallet address associated with your account. You can see your wallet address if you click on the top right corner of the app, section "My Wallet".)
 
