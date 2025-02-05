@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # How discover agents or plans?
 
-With the Payments Library, Subscribers can search for Agents or Plans that are available in the Nevermined ecosystem.
+With the Payments Library, Subscribers can search for Agents or Plans that are available in the Nevermined ecosystem. Currently we are supporting the search of Plans by text in the DDO. This is useful when you want to find a Plan that is related to a specific topic or service. More search options will be available in the future. 
 
 ## Searching a Plan
 
@@ -21,7 +21,7 @@ With the Payments Library, Subscribers can search for Agents or Plans that are a
   <TabItem value="python">
   ```python
   # Here we search for a Plan by the text in the DDO
-  order_result = payments.search_plans(text='Youtube summarizer')  
+  order_result = payments.search_plans(text='Youtube summarizer', page=1, offset=10)  
   # OUTPUT: searchResult: 
   #  { did: did:nv:123213, metadata: MetaData }   
   ```
@@ -29,7 +29,7 @@ With the Payments Library, Subscribers can search for Agents or Plans that are a
   <TabItem value="typescript">
   ```typescript
   // Here we search for a Plan by the text in the DDO
-  const orderResult = await payments.searchPlans({text: 'Youtube summarizer'})  
+  const orderResult = await payments.searchPlans({text: 'Youtube summarizer', page: 1, offset: 10})  
   // OUTPUT: searchResult: 
   //  { did: did:nv:123213, metadata: MetaData } 
 
