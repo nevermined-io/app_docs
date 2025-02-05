@@ -36,3 +36,31 @@ With the Payments Library, Subscribers can search for Agents or Plans that are a
   ```
   </TabItem>  
 </Tabs>
+
+## Searching an Agent
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'Typescript', value: 'typescript'}
+  ]}>
+  <TabItem value="python">
+  ```python
+  # Here we search for an Agent by the text in the DDO
+  order_result = payments.search_agents(text='Youtube summarizer', page=1, offset=10)  
+  # OUTPUT: searchResult: 
+  #  { did: did:nv:123213, metadata: MetaData }   
+  ```
+  </TabItem>
+  <TabItem value="typescript">
+  ```typescript
+  // Here we search for an Agent by the text in the DDO
+  const orderResult = await payments.searchAgents({text: 'Youtube summarizer', page: 1, offset: 10})  
+  // OUTPUT: searchResult: 
+  //  { did: did:nv:123213, metadata: MetaData } 
+
+  ```
+  </TabItem>
+</Tabs>
+
