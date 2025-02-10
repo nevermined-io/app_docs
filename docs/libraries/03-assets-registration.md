@@ -32,13 +32,13 @@ Nevermined Payment Plans enable the set up of time-based or request-based gating
   ```python
   USDC_ERC20_TESTING = '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d' # This is the USDC ERC20 address in the testing network
 
-  plan_DID = payments_builder.create_credits_plan({
+  plan_DID = payments_builder.create_credits_plan(createCreditsPlanDto=CreateCreditsPlanDto(
     name: 'E2E Payments Plan', 
     description: 'description', 
     price:15000000n, # 15 USDC
     token_address: USDC_ERC20_TESTING,
     amount_of_credits: 100 # It means when someone purchase this plan, they will get 100 credits
-  })
+  ))
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -69,14 +69,14 @@ Nevermined Payment Plans enable the set up of time-based or request-based gating
   ```python
   USDC_ERC20_TESTING = '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d' # This is the USDC ERC20 address in the testing network
 
-  plan_DID = payments.create_time_plan({
+  plan_DID = payments.create_time_plan(createTimePlanDto=CreateTimePlanDto(
     name: "My 1 Month Plan",
     description: "test",
     price:15000000n, # 15 USDC
     token_address: USDC_ERC20_TESTING,
     duration: 30, # 30 days
     tags: ["test"]
-  })  
+  ))  
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -110,7 +110,7 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   ]}>
   <TabItem value="python">
   ```python
-  agent_DID = payments_builder.create_agent({
+  agent_DID = payments_builder.create_agent(createAgentDto=CreateAgentDto(
     plan_DID, # The DID of the Payment Plan we created before
     name: 'My AI Assistant',
     description: 'description of the assistant',
@@ -119,7 +119,7 @@ Before registering an AI Agent, you need to have a Payment Plan created.
     token: 'changeme',
     amount_of_credits: 1,
     use_ai_hub: True,
-  })  
+  ))  
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -158,6 +158,61 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   })
 
 
+  ```
+  </TabItem>  
+</Tabs>
+
+### Creating a Credit-Based Payment Plan and an AI Agent in one step
+
+:::note
+This method allow to create in one step the plan an attach the agent to it.
+:::
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'Typescript', value: 'typescript'}
+  ]}>
+  <TabItem value="python">
+  ```python 
+      response = payments_builder.create_agent_and_plan(createCreditsPlanDto=CreateCreditsPlanDto(name="test-py",
+        description="test",
+        price=1000000,
+        token_address="0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d",
+        amount_of_credits=100,
+        tags=["test"]),
+        createAgentDto=CreateAgentDto(
+            name="agent-py",
+            description="test",
+            amount_of_credits=1,
+            service_charge_type="fixed",
+            auth_type="none",
+            use_ai_hub=True
+        )
+      )
+    print('Plan created', response.planDID)
+    print('Agent attached', response.agentDID)
+  ```
+  </TabItem>
+  <TabItem value="typescript">
+  ```typescript
+    const { planDID, agentDID } = await payments.createAgentAndPlan(
+    {
+      name: 'Payments Agent plan',
+      description: 'description',
+      price: 0n,
+      amountOfCredits: 100,
+      tokenAddress: ERC20_ADDRESS,
+    },
+    {
+      name: 'Agent e2e name',
+      description: 'description',
+      amountOfCredits: 1,
+      usesAIHub: true,
+      serviceChargeType: 'fixed',
+    },
+  )
   ```
   </TabItem>  
 </Tabs>
