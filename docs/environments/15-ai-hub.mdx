@@ -28,9 +28,20 @@ The AI Hub is under active development, so new exciting features will be availab
 
 ## How an AI Builder can use the AI Hub?
 
-It's very simple. An AI Builder just needs to:
+Using the AI Hub it's simple. An AI Builder just needs to:
 
 1. Get their own [Nevermined API Key](../tutorials/integration/nvm-api-keys)
 2. Install the [Payments library](../libraries/) in their project
 3. Integrate with the AI Hub to start [processing AI Tasks](../libraries/process-tasks)
 4. [Register the new AI Agent](../tutorials/builders/register-agent) into a Nevermined deployment
+
+When using the AI Hub, builders can focus in the AI logic of their agents and delegate the execution of the API to Nevermined. 
+In that case the AI agent will be divided in 2 parts:
+
+1. What we call **the AI Agent Processor**. It's the AI logic which having an input prompt from the user uses one or several LLM models or services to generate an output.
+2. The **AI HTTP API**. It's the part of the agent that receives the input prompt, authenticate the user and validates is a valid subscriber. If everything is okay it sends the input prompt to the AI Agent Processor. It also receives the output from the AI Agent Processor and sends it back to the user.
+
+<p align="center"><img src="/images/architecture/ai_hub_integration.png" width="400"/></p>
+
+Using the **Nevermined AI Hub** the Builder can focus in the AI Agent Processor and delegate the execution of the API to Nevermined. That simplifies the agent architecture.
+
