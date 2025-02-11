@@ -46,7 +46,7 @@ Running the HTTP API of your agent requires to expose it to the internet, build 
 With the **Nevermined AI Hub**, you can focus in the AI logic of your agent and delegate the execution of the API to Nevermined. In that case your agent will be divided in 2 parts:
 
 1. What we call **the AI Agent Processor**. It's the AI logic which having an input prompt from the user uses one or several LLM models or services to generate an output.
-2. The **AI HTTP API**. It's the part of the agent that receives the input prompt, authenticate the user and validates is a valid subscriber. If everything is okay it sends the input prompt to the AI Agent Processor. It also receives the output from the AI Agent Processor and sends it back to the user.
+2. The **AI HTTP API**. It's the part of the agent that receives the input prompt, authenticates the user and validates is a valid subscriber. If everything is okay it sends the input prompt to the AI Agent Processor. It also receives the output from the AI Agent Processor and sends it back to the user.
 
 <p align="center"><img src="/images/architecture/ai_hub_integration.png" width="400"/></p>
 
