@@ -28,6 +28,7 @@ If you have already an AI Agent or if you are thinking to build one, you can use
 2. Nevermined is independent of the API your agent is exposing. We recommend to use the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol) to expose your agent in a generic manner, but **you can expose any API you want**.
 3. Nevermined doesn't require you build any new code. You can register your agent in the Nevermined App and define how much is gonna cost and how users can query your agent. **No code modification is required**.
 
+
 ## Make your AI Agent available to other AI Agents
 
 If you want to make your AI Agent available to other AI Agents in a generic manner, you can use the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol) to expose your agent in a generic manner. 
