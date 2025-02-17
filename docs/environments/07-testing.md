@@ -5,7 +5,7 @@ description: Point of Sales Testing Environment
 
 # Testing
 
-The Point of Sales testing environment is free to use and where users can interact with the application without using real money. The existing testing environment (Environment id: `appTesting`) is available at [https://testing.nevermined.app/](https://testing.nevermined.app/).
+The Point of Sales testing environment is available at [https://testing.nevermined.app/](https://testing.nevermined.app/). This environment is free to use and allows users to interact with the application without using real money. The environment ID for this testing instance is `appTesting`.
 
 ## Nevermined Testing Deployments
 
@@ -15,12 +15,12 @@ Environment ID  | Nevermined App | Marketplace API (Metadata) | Node
 
 ## Network Fee
 
-As in the production envorinment, the testing environment charges a 1% fee for the payment of subscriptions when they are not free.
+Similar to the production environment, the testing environment charges a 1% fee for paid subscriptions. Free subscriptions incur no fees.
 
-In the testing environment assets can be purchased (not real money involved) using fiat (via Stripe) or crypto.
+In the testing environment, assets can be purchased using simulated fiat payments (via Stripe) or test crypto tokens. No real money is involved in any transaction.
 
 :::info
 
-If you want to pay using fiat, use the following credit card number: `4242 4242 4242 4242` with any expiration date and CVC. More information [here](https://docs.stripe.com/testing#testing-interactively).
+To test fiat payments, use the following test credit card number: `4242 4242 4242 4242` with any expiration date and CVC. For additional testing options, see the [Stripe testing documentation](https://docs.stripe.com/testing#testing-interactively).
 
 :::
