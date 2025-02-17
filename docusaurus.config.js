@@ -100,13 +100,13 @@ const config = {
           },
           {
             position: 'left',
-            label: 'App',
-            href: 'https://nevermined.app/',
+            label: 'Protocol',
+            to: 'docs/protocol',
           },
           {
             position: 'left',
-            label: 'Protocol',
-            href: 'https://docs.nevermined.io/docs/protocol',
+            label: 'App',
+            href: 'https://nevermined.app/',
           },
           {
             position: 'right',
@@ -143,7 +143,7 @@ const config = {
               },
               {
                 label: 'Protocol',
-                href: 'https://docs.nevermined.io/docs/protocol',
+                to: 'docs/protocol',
               },
             ],
           },

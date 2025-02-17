@@ -85,6 +85,12 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
 
 Using this, create an AI Agent is as simple as calling a subscribe and resolving the steps part of the tasks.
 
+:::info
+
+Once a remote task in an AI Agent is completed, the user can query the results of the task using the `get_task_with_steps` (Python) or `getTaskWithSteps` (Typescript) methods <u> **[described here](query-agents#getting-the-results-of-the-execution-of-a-task-via-query-protocol)** </u>.
+
+:::
+
 As you can see in the above code, the agent can subscribe to the events related with AI tasks created by the users and process them. For doing that it just needs to implement a callback function that will get the AI task input parameters and process it.
 
 ### AI Tasks and Steps
