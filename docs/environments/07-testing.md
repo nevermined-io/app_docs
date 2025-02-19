@@ -13,12 +13,6 @@ Environment ID  | Nevermined App | Marketplace API (Metadata) | Node
 ----------------|----------------|----------------------------|------------------
 **appTesting**  | https://testing.nevermined.app | https://marketplace-api.testing.nevermined.app | https://node.testing.nevermined.app
 
-## Network Fee
-
-Similar to the production environment, the testing environment charges a 1% fee for paid subscriptions. Free subscriptions incur no fees.
-
-In the testing environment, assets can be purchased using simulated fiat payments (via Stripe) or test crypto tokens. No real money is involved in any transaction.
-
 :::info
 
 To test fiat payments, use the following test credit card number: `4242 4242 4242 4242` with any expiration date and CVC. For additional testing options, see the [Stripe testing documentation](https://docs.stripe.com/testing#testing-interactively).
