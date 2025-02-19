@@ -29,13 +29,3 @@ Environment ID  | Nevermined App | Proxy | Node
 The environments flagged with **Only Protocol** are not deployed with the Nevermined App. This means that all Nevermined functions are available via [Payment Libraries](../libraries/), but they cannot use the Nevermined App.
 
 :::
-
-## Network Fees
-
-Nevermined is free to use for builders. Anyone can publish AI services and data for free. Nevermined collects a `1%` fee on all paid transactions. When a subscriber makes a payment for a subscription, Nevermined collects a `1%` fee from that transaction. For credit card payments processed through Stripe, additional Stripe processing fees will apply.
-
-:::info
-
-For free subscriptions, since no payment is involved, Nevermined does not charge any fees.
-
-:::
