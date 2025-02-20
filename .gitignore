@@ -23,3 +23,6 @@ package-lock.json
 
 # Contracts
 /static/contracts
+
+# cursorrules
+.cursorrules
