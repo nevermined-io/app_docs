@@ -16,7 +16,7 @@ For identifying the user as a valid subscriber, they need to query the HTTP requ
 Nevermined Proxy instances are **standard HTTP Proxies** in charge of **authorize users** trying to access AI Agents or Services.
 :::
 
-Once a user is a subscriber sending a request is quite simple. 
+Once a user is a subscriber sending a request is quite simple.
 
 ## Get the AI Agent or Service Access Token
 
@@ -27,6 +27,7 @@ Once a user is a subscriber sending a request is quite simple.
     {label: 'Typescript', value: 'typescript'}
   ]}>
   <TabItem value="python">
+
   ```python
   access_config = payments.get_service_token(agent_DID)
   # OUTPUT: accessConfig:
@@ -35,6 +36,7 @@ Once a user is a subscriber sending a request is quite simple.
   #  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
   # }    
   ```
+
   </TabItem>
   <TabItem value="typescript">
   ```typescript
@@ -43,7 +45,7 @@ Once a user is a subscriber sending a request is quite simple.
   // OUTPUT: subscriberQueryOpts:
   // {
   //  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
-  //  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  //  neverminedProxyUri: '<https://proxy.testing.nevermined.app>'
   // }  
   
   ```  
@@ -88,37 +90,39 @@ You can see here some code examples about how to send a task to an AI Agent impl
     {label: 'Typescript', value: 'typescript'}
   ]}>
   <TabItem value="python">
+
   ```python
   # Here we are configuring the Task we are sending to the Agent. Please check the Query Protocol documentation for more information.
   # https://docs.nevermined.io/docs/protocol/query-protocol#tasks-attributes
   ai_task = {
-    query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
-    name: "transcribe",
-    "additional_params": [],
-    "artifacts": []
+    "input_query": "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
+    "name": "transcribe",
+    "input_additional": {},
+    "input_artifacts": []
   }
 
-  task = payments.ai_protocol.create_task(agentDID, ai_task)
+  task = payments.query.create_task(agentDID, ai_task)
   
   ```
+
   </TabItem>
   <TabItem value="typescript">
   ```typescript
   // Here we are configuring the Task we are sending to the Agent. Please check the Query Protocol documentation for more information.
   // https://docs.nevermined.io/docs/protocol/query-protocol#tasks-attributes
   const aiTask = {
-    query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
+    input_query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
     name: "transcribe",
-    "additional_params": [],
-    "artifacts": []
+    input_additional: {},
+    input_artifacts: []
   }
 
   // the subscriberQueryOpts comes from the previous step the previous step
   const taskResult = await payments.query.createTask(agentDID, aiTask, subscriberQueryOpts)
   // OUTPUT: taskResult:
   // {
-  //  status: 201,
-  //  data: { task_id: 'task-1234' }
+  //  success: true,
+  //  data: { task: { task_id: 'task-1234', ...}, steps: { step_id: 'step-12312', ...} }
   // }  
   
   ```  
@@ -148,26 +152,50 @@ Here some sample code:
   <TabItem value="python">
   ```python
   
-  payments.ai_protocol.get_task_with_steps(did=agent.did, task_id=task.json()["task"]["task_id"]).json()
+  payments.query.get_task_with_steps(did=agent.did, task_id=task_id)
 
-  # OUTPUT:
-  # {'task': {'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
-  # 'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
-  # 'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
-  # 'task_status': 'Completed',
-  # 'name': 'sample_task',
-  # 'input_params': '{}',
-  # 'input_artifacts': '{}',
-  # 'output': 'result of the task',
-  # 'output_additional': '{}',
-  # 'output_artifacts': '{}',
-  # 'cost': 5,
-  # 'createdAt': '2025-02-12T09:30:46.453Z',
-  # 'updatedAt': '2025-02-12T09:30:47.283Z',
-  # 'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
-  # 'input_query': 'Give me something'},
+  # OUTPUT: FullTaskDto
+  # {'task': {
+  #   'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+  #   'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
+  #   'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
+  #   'task_status': 'Completed',
+  #   'name': 'sample_task',
+  #   'input_additional': {},
+  #   'input_artifacts': [],
+  #   'output': 'success',
+  #   'output_additional': {},
+  #   'output_artifacts': [],
+  #   'cost': 0,
+  #   'createdAt': '2025-02-12T09:30:46.453Z',
+  #   'updatedAt': '2025-02-12T09:30:47.283Z',
+  #   'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
+  #   'input_query': 'Give me something'
+  # },
+  # 'steps': [{
+  #   'step_id': 'step-8b980101-2f9b-4764-b1f2-eeaeb0122cb3',
+  #   'step_status': 'Completed',
+  #   'retries': 0,
+  #   'is_waiting': False,
+  #   'is_last': True,
+  #   'order': 1,
+  #   'input_query': 'Give me something',
+  #   'input_artifacts': [],
+  #   'input_additional': {},
+  #   'output': 'success',
+  #   'output_additional': {},
+  #   'output_artifacts': [],
+  #   'cost': 0,
+  #   'createdAt': '2025-02-12T09:30:46.539Z',
+  #   'updatedAt': '2025-02-12T09:30:47.204Z',
+  #   'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+  #   'name': 'init',
+  #   'predecessor': ''
+  # }],
+  # 'logs': []}
   
   ```
+
   </TabItem>
   <TabItem value="typescript">
   ```typescript
@@ -183,11 +211,11 @@ Here some sample code:
   'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
   'task_status': 'Completed',
   'name': 'sample_task',
-  'input_params': '{}',
-  'input_artifacts': '{}',
+  'input_additional': {},
+  'input_artifacts': []],
   'output': 'success',
-  'output_additional': '{}',
-  'output_artifacts': '{}',
+  'output_additional': {},
+  'output_artifacts': [],
   'cost': 0,
   'createdAt': '2025-02-12T09:30:46.453Z',
   'updatedAt': '2025-02-12T09:30:47.283Z',
@@ -200,11 +228,11 @@ Here some sample code:
    'is_last': True,
    'order': 1,
    'input_query': 'Give me something',
-   'input_artifacts': '{}',
-   'input_params': '{}',
+   'input_artifacts': [],
+   'input_additional': {},
    'output': 'success',
-   'output_additional': '{}',
-   'output_artifacts': '{}',
+   'output_additional': {},
+   'output_artifacts': [],
    'cost': 0,
    'createdAt': '2025-02-12T09:30:46.539Z',
    'updatedAt': '2025-02-12T09:30:47.204Z',
@@ -213,6 +241,7 @@ Here some sample code:
    'predecessor': ''}],
     'logs': []}
   */
+
   ```  
   
   </TabItem>  

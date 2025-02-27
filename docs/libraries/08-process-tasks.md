@@ -39,11 +39,11 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
   ```python
   import asyncio
 
-  asyncio.create_task(builder.ai_protocol.subscribe(callback_function, join_account_room=True, join_agent_rooms=[], subscribe_event_types=['step-updated'], get_pending_events_on_subscribe=True))
+  asyncio.create_task(builder.query.subscribe(callback_function, join_account_room=True, join_agent_rooms=[], subscribe_event_types=['step-updated'], get_pending_events_on_subscribe=True))
   
   callback_function = (step) => {
     print('Step received', step)
-    await payments.ai_protocol.update_step(did=step['did'], 
+    await payments.query.update_step(did=step['did'], 
       task_id=step['task_id'], 
       step_id=step['step_id'], 
       step={'step_id': step['step_id'],
@@ -125,7 +125,7 @@ Let's see an example:
   ]}>
   <TabItem value="python">
   ```python
-  await self.payment.ai_protocol.log_task(
+  await self.payment.query.log_task(
     TaskLog(
       task_id=step['task_id'], 
       message='Summary ready.', 
