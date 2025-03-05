@@ -134,7 +134,7 @@
   --ifm-font-color-base-inverse: var(--ifm-color-content-inverse);
   --ifm-font-color-secondary: var(--ifm-color-content-secondary);
 
-  --ifm-navbar-background-color: transparent;
+  --ifm-navbar-background-color: var(--ifm-color-white);
   --ifm-navbar-height: 74px;
   --ifm-navbar-link-color: var(--ifm-color-black);
   --ifm-navbar-link-hover-color: var(--ifm-color-primary);
