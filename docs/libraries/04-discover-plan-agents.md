@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 
 # How to search & discover AI Agents and Plans?
 
-With the Payments Library, Subscribers can search for Agents or Plans that are available in the Nevermined ecosystem. Currently we are supporting the search of any Plan or AI Agent by their metadata (description, tags, etc). This is useful when you want to find a Plan that is related to a specific topic or service. More search options will be available in the future. 
+With the Payments Library, Subscribers can search for Agents or Plans that are available in the Nevermined ecosystem. Currently, we are supporting the search for any Plan or AI Agent by their metadata (description, tags, etc). This is useful when you want to find a Plan that is related to a specific topic or service. More search options will be available in the future. 
 
-Searching for other plans or agents is useful when you want that your agent find other agents that can help to solve specific tasks.
+Searching for other plans or agents is useful when you want your agent to find other agents that can help solve specific tasks.
 
 ## Searching a Plan
 
@@ -18,7 +18,7 @@ Searching for other plans or agents is useful when you want that your agent find
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
@@ -34,7 +34,6 @@ Searching for other plans or agents is useful when you want that your agent find
   const orderResult = await payments.searchPlans({text: 'Youtube summarizer', page: 1, offset: 10})  
   // OUTPUT: searchResult: 
   //  { did: did:nv:123213, metadata: MetaData } 
-
   ```
   </TabItem>  
 </Tabs>
@@ -45,7 +44,7 @@ Searching for other plans or agents is useful when you want that your agent find
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
@@ -61,7 +60,6 @@ Searching for other plans or agents is useful when you want that your agent find
   const orderResult = await payments.searchAgents({text: 'Youtube summarizer', page: 1, offset: 10})  
   // OUTPUT: searchResult: 
   //  { did: did:nv:123213, metadata: MetaData } 
-
   ```
   </TabItem>
 </Tabs>
