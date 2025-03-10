@@ -6,7 +6,7 @@ description: How AI Builders can process AI Tasks?
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# How AI Builders can process AI Tasks?
+# How Can AI Builders Process AI Tasks?
 
 :::note
 This feature is specific for AI Agents Services using the <ins>Nevermined AI Hub</ins>.
@@ -14,7 +14,7 @@ This feature is specific for AI Agents Services using the <ins>Nevermined AI Hub
 
 ## Benefits of delegating the API to Nevermined AI Infrastructure
 
-When a AI Builder creates an AI Agent and delegates the maintenance and execution of the HTTP API to Nevermined, they can just focus in the AI piece. This has several benefits for them:
+When an AI Builder creates an AI Agent and delegates the maintenance and execution of the HTTP API to Nevermined, they can just focus on the AI piece. This has several benefits for them:
 
 * **Focus on the AI**: The AI Builder can focus on the AI model and the AI Agent logic. Nevermined will take care of the execution of the API, authorization, etc.
 * **Generic Interface**: The AI Agent will be accessible via a generic interface, the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol).
@@ -22,18 +22,18 @@ When a AI Builder creates an AI Agent and delegates the maintenance and executio
 * **Scalability**: Nevermined will take care of the scaling of the AI Agent HTTP API.
 
 :::info
-Builders using the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) can process AI tasks in a simple way and generic way. No need to define a way to interact with the agents, just start to integrate.
+Builders using the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) can process AI tasks in a simple and generic way. No need to define a way to interact with the agents, just start to integrate.
 :::
 
 ## How to process AI Tasks?
 
-The AI Builders can create simple worker AI process subscribing to Nevermined to retrieving the AI tasks sent by the users.
+The AI Builders can create simple worker AI processes by subscribing to Nevermined to retrieve the AI tasks sent by the users.
 
 <Tabs
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
@@ -83,36 +83,34 @@ The AI Builders can create simple worker AI process subscribing to Nevermined to
   </TabItem>  
 </Tabs>
 
-Using this, create an AI Agent is as simple as calling a subscribe and resolving the steps part of the tasks.
+Using this approach, creating an AI Agent is as simple as calling a subscribe function and resolving the steps that are part of the tasks.
 
 :::info
-
-Once a remote task in an AI Agent is completed, the user can query the results of the task using the `get_task_with_steps` (Python) or `getTaskWithSteps` (Typescript) methods <u> **[described here](query-agents#getting-the-results-of-the-execution-of-a-task-via-query-protocol)** </u>.
-
+Once a remote task in an AI Agent is completed, the user can query the results of the task using the `get_task_with_steps` (Python) or `getTaskWithSteps` (TypeScript) methods <u>[described here](query-agents#getting-the-results-of-the-execution-of-a-task-via-query-protocol)</u>.
 :::
 
-As you can see in the above code, the agent can subscribe to the events related with AI tasks created by the users and process them. For doing that it just needs to implement a callback function that will get the AI task input parameters and process it.
+As you can see in the above code, the agent can subscribe to the events related to AI tasks created by the users and process them. To do that, it just needs to implement a callback function that will get the AI task input parameters and process them.
 
 ### AI Tasks and Steps
 
-The AI tasks are composed by several steps. Each step is a part of the task that the AI Agent needs to process. The steps are processed sequentially and the agent can update the status of the step and the output of the step. You can see the steps as a workflow that the AI Agent needs to process to be completed.
+The AI tasks are composed of several steps. Each step is a part of the task that the AI Agent needs to process. The steps are processed sequentially, and the agent can update the status and output of each step. You can think of steps as a workflow that the AI Agent processes to complete the task.
 
-The AI Agent only needs to process the steps and update the status of the step and the output of the step. The rest of the logic is managed by **Nevermined AI Hub**.
+The AI Agent only needs to process the steps and update their status and output. The rest of the logic is managed by **Nevermined AI Hub**.
 
-When a user requests a task to an AI Agent, by default is created one task with one step. This first step has the **"init"** name. When the AI agent receives the **init** step can:
+When a user requests a task from an AI Agent, by default one task with one step is created. This first step has the **"init"** name. When the AI agent receives the **init** step, it can:
 
-* If the AI task is simple and **doesn't require several steps**, it can process the step and update the status of the step to **Completed** and the **is_last** attribute as **true**. This will mark the whole task as completed.
+* If the AI task is simple and **doesn't require several steps**, it can process the step and update the status to **Completed** and set the **is_last** attribute to **true**. This will mark the whole task as completed.
 
-* If the AI task requires **multiple steps**, the AI Agent can create more steps and setup the order of execution and configuration of them. This can be done by defining the **name**, **order** and **predecessor** step. 
+* If the AI task requires **multiple steps**, the AI Agent can create more steps and set up the order of execution and configuration for them. This can be done by defining the **name**, **order**, and **predecessor** step. 
 
 We will see different code examples about how to do this in the following section.
 
 ### Sending task logs dynamically
 
-The execution of an AI task can be long and the user can want to know the status of the task. The AI Agent can send logs to the user about the status and some other relevant output of the task. This can be done using the `log_task (python)` or `logTask (typescript)` methods. 
+The execution of an AI task can be long, and the user may want to know the status of the task. The AI Agent can send logs to the user about the status and other relevant output of the task. This can be done using the `log_task` (Python) or `logTask` (TypeScript) methods. 
 
 :::tip
-When your task finishes with a `Completed` or `Failed` status, you can send a log message witht that status. That will allow the user (or agent) to know the final status of the task in real-time.
+When your task finishes with a `Completed` or `Failed` status, you can send a log message with that status. That will allow the user (or agent) to know the final status of the task in real-time.
 :::
 
 Let's see an example:
@@ -121,19 +119,18 @@ Let's see an example:
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
   await self.payment.query.log_task(
-    TaskLog(
-      task_id=step['task_id'], 
-      message='Summary ready.', 
-      level='info', 
-      task_status=AgentExecutionStatus.Completed.value
-    )
+      TaskLog(
+          task_id=step['task_id'], 
+          message='Summary ready.', 
+          level='info', 
+          task_status=AgentExecutionStatus.Completed.value
+      )
   )
-
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -145,10 +142,9 @@ Let's see an example:
       message: `Step ${step.name} : ${step.step_id} completed!`,
   }
   await payments.query.logTask(logMessage)
-  
   ```
   </TabItem>  
 </Tabs>
 
-These logs will be send via websocket and the user who sent the task can see them in real time.
+These logs will be sent via websocket, and the user who sent the task can see them in real-time.
 
