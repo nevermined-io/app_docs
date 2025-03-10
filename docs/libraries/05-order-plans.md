@@ -6,9 +6,9 @@ description: How Subscribers can order Plans?
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# How Subscribers can order Plans?
+# How Can Subscribers Order Plans?
 
-With the Payments Library, Subscribers can order Plans paying in Crypto. The process is simple and secure. The Subscriber needs to have enough funds in their wallet to pay for the Plan in the token selected by the creator of the Plan. In Nevermined the Payment Plan creators can request the payments in any valid ERC20 or Native token (depending on the network where the Plan is created).
+With the Payments Library, Subscribers can order Plans by paying in crypto. The process is simple and secure. The Subscriber needs to have enough funds in their wallet to pay for the Plan in the token selected by the creator of the Plan. In Nevermined, the Payment Plan creators can request the payments in any valid ERC20 or Native token (depending on the network where the Plan is created).
 
 ## Ordering a Plan
 
@@ -16,7 +16,7 @@ With the Payments Library, Subscribers can order Plans paying in Crypto. The pro
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
@@ -32,7 +32,6 @@ With the Payments Library, Subscribers can order Plans paying in Crypto. The pro
   const orderResult = await payments.orderPlan(planDID)  
   // OUTPUT: orderResult: 
   //  { success: true, agreementId: '0xaabbcc' }  
-
   ```
   </TabItem>  
 </Tabs>
@@ -49,33 +48,30 @@ Time-based Plans have a balance of 1 credit for subscribers. When the plan expir
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
-    balance_result = payments.get_plan_balance(plan_DID)
-    # OUTPUT: balanceResult:
-    # {
-    #  "planType": 'credits",
-    #  "isSubscriptor": True,
-    #  "isOwner": False,
-    #  "balance": 10000000
-    #}  
-    ```
+  balance_result = payments.get_plan_balance(plan_DID)
+  # OUTPUT: balanceResult:
+  # {
+  #   "planType": "credits",
+  #   "isSubscriptor": True,
+  #   "isOwner": False,
+  #   "balance": 10000000
+  # }  
+  ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
-
   const balanceResult = await payments.getPlanBalance(planDID)
   // OUTPUT: balanceResult:
   // {
-  //  subscriptionType: 'credits',
-  //  isSubscriptor: true,
-  //  isOwner: false,
-  //  balance: 100n
-  //}  
-  
+  //   subscriptionType: 'credits',
+  //   isSubscriptor: true,
+  //   isOwner: false,
+  //   balance: 100n
+  // }  
   ```  
-  
   </TabItem>  
 </Tabs>
