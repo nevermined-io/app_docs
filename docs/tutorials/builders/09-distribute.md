@@ -1,27 +1,27 @@
 ---
 sidebar_position: 9
-description: Distribute your AI agents, services and files and make some money
+description: Distribute your AI Agents, services and files and make some money
 ---
 
-# Distribute your AI agents and make some money
+# Distribute your AI Agents and make some money
 
-In previous tutorials we showed [how to create a Payment Plan](create-plan), [how to register a dataset](register-file-asset) and [how to register an AI service](register-agent). Now it's time to distribute your AI services and make some money.
+In previous tutorials we showed [how to create a Pricing Plan](create-plan), [how to register a dataset](register-file-asset) and [how to register an AI service](register-agent). Now it's time to distribute your AI services and make some money.
 
-Go to the "Published" tab of the "My Assets" view to get an overview of your AI Agents/Services. Use the filter on the "Search" tab if you need it.
+Go to the "Published" tab of the "My Agents" view to get an overview of your AI Agents/Services. Use the filter on the "Search" tab if you need it.
 
 <p align="center"><img src="/images/tutorials/05-06-My-assets.png" width="600"/></p>
 
 The different AI services published can be identified by the information you provide (title, images, etc.).
 
-## Promote your AI agents
+## Promote your AI Agents
 
-Click on the AI Service to go the Asset Details page (click on the eye icon).
+Click on the AI Service to go to the Agent Details page (click on the eye icon).
 
 Share this URL with potential buyers. They can use the 'Subscribe' button to purchase directly from you.  
 
 <p align="center"><img src="/images/tutorials/builders/ai-service-details.png" width="600"/></p>
 
-## Promote your AI agents via Embeddable Widgets 
+## Promote your AI Agents via Embeddable Widgets 
 
 Nevermined provides embeddable widgets that Builders can use to promote their AI services in their own app or website.
 Just click on the three dots icon and select "Edit Widget".
