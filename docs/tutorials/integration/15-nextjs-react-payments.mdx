@@ -1,6 +1,6 @@
 ---
 sidebar_position: 15
-description: How to integrate the Nevermined Payments library in a react application
+description: How to integrate the Nevermined Payments library in a React application
 ---
 
 import PaymentsTutorial from '@site/src/components/payments/tutorial'
@@ -13,32 +13,32 @@ To have full details about how to use the [Payments Library](../../libraries/), 
 
 ### Initializing the project
 
-For this tutorial we will be using [nextjs](https://nextjs.org/docs/getting-started/installation)
-create our react application.
+For this tutorial we will be using [Next.js](https://nextjs.org/docs/getting-started/installation) to
+create our React application.
 
-1. Initialize the react project
+1. Initialize the React project
 
-```
+```bash
 npx create-next-app@latest
 ```
 
 2. Install the Nevermined [payments library](https://github.com/nevermined-io/payments)
 
-```
+```bash
 yarn add @nevermined-io/payments
 ```
 
 3. Starting the development server
 
-```
+```bash
 yarn dev
 ```
 
 ### Initialize the payments library
 
-In order to initialize the payments library we need to have the user login to Nevermined. This can
-be achieved by calling the `connect` method that will redirect the user to the Nevermined for Login
-and once the user is returned to the app calling the `init` method to finalize the initialization of
+In order to initialize the payments library, we need to have the user log in to Nevermined. This can
+be achieved by calling the `connect` method that will redirect the user to Nevermined for login.
+Once the user is returned to the app, calling the `init` method will finalize the initialization of
 the payments library.
 
 ```tsx title="/app/page.tsx"
@@ -76,8 +76,8 @@ export default function Home() {
 
 ### Create a subscription
 
-Once the app is initialized we can start interacting with the Nevermined Payments Protocol. Here is
-a example for creating a subscription
+Once the app is initialized, we can start interacting with the Nevermined Payments Protocol. Here is
+an example for creating a subscription:
 
 ```tsx title="/app/page.tsx"
   ...
@@ -111,7 +111,7 @@ a example for creating a subscription
 
 ### Full code
 
-For the full nextjs example please check
+For the full Next.js example, please check
 [payments-nextjs-example](https://github.com/nevermined-io/tutorials/tree/main/payments-nextjs-example)
 
 ```tsx title="app/page.tsx"
@@ -188,5 +188,4 @@ export default function PaymentsTutorial() {
 }
 ```
 
-
-In the following link you can find the complete documentation of the library: [payments](https://nevermined-io.github.io/payments/). 
+In the following link you can find the complete documentation of the library: [payments](https://nevermined-io.github.io/payments/).
