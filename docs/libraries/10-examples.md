@@ -9,15 +9,15 @@ The Payment Libraries allow you to interact with the Nevermined platform to crea
 
 ## AI Agents
 
-### Youtube Agent (Python)
+### YouTube Agent (Python)
 
-The Youtube Summarizer it's a small Python AI Agent with Nevermined Payments Library integrated which receives a Youtube video URL and returns a summary of the transcription of the video.
+The YouTube Summarizer is a small Python AI Agent with Nevermined Payments Library integration which receives a YouTube video URL and returns a summary of the video's transcription.
 
 The Agent uses LangChain to retrieve the transcription and summarize it via OpenAI integration.
 
-Here is the [Youtube Summarizer Agent code](https://github.com/nevermined-io/youtube-agent/).
+Here is the [YouTube Summarizer Agent code](https://github.com/nevermined-io/youtube-agent/).
 
-As you can see, the Agent is a simple Python script that implements a callback function to process the AI Tasks that are sent by the users.
+As you can see, the Agent is a simple Python script that implements a callback function to process the AI Tasks that are sent by users.
 
 ```python
 class YoutubeAgent:
@@ -109,7 +109,7 @@ class YoutubeAgent:
         )
 ```
 
-As you can see the fuction `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the Youtube video URL, transcribe it, and summarize it. After processing you have to update the step with the result.
+As you can see, the function `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the YouTube video URL, transcribe it, and summarize it. After processing, you have to update the step with the result.
 
 ```python
 async def main():
@@ -133,7 +133,7 @@ async def main():
 ```
 
 The `main` function initializes the Payments object and the YoutubeAgent object. Then it subscribes to the query protocol with the agent's `run` method. 
-In this example we are asuming that the agent is processing the AI task in one step, but you can implement the agent to process multiple steps.
+In this example, we are assuming that the agent is processing the AI task in one step, but you can implement the agent to process multiple steps.
 
 ```python
 class YoutubeAgent:
@@ -237,22 +237,22 @@ class YoutubeAgent:
             print(f"Unknown step name: {step.name}")
 ```
 
-In this example, we are assuming that the agent is processing the AI task in multiple steps. The agent receives the data from the AI Task and uses it to process the task. 
-After processing you have to update the step with the result. Automatically the output of the previous step is the input of the next step.
+In this example, we are implementing an agent that processes the AI task in multiple steps. The agent receives the data from the AI Task and uses it to process the task. 
+After processing, you have to update the step with the result. Automatically, the output of the previous step becomes the input of the next step.
 
-### The Text to Speech Agent (Typescript)
+### The Text to Speech Agent (TypeScript)
 
-The Text to Speech Agent is a simple Typescript AI Agent with Nevermined Payments Library integrated which receives a text and returns an audio file with the speech of the text.
+The Text to Speech Agent is a simple TypeScript AI Agent with Nevermined Payments Library integration which receives text and returns an audio file with the speech of the text.
 
-The Agent uses OpenAPI to generate the audio file, which after the generation is uploaded to IPFS.
+The Agent uses OpenAI to generate the audio file, which after generation is uploaded to IPFS.
 
 Here is the [Text to Speech agent code](https://github.com/nevermined-io/agent-text2speech-js).
 
-In this agent we created 2 separate implementations, one for a single step agent generating the audio file, and another integrating the above Youtube agent ([agent2agent implementation](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/agent2agent.ts)).
+In this agent, we created 2 separate implementations: one for a single-step agent generating the audio file, and another integrating the above YouTube agent ([agent2agent implementation](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/agent2agent.ts)).
 
 ### Simple Text to Speech Agent implementation
 
-As you can see, the Agent is a [simple Typescript code](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/main.ts) that implements a callback function (`processSteps`) to process the AI Tasks that are sent by the users.
+As you can see, the Agent is a [simple TypeScript code](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/main.ts) that implements a callback function (`processSteps`) to process the AI Tasks that are sent by the users.
 
 ```typescript
 async function main() {  
@@ -298,15 +298,15 @@ async function processSteps(data: any) {
 }
 ```
 
-### Agent2Agent implementation (Youtube to Speech)
+### Agent2Agent implementation (YouTube to Speech)
 
 ```
-(Text2Speech + Youtube Summarizer) = Youtube2Speech
+(Text2Speech + YouTube Summarizer) = YouTube2Speech
 ```
 
-In this example we are going to show you how to integrate an external agent (Youtube summarizer) in our agent. This is implemented using multiple steps.
+In this example, we'll show you how to integrate an external agent (YouTube summarizer) in our agent. This is implemented using multiple steps.
 
-First we implement our `main` function to initialize the Payments object and subscribe to receive new tasks. This is as we saw before:
+First, we implement our `main` function to initialize the Payments object and subscribe to receive new tasks. This is as we saw before:
 
 ```typescript
 async function main() {  
@@ -318,7 +318,7 @@ async function main() {
 }
 ```
 
-But in this example our logic is a bit more sophisticated because when the `processSteps` callback function is invoked, we check the step name to know which step we are processing. 
+But in this implementation, our logic is more sophisticated because when the `processSteps` callback function is invoked, we check the step name to determine which step we are processing. 
 
 ```typescript
 async function processSteps(data: any) {
@@ -339,7 +339,7 @@ async function processSteps(data: any) {
 }
 ```
 
-When a new Task is created by the user, automatically is created a step with name `init`. What we do in this case is create the execution plan of the task, which in our example involves 2 steps: `transcribe` and `text2speech`:
+When a user creates a new Task, a step with name `init` is automatically created. What we do in this case is create the execution plan of the task, which in our example involves 2 steps: `transcribe` and `text2speech`:
 
 ```typescript
 if (step.name === 'init') {
@@ -389,10 +389,10 @@ if (step.name === 'init') {
         })
 
   } else if (step.name === 'transcribe') {
-    // Here we integrate with the Youtube Summarizer agent
+    // Here we integrate with the YouTube Summarizer agent
 
   } else if (step.name === 'text2speech') {
-    // Here we generate the speech from the Youtube summarized text
+    // Here we generate the speech from the YouTube summarized text
 
   } else {    
     logger.warn(`Step ${step.name} is not recognized. Skipping...`)
@@ -401,30 +401,30 @@ if (step.name === 'init') {
 
 ```
 
-When the step `init` is completed, it will add 2 additional steps to the task and our agent will receive the next step to process. Because the `text2speech` steps depend on the completion of the `transcribe` step, we will receive first that one, and there is where we integrate with the Youtube Summarizer:
+When the step `init` is completed, it will add 2 additional steps to the task and our agent will receive the next step to process. Because the `text2speech` steps depend on the completion of the `transcribe` step, we will receive the `transcribe` step first, and that's where we integrate with the YouTube Summarizer:
 
 ```typescript
   } else if (step.name === 'transcribe') {
     logger.info(`Transcribing video to text with external agent ...`)
 
-    // First we check if we have enough balance to query the Youtube AI Agent
+    // First we check if we have enough balance to query the YouTube AI Agent
     const balanceResult = await payments.getPlanBalance(PLAN_YOUTUBE_DID)
     payments.query.logTask({
       task_id: step.task_id,
       level: 'info',
-      message: `Youtube Plan balance: ${balanceResult.balance}`,
+      message: `YouTube Plan balance: ${balanceResult.balance}`,
     })
 
     if (balanceResult.balance < 1) { // If we don't have enough balance, we order more credits
       payments.query.logTask({
         task_id: step.task_id,
         level: 'warning',
-        message: `Insufficient balance to query the Youtube AI Agent. Ordering more credits.`,
+        message: `Insufficient balance to query the YouTube AI Agent. Ordering more credits.`,
       })
       await payments.orderPlan(PLAN_YOUTUBE_DID)
     }
 
-    // Create the AI Task to query the Youtube Agent with the youtube video URL
+    // Create the AI Task to query the YouTube Agent with the YouTube video URL
     const aiTask = {
       query: step.input_query,
       name: "transcribe",
@@ -435,9 +435,9 @@ When the step `init` is completed, it will add 2 additional steps to the task an
     payments.query.logTask({
       task_id: step.task_id,
       level: 'info',
-      message: `Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
+      message: `Querying YouTube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
     })
-    // Get the JWT access token and the Proxy we must use to query theYoutube Agent
+    // Get the JWT access token and the Proxy we must use to query the YouTube Agent
     const accessConfig = await payments.query.getServiceAccessConfig(AGENT_YOUTUBE_DID)
 
     // Create the task
@@ -468,15 +468,15 @@ When the step `init` is completed, it will add 2 additional steps to the task an
         task_id: step.task_id,
         task_status: AgentExecutionStatus.Failed,
         level: 'error',
-        message: `Failed to create task on Youtube Summarizer external agent: ${taskResult.data}`,
+        message: `Failed to create task on YouTube Summarizer external agent: ${taskResult.data}`,
       })
-      // Because we couldnt summarize the Youtube video on the external agent:
+      // Because we couldn't summarize the YouTube video on the external agent:
       // we UPDATE the Step to FAILED
       await payments.query.updateStep(step.did, {
         ...step,
         step_status: AgentExecutionStatus.Failed,
         is_last: true,
-        output: `Error creating task on Youtube Summarizer external agent: ${JSON.stringify(taskResult.data)}`,
+        output: `Error creating task on YouTube Summarizer external agent: ${JSON.stringify(taskResult.data)}`,
       })
       return
     }
@@ -490,7 +490,7 @@ When the step `init` is completed, it will add 2 additional steps to the task an
 
 ```
 
-At this stage if everything worked correctly we must have a few credits and the summary of the Youtube video. Because the `transcribe` is completed now we will receive an update on the `text2speech` step, meaning now we can process that step:
+At this stage, if everything worked correctly, we should have a few credits and the summary of the YouTube video. Because the `transcribe` step is completed, we will now receive an update on the `text2speech` step, meaning we can process that step:
 
 ```typescript
 
@@ -544,7 +544,7 @@ At this stage if everything worked correctly we must have a few credits and the 
   }
 ```
 
-If the `text2speech` step is completed, we will update the step with the result of the audio file and the cost of the step. And because the `text2speech` step is the last one, when we update the step this will resolve the whole task and calculate the total cost as the sum of all the individual cost of the steps.
+When the `text2speech` step completes, we update the step with the result of the audio file and the cost of the step. Because the `text2speech` step is the last one, when we update the step, this will resolve the whole task and calculate the total cost as the sum of all the individual costs of the steps.
 
 
 ## Notebooks
