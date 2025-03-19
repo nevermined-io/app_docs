@@ -3,17 +3,17 @@ sidebar_position: 25
 description: How to build sophisticated web applications on top of the Nevermined network with the Nevermined SDK
 ---
 
-# Using the Nvm App SDK for building web applications
+# Using the Nevermined App SDK for building web applications
 
-The Nevermined App provides a Typescript library (aka [Nevermined SDK](https://github.com/nevermined-io/sdk-js)) which allow you to build web applications on top of the Nevermined ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions and subscribe to web services and get the JWT access token to call them.
+The Nevermined App provides a TypeScript library (aka [Nevermined SDK](https://github.com/nevermined-io/sdk-js)) which allows you to build web applications on top of the Nevermined ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions, subscribe to web services, and get the JWT access token to call them.
 
 :::warning
-Don't confuse the [Nevermined SDK](https://github.com/nevermined-io/sdk-js) with the [Nevermined Payment Libraries](../../libraries/). The SDK is oriented to build complex web applications on top of Nevermined network (like Marketplaces), while the Payment Libraries are oriented to facilitate monetization of AI agents and interaction with other agents.
+Don't confuse the [Nevermined SDK](https://github.com/nevermined-io/sdk-js) with the [Nevermined Payment Libraries](../../libraries/). The SDK is oriented toward building complex web applications on top of the Nevermined network (like Marketplaces), while the Payment Libraries are oriented to facilitate monetization of AI Agents and interaction with other Agents.
 :::
 
-## Install the NVM App SDK
+## Install the Nevermined App SDK
 
-The NVM App API is included as part of the [Nevermined SDK](https://www.npmjs.com/package/@nevermined-io/sdk). Start by adding the package to your dependencies:
+The Nevermined App API is included as part of the [Nevermined SDK](https://www.npmjs.com/package/@nevermined-io/sdk). Start by adding the package to your dependencies:
 
 ```bash
 npm i @nevermined-io/sdk
@@ -25,7 +25,7 @@ yarn add @nevermined-io/sdk
 
 ### Connect to a Nevermined environment
 
-Once you added the Nevermined App API to your project, you can connect to any of the existing Nevermined environments. The following code snippet shows how to connect to the Testing environment:
+Once you've added the Nevermined App API to your project, you can connect to any of the existing Nevermined environments. The following code snippet shows how to connect to the Testing environment:
 
 ```typescript
 const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing)
@@ -47,7 +47,7 @@ If you want to connect to Nevermined not only for searching purposes but for blo
 
 ```typescript
 const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing, {
-    contractsVersion: 'v3.5.6', // The version of the contracts to use. If you don't pass will automatically fetch the latest version
+    contractsVersion: 'v3.5.6', // The version of the contracts to use. If you don't pass this, it will automatically fetch the latest version
 })
 ```
 
@@ -61,7 +61,7 @@ const nvmApp = await NvmApp.getInstance(NVMAppEnvironments.Testing, {
 ```
 
 :::info
-You can download the Smart Contracts artifacts using the [download script](https://github.com/nevermined-io/sdk-js/blob/main/scripts/download-artifacts.sh). For example running `./download-artifacts.sh v3.5.8 arbitrum-sepolia`
+You can download the Smart Contracts artifacts using the [download script](https://github.com/nevermined-io/sdk-js/blob/main/scripts/download-artifacts.sh). For example, running `./download-artifacts.sh v3.5.8 arbitrum-sepolia`
 :::
 
 You can connect with your account using the `connect` method:
@@ -74,7 +74,7 @@ await nvmApp.connect(accountSigner)
 Regarding the wallet, you can use ethers/viem or other libraries to have the wallet connected.
 
 :::warning
-You can pass a ZeroDev account to the `connect` method. The use of zeroDev is optional.
+You can pass a ZeroDev account to the `connect` method. The use of ZeroDev is optional.
 :::
 
 ### Publishing subscriptions
@@ -106,7 +106,7 @@ const subscriptionDDO = await nvmAppPublisher.createCreditsSubscription(
 
 ```typescript
 const agentMetadata = NvmAppMetadata.getServiceMetadataTemplate(
-    'Nevermined Ageeeent', // The name of the agent
+    'Nevermined Agent', // The name of the agent
     'Nevermined', // The author of the agent
     [ // The list of endpoints protected by Nevermined
         {
@@ -125,9 +125,9 @@ const agentMetadata = NvmAppMetadata.getServiceMetadataTemplate(
 const serviceDDO = await nvmApp.registerServiceAsset(
     agentMetadata,
     subscriptionDDO.id, // The unique identifier of the subscription
-    // We are gonna configure the agent usage costs in a dynamic manner:
-    // The cost in credits for every succesful query to the agent will be between 1 and 5 credits being 2 credits the default cost
-    2n, // default cost in credits for every succesful query to the agent
+    // We are going to configure the agent usage costs in a dynamic manner:
+    // The cost in credits for every successful query to the agent will be between 1 and 5 credits, with 2 credits being the default cost
+    2n, // default cost in credits for every successful query to the agent
     1n, // min amount of credits to be consumed
     5n, // max amount of credits to be consumed
 )
@@ -223,4 +223,4 @@ const results = await nvmAppSubscriber.downloadFiles(
 
 ```
 
-You can find a full example of how to use the nvm sdk here: [nvm-sdk-example](https://codesandbox.io/p/devbox/nvm-example-new-flcr8f)
+You can find a full example of how to use the Nevermined SDK here: [nvm-sdk-example](https://codesandbox.io/p/devbox/nvm-example-new-flcr8f)
