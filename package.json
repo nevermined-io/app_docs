@@ -28,7 +28,7 @@
     "@mdx-js/react": "^3.0.0",
     "@nevermined-io/payments": "0.3.2",
     "@nevermined-io/styles": "^0.1.1",
-    "axios": "1.6.0",
+    "axios": "1.8.2",
     "bem-helpers": "^1.1.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
