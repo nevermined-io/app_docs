@@ -1,5 +1,22 @@
 # Proposal for a Payments module in ACP
 
+## Table of Contents
+
+- [Proposal for a Payments module in ACP](#proposal-for-a-payments-module-in-acp)
+  - [Table of Contents](#table-of-contents)
+  - [Abstract](#abstract)
+  - [Motivation](#motivation)
+    - [Core Features](#core-features)
+  - [Payments Module: Specification Proposal](#payments-module-specification-proposal)
+    - [Get the information about how an agent can be paid](#get-the-information-about-how-an-agent-can-be-paid)
+    - [Order a payment plan](#order-a-payment-plan)
+    - [Get plan balance](#get-plan-balance)
+    - [Redeem credits](#redeem-credits)
+  - [User Flows](#user-flows)
+    - [Subscriber asks for payment conditions](#subscriber-asks-for-payment-conditions)
+    - [Subscriber checks the plan balance and executes a query into an Agent](#subscriber-checks-the-plan-balance-and-executes-a-query-into-an-agent)
+  - [Open API](#open-api)
+
 ## Abstract
 
 The current version of ACP assumes communication between users and agents without access control or
