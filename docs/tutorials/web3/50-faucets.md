@@ -7,15 +7,15 @@ description: What faucets can you use to start playing with Nevermined environme
 
 ## Testnets
 
-For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
+For testing purposes, we have also deployed the application on the following testnets. Using these networks has the benefit that you can try the application while using 'test tokens' (without any value) to pay for transaction fees.
 
-Note that you shouldn't register your real assets, as they will become available in the App. 
+Note that you shouldn't register your real Agents, as they will become available in the App. 
 
 - [Testing](https://testing.nevermined.app/) (for Arbitrum)
   
 ## Getting tokens for Sepolia, the testnet for Arbitrum
 
-To publish a Payment Plan (and the associated AI web service or Data) you need some Arbitrum ETH, to pay for the network transaction fees.
+To publish a Pricing Plan (and the associated AI web service or Data) you need some Arbitrum ETH to pay for the network transaction fees.
 
 ### Getting testnet ETH
 

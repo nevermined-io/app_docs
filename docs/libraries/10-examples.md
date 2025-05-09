@@ -9,15 +9,15 @@ The Payment Libraries allow you to interact with the Nevermined platform to crea
 
 ## AI Agents
 
-### Youtube Agent (Python)
+### YouTube Agent (Python)
 
-The Youtube Summarizer it's a small Python AI Agent with Nevermined Payments Library integrated which receives a Youtube video URL and returns a summary of the transcription of the video.
+The YouTube Summarizer is a small Python AI Agent with Nevermined Payments Library integration which receives a YouTube video URL and returns a summary of the video's transcription.
 
 The Agent uses LangChain to retrieve the transcription and summarize it via OpenAI integration.
 
-Here is the [Youtube Summarizer Agent code](https://github.com/nevermined-io/youtube-agent/).
+Here is the [YouTube Summarizer Agent code](https://github.com/nevermined-io/youtube-agent/).
 
-As you can see, the Agent is a simple Python script that implements a callback function to process the AI Tasks that are sent by the users.
+As you can see, the Agent is a simple Python script that implements a callback function to process the AI Tasks that are sent by users.
 
 ```python
 class YoutubeAgent:
@@ -27,59 +27,89 @@ class YoutubeAgent:
     # Callback function called when a user creates an AI Task that needs to be processed
     async def run(self, data):
         print("Data received:", data)
-        step = self.payment.ai_protocol.get_step(data['step_id'])
-        if(step['step_status'] != AgentExecutionStatus.Pending.value):
-            print('Step status is not pending')
+        step = self.payment.query.get_step(data["step_id"])
+        if step.step_status != AgentExecutionStatus.Pending.value:
+            print("Step status is not pending")
             return
 
         # logging, we inform we are initializing the youtube loader
-        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Initializing Youtube Loader...', level='info'))
+        await self.payment.query.log_task(
+            TaskLog(task_id=step.task_id, message="Fetching steps...", level="info")
+        )
         loader = YoutubeLoader.from_youtube_url(
-            youtube_url=step['input_query'],
-            add_video_info=False, 
-            language=["en", "es", "pt", "uk", "ru", "fr", "zh-Hans", "zh-Hant", "de"],           
-            transcript_format=TranscriptFormat.CHUNKS, 
+            youtube_url=step.input_query,
+            add_video_info=False,
+            language=["en", "es", "pt", "uk", "ru", "fr", "zh-Hans", "zh-Hant", "de"],
+            transcript_format=TranscriptFormat.CHUNKS,
             chunk_size_seconds=30,
         )
         # We generate some logs saying that we are loading the documents
-        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Load the documents from the video', level='info'))
+        await self.payment.query.log_task(
+            TaskLog(
+                task_id=step.task_id,
+                message="Load the documents from the video",
+                level="info",
+            )
+        )
         try:
-            # Load the documents from the video
             docs = loader.load()
             if not docs:
                 print("No transcript available for the video.")
-                await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='No transcript available.', level='error', task_status=AgentExecutionStatus.Failed.value))
+                await self.payment.query.log_task(
+                    TaskLog(
+                        task_id=step.task_id,
+                        message="No transcript available.",
+                        level="error",
+                        task_status=AgentExecutionStatus.Failed.value,
+                    )
+                )
                 return
         except Exception as e:
             print("Error parsing transcript:", e)
-            await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Error parsing transcript', level='error', task_status=AgentExecutionStatus.Failed.value))
+            await self.payment.query.log_task(
+                TaskLog(
+                    task_id=step.task_id,
+                    message="Error parsing transcript",
+                    level="error",
+                    task_status=AgentExecutionStatus.Failed.value,
+                )
+            )
             return
         result = " ".join(doc.page_content for doc in docs)
-        
 
         llm = OpenAI(api_key=openai_api_key)
-        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summarizing...', level='info'))
+        await self.payment.query.log_task(
+            TaskLog(task_id=step.task_id, message="Summarizing...", level="info")
+        )
         summarize_chain = load_summarize_chain(llm, chain_type="map_reduce")
         docs = [Document(page_content=result)]
         summary = summarize_chain.invoke(docs)
-        print('Summary:', summary['output_text'])
+        print("Summary:", summary["output_text"])
 
         # Use the `payment` object to update the step
-        self.payment.ai_protocol.update_step(
-            did=data['did'],
-            task_id=data['task_id'], 
-            step_id=data['step_id'],
-            step={'step_id': data['step_id'],
-                    'task_id': data["task_id"], 
-                    'step_status': AgentExecutionStatus.Completed.value,
-                    'output': summary['output_text'],
-                    'is_last': True
-                    },
+        self.payment.query.update_step(
+            did=data["did"],
+            task_id=data["task_id"],
+            step_id=data["step_id"],
+            step={
+                "step_id": data["step_id"],
+                "task_id": data["task_id"],
+                "step_status": AgentExecutionStatus.Completed.value,
+                "output": summary["output_text"],
+                "is_last": True,
+            },
         )
-        await self.payment.ai_protocol.log_task(TaskLog(task_id=step['task_id'], message='Summary ready.', level='info', task_status=AgentExecutionStatus.Completed.value))
-``` 
+        await self.payment.query.log_task(
+            TaskLog(
+                task_id=step.task_id,
+                message="Summary ready.",
+                level="info",
+                task_status=AgentExecutionStatus.Completed.value,
+            )
+        )
+```
 
-As you can see the fuction `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the Youtube video URL, transcribe it, and summarize it. After processing you have to update the step with the result.
+As you can see, the function `run` is the callback function that processes the AI Task. The function receives the data from the AI Task and uses it to process the task. In this case, the function uses the data to retrieve the YouTube video URL, transcribe it, and summarize it. After processing, you have to update the step with the result.
 
 ```python
 async def main():
@@ -89,23 +119,21 @@ async def main():
         nvm_api_key=nvm_api_key, 
         version="1.0.0", 
         environment=Environment.get_environment(environment), 
-        ai_protocol=True, 
-        web_socket_options={'bearer_token': nvm_api_key}
     )
 
     # Initialize the YoutubeAgent with the payment instance
     agent = YoutubeAgent(payment)
 
-    # Subscribe to the ai_protocol with the agent's `run` method
-    subscription_task = asyncio.get_event_loop().create_task(payment.ai_protocol.subscribe(agent.run, join_account_room=True))
+    # Subscribe to the query protocol with the agent's `run` method
+    subscription_task = asyncio.get_event_loop().create_task(payment.query.subscribe(agent.run, join_account_room=True))
     try:
         await subscription_task
     except asyncio.CancelledError:
         print("Subscription task was cancelled")
 ```
 
-The `main` function initializes the Payments object and the YoutubeAgent object. Then it subscribes to the ai_protocol with the agent's `run` method. 
-In this example we are asuming that the agent is processing the AI task in one step, but you can implement the agent to process multiple steps.
+The `main` function initializes the Payments object and the YoutubeAgent object. Then it subscribes to the query protocol with the agent's `run` method. 
+In this example, we are assuming that the agent is processing the AI task in one step, but you can implement the agent to process multiple steps.
 
 ```python
 class YoutubeAgent:
@@ -113,107 +141,118 @@ class YoutubeAgent:
         self.payment = payment
 
     async def run(self, data):
-        step = self.payment.ai_protocol.get_step(data['step_id'])
-        if(step['step_status'] != AgentExecutionStatus.Pending.value):
-            print('Step status is not pending')
+        step = self.payment.query.get_step(data["step_id"])
+        if step.step_status != AgentExecutionStatus.Pending.value:
+            print("Step status is not pending", step.step_status)
             return
-        
-        if(step['name'] == 'init'):
+
+        if step.name == "init":
             transcript_step_id = generate_step_id()
-            self.payment.ai_protocol.create_steps(did=step['did'], task_id=step['task_id'], steps={"steps" : [{
-                'task_id': step['task_id'],
-                'step_id': transcript_step_id,
-                'input_query': step['input_query'],
-                'name': 'transcript',
-                'predecessor': step['step_id'],
-                'is_last': False,
-                'order': 2
-                },
-                {                
-                'task_id': step['task_id'],
-                'step_id': generate_step_id(),
-                'predecessor': transcript_step_id,
-                'input_query': '',
-                'name': 'summarize',
-                'is_waiting': True, 
-                'is_last': True,
-                'order': 3
-            }]})
-            self.payment.ai_protocol.update_step(
-                did=step['did'],
-                task_id=step['task_id'], 
-                step_id=step['step_id'],
-                step={'step_id': step['step_id'],
-                        'task_id': step["task_id"], 
-                        'step_status': AgentExecutionStatus.Completed.value,
-                        'input_query': step['input_query'],
-                        'output': step['input_query'],
-                        'is_last': False
+            self.payment.query.create_steps(
+                did=step.did,
+                task_id=step.task_id,
+                steps={
+                    "steps": [
+                        {
+                            "task_id": step.task_id,
+                            "step_id": transcript_step_id,
+                            "input_query": step.input_query,
+                            "name": "transcript",
+                            "predecessor": step.step_id,
+                            "is_last": False,
+                            "order": 2,
                         },
+                        {
+                            "task_id": step.task_id,
+                            "step_id": generate_step_id(),
+                            "predecessor": transcript_step_id,
+                            "input_query": "",
+                            "name": "summarize",
+                            "is_waiting": True,
+                            "is_last": True,
+                            "order": 3,
+                        },
+                    ]
+                },
             )
-        
-        elif (step['name'] == 'transcript'):
+            self.payment.query.update_step(
+                did=step.did,
+                task_id=step.task_id,
+                step_id=step.step_id,
+                step={
+                    "step_id": step.step_id,
+                    "task_id": step.task_id,
+                    "step_status": AgentExecutionStatus.Completed.value,
+                    "input_query": step.input_query,
+                    "output": step.input_query,
+                    "is_last": False,
+                },
+            )
+
+        elif step.name == "transcript":
             loader = YoutubeLoader.from_youtube_url(
-                youtube_url=step['input_query'],
-                add_video_info=False, 
+                youtube_url=step.input_query,
+                add_video_info=False,
                 language=["en"],
-                transcript_format=TranscriptFormat.CHUNKS, 
+                transcript_format=TranscriptFormat.CHUNKS,
                 chunk_size_seconds=30,
             )
             # Load the documents from the video
             docs = loader.load()
             result = " ".join(doc.page_content for doc in docs)
-            self.payment.ai_protocol.update_step(
-                did=step['did'],
-                task_id=step['task_id'], 
-                step_id=step['step_id'],
-                step={'step_id': step['step_id'],
-                        'task_id': step["task_id"], 
-                        'step_status': AgentExecutionStatus.Completed.value,
-                        'output': result,
-                        'is_last': False
-                        },
+            self.payment.query.update_step(
+                did=step.did,
+                task_id=step.task_id,
+                step_id=step.step_id,
+                step={
+                    "step_id": step.step_id,
+                    "task_id": step.task_id,
+                    "step_status": AgentExecutionStatus.Completed.value,
+                    "output": result,
+                    "is_last": False,
+                },
             )
-        
-        elif (step['name'] == 'summarize'):
+
+        elif step.name == "summarize":
             llm = OpenAI(api_key=openai_api_key)
             summarize_chain = load_summarize_chain(llm, chain_type="map_reduce")
-            docs = [Document(page_content=step["input_query"])]
+            docs = [Document(page_content=step.input_query)]
             summary = summarize_chain.invoke(docs)
-            print('Summary:', summary['output_text'])
+            print("Summary:", summary["output_text"])
             # Use the `payment` object to update the step
-            self.payment.ai_protocol.update_step(
-                did=step['did'],
-                task_id=step['task_id'], 
-                step_id=step['step_id'],
-                step={'step_id': step['step_id'],
-                        'task_id': step["task_id"], 
-                        'step_status': AgentExecutionStatus.Completed.value,
-                        'output': summary['output_text'],
-                        'is_last': True
-                        },
+            self.payment.query.update_step(
+                did=step.did,
+                task_id=step.task_id,
+                step_id=step.step_id,
+                step={
+                    "step_id": step.step_id,
+                    "task_id": step.task_id,
+                    "step_status": AgentExecutionStatus.Completed.value,
+                    "output": summary["output_text"],
+                    "is_last": True,
+                },
             )
-        
+
         else:
-            print(f"Unknown step name: {step['name']}")
+            print(f"Unknown step name: {step.name}")
 ```
 
-In this example, we are assuming that the agent is processing the AI task in multiple steps. The agent receives the data from the AI Task and uses it to process the task. 
-After processing you have to update the step with the result. Automatically the output of the previous step is the input of the next step.
+In this example, we are implementing an agent that processes the AI task in multiple steps. The agent receives the data from the AI Task and uses it to process the task. 
+After processing, you have to update the step with the result. Automatically, the output of the previous step becomes the input of the next step.
 
-### The Text to Speech Agent (Typescript)
+### The Text to Speech Agent (TypeScript)
 
-The Text to Speech Agent is a simple Typescript AI Agent with Nevermined Payments Library integrated which receives a text and returns an audio file with the speech of the text.
+The Text to Speech Agent is a simple TypeScript AI Agent with Nevermined Payments Library integration which receives text and returns an audio file with the speech of the text.
 
-The Agent uses OpenAPI to generate the audio file, which after the generation is uploaded to IPFS.
+The Agent uses OpenAI to generate the audio file, which after generation is uploaded to IPFS.
 
 Here is the [Text to Speech agent code](https://github.com/nevermined-io/agent-text2speech-js).
 
-In this agent we created 2 separate implementations, one for a single step agent generating the audio file, and another integrating the above Youtube agent ([agent2agent implementation](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/agent2agent.ts)).
+In this agent, we created 2 separate implementations: one for a single-step agent generating the audio file, and another integrating the above YouTube agent ([agent2agent implementation](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/agent2agent.ts)).
 
 ### Simple Text to Speech Agent implementation
 
-As you can see, the Agent is a [simple Typescript code](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/main.ts) that implements a callback function (`processSteps`) to process the AI Tasks that are sent by the users.
+As you can see, the Agent is a [simple TypeScript code](https://github.com/nevermined-io/agent-text2speech-js/blob/main/src/main.ts) that implements a callback function (`processSteps`) to process the AI Tasks that are sent by the users.
 
 ```typescript
 async function main() {  
@@ -252,22 +291,22 @@ async function processSteps(data: any) {
     output_artifacts: [cid],
     cost: 5
   })
-  if (updateResult.status === 201)
+  if (updateResult.success)
     logger.info(`Step ${step.step_id} completed!`)
   else
     logger.error(`Error updating step ${step.step_id} - ${JSON.stringify(updateResult.data)}`)
 }
 ```
 
-### Agent2Agent implementation (Youtube to Speech)
+### Agent2Agent implementation (YouTube to Speech)
 
 ```
-(Text2Speech + Youtube Summarizer) = Youtube2Speech
+(Text2Speech + YouTube Summarizer) = YouTube2Speech
 ```
 
-In this example we are going to show you how to integrate an external agent (Youtube summarizer) in our agent. This is implemented using multiple steps.
+In this example, we'll show you how to integrate an external agent (YouTube summarizer) in our agent. This is implemented using multiple steps.
 
-First we implement our `main` function to initialize the Payments object and subscribe to receive new tasks. This is as we saw before:
+First, we implement our `main` function to initialize the Payments object and subscribe to receive new tasks. This is as we saw before:
 
 ```typescript
 async function main() {  
@@ -279,7 +318,7 @@ async function main() {
 }
 ```
 
-But in this example our logic is a bit more sophisticated because when the `processSteps` callback function is invoked, we check the step name to know which step we are processing. 
+But in this implementation, our logic is more sophisticated because when the `processSteps` callback function is invoked, we check the step name to determine which step we are processing. 
 
 ```typescript
 async function processSteps(data: any) {
@@ -300,7 +339,7 @@ async function processSteps(data: any) {
 }
 ```
 
-When a new Task is created by the user, automatically is created a step with name `init`. What we do in this case is create the execution plan of the task, which in our example involves 2 steps: `transcribe` and `text2speech`:
+When a user creates a new Task, a step with name `init` is automatically created. What we do in this case is create the execution plan of the task, which in our example involves 2 steps: `transcribe` and `text2speech`:
 
 ```typescript
 if (step.name === 'init') {
@@ -324,7 +363,7 @@ if (step.name === 'init') {
         is_last: true,
         order: 3
     }]})
-    createResult.status === 201
+    createResult.success
       ? payments.query.logTask({ task_id: step.task_id, level: 'info', message: 'Steps created successfully' })
       : payments.query.logTask({
           task_id: step.task_id,
@@ -337,7 +376,7 @@ if (step.name === 'init') {
       step_status: AgentExecutionStatus.Completed,
       output: step.input_query,
     })
-    updateResult.status === 201
+    updateResult.success
       ? payments.query.logTask({
           task_id: step.task_id,
           level: 'info',
@@ -350,10 +389,10 @@ if (step.name === 'init') {
         })
 
   } else if (step.name === 'transcribe') {
-    // Here we integrate with the Youtube Summarizer agent
+    // Here we integrate with the YouTube Summarizer agent
 
   } else if (step.name === 'text2speech') {
-    // Here we generate the speech from the Youtube summarized text
+    // Here we generate the speech from the YouTube summarized text
 
   } else {    
     logger.warn(`Step ${step.name} is not recognized. Skipping...`)
@@ -362,30 +401,30 @@ if (step.name === 'init') {
 
 ```
 
-When the step `init` is completed, it will add 2 additional steps to the task and our agent will receive the next step to process. Because the `text2speech` steps depend on the completion of the `transcribe` step, we will receive first that one, and there is where we integrate with the Youtube Summarizer:
+When the step `init` is completed, it will add 2 additional steps to the task and our agent will receive the next step to process. Because the `text2speech` steps depend on the completion of the `transcribe` step, we will receive the `transcribe` step first, and that's where we integrate with the YouTube Summarizer:
 
 ```typescript
   } else if (step.name === 'transcribe') {
     logger.info(`Transcribing video to text with external agent ...`)
 
-    // First we check if we have enough balance to query the Youtube AI Agent
+    // First we check if we have enough balance to query the YouTube AI Agent
     const balanceResult = await payments.getPlanBalance(PLAN_YOUTUBE_DID)
     payments.query.logTask({
       task_id: step.task_id,
       level: 'info',
-      message: `Youtube Plan balance: ${balanceResult.balance}`,
+      message: `YouTube Plan balance: ${balanceResult.balance}`,
     })
 
     if (balanceResult.balance < 1) { // If we don't have enough balance, we order more credits
       payments.query.logTask({
         task_id: step.task_id,
         level: 'warning',
-        message: `Insufficient balance to query the Youtube AI Agent. Ordering more credits.`,
+        message: `Insufficient balance to query the YouTube AI Agent. Ordering more credits.`,
       })
       await payments.orderPlan(PLAN_YOUTUBE_DID)
     }
 
-    // Create the AI Task to query the Youtube Agent with the youtube video URL
+    // Create the AI Task to query the YouTube Agent with the YouTube video URL
     const aiTask = {
       query: step.input_query,
       name: "transcribe",
@@ -396,9 +435,9 @@ When the step `init` is completed, it will add 2 additional steps to the task an
     payments.query.logTask({
       task_id: step.task_id,
       level: 'info',
-      message: `Querying Youtube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
+      message: `Querying YouTube Agent DID: ${AGENT_YOUTUBE_DID} with input: ${step.input_query}`,
     })
-    // Get the JWT access token and the Proxy we must use to query theYoutube Agent
+    // Get the JWT access token and the Proxy we must use to query the YouTube Agent
     const accessConfig = await payments.query.getServiceAccessConfig(AGENT_YOUTUBE_DID)
 
     // Create the task
@@ -424,20 +463,20 @@ When the step `init` is completed, it will add 2 additional steps to the task an
       },
     )
 
-   if (taskResult.status !== 201) {
+   if (!taskResult.success) {
       payments.query.logTask({
         task_id: step.task_id,
         task_status: AgentExecutionStatus.Failed,
         level: 'error',
-        message: `Failed to create task on Youtube Summarizer external agent: ${taskResult.data}`,
+        message: `Failed to create task on YouTube Summarizer external agent: ${taskResult.data}`,
       })
-      // Because we couldnt summarize the Youtube video on the external agent:
+      // Because we couldn't summarize the YouTube video on the external agent:
       // we UPDATE the Step to FAILED
       await payments.query.updateStep(step.did, {
         ...step,
         step_status: AgentExecutionStatus.Failed,
         is_last: true,
-        output: `Error creating task on Youtube Summarizer external agent: ${JSON.stringify(taskResult.data)}`,
+        output: `Error creating task on YouTube Summarizer external agent: ${JSON.stringify(taskResult.data)}`,
       })
       return
     }
@@ -451,7 +490,7 @@ When the step `init` is completed, it will add 2 additional steps to the task an
 
 ```
 
-At this stage if everything worked correctly we must have a few credits and the summary of the Youtube video. Because the `transcribe` is completed now we will receive an update on the `text2speech` step, meaning now we can process that step:
+At this stage, if everything worked correctly, we should have a few credits and the summary of the YouTube video. Because the `transcribe` step is completed, we will now receive an update on the `text2speech` step, meaning we can process that step:
 
 ```typescript
 
@@ -487,7 +526,7 @@ At this stage if everything worked correctly we must have a few credits and the 
       cost: 20,
     })
 
-    if (updateResult.status === 201)
+    if (updateResult.success)
       payments.query.logTask({
         task_id: step.task_id,
         task_status: AgentExecutionStatus.Completed,
@@ -505,7 +544,7 @@ At this stage if everything worked correctly we must have a few credits and the 
   }
 ```
 
-If the `text2speech` step is completed, we will update the step with the result of the audio file and the cost of the step. And because the `text2speech` step is the last one, when we update the step this will resolve the whole task and calculate the total cost as the sum of all the individual cost of the steps.
+When the `text2speech` step completes, we update the step with the result of the audio file and the cost of the step. Because the `text2speech` step is the last one, when we update the step, this will resolve the whole task and calculate the total cost as the sum of all the individual costs of the steps.
 
 
 ## Notebooks

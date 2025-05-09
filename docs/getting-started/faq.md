@@ -7,17 +7,17 @@ description: FAQ
 
 ## What is Nevermined?
 
-Nevermined is the AI payments protocol delivering the Web3 standard for AI-to-AI transactions. At Nevermined, we AI payments are a protocol, not a feature, and we're building the Open Source software to power AI's future.
+Nevermined is the AI payments protocol delivering the Web3 standard for AI-to-AI transactions. At Nevermined, we believe AI payments are a protocol, not a feature, and we're building the Open Source software to power AI's future.
 
 ## What is Nevermined App?
 
-The Nevermined App allows AI builders to monetize their AI agents and associated assets, like context data, etc. You do this by creating a Payment Plans in which you specify the access parameters to your AI agent, such as price, time limit, and/or number of requests that can be made to use your AI agent. You then add your AI agent API to the plan, and make the AI available to your users.
+The Nevermined App allows AI builders to monetize their AI agents and associated assets, like context data, etc. You do this by creating Payment Plans in which you specify the access parameters to your AI agent, such as price, time limit, and/or number of requests that can be made to use your AI agent. You then add your AI agent API to the plan, and make the AI available to your users.
 
 ## Who can use Nevermined App?
 
 ### AI Builders
 
-AI Owners can use Nevermined to tokenize the Web Service of their AI model or agent by defining access conditions and making it available to app developers who want to integrate AI services into their product, but don’t want to build it from scratch.
+AI Owners can use Nevermined to tokenize the Web Service of their AI model or agent by defining access conditions and making it available to app developers who want to integrate AI services into their product, but don't want to build it from scratch.
 
 You can use Nevermined to tokenize datasets or services, set pricing and access control conditions and then make it available to AI builders to train their models.
 
@@ -25,27 +25,27 @@ You can use Nevermined to tokenize datasets or services, set pricing and access 
 
 AI users can use Nevermined to purchase access to datasets that are relevant to their model.
 
-App developers can purchase access to a broad range of AI Services and integrate them into their product, so they don’t need to build AI services from scratch.  
+App developers can purchase access to a broad range of AI Services and integrate them into their product, so they don't need to build AI services from scratch.  
 
 ## How does Nevermined App work?
 
-* AI agent / service builders can monetize their API endpoint and embed time and price access conditions.
-* Once the Payment Plans terms are created, a DID associated with the builder’s wallet is issued and it can be then linked to a specific plan.
+* AI agent/service builders can monetize their API endpoint and embed time and price access conditions.
+* Once the Payment Plans terms are created, a DID associated with the builder's wallet is issued and it can be then linked to a specific plan.
 * At the end of the process, the App will automatically create a widget containing the plan information and display it on the marketplace, but builders also have the option to embed this widget on their own point-of-sale, i.e. website or channel.
 * Purchasing access means the asset's smart contract sends the buyer a non-fungible Payment Plan token, using ERC-standards, that can be simply copied into the users' application.
-* This Payment Plan proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service
+* This Payment Plan proves ownership of a unique JWT access token, which allows the user to send HTTP requests to the AI's web service.
 
-## What are Payment Plans
+## What are Payment Plans?
 
 *Smart Contracts + Plan Logic = Payment Plans!*
 
-Payment Plans is a new concept that builds on blockchain smart contract and NFT technology, but provides much greater utility and flexibility than current NFTs. Traditionally, NFT technology has been applied to represent a unique asset, in a 1-to-1 relationship. For example, a Bored Ape NFT has one JPEG for each token. While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn’t work well when a use case requires access to multiple assets.
+Payment Plans are a new concept that builds on blockchain smart contract and NFT technology, but provides much greater utility and flexibility than current NFTs. Traditionally, NFT technology has been applied to represent a unique asset, in a 1-to-1 relationship. For example, a Bored Ape NFT has one JPEG for each token. While the 1-to-1 nature of NFT technology works well for things like static digital art, event tickets, etc., it doesn't work well when a use case requires access to multiple assets.
 
-In the case of AI, a workflow might require access to dozens of assets (i.e. data, models and analysis services). If each dataset. model, or analysis service was represented by an NFT, this would correspond to dozens of onchain confirmations, performed via your wallet, to orchestrate the end-to-end process. The result? Horrendous UX.
+In the case of AI, a workflow might require access to dozens of assets (i.e. data, models and analysis services). If each dataset, model, or analysis service was represented by an NFT, this would correspond to dozens of onchain confirmations, performed via your wallet, to orchestrate the end-to-end process. The result? Horrendous UX.
 
-Instead, Payment Plans facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one Payment Plans can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference or output.
+Instead, Payment Plans facilitate the creation of buckets of assets under one token in a 1-to-many relationship. In the case of AI, now one Payment Plan can represent multiple datasets, analysis services, models, etc., to be orchestrated in an AI service pipeline that produces an inference or output.
 
-In addition, Nevermined has added the ability to add a time-related access parameter to the Payment Plans and its related assets. This means you can tokengate access for 1 hour, 1 day, 1 month, 1 year… The sky’s the limit!
+In addition, Nevermined has added the ability to add a time-related access parameter to the Payment Plans and their related assets. This means you can tokengate access for 1 hour, 1 day, 1 month, 1 year… The sky's the limit!
 
 The result? Much greater usability and a big step change in overall utility.
 
@@ -55,20 +55,20 @@ Web services allow applications to interact with each other over the internet, e
 
 ## What do I need to get started as an AI Agent Builder?
 
-* A Metamask wallet;
-* If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network;
-* If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network;
-* If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network;
-* Your assets: Server link and authentication token.
+* A Metamask wallet
+* If you publish your assets on Polygon, you need MATIC tokens to pay for the gas fees on that network
+* If you publish your assets on Gnosis, you need xDAI to pay for the gas fees on that network
+* If you publish your assets on Arbitrum, you need Arbitrum ETH to pay for the gas fees on that network
+* Your assets: Server link and authentication token
 * Standard Contract for Marketplace (SCMP) agreement that will govern the usage of your asset. You have the option to utilize the default Nevermined Standard Contract but we strongly encourage Builders to apply their own SCMP.
 
 ## What do I need to get started as a user?
 
-* An account which is linked to a wallet (don't worry, Nevermined can handle the wallet part);
-* If you’re buying an asset on [Production / Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets.
-* If you’re buying an asset on [Testing / Arbitrum Sepolia](https://testing.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase. You can get some from the [Circle Faucet](https://faucet.circle.com/).
-* If you’re buying an asset on [PEAQ](https://peaq.nevermined.app/), you need PEAQ tokens to pay for the assets you want to purchase.
-* If you want to use any of the other environments without a Nevermined App, you need to have the respective tokens for the network you are using. 
+* An account which is linked to a wallet (don't worry, Nevermined can handle the wallet part)
+* If you're buying an asset on [Production/Arbitrum](https://nevermined.app/), you need USDC tokens to pay for the assets
+* If you're buying an asset on [Testing/Arbitrum Sepolia](https://testing.nevermined.app/), you need USDC tokens to pay for the assets you want to purchase. You can get some from the [Circle Faucet](https://faucet.circle.com/)
+* If you're buying an asset on [PEAQ](https://peaq.nevermined.app/), you need PEAQ tokens to pay for the assets you want to purchase
+* If you want to use any of the other environments without a Nevermined App, you need to have the respective tokens for the network you are using
 
 :::info
 You can find a complete list of the Nevermined App deployments [here](../environments/).
@@ -76,7 +76,7 @@ You can find a complete list of the Nevermined App deployments [here](../environ
 
 ## What is the publishing flow?
 
-* Create a Payment Plans for your asset(s)
+* Create Payment Plans for your asset(s)
 * Register your asset or your web service and attach it to the Payment Plans
 * Publish it to our Marketplace. (Soon you will also be able to create a widget to embed it in your own website.)
 
@@ -84,39 +84,37 @@ You can find more detailed tutorials for each step [here](../tutorials/).
 
 ## What is the buying flow?
 
-* Find the asset you’re interested in on the Marketplace;
-* Purchase a plan to that asset, with your USDC.
-* If you buy access to an AI: integrate the AI API with JWT token into your software.
-* If you buy access to data: integrate the data into your AI workflow.
+* Find the asset you're interested in on the Marketplace
+* Purchase a Pricing Plan to that asset, with your USDC
+* If you buy access to an AI: integrate the AI API with JWT token into your software
+* If you buy access to data: integrate the data into your AI workflow
 
 You can find more detailed tutorials for each step [here](../tutorials/).
 
 ## What files can I monetize using the Nevermined App?
 
-* For AIs and WebServices, we support any open API endpoint that you control the web token to.
+* For AIs and WebServices, we support any open API endpoint that you control the web token to
 * For Data, we support any and all data files
 
 ## What is the price for using Nevermined App?
 
-Using Nevermined to create Payment Plans is free. It’s only when you sell plans that you will pay a small 1% fee to Nevermined.
+Using Nevermined to create Payment Plans is free. It's only when you sell plans that you will pay a small 1% fee to Nevermined.
 
 ## What type of plans are available for the Payment Plans configuration?
 
-Nevermined App offers 3 pre-defined plans, as well as a customized option:
+Nevermined App offers 3 pre-defined Pricing Plans, as well as a customized option:
 
-* Free Plan - Optimal for creating open ended exclusive access that boosts community loyalty and engagement.
-* One month Plan - Great for creating time-critical gated assets that follow the latest trends.
-* One year Plan - Perfect for creating valuable gated assets with long-term access.
-* Custom Plan - Creates a bespoke plan configuration with your desired duration & price.
+* Free Pricing Plan - Optimal for creating open ended exclusive access that boosts community loyalty and engagement
+* One month Pricing Plan - Great for creating time-critical gated assets that follow the latest trends
+* One year Pricing Plan - Perfect for creating valuable gated assets with long-term access
+* Custom Pricing Plan - Creates a bespoke plan configuration with your desired duration & price
 
 ## What blockchain network does the Nevermined App use?
 
 At the moment, the Nevermined App is deployed on Arbitrum, Base, Polygon, Gnosis, Optimism, PEAQ and Celo networks, allowing our users to benefit from the smallest network fees available. Since Nevermined is a chain agnostic product, we plan to deploy the app on several other networks in the future.
 
 :::info
-
 You can find a complete list of the Nevermined App deployments [here](../environments/).
-
 :::
 
 ## How do I claim back my locked tokens if a transaction fails during processing?

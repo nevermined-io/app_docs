@@ -1,22 +1,22 @@
 ---
 sidebar_position: 9
-description: How to expose an AI agent and publish it into Nevermined
+description: How to expose an AI Agent and publish it into Nevermined
 ---
 
-# How to expose a Python AI agent and publish it into Nevermined
+# How to expose a Python AI Agent and publish it into Nevermined
 
 
 In the following sections we will show how you can easily expose your AI model through web services endpoints.
-With this endpoints up & running you will be able to register this service in Nevermined so you can safely share, and monetize, your AI model
+With these endpoints up & running you will be able to register this service in Nevermined so you can safely share, and monetize, your AI model.
 
 
-## Enviroment and dependencies
+## Environment and dependencies
 
-The tips and code examples we will provide in this tutorial assume you have developed your AI service using Python, so you need to be acquainted to working wiht Python projects.
+The tips and code examples we will provide in this tutorial assume you have developed your AI service using Python, so you need to be acquainted with working with Python projects.
 
-We recommend you to use a enviroment manager to install the dependencies, like venv, conda, etc
+We recommend you to use an environment manager to install the dependencies, like venv, conda, etc.
 
-### venv as enviroment
+### venv as environment
 
 For example, to create a virtual env for your project you can use venv:
 
@@ -25,9 +25,9 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-All the dependencies installed using *pip install* will be installed  in the virtual enviroment and not in your OS.
+All the dependencies installed using *pip install* will be installed in the virtual environment and not in your OS.
 
-To stop using the virtual enviroment you just need to use the *deactivate* command
+To stop using the virtual environment you just need to use the *deactivate* command:
 
 ```bash
 deactivate
@@ -37,7 +37,7 @@ deactivate
 
 The dependencies needed in order to run your services are *fastapi*, and *uvicorn*.
 
-You can install this dependencies in your enviroment using *pip install* or you can use a setup.py file like the one included in this repository. If you use the setup.py file, you need to execute:
+You can install these dependencies in your environment using *pip install* or you can use a setup.py file like the one included in this repository. If you use the setup.py file, you need to execute:
 
 ```bash
 pip3 install -e .
@@ -45,18 +45,18 @@ pip3 install -e .
 
 ## Synchronous service
 
-The first approach to expose your AI model would be to implement a synchronous endpoint, that takes some parameters from a GET request, call your AI function, waits until the function finish the computation, and return the result.
+The first approach to expose your AI model would be to implement a synchronous endpoint, that takes some parameters from a GET request, calls your AI function, waits until the function finishes the computation, and returns the result.
 
 The sync approach is valid when the execution of your AI model/service does not take long. If the service takes over a minute to complete the execution and return a response, we would strongly suggest you to take an asynchronous approach.
 
-To implement this sync service we will use FastAPI framework. You will see how easy is to run a service wit a few lines of code.
+To implement this sync service we will use FastAPI framework. You will see how easy it is to run a service with a few lines of code.
 
 You need to install both *fastapi* and *uvicorn* dependencies.
 
 
 ### Implementing a GET method
 
-In the following examples we will show you some code snippets with the relevant pieces of code to implement these service. But you can see the full example in the sync_service.py file contained in this repository. 
+In the following examples we will show you some code snippets with the relevant pieces of code to implement these services. But you can see the full example in the sync_service.py file contained in this repository. 
 
 First thing to do is to define a FastAPI app:
 
@@ -68,7 +68,7 @@ app = FastAPI( title="Awesome AI service",
 )
 ```
 
-The information passed to the FastAPI object will be use to construct the docs of the service, so take your time to describe your service!
+The information passed to the FastAPI object will be used to construct the docs of the service, so take your time to describe your service!
 
 Let's implement a *Hello World* endpoint:
 
@@ -78,7 +78,7 @@ def home():
     return "Hello World!"
 ```
 
-And that's it, you have your first endpoint implemented
+And that's it, you have your first endpoint implemented.
 
 To run the service just execute this command from the root folder of your project:
 
@@ -94,7 +94,7 @@ To call the *Hello World* endpoint you just need to browse to *http://localhost:
 
 ### Calling your AI model with parameters
 
-The next step is calling your AI service, using a couple of parameteres you get from the service request:
+The next step is calling your AI service, using a couple of parameters you get from the service request:
 
 ```python
 @app.get("/ai_service")
@@ -107,14 +107,14 @@ def ai_service(param1, param2):
     return {"result": result}
 ```
 
-Really simple, we just defined an *ai-service* endpoint, that gets two parameters, param1 and param2, you will use to call your awesome AI service. The AI service returns a string result we use to compose a json response. 
+Really simple, we just defined an *ai-service* endpoint, that gets two parameters, param1 and param2, you will use to call your awesome AI service. The AI service returns a string result we use to compose a JSON response. 
 
 If you want to try it, you just need to put this in your browser: *http://localhost:8000/ai-service?param1=value1&param2=value2*
 
 ### Using BackgroundTasks
 
 Depending on the nature of your service you might need some way of executing some tasks once your endpoint returns the response. 
-For instance, imagine that your AI function returns a path where it placed a generated pdf file, and your endpoint returns the binary content of the file.
+For instance, imagine that your AI function returns a path where it placed a generated PDF file, and your endpoint returns the binary content of the file.
 
 ```python
 @app.get("/ai_service_binary")
@@ -142,7 +142,7 @@ In this example, we use the BackgroundTasks instance to close the bytes stream o
 
 Now you are able to implement your own endpoints to call your AI model, but until this time your endpoints are open, so anyone can use them, so let's see how you can protect your endpoints with a Bearer Token.
 
-First you need to indicate where is your token and how to validate it. As a simple approach, you can use an enviroment variable to define the value of the token, and just compare if the request contains an Authorization Header wich value is the same
+First you need to indicate where your token is and how to validate it. As a simple approach, you can use an environment variable to define the value of the token, and just compare if the request contains an Authorization Header which value is the same:
 
 ```python
 bearer_scheme = HTTPBearer()
@@ -155,7 +155,7 @@ def validate_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sc
     return credentials
 ```
 
-And now we need to modify slighly the creation of the app to include this validate token function:
+And now we need to modify slightly the creation of the app to include this validate token function:
 
 ```python
 app = FastAPI( title="Awesome AI service",
@@ -173,15 +173,15 @@ assert BEARER_TOKEN is not None
            ^^^^^^^^^^^^^^^^^^^^^^^^
 ```
 
-You need to create the enviroment variable with the token value you want to use:
+You need to create the environment variable with the token value you want to use:
 
 ```bash
 export BEARER_TOKEN=1234
 ```
 
-Of course using *1234* as Authorization token is not the best practice here. You can use an online uuid generator tool to create a random token.
+Of course using *1234* as Authorization token is not the best practice here. You can use an online UUID generator tool to create a random token.
 
-If you try now to access to the *Hello World* endpoint you'll get a *Not Authenticated* error
+If you try now to access to the *Hello World* endpoint you'll get a *Not Authenticated* error.
 
 Try with this:
 
@@ -191,7 +191,7 @@ curl -H "Authorization: Bearer 1234" -X GET "localhost:8000/"
 
 ### Implementing POST methods
 
-If you need, o prefer, to implement your endpoints as POST methods instead, FastAPI makes it quite easy:
+If you need, or prefer, to implement your endpoints as POST methods instead, FastAPI makes it quite easy:
 
 ```python
 
@@ -201,7 +201,7 @@ class AIRequest(BaseModel):
     param1: str
     param2: str | None = None
 
-@app.get("/ai_service")
+@app.post("/ai_service")
 def ai_service(aiRequest: AIRequest):
     logger.debug("Processing AI service with params: " + aiRequest.param1 + ',' + aiRequest.param2)
 
@@ -213,15 +213,15 @@ def ai_service(aiRequest: AIRequest):
 
 ## Using ngrok as tunneling solution
 
-If you want to test how you can register your AI service on Nevermined App, you will need a way to make your service accesible outside your laptop, if you are running the service locally.
+If you want to test how you can register your AI service on Nevermined App, you will need a way to make your service accessible outside your laptop, if you are running the service locally.
 
-Of course the best solution here would be to deploy your service on a Cloud service like Aws, Gcloud, or on an on-premise infraestructure, etc. But to test it in a quick way you can use a tunneling tool. There are several free alternatives, but maybe the most popular is ngrok.
+Of course the best solution here would be to deploy your service on a Cloud service like AWS, GCloud, or on an on-premise infrastructure, etc. But to test it in a quick way you can use a tunneling tool. There are several free alternatives, but maybe the most popular is ngrok.
 
 ### Creating an account and generate Authtoken
 
 You can create a free account in [ngrok website](https://ngrok.com)
 
-Once you are register, you will see an option to create an Authtoken. You will need this token to run ngrok in your laptop.
+Once you are registered, you will see an option to create an Authtoken. You will need this token to run ngrok in your laptop.
 
 ### Install and configure 
 
@@ -235,7 +235,7 @@ ngrok config add-authtoken yourtokenhere
 
 ### Tunneling the AI service
 
-First you need to start the AI service with *unicorn* as we have already seen.
+First you need to start the AI service with *uvicorn* as we have already seen.
 
 Once the service is running, you just need to execute this command:
 
@@ -243,72 +243,72 @@ Once the service is running, you just need to execute this command:
 ngrok http 8000
 ```
 
-You will see ngrok has created a new url to forward the request to your localhost service:
+You will see ngrok has created a new URL to forward the request to your localhost service:
 
 ```bash
 Forwarding                    https://6557-213-94-33-247.ngrok-free.app -> http://localhost:8000 
 ```
 
-So now your AI services are accesible to anyone (as long as you keep your ngrok process running)
+So now your AI services are accessible to anyone (as long as you keep your ngrok process running)
 
 ```bash
-curl -H "Authorization: Bearer 1234" -X GET " https://6557-213-94-33-247.ngrok-free.app"
+curl -H "Authorization: Bearer 1234" -X GET "https://6557-213-94-33-247.ngrok-free.app"
 ```
 
-Take into account that any time you run ngrok to tunnel your local service, a new url wil be generated, so if you want to test your AI service with Nevermined App, remember to keep ngrok running until you finish all the testing.
+Take into account that any time you run ngrok to tunnel your local service, a new URL will be generated, so if you want to test your AI service with Nevermined App, remember to keep ngrok running until you finish all the testing.
 
 ## Registering your AI Service in Nevermined App
 
-So you have implemented some endpoints to access your AI service, you have protected them and this endpoints are available to anyone who want to use them.
+So you have implemented some endpoints to access your AI service, you have protected them and these endpoints are available to anyone who wants to use them.
 
-You can share your service with the Community in a safety way, and even monetize them, if you want, using a Nevermined Payment Plan.
+You can share your service with the Community in a safe way, and even monetize them, if you want, using a Nevermined Pricing Plan.
 
 In order to test and learn how you can use Nevermined App, we provide a testing environment where you can try the different features provided by Nevermined.
 
-You can access to this test version of Nevermined App [here](https://testing.nevermined.app/en)
+You can access this test version of Nevermined App [here](https://testing.nevermined.app/en)
 
 ### Before you register your Service
 
-We recommend you to take a look to the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
+We recommend you to take a look at the different [guides and tutorials we have about Nevermined App](https://docs.nevermined.app/docs/getting-started/)
 
-The next step is to create a brand new [Payment Plan](https://docs.nevermined.app/docs/builders/smart-subscriptions)
+The next step is to create a brand new [Pricing Plan](https://docs.nevermined.app/docs/builders/smart-subscriptions)
 
 You will register your AI Service associated with this Subscription you are about to create. The process to create a new Plan is pretty straightforward, but [here](https://docs.nevermined.app/docs/tutorials/builders/create-plan) you can find some help to guide you.
 
 ### Registering your AI Service
 
-So now that you have all set up and you have created a Payment Plan, you can create a Web Service Asset to register your AI Service in Nevermined App.
+So now that you have all set up and you have created a Pricing Plan, you can create a Web Service Agent to register your AI Service in Nevermined App.
 
 You can find a complete guide to register your service [here](https://docs.nevermined.app/docs/tutorials/builders/register-agent/)
 
 
- #### Defining Endpoints URLs
+#### Defining Endpoints URLs
 
- In the second step of the process you'll see you need to provide the endpoints URLs of your AI Service, and in case you have protected them with a Bearer Token, you need to facilitate it. 
+In the second step of the process you'll see you need to provide the endpoints URLs of your AI Service, and in case you have protected them with a Bearer Token, you need to facilitate it. 
 
- Instead of define the endpoints one by one manually, we can use the OpenAPI integration to do this automatically. 
+Instead of defining the endpoints one by one manually, we can use the OpenAPI integration to do this automatically. 
 
- If you remember, when we create an endpoint with FastAPI, it generates a docs page located in *https://your-ngrok-url-free.app/docs*
+If you remember, when we create an endpoint with FastAPI, it generates a docs page located at *https://your-ngrok-url-free.app/docs*
 
- This is not the url where are going to use. If you access to this docs page, you'll see a link named */openapi.json*. If you click there in your browser you will see a json object which describe your service in OpenAPI standard. You will use the url of the page that shows this json.
+This is not the URL we are going to use. If you access this docs page, you'll see a link named */openapi.json*. If you click there in your browser you will see a JSON object which describes your service in OpenAPI standard. You will use the URL of the page that shows this JSON.
 
- ![Service OpenAPI Docs](/images/tutorials/09_02_ServiceDocs.png)
+![Service OpenAPI Docs](/images/tutorials/09_02_ServiceDocs.png)
 
- ### Access to the details of the Service
+### Access to the details of the Service
 
- When the process is finished, you will be able to access the details of your new Service Asset (you can also access anytime using the "MyAssets" menu on the App).
- In the Service details you can access to the description of the endpoints.
+When the process is finished, you will be able to access the details of your new Service Agent (you can also access anytime using the "My Agents" menu on the App).
+In the Service details you can access the description of the endpoints.
 
 ![Service Endpoints](/images/tutorials/09_03_ServiceEndpoints.png)
 
 
- ### Consuming your AI Service
+### Consuming your AI Service
 
-Every user that have purchased your Plan will be able to use your AI Service through Nevermined. In this [guide](../integration/agent-integration) you can find how users can integrate your service.
+Every user that has purchased your Plan will be able to use your AI Service through Nevermined. In this [guide](../integration/agent-integration) you can find how users can integrate your service.
 
 #### Examples
 
-Use the service through Nevermined Proxy URL is pretty straighforward, you need to use the Proxy URL instead of the actual URL of your service, adding the specific endpoint you want to call and the parameters defined in that endpoint, and indicate and the Authorization Header with the JWT.
+Using the service through Nevermined Proxy URL is pretty straightforward, you need to use the Proxy URL instead of the actual URL of your service, adding the specific endpoint you want to call and the parameters defined in that endpoint, and indicate the Authorization Header with the JWT.
 
 For instance:
 

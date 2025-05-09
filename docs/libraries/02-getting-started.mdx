@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Getting Started
 
-## Select which library flavour to use
+## Select which library flavor to use
 
-Depending on where you want to integrate the library and the application you want to build, you can choose between the Python or Typescript library:
+Depending on your programming language and where you want to integrate the library, you can choose between the Python or TypeScript library:
 
-- **Python**: Github repository [nevermined-io/payments-py](https://github.com/nevermined-io/payments-py) and [PyPi package](https://pypi.org/project/payments-py/)
-- **Typescript**: Github repository [nevermined-io/payments](https://github.com/nevermined-io/payments) and [NPM package](https://www.npmjs.com/package/@nevermined-io/payments)
+- **Python**: GitHub repository [nevermined-io/payments-py](https://github.com/nevermined-io/payments-py) and [PyPi package](https://pypi.org/project/payments-py/)
+- **TypeScript**: GitHub repository [nevermined-io/payments](https://github.com/nevermined-io/payments) and [NPM package](https://www.npmjs.com/package/@nevermined-io/payments)
 
 :::info
 Both Payments libraries implementations are Open Source ([Apache v2](https://www.apache.org/licenses/LICENSE-2.0)).
@@ -21,7 +21,7 @@ Both Payments libraries implementations are Open Source ([Apache v2](https://www
 
 ## Requirements
 
-## Get a Nevermined API Key
+### Get a Nevermined API Key
 
 To use the Payments libraries you need to [create a Nevermined API Key](../tutorials/integration/nvm-api-keys). This key will allow you to interact with the Nevermined platform and create Payment Plans and Agents.
 
@@ -37,7 +37,7 @@ You need to keep your API Key secure and never share it with anyone.
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
@@ -57,8 +57,8 @@ You need to keep your API Key secure and never share it with anyone.
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'},
-    {label: 'Typescript (Browser)', value: 'browser'}
+    {label: 'TypeScript', value: 'typescript'},
+    {label: 'TypeScript (Browser)', value: 'browser'}
   ]}>
   <TabItem value="python">
   ```python
@@ -75,7 +75,7 @@ You need to keep your API Key secure and never share it with anyone.
   // https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys  
   const nvmApiKey = 'eyJhbGciOiJFUzI1NksifQ.ey .....'
 
-  // If you want to connect to production use 'arbitrum' as environment
+  # If you want to connect to production use 'arbitrum' as environment
   const payments = Payments.getInstance({
     nvmApiKey,
     environment: 'testing', // 'local' | 'staging' | 'testing' | 'arbitrum' | 'peaq' | 'custom'

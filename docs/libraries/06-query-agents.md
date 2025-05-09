@@ -6,17 +6,17 @@ description: How Subscribers can query AI Agents?
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# How Subscribers can query AI Agents?
+# How Can Subscribers Query AI Agents?
 
-Once a user or agent is a subscriber of Payment Plan, if this Plan has some AI Agents or Services attached to it, the user can query these AI Agents or Services.
+Once a user or agent is a subscriber of a Payment Plan, if this Plan has some AI Agents or Services attached to it, the user can query these AI Agents or Services.
 
-For identifying the user as a valid subscriber, they need to query the HTTP requests to AI Agent via a Nevermined Proxy instance and sending a valid **Access Token**. This is sent using the standard **HTTP Authorization header**.
+For identifying the user as a valid subscriber, they need to send HTTP requests to the AI Agent via a Nevermined Proxy instance and include a valid **Access Token**. This is sent using the standard **HTTP Authorization header**.
 
 :::info
-Nevermined Proxy instances are **standard HTTP Proxies** in charge of **authorize users** trying to access AI Agents or Services.
+Nevermined Proxy instances are **standard HTTP Proxies** in charge of **authorizing users** trying to access AI Agents or Services.
 :::
 
-Once a user is a subscriber sending a request is quite simple. 
+Once a user is a subscriber, sending a request is quite simple.
 
 ## Get the AI Agent or Service Access Token
 
@@ -24,47 +24,43 @@ Once a user is a subscriber sending a request is quite simple.
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
   access_config = payments.get_service_token(agent_DID)
   # OUTPUT: accessConfig:
   # {
-  #  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
-  #  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  #   "accessToken": "eJyNj0sKgDAURP9lJQ ....",
+  #   "neverminedProxyUri": "https://proxy.testing.nevermined.app"
   # }    
   ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
-
   const subscriberQueryOpts = await payments.query.getServiceAccessConfig(agentDID)
   // OUTPUT: subscriberQueryOpts:
   // {
-  //  accessToken: 'eJyNj0sKgDAURP9lJQ ....',
-  //  neverminedProxyUri: 'https://proxy.testing.nevermined.app'
+  //   accessToken: 'eJyNj0sKgDAURP9lJQ ....',
+  //   neverminedProxyUri: 'https://proxy.testing.nevermined.app'
   // }  
-  
   ```  
-  
   </TabItem>  
 </Tabs>
 
 
 ## Sending a task to the AI Agent or Service
 
-Nevermined recommends to use the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) but doesn't enforce it. 
+Nevermined recommends using the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) but doesn't enforce it. 
 
 :::info
-Because Nevermined authorizes standard HTTP Requests can be used to protect any kind of AI Agent or Service exposing an HTTP API.
+Because Nevermined authorizes standard HTTP requests, they can be used to protect any kind of AI Agent or Service exposing an HTTP API.
 :::
 
 ```bash
 export AGENT_ACCESS_TOKEN="eJyNj0sKgDAURP9lJQ..."
 
 curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $AGENT_ACCESS_TOKEN" -d "{'query': 'hey there'}" https://proxy.testing.nevermined.app/ask
-
 ```
 
 ## Sending tasks and receiving results from agents implementing the Nevermined Query Protocol
@@ -72,9 +68,7 @@ curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $
 The [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) standardizes the interface of AI Agents and Services. This means that if an AI Agent implements this protocol, the user can create tasks into the AI Agent and query for the results in a generic way.
 
 :::note
-
 If the AI Agent doesn't implement the Query Protocol, the user can still send tasks to the AI Agent using the standard HTTP requests described in the above section.
-
 :::
 
 ### Sending a task to the AI Agent implementing the Nevermined Query Protocol
@@ -85,21 +79,20 @@ You can see here some code examples about how to send a task to an AI Agent impl
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
   # Here we are configuring the Task we are sending to the Agent. Please check the Query Protocol documentation for more information.
   # https://docs.nevermined.io/docs/protocol/query-protocol#tasks-attributes
   ai_task = {
-    query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
-    name: "transcribe",
-    "additional_params": [],
-    "artifacts": []
+    "input_query": "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
+    "name": "transcribe",
+    "input_additional": {},
+    "input_artifacts": []
   }
 
-  task = payments.ai_protocol.create_task(agentDID, ai_task)
-  
+  task = payments.query.create_task(agentDID, ai_task)
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -107,113 +100,138 @@ You can see here some code examples about how to send a task to an AI Agent impl
   // Here we are configuring the Task we are sending to the Agent. Please check the Query Protocol documentation for more information.
   // https://docs.nevermined.io/docs/protocol/query-protocol#tasks-attributes
   const aiTask = {
-    query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
+    input_query: "https://www.youtube.com/watch?v=0tZFQs7qBfQ",
     name: "transcribe",
-    "additional_params": [],
-    "artifacts": []
+    input_additional: {},
+    input_artifacts: []
   }
 
-  // the subscriberQueryOpts comes from the previous step the previous step
+  // the subscriberQueryOpts comes from the previous step
   const taskResult = await payments.query.createTask(agentDID, aiTask, subscriberQueryOpts)
   // OUTPUT: taskResult:
   // {
-  //  status: 201,
-  //  data: { task_id: 'task-1234' }
+  //   success: true,
+  //   data: { task: { task_id: 'task-1234', ...}, steps: { step_id: 'step-12312', ...} }
   // }  
-  
   ```  
-  
   </TabItem>  
 </Tabs>
 
 
 ## Getting the results of the execution of a task via Query Protocol
 
-Once the remote task is executed, the user can query the results of the task using the Query Protocol.
+After the remote task is executed, the user can query the results of the task using the Query Protocol.
 
 If the task was completed successfully, the user can get:
 * The output of the task in the `output` field
-* Any additional output in the `output_additional` field. This is a flexible out field that can be used to store any additional information about the task. **Optional**
+* Any additional output in the `output_additional` field. This is a flexible output field that can be used to store any additional information about the task. **Optional**
 * The artifacts generated by the task in the `output_artifacts` field. **Optional**
 * The cost of the task (in Nevermined Credits) in the `cost` field
 
-Here some sample code: 
+Here is some sample code: 
 
 <Tabs
   defaultValue="python"
   values={[
     {label: 'Python', value: 'python'},
-    {label: 'Typescript', value: 'typescript'}
+    {label: 'TypeScript', value: 'typescript'}
   ]}>
   <TabItem value="python">
   ```python
-  
-  payments.ai_protocol.get_task_with_steps(did=agent.did, task_id=task.json()["task"]["task_id"]).json()
+  payments.query.get_task_with_steps(did=agent.did, task_id=task_id)
 
-  # OUTPUT:
-  # {'task': {'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
-  # 'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
-  # 'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
-  # 'task_status': 'Completed',
-  # 'name': 'sample_task',
-  # 'input_params': '{}',
-  # 'input_artifacts': '{}',
-  # 'output': 'result of the task',
-  # 'output_additional': '{}',
-  # 'output_artifacts': '{}',
-  # 'cost': 5,
-  # 'createdAt': '2025-02-12T09:30:46.453Z',
-  # 'updatedAt': '2025-02-12T09:30:47.283Z',
-  # 'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
-  # 'input_query': 'Give me something'},
-  
+  # OUTPUT: FullTaskDto
+  # {
+  #   'task': {
+  #     'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+  #     'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
+  #     'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
+  #     'task_status': 'Completed',
+  #     'name': 'sample_task',
+  #     'input_additional': {},
+  #     'input_artifacts': [],
+  #     'output': 'success',
+  #     'output_additional': {},
+  #     'output_artifacts': [],
+  #     'cost': 0,
+  #     'createdAt': '2025-02-12T09:30:46.453Z',
+  #     'updatedAt': '2025-02-12T09:30:47.283Z',
+  #     'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
+  #     'input_query': 'Give me something'
+  #   },
+  #   'steps': [{
+  #     'step_id': 'step-8b980101-2f9b-4764-b1f2-eeaeb0122cb3',
+  #     'step_status': 'Completed',
+  #     'retries': 0,
+  #     'is_waiting': False,
+  #     'is_last': True,
+  #     'order': 1,
+  #     'input_query': 'Give me something',
+  #     'input_artifacts': [],
+  #     'input_additional': {},
+  #     'output': 'success',
+  #     'output_additional': {},
+  #     'output_artifacts': [],
+  #     'cost': 0,
+  #     'createdAt': '2025-02-12T09:30:46.539Z',
+  #     'updatedAt': '2025-02-12T09:30:47.204Z',
+  #     'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+  #     'name': 'init',
+  #     'predecessor': ''
+  #   }],
+  #   'logs': []
+  # }
   ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
-  
   const result = await payments.query.getTaskWithSteps(
     agentDID,
     taskResult.data.task_id,
     subscriberQueryOpts
   )
   /**
-  {'task': {'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
-  'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
-  'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
-  'task_status': 'Completed',
-  'name': 'sample_task',
-  'input_params': '{}',
-  'input_artifacts': '{}',
-  'output': 'success',
-  'output_additional': '{}',
-  'output_artifacts': '{}',
-  'cost': 0,
-  'createdAt': '2025-02-12T09:30:46.453Z',
-  'updatedAt': '2025-02-12T09:30:47.283Z',
-  'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
-  'input_query': 'Give me something'},
- 'steps': [{'step_id': 'step-8b980101-2f9b-4764-b1f2-eeaeb0122cb3',
-   'step_status': 'Completed',
-   'retries': 0,
-   'is_waiting': False,
-   'is_last': True,
-   'order': 1,
-   'input_query': 'Give me something',
-   'input_artifacts': '{}',
-   'input_params': '{}',
-   'output': 'success',
-   'output_additional': '{}',
-   'output_artifacts': '{}',
-   'cost': 0,
-   'createdAt': '2025-02-12T09:30:46.539Z',
-   'updatedAt': '2025-02-12T09:30:47.204Z',
-   'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
-   'name': 'init',
-   'predecessor': ''}],
-    'logs': []}
-  */
+   * {
+   *   'task': {
+   *     'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+   *     'did': 'did:nv:5392e8cdc5addec2b7384072fda166d42a5d4ab96ae6d311f516b6b324f24cec',
+   *     'user': '0x1B06CFB22F0832fb92554152dbb5F9c9756e937d',
+   *     'task_status': 'Completed',
+   *     'name': 'sample_task',
+   *     'input_additional': {},
+   *     'input_artifacts': [],
+   *     'output': 'success',
+   *     'output_additional': {},
+   *     'output_artifacts': [],
+   *     'cost': 0,
+   *     'createdAt': '2025-02-12T09:30:46.453Z',
+   *     'updatedAt': '2025-02-12T09:30:47.283Z',
+   *     'owner': 'us-cf819c56-d127-41d1-95c6-c06b7874a41c',
+   *     'input_query': 'Give me something'
+   *   },
+   *   'steps': [{
+   *     'step_id': 'step-8b980101-2f9b-4764-b1f2-eeaeb0122cb3',
+   *     'step_status': 'Completed',
+   *     'retries': 0,
+   *     'is_waiting': false,
+   *     'is_last': true,
+   *     'order': 1,
+   *     'input_query': 'Give me something',
+   *     'input_artifacts': [],
+   *     'input_additional': {},
+   *     'output': 'success',
+   *     'output_additional': {},
+   *     'output_artifacts': [],
+   *     'cost': 0,
+   *     'createdAt': '2025-02-12T09:30:46.539Z',
+   *     'updatedAt': '2025-02-12T09:30:47.204Z',
+   *     'task_id': 'task-11e25f9f-65d4-4186-b181-c7db1cb93d14',
+   *     'name': 'init',
+   *     'predecessor': ''
+   *   }],
+   *   'logs': []
+   * }
+   */
   ```  
-  
   </TabItem>  
 </Tabs>
