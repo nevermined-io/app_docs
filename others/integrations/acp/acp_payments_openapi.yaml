@@ -1,0 +1,400 @@
+openapi: 3.1.0
+info:
+  title: Payments module for ACP
+  description: |-
+    This API to be delivered in conjuection to ACP creates a payments module that allows agents to charge for their services. This module needs to support the payments for human-to-agent and agent-to-agent interactions. 
+    The core functionalities included in this API are:
+    - Agent monetization: AI Builders should have the flexibility to define the price & the conditions to access their APIs. Subscribers (human or other agents) should be able to pay for the access to the agent APIs.
+    - Access control: Access to Agent APIs can be restricted, so only subscribers with a valid subscription can access to the Agent API.
+    - Accounting & Metering: The usage of the agents can be tracked, and that information can be used as part of the access control mechanism. For example you pay $10 to make 100 requests to the agent API.
+
+    Some useful links:
+    - [ACP Documentation](https://agentcommunicationprotocol.dev/)
+    - [Documentation of Nevermined Payments Protocol](https://docs.nevermined.app/)
+  termsOfService: https://swagger.io/terms/
+  contact:
+    email: aitor@nevermined.io
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Nevermined
+  url: https://docs.nevermined.app/
+tags:
+  - name: payments
+    description: Enabling AI Agent payments
+
+paths:
+  /agents/{name}/payment:
+    get:
+      tags:
+        - payments
+      summary: Get the payment options offered by an agent.
+      description:
+        Returns the payment information of the agent by ID (agent name). An AI Agent can offer
+        different payment options configured as payment plans. This endpoint returns all the options
+        available so subscribers (humans or other agents) can decide what is the most convenient
+        method to purchase the plan and subscribe. Users subscribing to a payment plan can access
+        the agents associated with it. This function is designed to be integrated into user
+        interfaces or by other AI Agents, who can parse this information to order the plan required
+        to access an agent. Returns the payment information. The response will include information
+        about all the plans associated with the agent.
+      operationId: getAgentPaymentInformation
+      parameters:
+        - name: name
+          in: path
+          description: Unique identifier of the agent
+          required: true
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentPayments'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AgentPayments'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Agent not found
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /plans/{plan_id}:
+    post:
+      tags:
+        - payments
+      summary: Orders a payment plan required to access an AI Agent.
+      description:
+        When a plan is purchased by a user, all the agents associated with the plan can be queried
+        by the user with that subscription. Returns the status of the purchase order.
+      operationId: orderPlan
+      parameters:
+        - name: plan_id
+          in: path
+          description: Unique identifier of the payment plan
+          required: true
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      security:
+        - api_key: []
+  /plans/{plan_id}/{user_id}:
+    get:
+      tags:
+        - payments
+      summary: Get the balance information of a user for a specific plan.
+      description:
+        Returns the balance information for a user identified by "user_id" for a plan identified by
+        "plan_id". Typically, a user needs to "order" a plan to get some balance. The balance
+        represents the number of "credits" that user owns.
+      operationId: getUserPlanBalance
+      parameters:
+        - name: plan_id
+          in: path
+          description: Unique identifier of the payment plan
+          required: true
+          schema:
+            type: string
+            format: string
+        - name: user_id
+          in: path
+          description: Unique identifier of the user
+          required: true
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanBalance'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PlanBalance'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Plan not found
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - api_key: []
+  /plans/{plan_id}/redeem:
+    put:
+      tags:
+        - payments
+      summary:
+        Method used to redeem credits. This typically happens when an agent is queried by a user.
+      description:
+        When a subscriber (owning a specific plan) calls an agent, depending on the usage, some
+        credits can be redeemed. This method allows redeeming these credits and updating the balance
+        of credits for the user for a specific plan.
+      operationId: redeemPlanCredits
+      parameters:
+        - name: plan_id
+          in: path
+          description: Unique identifier of the payment plan
+          required: true
+          schema:
+            type: string
+            format: string
+      requestBody:
+        required: true
+        description: The object describing the redemption action
+        $ref: '#/components/requestBodies/RedeemCredits'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanBalance'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PlanBalance'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Plan not found
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - api_key: []
+components:
+  schemas:
+    PlanBalance:
+      required:
+        - plan_id
+        - user_id
+        - balance
+        - is_subscriber
+      properties:
+        plan_id:
+          type: string
+          description: Unique identifier of the payment plan
+          example: '012345678'
+        user_id:
+          type: string
+          description: Unique identifier of the user
+          examples: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+        is_subscriber:
+          type: boolean
+          description: Indicates if the user is currently a subscriber of the plan
+        balance:
+          type: integer
+          format: int128
+          description: Number of credits owned by the user
+          example: 10
+    PlanPrice:
+      required:
+        - medium
+        - total_amount
+        - currency
+      properties:
+        type_currency:
+          type: string
+          description: Identifies what type of currency needs to be used for the payment
+          example: fiat
+          enum:
+            - fiat
+            - crypto
+        total_amount:
+          type: integer
+          description: The total amount that needs to be paid to purchase the plan
+          format: int128
+          example: 10
+        currency:
+          type: string
+          description: The currency that needs to be used for the payment
+          example: 'USD'
+        receivers:
+          type: array
+          description:
+            Given the "total_amount", describes how the payment will be distributed among different
+            receivers when the plan is purchased
+          items:
+            $ref: '#/components/schemas/PaymentReceiver'
+    Plan:
+      required:
+        - plan_id
+        - plan_type
+        - plan_name
+        - payment_provider
+        - price
+        - accounting
+      type: object
+      properties:
+        plan_id:
+          type: string
+          description: Unique identifier of the payment plan
+          example: '012345678'
+        limited_by:
+          type: string
+          description: Limits the usage of the plan to a certain time frame or number of "requests"
+          example: usage
+          enum:
+            - usage
+            - time
+            - no_limit
+        plan_name:
+          type: string
+          description: Name of the plan
+          example: 'Premium Plan'
+        payment_provider:
+          type: string
+          description:
+            Name of the payment provider to be used. This parameter is open and can be used to plug
+            in different payment implementations (Nevermined, Stripe, Apify, etc.)
+          example: 'Nevermined'
+        price:
+          $ref: '#/components/schemas/PlanPrice'
+        accounting:
+          $ref: '#/components/schemas/Accounting'
+    PaymentReceiver:
+      required:
+        - amount
+        - receiver
+      properties:
+        amount:
+          type: integer
+          description: Total amount to receive
+          format: int128
+          example: 10
+        receiver:
+          type: string
+          description: Unique identifier of the user receiving the payment
+          example: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+    Accounting:
+      required:
+        - expiration
+        - credits_granted
+        - min_credits_cost
+        - max_credits_cost
+      properties:
+        expiration:
+          type: integer
+          format: int128
+          description:
+            Duration (in seconds) of the plan (1 day, 3 months, 5 years, forever, etc.) when the
+            plan is limited by time
+          example: 86400
+        credits_granted:
+          type: integer
+          format: int128
+          description:
+            Number of credits given to the user when they purchase the plan (plan limited by usage)
+          example: 100
+        min_credits_cost:
+          type: integer
+          format: int128
+          description:
+            Minimum number of credits redeemed when the plan is used and is limited by usage
+          example: 1
+        max_credits_cost:
+          type: integer
+          format: int128
+          description:
+            Maximum number of credits that can be redeemed when the plan is used and is limited by
+            usage
+          example: 5
+    AgentPayments:
+      required:
+        - payment_required
+        - plans
+      properties:
+        payment_required:
+          type: boolean
+          description: Indicates if the AI Agent requires some kind of payment to be used
+          example: true
+        plans:
+          type: array
+          items:
+            $ref: '#/components/schemas/Plan'
+    RedeemCredits:
+      required:
+        - plan_id
+        - user_id
+        - amount
+      properties:
+        plan_id:
+          type: string
+          description: Unique identifier of the plan
+          example: '012345678'
+        user_id:
+          type: string
+          description: Unique identifier of the user
+          example: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+        amount:
+          type: integer
+          description: Amount of credits associated with the plan to redeem
+          format: int128
+          example: 10
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      xml:
+        name: '##default'
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+  requestBodies:
+    Plan:
+      description: Plan object
+    RedeemCredits:
+      description: Request data sent when it is necessary to redeem some credits related to a plan
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RedeemCredits'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/RedeemCredits'
+            type: string
+
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
