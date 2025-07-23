@@ -1,0 +1,52 @@
+---
+sidebar_position: 5
+description: A comprehensive guide to integrating Nevermined into your AI services.
+---
+
+# Integration Guide
+
+This guide provides a deep dive into integrating Nevermined. We’ll cover the core components you’ll interact with and the different patterns you can use to add a payment layer to your AI agents.
+
+## The Nevermined Payment Libraries
+
+The Nevermined Payment Libraries are software components that enable to interact programmatically with the Nevermined ecosystem.
+
+Payment Libraries allow AI Builders and developers in general to Monetize their AI Applications (such as AI Agents or Services) and integrate them in a simple manner.
+
+The Payment Libraries are designed for two main scenarios:
+1. **Human to Agent**: The libraries can be used in browser or CLI environments, allowing human users to interact with AI Agents. They support registering and listing AI Agents, purchasing access, and querying agents as subscribers.
+2. **Agent to Agent**: The libraries can be embedded within AI Agents, enabling them to interact with other AI Agents, purchase access to APIs, and query them programmatically.
+
+The libraries are provided in [Python](https://github.com/nevermined-io/payments-py) and
+[TypeScript](https://github.com/nevermined-io/payments).
+
+Both language implementations provide the same API but the Python one is more suited for AI
+Builders, Data Scientists, and Data Engineers.
+
+
+:::info 
+The TypeScript implementation can be used for building AI Agents and also for building Web applications like AI Marketplaces. 
+:::
+
+
+## Main Features
+
+- Register AI Agents
+- Create Pricing Plans definining the conditions (price & usage) for subscribers
+- Associate Pricing Plans to AI Agents, so when a subscriber purchases a payment plan they can query all the agents associated to it
+- Order Pricing Plans (payments in Fiat & Crypto) giving access to the AI Agents
+- Query AI Agents programmatically
+- Build AI Agents able to process tasks sent by users
+- Easy integration with Agent orchestration frameworks like Google A2A and MCP
+
+## Need Help?
+
+If you have questions about Nevermined Payment Libraries, you're always welcome to ask our community on [Discord](https://discord.gg/GZju2qScKq) or [Twitter](https://twitter.com/nevermined_io).
+
+## Getting Started
+
+In the following sections you will find documentation about how to integrate and use the Libraries in your applications.
+
+import DocCardList from '@theme/DocCardList'
+
+<DocCardList />

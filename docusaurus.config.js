@@ -90,8 +90,8 @@ const config = {
           },
           {
             position: 'left',
-            label: 'Libraries',
-            to: 'docs/libraries',
+            label: 'Integration',
+            to: 'docs/integration',
           },
           {
             position: 'left',
@@ -130,9 +130,9 @@ const config = {
                 to: '/docs/getting-started',
               },
               {
-                label: 'Libraries',
-                to: 'docs/libraries',
-              },              
+                label: 'Integration',
+                to: 'docs/integration',
+              },
               {
                 label: 'Tutorials',
                 to: 'docs/tutorials',

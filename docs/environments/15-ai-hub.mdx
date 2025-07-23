@@ -10,37 +10,47 @@ description: Nevermined AI Hub
 The Nevermined AI Hub (aka AI Hub or Hub) is a set of infrastructure and AI services provided by
 Nevermined to simplify the delivery of AI Agents and services for developers.
 
-## Benefits 
+## Benefits
 
 The AI Hub provides:
 
-* A backend API implementing the
-  [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol). This backend provides the REST API for querying any AI Agent, allowing AI Builders to focus on the AI implementation rather than API development.
-* Access control. Only subscribed users with valid Payment Plans can send Tasks to an Agent.
-* Dynamic cost calculation for user queries based on AI Task complexity. The AI Agent reports the cost in credits for individual Steps composing the task via the **cost** attribute. The total task cost cannot exceed the pre-defined maximum.
-* Automatic usage accounting. Subscribers sending Tasks to the Agent are charged credits for their Tasks. Access is restricted when available credits are depleted, requiring a top-up to continue using the Agent.
-* Task orchestration. The backend allows AI builders to define their workflow of Steps and receive them in the correct order. The backend marks Tasks as **Completed** when all Steps are successful, or **Failed** if any Step fails.
+- A backend API implementing the
+  [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol). This backend
+  provides the REST API for querying any AI Agent, allowing AI Builders to focus on the AI
+  implementation rather than API development.
+- Access control. Only subscribed users with valid Payment Plans can send Tasks to an Agent.
+- Dynamic cost calculation for user queries based on AI Task complexity. The AI Agent reports the
+  cost in credits for individual Steps composing the task via the **cost** attribute. The total task
+  cost cannot exceed the pre-defined maximum.
+- Automatic usage accounting. Subscribers sending Tasks to the Agent are charged credits for their
+  Tasks. Access is restricted when available credits are depleted, requiring a top-up to continue
+  using the Agent.
+- Task orchestration. The backend allows AI builders to define their workflow of Steps and receive
+  them in the correct order. The backend marks Tasks as **Completed** when all Steps are successful,
+  or **Failed** if any Step fails.
 
-:::tip
-The AI Hub is under active development, with new features coming soon.
-:::
+:::tip The AI Hub is under active development, with new features coming soon. :::
 
 ## How an AI Builder can use the AI Hub?
 
 Using the AI Hub is straightforward. An AI Builder needs to:
 
 1. Get their own [Nevermined API Key](../tutorials/integration/nvm-api-keys)
-2. Install the [Payments library](../libraries/) in their project
-3. Integrate with the AI Hub to start [processing AI Tasks](../libraries/process-tasks)
+2. Install the [Payments library](../integration/) in their project
+3. Integrate with the AI Hub to start [processing AI Tasks](../integration/process-tasks)
 4. [Register the new AI Agent](../tutorials/builders/register-agent) into a Nevermined deployment
 
-When using the AI Hub, builders can focus on their agents' AI logic and delegate API execution to Nevermined. 
-The AI agent is divided into 2 parts:
+When using the AI Hub, builders can focus on their agents' AI logic and delegate API execution to
+Nevermined. The AI agent is divided into 2 parts:
 
-1. The **AI Agent Processor**: The AI logic that processes user input prompts using one or several LLM models or services to generate output.
-2. The **AI HTTP API**: The component that handles input prompts, authenticates users, validates subscriptions, and manages communication between users and the AI Agent Processor.
+1. The **AI Agent Processor**: The AI logic that processes user input prompts using one or several
+   LLM models or services to generate output.
+2. The **AI HTTP API**: The component that handles input prompts, authenticates users, validates
+   subscriptions, and manages communication between users and the AI Agent Processor.
 
-<p align="center"><img src="/images/architecture/ai_hub_integration.png" width="400"/></p>
+<p align="center">
+  <img src="/images/architecture/ai_hub_integration.png" width="400" />
+</p>
 
-Using the **Nevermined AI Hub**, builders can focus on the AI Agent Processor while delegating API execution to Nevermined, resulting in simplified agent architecture.
-
+Using the **Nevermined AI Hub**, builders can focus on the AI Agent Processor while delegating API
+execution to Nevermined, resulting in simplified agent architecture.

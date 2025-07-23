@@ -1,0 +1,102 @@
+---
+sidebar_position: 2
+description: Getting Started and Requirements
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Getting Started
+
+## Select which library flavor to use
+
+Depending on your programming language and where you want to integrate the library, you can choose
+between the Python or TypeScript library:
+
+- **Python**: GitHub repository
+  [nevermined-io/payments-py](https://github.com/nevermined-io/payments-py) and
+  [PyPi package](https://pypi.org/project/payments-py/)
+- **TypeScript**: GitHub repository
+  [nevermined-io/payments](https://github.com/nevermined-io/payments) and
+  [NPM package](https://www.npmjs.com/package/@nevermined-io/payments)
+
+:::info 
+Both Payments libraries implementations are Open Source
+([Apache v2](https://www.apache.org/licenses/LICENSE-2.0)). 
+:::
+
+## Requirements
+
+### Get a Nevermined API Key
+
+To use the Payments libraries you need to
+[create a Nevermined API Key](../tutorials/integration/nvm-api-keys). This key will allow you to
+interact with the Nevermined platform and create Payment Plans and Agents.
+
+The Nevermined API Key must be created in the environment where you will run your application. For
+example, if you are running a Python application connected to the **"testing"**, you need to create
+the API Key in the [Nevermined Testing App](https://testing.nevermined.app/) but if you want to use
+the Live environment you must use the [Nevermined App](https://nevermined.app/).
+
+:::warning 
+You need to keep your API Key secure and never share it with anyone. 
+:::
+
+## Install the library
+
+<Tabs
+  defaultValue="python"
+  values={[
+    { label: 'Python', value: 'python' },
+    { label: 'TypeScript', value: 'typescript' },
+  ]}
+>
+  <TabItem value="python">```python pip install payments-py ```</TabItem>
+  <TabItem value="typescript">```typescript npm install @nevermined-io/payments ```</TabItem>
+</Tabs>
+
+## Initialize the Payments instance
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'TypeScript', value: 'typescript'},
+    {label: 'TypeScript (Browser)', value: 'browser'}
+  ]}>
+  <TabItem value="python">
+  ```python
+  # @see https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys
+  nvm_api_key = 'eyJhbGciOiJFUzI1NksifQ.ey .....'
+
+# If you want to connect to production use 'live' as environment
+
+payments = Payments(nvm_api_key, environment=Environment.get_environment('sandbox'))
+
+````
+</TabItem>
+<TabItem value="typescript">
+```typescript
+// To get your own Nevermined API Key, follow the instructions here:
+// https://docs.nevermined.app/docs/tutorials/integration/nvm-api-keys
+const nvmApiKey = 'eyJhbGciOiJFUzI1NksifQ.ey .....'
+
+# If you want to connect to production use 'live' as environment
+const payments = Payments.getInstance({
+  nvmApiKey,
+  environment: 'sandbox',
+})
+````
+
+  </TabItem>
+  <TabItem value="browser">
+  ```typescript
+  // If you want to connect to production use 'live' as environment
+  const payments = Payments.getBrowserInstance({
+    returnUrl: 'https://mysite.example.com',
+    environment: 'sandbox'
+  })
+  payments.connect()
+  ```
+  </TabItem>
+</Tabs>

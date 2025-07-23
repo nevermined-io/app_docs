@@ -126,7 +126,7 @@ curl -k -X POST -H "Content-Type: application/json"  -H "Authorization: Bearer $
 
 #### 4.b Using the Nevermined Payment Libraries to integrate the Agent
 
-Nevermined provides the [Payments Libraries](../../libraries/) which allow you to integrate the
+Nevermined provides the [Payments Libraries](../../integration/) which allow you to integrate the
 Agent in your application. The libraries are available in different languages and provide a simple
 way to interact with the Nevermined ecosystem and other Agents.
 
@@ -134,7 +134,7 @@ Here we assume you already ordered a plan. We are going to generate the JWT acce
 the request to the Agent through the Proxy.
 
 :::info If you want to learn more about how to order Pricing Plans, please check the
-[How Subscribers can order Plans?](../../libraries/order-plans) section of the documentation. :::
+[How Subscribers can order Plans?](../../integration/order-plans) section of the documentation. :::
 
 <Tabs
   defaultValue="python"
@@ -153,10 +153,8 @@ the request to the Agent through the Proxy.
   
   proxy_endpoint = f"{subscriberQueryOpts.neverminedProxyUri}/ask"
 
-headers = { # The proxy expects the `HTTP Authorization` header with the JWT 
-"authorization": f"Bearer {subscriberQueryOpts.accessToken}", 
-"content-type": "application/json" 
-}
+headers = { # The proxy expects the `HTTP Authorization` header with the JWT "authorization":
+f"Bearer {subscriberQueryOpts.accessToken}", "content-type": "application/json" }
 
 data = '{"queries": [{"query": "Adam And Evil", "filter": {}, "top_k": 1 }]}'
 
