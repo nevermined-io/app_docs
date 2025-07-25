@@ -28,12 +28,13 @@ Once a user is a subscriber, sending a request is quite simple.
   ]}>
   <TabItem value="python">
   ```python
-  access_config = payments.get_service_token(agent_DID)
-  # OUTPUT: accessConfig:
+  # Get agent access token for the given plan and agent
+  credentials = payments.agents.get_agent_access_token(plan_id, agent_id)
+  # OUTPUT: credentials:
   # {
   #   "accessToken": "eJyNj0sKgDAURP9lJQ ....",
-  #   "neverminedProxyUri": "https://proxy.testing.nevermined.app"
-  # }    
+  #   "proxies": [ "https://proxy.nevermined.app" ]
+  # }
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -75,7 +76,16 @@ Of course you can use all this information to send a request to the agent in Pyt
   ]}>
   <TabItem value="python">
   ```python
-  # Add code here
+  import requests
+
+  # HTTP options for the agent request
+  headers = {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "Authorization": f"Bearer {credentials['accessToken']}",
+  }
+
+  response = requests.post("https://my.agent.io/prompt", headers=headers)
   ```
   </TabItem>
   <TabItem value="typescript">

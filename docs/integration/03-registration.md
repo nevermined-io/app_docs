@@ -30,15 +30,27 @@ Nevermined Payment Plans enable the setup of time-based or request-based gating 
   ]}>
   <TabItem value="python">
   ```python
-  USDC_ERC20_TESTING = '0x036CbD53842c5426634e7929541eC2318f3dCF7e' # This is the USDC ERC20 address in the test network (sandbox)
+  # This is the USDC ERC20 address in the test network (sandbox)
+  USDC_ERC20_TESTING = "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
 
-  plan_DID = payments_builder.create_credits_plan(CreateCreditsPlanDto(
-      name='E2E Payments Plan', 
-      description='description', 
-      price=15000000, # 15 USDC
-      token_address=USDC_ERC20_TESTING,
-      amount_of_credits=100 # It means when someone purchase this plan, they will get 100 credits
-  ))
+  # Plan metadata
+  plan_metadata = PlanMetadata(
+      name="My Credits Plan",
+      tags=["test"]
+  )
+
+  # The price is 20 USDC (20_000_000) in the sandbox network
+  price_config = get_erc20_price_config(20_000_000, USDC_ERC20_TESTING, builder_address)
+  # The subscriber receives 100 credits upon purchasing the plan
+  credits_config = get_fixed_credits_config(100)
+
+  # Register the plan
+  response = payments_builder.plans.register_credits_plan(
+      plan_metadata,
+      price_config,
+      credits_config
+  )
+  plan_id = response.get("planId")
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -75,16 +87,17 @@ Nevermined Payment Plans enable the setup of time-based or request-based gating 
   ]}>
   <TabItem value="python">
   ```python
-  USDC_ERC20_TESTING = '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d' # This is the USDC ERC20 address in the testing network
-
-  plan_DID = payments.create_time_plan(CreateTimePlanDto(
-      name="My 1 Month Plan",
-      description="test",
-      price=15000000, # 15 USDC
-      token_address=USDC_ERC20_TESTING,
-      duration=30, # 30 days
-      tags=["test"]
-  ))  
+  # The price is 5 USDC (5_000_000) in the sandbox network
+  price_config = get_erc20_price_config(5_000_000, ERC20_ADDRESS, builder_address)
+  # The plan is valid for 1 day
+  one_day_plan_config = get_expirable_duration_config(ONE_DAY_DURATION)
+  # Register the plan
+  response = payments_builder.plans.register_time_plan(
+      plan_metadata,
+      price_config,
+      one_day_plan_config
+  )
+  plan_id = response.get("planId")
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -116,7 +129,22 @@ A Trial Plan is a special type of Payment Plan that allows users to try out an A
   ]}>
   <TabItem value="python">
   ```python
-  # Add the Trial Plan code registration here
+  # Plan metadata for the trial plan
+  trial_plan_metadata = PlanMetadata(
+      name="Try it for one day before you buy it"
+  )
+
+  # The price is free
+  free_config = get_free_price_config()
+  # The plan is valid for 1 day
+  one_day_plan_config = get_expirable_duration_config(ONE_DAY_DURATION)
+  # Register the trial plan
+  response = payments_builder.plans.register_time_trial_plan(
+      trial_plan_metadata,
+      free_config,
+      one_day_plan_config
+  )
+  plan_id = response.get("planId")
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -153,16 +181,34 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   ]}>
   <TabItem value="python">
   ```python
-  agent_DID = payments_builder.create_agent(CreateAgentDto(
-      plan_DID, # The DID of the Payment Plan we created before
-      name='My AI Assistant',
-      description='description of the assistant',
-      service_charge_type='fixed',
-      auth_type='bearer',
-      token='changeme',
-      amount_of_credits=1,
-      use_ai_hub=True,
-  ))  
+  # When you create an agent, you need to provide the endpoints that the agent exposes and are protected by the Payment Plan
+  # You must specify the HTTP method and the URL pattern that the agent exposes
+  # You can use wildcards (like :agentId in the example) to match any string
+  # See more information about the wildcards supported here: https://github.com/pillarjs/path-to-regexp
+
+  from datetime import datetime
+
+  agent_metadata = {
+      "name": "E2E Payments Agent",
+      "tags": ["test"],
+      "dateCreated": datetime.now().isoformat(),
+      "description": "Description for the E2E Payments Agent"
+  }
+  agent_api = {
+      "endpoints": [
+          {"POST": "https://example.com/api/v1/agents/:agentId/tasks"},
+          {"GET": "https://example.com/api/v1/agents/:agentId/tasks/invoke"}
+      ],
+      "openEndpoints": ["https://example.com/api/v1/rest/docs-json"]
+  }
+  payment_plans = [credits_plan_id, expirable_plan_id]
+
+  response = payments_builder.agents.register_agent(
+      agent_metadata,
+      agent_api,
+      payment_plans
+  )
+  agent_id = response.get("agentId")
   ```
   </TabItem>
   <TabItem value="typescript">
@@ -175,7 +221,8 @@ Before registering an AI Agent, you need to have a Payment Plan created.
   const agentMetadata: AgentMetadata = {
     name: 'E2E Payments Agent',
     tags: ['test'],
-    dateCreated: new Date()
+    dateCreated: new Date(),
+    description: 'Description for the E2E Payments Agent'
   }
   const agentApi = {
     endpoints: [
@@ -210,31 +257,43 @@ This method allows you to create the plan and attach the agent to it in one step
   ]}>
   <TabItem value="python">
   ```python 
-  response = payments_builder.create_agent_and_plan(
-      createCreditsPlanDto=CreateCreditsPlanDto(
-          name="test-py",
-          description="test",
-          price=1000000,
-          token_address="0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d",
-          amount_of_credits=100,
-          tags=["test"]
-      ),
-      createAgentDto=CreateAgentDto(
-          name="agent-py",
-          description="test",
-          amount_of_credits=1,
-          service_charge_type="fixed",
-          auth_type="none",
-          use_ai_hub=True
-      )
+  # Agent metadata and API definition
+  agent_metadata = {
+      "name": "My AI Payments Agent",
+      "tags": ["test2"],
+      "description": "Description for my AI Payments Agent"
+  }
+  agent_api = {
+      "endpoints": [
+          {"POST": "http://example.com/test/:agentId/tasks"}
+      ]
+  }
+
+  # The price is 500 native tokens
+  crypto_price_config = get_native_token_price_config(500, builder_address)
+  # Non expirable payment plan
+  non_expirable_config = get_non_expirable_duration_config()
+
+  response = payments_builder.agents.register_agent_and_plan(
+      agent_metadata,
+      agent_api,
+      plan_metadata,
+      crypto_price_config,
+      non_expirable_config
   )
+  agent_id = response.get("agentId")
+  plan_id = response.get("planId")
   print('Plan created', response.planDID)
   print('Agent attached', response.agentDID)
   ```
   </TabItem>
   <TabItem value="typescript">
   ```typescript
-  const agentMetadata = { name: 'My AI Payments Agent', tags: ['test2'] }
+  const agentMetadata = { 
+    name: 'My AI Payments Agent', 
+    tags: ['test2'], 
+    description: 'Description for my AI Payments Agent' 
+  }
   const agentApi = { endpoints: [{ 'POST': 'http://example.com/test/:agentId/tasks' }] }
 
   const cryptoPriceConfig = getNativeTokenPriceConfig(500n, builderAddress)

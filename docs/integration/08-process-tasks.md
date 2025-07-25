@@ -30,7 +30,51 @@ In the example below we are gonna start a simple HTTP server that first thing is
   ]}>
   <TabItem value="python">
   ```python
-  # Add example here
+  from http.server import HTTPServer, BaseHTTPRequestHandler
+  import json
+
+  agent_host = "https://example.com"  # The AI Agent is running in this host
+
+  class AgentRequestHandler(BaseHTTPRequestHandler):
+      def do_POST(self):
+          self._handle_request()
+
+      def do_GET(self):
+          self._handle_request()
+
+      def _handle_request(self):
+          auth_header = self.headers.get("Authorization")
+          requested_url = f"{agent_host}{self.path}"
+          http_verb = self.command
+          print("Received request:", {"endpoint": requested_url, "httpVerb": http_verb, "authHeader": auth_header})
+
+          try:
+              is_valid_req = payments.requests.start_processing_request(
+                  agent_id,
+                  auth_header,
+                  requested_url,
+                  http_verb
+              )
+              print("isValidReq", is_valid_req)
+              if is_valid_req["balance"]["isSubscriber"]:
+                  self.send_response(200)
+                  self.send_header("Content-Type", "application/json")
+                  self.end_headers()
+                  self.wfile.write(json.dumps({"message": "Hello from the Agent!"}).encode())
+                  return
+          except Exception as error:
+              print("Unauthorized access attempt:", auth_header)
+              print("Error details:", error)
+
+          self.send_response(402)
+          self.send_header("Content-Type", "application/json")
+          self.end_headers()
+          self.wfile.write(json.dumps({"error": "Payment Required"}).encode())
+          return
+
+  # To start the server:
+  # server = HTTPServer(("localhost", 8889), AgentRequestHandler)
+  # server.serve_forever()
   ```
   </TabItem>
   <TabItem value="typescript">
