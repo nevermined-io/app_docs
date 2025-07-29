@@ -15,19 +15,18 @@ The Nevermined Payment Libraries allow interaction with the
 | **Monetization of AI Agents or Services**                   | Allow AI Builders to monetize their existing AI Agents without any complex modification.                                                                                                                                  |
 | **Creation of Payment Plans**                               | Payment Plans allow builders to monetize groups of AI applications and file assets in credits or time restricted plans.                                                                                                   |
 | **Registration of Agents**                                  | Register AI Agents and allow Payment Plans subscribers to access them.                                                                                                                                                    |
-| **Registration of file assets**                             | Register assets with files associated (Models, Datasets, etc) and allow Payment Plan subscribers to download these files.                                                                                                 |
 | **Purchase of Payment Plans**                               | Allows users to purchase any Payment Plan existing on Nevermined using crypto payments.                                                                                                                                   |
 | **Protect/restrict the access to your Agents**              | Nevermined protects the access to your agents only giving access to Payment Plan subscribers.                                                                                                                             |
-| **Account for the usage of your agents and file downloads** | Nevermined controls and accounts for access to your resources.                                                                                                                                                            |
+| **Account for the usage of your agents** | Nevermined controls and accounts for all the usage of your agents.                                                                                                                                                            |
 | **Throttle the access to your agents**                      | For AI Agents using a Payment Plan based on credits, Nevermined can restrict the number of requests processed by the agents automatically.                                                                                |
-| **Charge AI Tasks depending on the complexity**             | For AI Agents using a Payment Plan based on credits, Nevermined can charge the usage of the agents based on the complexity of the queries.                                                                                |
-| **Query AI Agents in a generic way**                        | Agents implementing the [Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol) can be queried in a generic way, allowing you to build faster integrations with your agents or other agents. |
+| **Charge AI requests depending on the complexity**             | For AI Agents using a Payment Plan based on credits, Nevermined can charge the usage of the agents based on the complexity of the queries.                                                                                |
+| **Query AI Agents in a generic way**                        | All the payment, access control and accounting can be integrated in such a way that doesn't interfere with your API and the experience from the user side. |
 
 ## Who can use the libraries?
 
 The main objective of the Payment Libraries is to allow AI Builders to monetize their AI
 Applications (like AI Agents or Services), integrate other AI applications, and query them in a
-generic way. Because of that, the main users of the libraries are:
+simple way. Because of that, the main users of the libraries are:
 
 ### AI Builders
 
@@ -38,7 +37,7 @@ Agents, the Payment Libraries are for you. Using Nevermined you can:
 2. Register your AI Agents and file assets
 3. Build agents able to process tasks sent by users
 4. Restrict the access to your agents only to Payment Plan subscribers
-5. Account for the usage of your agents and file downloads
+5. Account for the usage of your AI agents
 6. Charge for the real usage of your agents based on user queries complexity via Dynamic Charging
    feature
 
@@ -73,22 +72,6 @@ can be monetized and restricted to Payment Plan subscribers.
 The use case of the agents is very broad, and because the intention of the Payment Libraries is to
 facilitate easy integration, the agents can be used in many different AI applications.
 
-If the AI Agent implements the
-[Nevermined Query Protocol](https://docs.nevermined.io/docs/protocol/query-protocol), your agent can
-be used by your users in a generic way. This has the following benefits:
-
-- The cost of integration is reduced because your users don't need to figure out your API or
-  interface
-- If your agent is integrating another agent that implements the Query Protocol, the integration is
-  also simpler for you
-- Any existing user interface compatible with the Query Protocol can be used to interact with your
-  agent
-
-:::tip
-Nevermined provides a reference backend implementation of the AI Query Protocol. This means if you
-don't want to take care of exposing an HTTP Service, you can use the reference implementation and
-focus on the AI part of your agent.
-:::
 
 ### Notebooks
 

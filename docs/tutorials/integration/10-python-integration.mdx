@@ -5,11 +5,15 @@ description: How to integrate the Nevermined Payments Python library
 
 # Tutorial on how to use the Nevermined Payments Protocol in Python
 
-The objective of this library is to make possible the integration of Nevermined payments in the Python code ecosystem. This library provides a set of functions to interact with the Nevermined network, including the ability to register subscriptions, subscribe to web services, and get the JWT access token to call them.
+The objective of this library is to make possible the integration of Nevermined payments in the
+Python code ecosystem. This library provides a set of functions to interact with the Nevermined
+network, including the ability to register subscriptions, subscribe to web services, and get the JWT
+access token to call them.
 
 :::tip
 
-To have full details about how to use the [Payments Library](../../libraries/), please visit the [documentation section](../../libraries/)
+To have full details about how to use the [Payments Library](../../integration/), please visit the
+[documentation section](../../integration/)
 
 :::
 
@@ -24,18 +28,21 @@ pip install payments-py
 ### Initialize the payments library
 
 :::info
- 
+
 In a previous tutorial we showed [what is a Nevermined API Key and how to obtain it](nvm-api-keys).
 
 :::
 
 To initialize the payments library, you need to provide the following parameters:
 
-- Nevermined API Key: It's a string that identifies the session key of the account abstraction and some extra data such as the marketplace auth token. It works similar to a JWT but for blockchain accounts. You can find more information in the [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
-- Environment: It's an enum that represents the environment where the library will interact with the Nevermined network. It can be `Environment.appTesting` or `Environment.appArbitrum`.
+- Nevermined API Key: It's a string that identifies the session key of the account abstraction and
+  some extra data such as the marketplace auth token. It works similar to a JWT but for blockchain
+  accounts. You can find more information in the
+  [zeroDev docs](https://docs.zerodev.app/sdk/plugins/session-keys).
+- Environment: It's an enum that represents the environment where the library will interact with the
+  Nevermined network. It can be `Environment.appTesting` or `Environment.appArbitrum`.
 - App ID: It's a string that represents the app ID. Currently it is optional.
 - Version: It's a string that represents the version of the app. Currently it is optional.
-
 
 ```python
 from nevermined_payments import Payments, Environment
@@ -43,25 +50,31 @@ from nevermined_payments import Payments, Environment
 payments = Payments(nvm_api_key=nvm_api_key, environment=Environment.appTesting, app_id="your_app_id", version="1.0.0")
 ```
 
-
 ### Using payments library
 
 Once you have initialized the payments library, you can use the methods as follows:
-
 
 ```python
 response = payments.create_subscription(name="test-py", description="test", price=1000000, token_address="0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d", amount_of_credits=100, duration=30, tags=["test"])
 ```
 
-In the following link you can find the complete documentation of the library: [payments-py](https://nevermined-io.github.io/payments-py/). 
+In the following link you can find the complete documentation of the library:
+[payments-py](https://nevermined-io.github.io/payments-py/).
 
 ## Example
 
 Here you can find an example of how to use the payments library and try it yourself:
 
+<a
+  href="https://colab.research.google.com/drive/1mjvecOYHmplKxCCG1RBY56vAI4Bxvu0F"
+  target="_parent"
+>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
+</a>
 
-<a href="https://colab.research.google.com/drive/1mjvecOYHmplKxCCG1RBY56vAI4Bxvu0F" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-<a href="https://colab.research.google.com/drive/1mjvecOYHmplKxCCG1RBY56vAI4Bxvu0F" target="_parent">![Colab](/images/tutorials/Colab.jpeg)</a>
-
-
+<a
+  href="https://colab.research.google.com/drive/1mjvecOYHmplKxCCG1RBY56vAI4Bxvu0F"
+  target="_parent"
+>
+  ![Colab](/images/tutorials/Colab.jpeg)
+</a>
